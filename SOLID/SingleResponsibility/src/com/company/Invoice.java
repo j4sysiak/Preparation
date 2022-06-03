@@ -15,6 +15,15 @@ public class Invoice {
         Vendee = vendee;
     }
 
+    public float calculateTotal() {
+        float total = 0;
+        for(var lineItem : lineItems) {
+            total += lineItem.price * lineItem.count * (1 + lineItem.getTaxRate());
+        }
+        return total;
+    }
+
+
     public Collection<LineItem> getLineItems() {
         return lineItems;
     }
