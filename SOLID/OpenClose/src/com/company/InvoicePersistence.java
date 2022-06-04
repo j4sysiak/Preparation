@@ -16,6 +16,8 @@ public class InvoicePersistence {
                 .build();
     }
 
+    // clue OpenClose
+    //Metoda save ma ten sam kod niezależnie od tego w jakim formacie chcemy wydrukować fakturę (pdf, word)
     public void save() {
         invoiceSaver.save(invoice);
     }

@@ -16,6 +16,8 @@ public class InvoiceLogger {
                 .build();
     }
 
+    // clue OpenClose
+    //Metoda display ma ten sam kod niezależnie od tego jaki total chcemy wyświetlić (brutto czy netto)
     public void display() {
         iInvoiceDisplayer.display(invoice);
     }
