@@ -16,7 +16,10 @@ public class Client {
 */
 
         AuthenticationManager.builder().build().authenticate(
-                User.builder().name("Jacek KKj").email("test@wp.pl").password("test@wp.pl").phoneNumber("123456").build(), "test@wp.pl" , "test@wp.pl"
+                User.builder().name("Jacek KKj").email("test@wp.pl")
+                        .password("test@wp.pl").phoneNumber("123456").build(),
+                "test@wp.pl" ,
+                "test@wp.pl"
         );
 
     }
