@@ -24,7 +24,7 @@ public class OptionalExample {
         String email = "test@wp.pl";
         String password = "test@wp.pl";
         User user = User.builder().name("Jacek KKj").email("test@wp.pl")
-                        .password("test@wp.pl").phoneNumber("123456").build();
+                .password("test@wp.pl").phoneNumber("123456").build();
 
         Optional<String> maybeString = Optional.ofNullable(User.create("test@wp.pl").getPassword());
         if (maybeString
@@ -32,7 +32,6 @@ public class OptionalExample {
                 .orElseGet(() -> runIfEmpty())) {
             EmailNotification.builder().build().sendNotification(user);
         }
-
 
 //        Optional<Boolean> maybeBoolean = Optional.ofNullable(maybeString
 //                .map(pass -> getRunIfExist(pass, email, password))
