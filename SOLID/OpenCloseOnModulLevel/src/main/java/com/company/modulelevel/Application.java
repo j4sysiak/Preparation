@@ -4,6 +4,13 @@ import java.util.Collection;
 
 public class Application {
 
+
+    //Jeżeli chcemy dodać nowy typ,
+    // to po prostu rozszerzamy model np o klasę Triangle i w tej klasie tworzymy sfoisty render dla niej
+    // wywołanie render dla nowej klasy Triangle nie powoduje rozszerzenia klasy Application (jest zamknięta na rozszerzenia) i jedncześnie otwarta na nowy typ
+    //tylko do listy dopisujemy obiekt Triangle
+    //Triangle triangle = Triangle.create(ShapeType.Triangle, 11, Point.create(1, 222));
+
     public static void render(Collection<Shape> shapes) {
 
     for (Shape shape : shapes) {
