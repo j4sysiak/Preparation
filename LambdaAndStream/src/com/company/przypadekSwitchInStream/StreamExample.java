@@ -22,6 +22,6 @@ public class StreamExample {
     @Test
     public void test() {
         Application app = new Application();
-        app.render(new ArrayList<>(Arrays.asList(rectangle, circle)));
+        app.render(new ArrayList(Arrays.asList(rectangle, circle)));
     }
 }
