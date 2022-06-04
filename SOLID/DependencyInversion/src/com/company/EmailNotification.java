@@ -9,6 +9,7 @@ import lombok.Setter;
 @Getter
 @Builder
 @NoArgsConstructor
+/*Moduł niskopoziomowy*/
 public class EmailNotification {
 
     public void sendNotification(User user) {

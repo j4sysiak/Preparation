@@ -9,35 +9,21 @@ import java.util.Optional;
 @Setter
 @Getter
 @Builder
+/*Moduł wysokopoziomowy*/
 public class AuthenticationManager {
 
     public void authenticate(User user, String email, String password) {
         Optional<String> maybeString = Optional.ofNullable(User.create("test@wp.pl").getPassword());
-        if(maybeString
+        if (maybeString
                 .map(pass -> getRunIfExist(pass, email, password))
                 .orElseGet(() -> runIfEmpty())) {
             EmailNotification.builder().build().sendNotification(user);
         }
 
-
-//        Optional<Boolean> maybeBoolean = Optional.ofNullable(maybeString
-//                .map(pass -> getRunIfExist(pass, email, password))
-//                .orElseGet(() -> runIfEmpty()));
-
-        Boolean k1 = Optional.of(maybeString
-                        .map(pass -> getRunIfExist(pass, email, password))
-                        .orElseGet(this::runIfEmpty))
-                .map(this::getRunIfExist2)
-                .orElseGet(this::runIfEmpty);
-
-    }
-
-    private Boolean getRunIfExist2(Boolean aBoolean) {
-        return aBoolean;
     }
 
     private Boolean getRunIfExist(String userPass, String email, String password) {
-        return  userPass.equals(email) && userPass.equals(password);
+        return userPass.equals(email) && userPass.equals(password);
     }
 
     private Boolean runIfEmpty() {
