@@ -9,7 +9,7 @@ public class InvoiceLogger {
     private Invoice invoice;
     private IInvoiceDisplayer invoiceDisplayer;
 
-    // clue OpenClose
+    // clue OpenClose na poziomie klasy
     // kalsa InvoiceLogger jest otwarta na rozszerzenie, ponieważ wystarczy, że dostarczymy jej
     // inną implementację invoiceDisplayer
     // jednocześnie jest zamknięta na modyfikację, ponieważ z perspektywy tej klasy

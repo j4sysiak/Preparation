@@ -9,7 +9,7 @@ public class InvoicePersistence {
     private Invoice invoice;
     private IInvoiceSaver invoiceSaver;
 
-    // clue OpenClose
+    // clue OpenClose na poziomie klasy
     // kalsa InvoicePersistence jest otwarta na rozszerzenie, ponieważ wystarczy, że dostarczymy jej
     // inną implementację invoiceSaver
     // jednocześnie jest zamknięta na modyfikację, ponieważ z perspektywy tej klasy
