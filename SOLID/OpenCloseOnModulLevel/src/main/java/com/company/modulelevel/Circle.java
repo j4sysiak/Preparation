@@ -21,4 +21,9 @@ public class Circle extends Shape {
                 .center(point)
                 .build();
     }
+
+    @Override
+    public void render() {
+        System.out.println("Render Circle ...");
+    }
 }

@@ -1,11 +1,15 @@
 package com.company.modulelevel;
 
 import java.util.Collection;
-import java.util.stream.Collectors;
 
 public class Application {
 
-    public void render(Collection<Shape> shapes) {
+    public static void render(Collection<Shape> shapes) {
+
+    for (Shape shape : shapes) {
+        shape.render();
+    }
+
 //        for (Shape shape : shapes) {
 //            ShapeType type = shape.shapeType;
 //            switch (type) {
@@ -19,22 +23,24 @@ public class Application {
 //            }
 //        }
 
-     shapes.stream()
-                .map(f -> {
-                    switch (f.getShapeType()) {
-                        case Circle: renderCircle((Circle)f);break;
-                        case Rectangle: renderRectangle((Rectangle)f);break;
-                    }
-                    return null;
-                })
-             .collect(Collectors.toList());
+//     shapes.stream()
+//                .map(f -> {
+//                    switch (f.getShapeType()) {
+//                        case Circle: renderCircle((Circle)f);break;
+//                        case Rectangle: renderRectangle((Rectangle)f);break;
+//                    }
+//                    return null;
+//                })
+//             .collect(Collectors.toList());
+
+
     }
 
-    private void renderRectangle(Rectangle rectangle) {
-        System.out.println("Render Rectangle ...");
-    }
-
-    private void renderCircle(Circle circle) {
-        System.out.println("Render Circle ...");
-    }
+//    private void renderRectangle(Rectangle rectangle) {
+//        System.out.println("Render Rectangle ...");
+//    }
+//
+//    private void renderCircle(Circle circle) {
+//        System.out.println("Render Circle ...");
+//    }
 }

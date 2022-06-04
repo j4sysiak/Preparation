@@ -25,4 +25,9 @@ public class Rectangle extends Shape {
                 .topLeft(point)
                 .build();
     }
+
+    @Override
+    public void render() {
+        System.out.println("Render Rectangle ...");
+    }
 }
