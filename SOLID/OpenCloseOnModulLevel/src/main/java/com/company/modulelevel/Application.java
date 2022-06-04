@@ -30,7 +30,6 @@ public class Application {
              .collect(Collectors.toList());
     }
 
-
     private void renderRectangle(Rectangle rectangle) {
         System.out.println("Render Rectangle ...");
     }
