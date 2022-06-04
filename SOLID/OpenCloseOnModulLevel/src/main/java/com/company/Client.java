@@ -8,7 +8,6 @@ import java.util.Arrays;
 public class Client {
 
     public static void main(String[] args) {
-
         Rectangle rectangle = Rectangle.create(ShapeType.Rectangle, 100, 200, Point.create(1, 1));
         Circle circle = Circle.create(ShapeType.Circle, 22, Point.create(22, 22));
 

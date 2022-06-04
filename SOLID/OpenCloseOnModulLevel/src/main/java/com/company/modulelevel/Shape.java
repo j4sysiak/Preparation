@@ -4,7 +4,7 @@ import lombok.*;
 
 @Getter
 @AllArgsConstructor
-public  class Shape {
+public abstract class Shape {
     public ShapeType shapeType;
-    public void render(){};
+    public abstract void render();
 }
