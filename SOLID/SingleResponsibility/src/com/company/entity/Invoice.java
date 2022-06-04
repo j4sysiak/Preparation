@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.Collection;
+import java.util.stream.Collectors;
 
 @Builder
 @Getter
@@ -27,20 +28,9 @@ public class Invoice {
     }
 
     public static float calculateTotal(Collection<LineItem> lineItems) {
-        float total = 0;
-
-        float tot = lineItems.stream()
-                .map(x -> met(x.price, x.count, x.taxRate))
+        return lineItems.stream()
+                .map(lineItem -> lineItem.price)
+                .reduce(0f, (x, y) -> x + y)
                 ;
-
-        for (var lineItem : lineItems) {
-            total += lineItem.price * lineItem.count * (1 + lineItem.getTaxRate());
-        }
-        return total;
-    }
-
-    private static Object met(float price, float count, int taxRate) {
-        total += lineItem.price * lineItem.count * (1 + lineItem.getTaxRate());
-        return total;
     }
 }

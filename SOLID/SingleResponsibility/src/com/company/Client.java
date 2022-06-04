@@ -20,8 +20,5 @@ public class Client {
 
         InvoiceLogger.create(invoice).display();
         InvoicePersistence.create(invoice).saveToPdf();
-
-        System.out.println("ssssssssss");
-
     }
 }
