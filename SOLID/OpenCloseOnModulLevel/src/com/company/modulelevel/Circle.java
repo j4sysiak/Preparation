@@ -2,17 +2,23 @@ package com.company.modulelevel;
 
 import lombok.*;
 
-@Builder
 @Getter
-@Setter
 public class Circle extends Shape {
     public int radius;
     public Point center;
 
-    public static Circle create(int radius, Point center) {
+    @Builder
+    public Circle(ShapeType type, int radius, Point center) {
+        super(type);
+        this.radius = radius;
+        this.center = center;
+    }
+
+    public static Circle create(ShapeType type, int r, Point point) {
         return Circle.builder()
-                .radius(radius)
-                .center(center)
+                .type(type)
+                .radius(r)
+                .center(point)
                 .build();
     }
 }
