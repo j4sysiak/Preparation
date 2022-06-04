@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="367e497d-d5b9-4041-bfb4-6705da0d3754" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/CityDuck.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Duck.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/MountainDuck.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/RubberDuck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/CityDuck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/CityDuck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Duck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Duck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/MountainDuck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/MountainDuck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/RubberDuck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/RubberDuck.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654339820087</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="04-06-2022 12:50">
+      <created>1654340108039</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1654340108039</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

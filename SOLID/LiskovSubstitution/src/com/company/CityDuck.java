@@ -10,4 +10,9 @@ public class CityDuck extends Duck {
     public void kwak() {
         System.out.println("CityDuck kwak ....");
     }
+
+    @Override
+    public void fly() {
+        System.out.println("CityDuck fly ....");
+    }
 }

@@ -10,4 +10,9 @@ public class MountainDuck extends Duck{
     public void kwak() {
         System.out.println("MountainDuck kwak ...");
     }
+
+    @Override
+    public void fly() {
+        System.out.println("MountainDuck fly ...");
+    }
 }
