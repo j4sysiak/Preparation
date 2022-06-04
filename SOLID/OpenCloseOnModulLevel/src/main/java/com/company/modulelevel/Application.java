@@ -5,17 +5,16 @@ import java.util.List;
 public class Application {
 
     public void render(List<Shape> shapes) {
-
         for (Shape shape : shapes) {
             ShapeType type = shape.shapeType;
             switch (type) {
                 case Circle:
                     renderCircle((Circle)shape);
-                    return;
+                    break;
                 case Rectangle:
                     renderRectangle((Rectangle)shape);
-                    return;
-                default: break;
+                    break;
+                default: return;
             }
         }
     }
