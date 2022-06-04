@@ -16,6 +16,8 @@ public class Invoice {
     public String vendor;
     public String vendee;
     public float total;
+    public float totalNetto;
+    public float totalBrutto;
 
     public static Invoice create(Collection<LineItem> lineItems, String vendor, String vendee) {
         return Invoice.builder()
@@ -23,6 +25,8 @@ public class Invoice {
                 .vendor(vendor)
                 .vendee(vendee)
                 .total(calculateTotal(lineItems))
+                .totalNetto(calculateTotalNetto(lineItems))
+                .totalBrutto(calculateTotalBrutto(lineItems))
                 .build();
     }
 
@@ -30,6 +34,20 @@ public class Invoice {
         return lineItems.stream()
                 .map(lineItem -> lineItem.price)
                 .reduce(0f, (x, y) -> x + y)
+                ;
+    }
+
+    public static float calculateTotalNetto(Collection<LineItem> lineItems) {
+        return lineItems.stream()
+                .map(lineItem -> lineItem.price)
+                .reduce(0f, (x, y) -> x + y-100)
+                ;
+    }
+
+    public static float calculateTotalBrutto(Collection<LineItem> lineItems) {
+        return lineItems.stream()
+                .map(lineItem -> lineItem.price)
+                .reduce(0f, (x, y) -> x + y+100)
                 ;
     }
 }

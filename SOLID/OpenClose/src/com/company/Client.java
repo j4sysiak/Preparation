@@ -15,7 +15,11 @@ public class Client {
 
         Invoice invoice = Invoice.create(lineItems, "www", "sss");
 
-        InvoiceLogger.create(invoice).display();
+        IInvoiceDisplayer bruttoDisplay = new BruttoInvoiceDisplayer();
+        InvoiceLogger.create(invoice, bruttoDisplay).display();
+
+        IInvoiceDisplayer nettoDisplay = new NettoInvoiceDisplayer();
+        InvoiceLogger.create(invoice, nettoDisplay).display();
 
         IInvoiceSaver pdfFormatSaver= new PdfInvoiceSaver();
         InvoicePersistence.create(invoice, pdfFormatSaver).save();
