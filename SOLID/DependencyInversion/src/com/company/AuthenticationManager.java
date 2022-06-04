@@ -10,14 +10,19 @@ import java.util.Optional;
 @Getter
 @Builder
 /*Moduł wysokopoziomowy*/
+// będzie musiała zależeć od jakiejś akstrakcji a nie bezpośrednio od klasy EmailNotification
+// więc wstawiamy nowe pole iNotificationSender Interfejsu INotificationSender
 public class AuthenticationManager {
+
+    private INotificationSender iNotificationSender;
 
     public void authenticate(User user, String email, String password) {
         Optional<String> maybeString = Optional.ofNullable(User.create("test@wp.pl").getPassword());
         if (maybeString
                 .map(pass -> getRunIfExist(pass, email, password))
                 .orElseGet(() -> runIfEmpty())) {
-            EmailNotification.builder().build().sendNotification(user);
+            //EmailNotification.builder().build().sendNotification(user);
+            iNotificationSender.sendNotification(user);
         }
 
     }

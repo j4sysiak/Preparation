@@ -10,9 +10,9 @@ import lombok.Setter;
 @Builder
 @NoArgsConstructor
 /*Moduł niskopoziomowy*/
-public class EmailNotification implements INotificationSender {
+public class SmslNotification implements INotificationSender {
 
     public void sendNotification(User user) {
-        System.out.println("Sending notification to user: " + user.name);
+        System.out.println("Sending SMS notification to user: " + user.name);
     }
 }
