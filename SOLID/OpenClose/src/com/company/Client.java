@@ -1,7 +1,6 @@
 package com.company;
 
 import com.company.entity.Invoice;
-import com.company.model.LineItem;
 
 import java.util.Arrays;
 import java.util.Collection;
