@@ -15,7 +15,16 @@ public class Client {
         Obiekty powinny zależeć od abstrakcji a nie od typów.
 */
 
-        AuthenticationManager.builder().build().authenticate(
+        //EmailNotification
+        AuthenticationManager.builder().iNotificationSender(new EmailNotification()).build().authenticate(
+                User.builder().name("Jacek KKj").email("test@wp.pl")
+                        .password("test@wp.pl").phoneNumber("123456").build(),
+                "test@wp.pl" ,
+                "test@wp.pl"
+        );
+
+        //SmslNotification
+        AuthenticationManager.builder().iNotificationSender(new SmslNotification()).build().authenticate(
                 User.builder().name("Jacek KKj").email("test@wp.pl")
                         .password("test@wp.pl").phoneNumber("123456").build(),
                 "test@wp.pl" ,
