@@ -7,19 +7,26 @@ import lombok.Builder;
 public class InvoiceLogger {
 
     private Invoice invoice;
-    private IInvoiceDisplayer iInvoiceDisplayer;
+    private IInvoiceDisplayer invoiceDisplayer;
+
+    // clue OpenClose
+    // kalsa InvoiceLogger jest otwarta na rozszerzenie, ponieważ wystarczy, że dostarczymy jej
+    // inną implementację invoiceDisplayer
+    // jednocześnie jest zamknięta na modyfikację, ponieważ z perspektywy tej klasy
+    // nie jest wymagane, aby zmieniła ona swoją implementację
+    // po to, żeby obsłużyć jakiś inny typ wyświetlania kwoty na fakturze
 
     public static InvoiceLogger create(Invoice invoice, IInvoiceDisplayer iInvoiceDisplayer) {
         return InvoiceLogger.builder()
                 .invoice(invoice)
-                .iInvoiceDisplayer(iInvoiceDisplayer)
+                .invoiceDisplayer(iInvoiceDisplayer)
                 .build();
     }
 
     // clue OpenClose
     //Metoda display ma ten sam kod niezależnie od tego jaki total chcemy wyświetlić (brutto czy netto)
     public void display() {
-        iInvoiceDisplayer.display(invoice);
+        invoiceDisplayer.display(invoice);
     }
 
 //    public void displayTotal() {

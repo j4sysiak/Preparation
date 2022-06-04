@@ -9,6 +9,13 @@ public class InvoicePersistence {
     private Invoice invoice;
     private IInvoiceSaver invoiceSaver;
 
+    // clue OpenClose
+    // kalsa InvoicePersistence jest otwarta na rozszerzenie, ponieważ wystarczy, że dostarczymy jej
+    // inną implementację invoiceSaver
+    // jednocześnie jest zamknięta na modyfikację, ponieważ z perspektywy tej klasy
+    // nie jest wymagane, aby zmieniła ona swoją implementację
+    // po to, żeby obsłużyć jakiś inny typ wydruku faktur
+
     public static InvoicePersistence create(Invoice invoice, IInvoiceSaver invoiceSaver) {
         return InvoicePersistence.builder()
                 .invoice(invoice)
