@@ -1,5 +1,6 @@
-package com.company.entity;
+package com.company;
 
+import com.company.entity.Invoice;
 import lombok.Builder;
 
 @Builder

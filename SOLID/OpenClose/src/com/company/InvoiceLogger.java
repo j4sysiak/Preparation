@@ -1,10 +1,7 @@
-package com.company.entity;
+package com.company;
 
 import com.company.entity.Invoice;
-import com.company.model.LineItem;
 import lombok.Builder;
-
-import java.util.Collection;
 
 @Builder
 public class InvoiceLogger {
@@ -14,6 +11,7 @@ public class InvoiceLogger {
     public InvoiceLogger(Invoice invoice) {
         this.invoice = invoice;
     }
+
     public static InvoiceLogger create(Invoice invoice) {
         return InvoiceLogger.builder()
                 .invoice(invoice)

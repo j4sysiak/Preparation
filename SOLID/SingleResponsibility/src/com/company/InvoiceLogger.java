@@ -1,5 +1,6 @@
-package com.company.entity;
+package com.company;
 
+import com.company.entity.Invoice;
 import lombok.Builder;
 
 @Builder
@@ -10,7 +11,6 @@ public class InvoiceLogger {
     public InvoiceLogger(Invoice invoice) {
         this.invoice = invoice;
     }
-
     public static InvoiceLogger create(Invoice invoice) {
         return InvoiceLogger.builder()
                 .invoice(invoice)

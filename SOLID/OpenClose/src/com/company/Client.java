@@ -1,8 +1,6 @@
 package com.company;
 
 import com.company.entity.Invoice;
-import com.company.entity.InvoiceLogger;
-import com.company.entity.InvoicePersistence;
 import com.company.model.LineItem;
 
 import java.util.Arrays;
@@ -20,7 +18,10 @@ public class Client {
 
         InvoiceLogger.create(invoice).display();
 
-        IInvoiceSaver d = new PdfInvoiceSaver();
-        InvoicePersistence.create(invoice, d).save();
+        IInvoiceSaver pdfFormatSaver= new PdfInvoiceSaver();
+        InvoicePersistence.create(invoice, pdfFormatSaver).save();
+
+        IInvoiceSaver wordFormatSaver= new WordInvoiceSaver();
+        InvoicePersistence.create(invoice, wordFormatSaver).save();
     }
 }
