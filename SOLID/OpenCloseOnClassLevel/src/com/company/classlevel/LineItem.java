@@ -1,4 +1,4 @@
-package com.company;
+package com.company.classlevel;
 
 import lombok.Builder;
 import lombok.Getter;

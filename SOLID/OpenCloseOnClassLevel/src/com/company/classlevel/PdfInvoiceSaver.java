@@ -1,6 +1,5 @@
-package com.company;
+package com.company.classlevel;
 
-import com.company.IInvoiceSaver;
 import com.company.entity.Invoice;
 
 public class PdfInvoiceSaver implements IInvoiceSaver {

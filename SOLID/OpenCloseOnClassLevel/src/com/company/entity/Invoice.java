@@ -1,6 +1,6 @@
 package com.company.entity;
 
-import com.company.LineItem;
+import com.company.classlevel.LineItem;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
