@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="53b29f28-4dab-447d-a074-396a6a917031" name="Changes" comment="" />
+    <list default="true" id="53b29f28-4dab-447d-a074-396a6a917031" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Dziedziczenie/src/com/company/model/BankAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Dziedziczenie/src/com/company/model/PersonalBankAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dziedziczenie/src/com/company/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dziedziczenie/src/com/company/Client.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
