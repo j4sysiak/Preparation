@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.model.User;
+
 public class Client {
 
     public static void main(String[] args) {

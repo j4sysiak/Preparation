@@ -1,5 +1,6 @@
 package com.company;
 
+import com.company.model.User;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
