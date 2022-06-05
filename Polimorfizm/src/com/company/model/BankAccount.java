@@ -11,7 +11,7 @@ import java.util.Optional;
 @AllArgsConstructor
 public class BankAccount {
 
-    private BigDecimal balance;
+    protected BigDecimal balance;
 
     public static BankAccount create(BigDecimal balance) {
         return BankAccount.builder()
@@ -34,7 +34,7 @@ public class BankAccount {
         return BigDecimal.ZERO;
     }
 
-    private BigDecimal runIfAmountNotNull(BigDecimal amount) {
+    BigDecimal runIfAmountNotNull(BigDecimal amount) {
         return Optional.of(amount.compareTo(BigDecimal.ZERO) >= 0)// 4. sprawdzam, czy true
                 .filter(Boolean::booleanValue)  // 4. będę sprawdzał Booleana
                 .map(bool -> ifTrue(amount))    // 5. Jeżeli true
