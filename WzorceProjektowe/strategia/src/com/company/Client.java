@@ -6,7 +6,7 @@ public class Client {
 
         var start = new Coordinate();
         var stop = new Coordinate();
-
+        
         //strategia pozwala na używanie różnych wariantów jednego algorytmu
         //w obrębie danego obiektu w trakcie działania programu
         //oddziela szczegóły implementacyjne od warstwy biznesowej
