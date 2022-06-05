@@ -1,14 +1,12 @@
 package com.company;
 
-import com.company.model.BankAccount;
 import com.company.model.CompanyBankAccount;
-import com.company.model.PersonalBankAccount;
 
 import java.math.BigDecimal;
 
 public class Client {
 
-   // private static BankAccount bankAccount;
+    // private static BankAccount bankAccount;
 
     public static void main(String[] args) {
 
