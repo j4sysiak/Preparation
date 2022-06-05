@@ -13,21 +13,29 @@ public class BankAccount {
 
     public void setBankAccount(BigDecimal amount) {
 
-        Boolean b = Optional.ofNullable(amount)
+        BigDecimal c =  Optional.ofNullable(amount)
                 .map(a -> runIfExists(a))
                 .orElseGet(() -> runIfEmpty());
 
-        System.out.println(b);
+        System.out.println(c);
     }
 
-    private Boolean runIfEmpty() {
-        return false;
+    private BigDecimal runIfEmpty() {
+        return BigDecimal.ZERO;
     }
 
-    private Boolean runIfExists(BigDecimal amount) {
-        if (amount.compareTo(BigDecimal.ZERO) >= 0) {
-            this.bankAccount = amount;
-        }
-        return true;
+    private BigDecimal runIfExists(BigDecimal amount) {
+        return Optional.of(amount.compareTo(BigDecimal.ZERO) >= 0)
+                .map(s -> ifTrue(amount))
+                .orElseGet(() -> ifNotTrue());
+
+    }
+
+    private BigDecimal ifNotTrue() {
+        return BigDecimal.ZERO;
+    }
+
+    private BigDecimal ifTrue(BigDecimal amount) {
+        return amount;
     }
 }
