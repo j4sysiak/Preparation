@@ -10,5 +10,5 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @AllArgsConstructor
 public class BankAccount {
-    private BigDecimal bankAccount = BigDecimal.valueOf(1000);
+    private BigDecimal balance = BigDecimal.valueOf(1000);
 }

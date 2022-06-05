@@ -16,9 +16,9 @@ public class StreamExample {
 
     @Test
     public void testIfTrueStatement() {
-        BigDecimal amount = new BankAccount().getBankAccount();
-        BigDecimal c = Optional.ofNullable(amount)  // 1. sprawdzam, czy null
-                .map(a -> runIfAmountNotNull(a))            //2. jeżeli nie null
+        BigDecimal balance = new BankAccount().getBalance();
+        BigDecimal c = Optional.ofNullable(balance)  // 1. sprawdzam, czy null
+                .map(amount -> runIfAmountNotNull(amount))            //2. jeżeli nie null
                 .orElseGet(() -> runIfEmpty());      //3. jeżeli null
         //System.out.println(c);
         assertEquals(c, BigDecimal.valueOf(1000));

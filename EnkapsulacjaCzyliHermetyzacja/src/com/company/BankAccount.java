@@ -5,17 +5,18 @@ import java.util.Optional;
 
 public class BankAccount {
 
-    private BigDecimal bankAccount;
+    private BigDecimal balance;
 
     public BigDecimal getBankAccount() {
-        return bankAccount;
+        return balance;
     }
 
     public void setBankAccount(BigDecimal amount) {
         BigDecimal c =  Optional.ofNullable(amount)  // 1. sprawdzam, czy null
                 .map(a -> runIfAmountNotNull(a))            //2. jeżeli nie null
                 .orElseGet(() -> runIfEmpty());      //3. jeżeli null
-        System.out.println(c);
+        //System.out.println(c);
+        this.balance = amount;
     }
 
     private BigDecimal runIfEmpty() {
