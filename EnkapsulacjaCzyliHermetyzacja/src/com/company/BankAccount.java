@@ -12,9 +12,9 @@ public class BankAccount {
     }
 
     public void setBankAccount(BigDecimal amount) {
-        BigDecimal c =  Optional.ofNullable(amount)
-                .map(a -> runIfExists(a))
-                .orElseGet(() -> runIfEmpty());
+        BigDecimal c =  Optional.ofNullable(amount)  // 1. sprawdzam, czy null
+                .map(a -> runIfExists(a))            //2. jeżeli nie null
+                .orElseGet(() -> runIfEmpty());      //3. jeżeli null
 
         System.out.println(c);
     }
@@ -24,9 +24,10 @@ public class BankAccount {
     }
 
     private BigDecimal runIfExists(BigDecimal amount) {
-        return Optional.of(amount.compareTo(BigDecimal.ZERO) >= 0)
-                .map(s -> ifTrue(s, amount))
-                .orElseGet(() -> ifNotTrue());
+        return Optional.of(amount.compareTo(BigDecimal.ZERO) >= 0)// 4. sprawdzam, czy true
+                .filter(Boolean::booleanValue)  // 4. będę sprawdzał Booleana
+                .map(bool -> ifTrue(bool, amount))  // 5. Jeżeli true
+                .orElseGet(() -> ifNotTrue());   // 6. jeżeli false
     }
 
     private BigDecimal ifNotTrue() {
