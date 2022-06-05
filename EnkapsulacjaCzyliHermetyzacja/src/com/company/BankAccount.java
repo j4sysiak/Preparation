@@ -15,7 +15,6 @@ public class BankAccount {
         BigDecimal c =  Optional.ofNullable(amount)  // 1. sprawdzam, czy null
                 .map(a -> runIfAmountNotNull(a))            //2. jeżeli nie null
                 .orElseGet(() -> runIfEmpty());      //3. jeżeli null
-
         System.out.println(c);
     }
 
@@ -31,7 +30,12 @@ public class BankAccount {
     }
 
     private BigDecimal ifNotTrue() {
-        return BigDecimal.ZERO;
+        try {
+            throw new Exception("Amount less then zero!!!");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     private BigDecimal ifTrue(BigDecimal amount) {

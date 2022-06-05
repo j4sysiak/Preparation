@@ -13,7 +13,7 @@ public class Client {
         Tylko prywatne metody wewnętrzne są uprawnione do zmiany tego stanu (np. set())
         */
         BankAccount bankAccount = new BankAccount();
-        bankAccount.setBankAccount(BigDecimal.valueOf(1000));
+        bankAccount.setBankAccount(BigDecimal.valueOf(-1000));
         System.out.println(bankAccount.getBankAccount());
     }
 }
