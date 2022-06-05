@@ -24,6 +24,7 @@ Dzięki temu możemy w dowolny sposób dostarczać implementację jakiejś dowol
 
 public class AuthenticationManager {
 
+    //pole iNotificationSender przez które wstrzykujemy zależność w klasie wysokiego poziomu do klas niskiego poziomu
     private INotificationSender iNotificationSender;
 
     //DependencyInjection przez konstruktor
@@ -32,6 +33,9 @@ public class AuthenticationManager {
     }
 
     public void authenticate(User user) {
+          // i tutaj w zależlości jakiego typu obiekt niskopoziomowy wstrzyknęliśmy - to
+          // odpalimy metodę właśnie z tej wstrzykniętej klasy niskiego poziomu np. SmsNotifikation lun EmailNotification
+          // obiekt iNotificationSender będzie reprezentował jedną z klas niskiego poziomu
         iNotificationSender.sendNotification(user);
     }
 }
