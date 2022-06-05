@@ -28,6 +28,18 @@ public class OptionalExample {
         assertTrue(priceIsInRange1(Modem.create(BigDecimal.valueOf(12))));
         assertFalse(priceIsInRange1(Modem.create(BigDecimal.valueOf(9.9))));
         assertFalse(priceIsInRange1(null));
+
+        assertTrue(priceIsInRange2(Modem2.create(12)));
+        assertFalse(priceIsInRange2(Modem2.create(9.9)));
+        assertFalse(priceIsInRange2(null));
+    }
+
+    public boolean priceIsInRange2(Modem2 modem) {
+        return Optional.ofNullable(modem)
+                .map(Modem2::getPrice)
+                .filter(p -> p >= 10)
+                .filter(p -> p <= 15)
+                .isPresent();
     }
 
     public boolean priceIsInRange1(Modem modem){
