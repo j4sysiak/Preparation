@@ -1,14 +1,12 @@
 package com.company.przypadekIfTrueStatement;
 
-import com.company.przypadekSwitchInStream.modulelevel2.Circle;
-import com.company.przypadekSwitchInStream.modulelevel2.Point;
-import com.company.przypadekSwitchInStream.modulelevel2.Rectangle;
-import com.company.przypadekSwitchInStream.modulelevel2.ShapeType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 import java.util.Optional;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class StreamExample {
 
@@ -19,13 +17,12 @@ public class StreamExample {
     @Test
     public void testIfTrueStatement() {
         BigDecimal amount = new BankAccount().getBankAccount();
-        BigDecimal c =  Optional.ofNullable(amount)  // 1. sprawdzam, czy null
+        BigDecimal c = Optional.ofNullable(amount)  // 1. sprawdzam, czy null
                 .map(a -> runIfAmountNotNull(a))            //2. jeżeli nie null
                 .orElseGet(() -> runIfEmpty());      //3. jeżeli null
-
-        System.out.println(c);
+        //System.out.println(c);
+        assertEquals(c, BigDecimal.valueOf(1000));
     }
-
 
     private BigDecimal runIfEmpty() {
         return BigDecimal.ZERO;
