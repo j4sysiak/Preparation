@@ -1,4 +1,4 @@
-package com.company.Optional;
+package com.company.Optional.mytestclasses;
 
 import lombok.Builder;
 import lombok.Getter;

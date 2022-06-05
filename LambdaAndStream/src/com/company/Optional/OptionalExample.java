@@ -1,7 +1,6 @@
 package com.company.Optional;
 
-import com.company.Optional.commons.EmailNotification;
-import com.company.Optional.commons.User;
+import com.company.Optional.mytestclasses.*;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
@@ -24,6 +23,26 @@ public class OptionalExample {
     public void setUp() {
     }
 
+    @Test
+    public void givenOptional_whenFlatMapWorks_thenCorrect2() {
+        Person person = Person.create("John", 19, "myPassword");
+        Optional<Person> personOptional = Optional.of(person);
+
+        Optional<Optional<String>> nameOptionalWrapper = personOptional
+                .map(Person::getName);
+
+        Optional<String> nameOptional = nameOptionalWrapper
+                .orElseThrow(IllegalArgumentException::new);
+
+        String name1 = nameOptional.
+                orElse("");
+        assertEquals("John", name1);
+
+        String name = personOptional
+                .flatMap(Person::getName)
+                .orElse("");
+        assertEquals("John", name);
+    }
 
     @Test
     public void givenOptional_whenMapWorksWithFilter_thenCorrect() {
