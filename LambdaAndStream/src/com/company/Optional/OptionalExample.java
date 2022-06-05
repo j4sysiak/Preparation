@@ -8,7 +8,11 @@ import lombok.Setter;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.math.BigDecimal;
 import java.util.Optional;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @Setter
 @Getter
@@ -17,6 +21,31 @@ public class OptionalExample {
 
     @BeforeEach
     public void setUp() {
+    }
+
+    @Test
+    public void testOptional3() {
+        assertTrue(priceIsInRange1(Modem.create(BigDecimal.valueOf(12))));
+        assertFalse(priceIsInRange1(Modem.create(BigDecimal.valueOf(9.9))));
+        assertFalse(priceIsInRange1(null));
+    }
+
+    public boolean priceIsInRange1(Modem modem){
+        boolean isInRange = false;
+        if (modem != null && modem.getPrice() != null
+                && (BigDecimal.valueOf(10).compareTo(modem.getPrice()) <= 0)
+                && (BigDecimal.valueOf(15).compareTo(modem.getPrice()) >= 0)) {
+            isInRange = true;
+        }
+        return isInRange;
+    }
+
+    @Test
+    public void testOptional2() {
+        Integer year = 2016;
+        Optional<Integer> yearOptional = Optional.of(year);
+        boolean is2016 = yearOptional.filter(y -> y == 2016).isPresent();
+        System.out.println(is2016);
     }
 
     @Test
