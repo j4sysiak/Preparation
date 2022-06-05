@@ -21,6 +21,7 @@ public class PersonalBankAccount extends BankAccount {
     }
 
     //obsługa polimorfizmu - specyficzne działanie metody makeWithdrawal dla wywołania z typu: PersonalBankAccount
+    //nadpisujemy medodę makeWithdrawal z BankAccount
     @Override
     public BigDecimal makeWithdrawal(BigDecimal withdrawalValuew) {
         System.out.println("specyficzne działanie metody makeWithdrawal dla wywołania z typu: PersonalBankAccount");
