@@ -12,8 +12,8 @@ public class Client {
         Żaden zewnętrzny obiekt nie może zmienić stanu obiektów.
         Tylko prywatne metody wewnętrzne są uprawnione do zmiany tego stanu (np. set())
         */
-        BankAccount bankAccount = new BankAccount();
-        bankAccount.setBankAccount(BigDecimal.valueOf(-1000));
+        BankAccount bankAccount = BankAccount.create(BigDecimal.valueOf(0));
+        bankAccount.setBankAccount(BigDecimal.valueOf(1000));
         System.out.println(bankAccount.getBankAccount());
     }
 }

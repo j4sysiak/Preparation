@@ -1,11 +1,20 @@
 package com.company;
 
+import lombok.Builder;
+
 import java.math.BigDecimal;
 import java.util.Optional;
 
+@Builder
 public class BankAccount {
 
     private BigDecimal balance;
+
+    public static BankAccount create(BigDecimal balance) {
+        return BankAccount.builder()
+                .balance(balance)
+                .build();
+    }
 
     public BigDecimal getBankAccount() {
         return balance;
