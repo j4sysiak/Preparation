@@ -6,17 +6,9 @@ import com.company.model.PersonalBankAccount;
 
 import java.math.BigDecimal;
 
-public class Client {
-
-   // private static BankAccount bankAccount;
+public class Client { ;
 
     public static void main(String[] args) {
-
-        /*
-        Enkapsulacja, czyli heretyzacja to  ukrywanie wewnętrznej implementacji.
-        Żaden zewnętrzny obiekt nie może zmienić stanu obiektów.
-        Tylko prywatne metody wewnętrzne są uprawnione do zmiany tego stanu (np. set())
-        */
 
         //BankAccount bankAccount = BankAccount.create(BigDecimal.valueOf(0));
 

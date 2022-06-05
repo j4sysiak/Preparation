@@ -61,4 +61,8 @@ public class BankAccount {
     public BigDecimal makeWithdrawal(BigDecimal amount) {
         return balance = balance.add(BigDecimal.valueOf(-1).multiply(runIfAmountNotNull(amount)));
     }
+
+//    public void requestPersolanLoan() {
+//        System.out.println("Making RequestPersolanLoan in BankAccount");
+//    }
 }

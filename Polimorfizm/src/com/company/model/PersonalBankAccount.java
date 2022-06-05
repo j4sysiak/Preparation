@@ -16,8 +16,9 @@ public class PersonalBankAccount extends BankAccount {
         //this.label = label;
     }
 
+   // @Override
     public void requestPersolanLoan() {
-        System.out.println("Making RequestPersolanLoan ...");
+        System.out.println("Making RequestPersolanLoan ... in PersonalBankAccount");
     }
 
     //obsługa polimorfizmu - specyficzne działanie metody makeWithdrawal dla wywołania z typu: PersonalBankAccount
