@@ -13,7 +13,10 @@ public class Client {
         Tylko prywatne metody wewnętrzne są uprawnione do zmiany tego stanu (np. set())
         */
         BankAccount bankAccount = BankAccount.create(BigDecimal.valueOf(0));
-        bankAccount.setBankAccount(BigDecimal.valueOf(1000));
-        System.out.println(bankAccount.getBankAccount());
+        bankAccount.setBalance(BigDecimal.valueOf(1000));
+        System.out.println(bankAccount.getBalance());
+
+        BigDecimal deposit = bankAccount.makeDeposit(BigDecimal.valueOf(1));
+        BigDecimal withdrawal = bankAccount.makeWithdrawal(BigDecimal.valueOf(100));
     }
 }

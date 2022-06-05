@@ -16,11 +16,11 @@ public class BankAccount {
                 .build();
     }
 
-    public BigDecimal getBankAccount() {
+    public BigDecimal getBalance() {
         return balance;
     }
 
-    public void setBankAccount(BigDecimal amount) {
+    public void setBalance(BigDecimal amount) {
         BigDecimal c =  Optional.ofNullable(amount)  // 1. sprawdzam, czy null
                 .map(a -> runIfAmountNotNull(a))            //2. jeżeli nie null
                 .orElseGet(() -> runIfEmpty());      //3. jeżeli null
@@ -50,5 +50,13 @@ public class BankAccount {
 
     private BigDecimal ifTrue(BigDecimal amount) {
         return amount;
+    }
+
+    public BigDecimal makeDeposit(BigDecimal amount) {
+        return balance = balance.add(runIfAmountNotNull(amount));
+    }
+
+    public BigDecimal makeWithdrawal(BigDecimal amount) {
+        return balance = balance.add(BigDecimal.valueOf(-1).multiply(runIfAmountNotNull(amount)));
     }
 }
