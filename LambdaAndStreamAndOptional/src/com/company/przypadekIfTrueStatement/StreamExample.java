@@ -36,7 +36,12 @@ public class StreamExample {
     }
 
     private BigDecimal ifNotTrue() {
-        return BigDecimal.ZERO;
+        try {
+            throw new Exception("Amount less then zero!!!");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     private BigDecimal ifTrue(BigDecimal amount) {
