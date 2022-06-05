@@ -4,7 +4,8 @@ public class Client {
 
     public static void main(String[] args) {
 
-         EmailSender emailSender = new EmailSender();
-         emailSender.sendEmail();
+        /*jedyna publiczna metoda*/
+        /*sendEmail wywoła pozostałe privat metody: te metody są uż dla nas tlko abstrakcyjne */
+        EmailSender.create().sendEmail();
     }
 }
