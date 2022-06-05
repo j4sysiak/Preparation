@@ -15,7 +15,7 @@ public class Client {
         /*
         Polimorfizm - podczas działania programu przy wywołaniu np. metody makeWithdrawal z klasy bazowej BankAccount
         to w zależności od typu, czy wywołamy metodę z CompanyBankAccount, czy z PersonalBankAccount
-        to konkretna implementacja zostanie wywołana (nadpisujemy metodę w klasach niższych @Override)
+        to konkretna implementacja zostanie wywołana (nadpisujemy metodę w klasach dziedziczących @Override)
 
         np. dla wywołania metody makeWithdrawal z typu PersonalBankAccount będzie się inaczej zachowywała, niż dla wywołania z CompanyBankAccount
         */
