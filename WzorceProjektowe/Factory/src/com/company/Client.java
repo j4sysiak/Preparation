@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.mdel.Circle;
+
 public class Client {
 
     public static void main(String[] args) throws Exception {
@@ -14,12 +16,15 @@ public class Client {
 
         var shapeFactory = new ShapeFactory();
 
+        //Circle circle = (Circle) shapeFactory.createShape(ShapeType.Circle);
         var circle = shapeFactory.createShape(ShapeType.Circle);
         circle.render();
 
+        // Triangle triangle = (Triangle) shapeFactory.createShape(ShapeType.Triangle);
         var triangle = shapeFactory.createShape(ShapeType.Triangle);
         triangle.render();
 
+        // Rectangle rectangle = (Rectangle) shapeFactory.createShape(ShapeType.Rectangle);
         var rectangle = shapeFactory.createShape(ShapeType.Rectangle);
         rectangle.render();
     }
