@@ -1,5 +1,9 @@
 package com.company;
 
+import com.company.mdel.Circle;
+import com.company.mdel.Rectangle;
+import com.company.mdel.Triangle;
+
 public class ShapeFactory {
 
     public Shape createShape(ShapeType type) throws Exception {
