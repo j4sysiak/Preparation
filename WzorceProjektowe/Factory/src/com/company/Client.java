@@ -4,6 +4,7 @@ public class Client {
 
     public static void main(String[] args) throws Exception {
 
+        //Udostępniany jest interfejs do tworzenia obiektów w ramach klasy bazowej
         //Fabryka oddziela kod implementacyjny (tworzący dany obiekt) od kodu, który korzysta z tego obiektu
         //dodanie nowego kształtu nie powoduje zmiany kodu klienta - dodajemy tylko w fabryce nowy case i budujemy klasę nowego obiektu
 
