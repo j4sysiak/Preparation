@@ -7,7 +7,7 @@ public class Client {
     public static void main(String[] args) throws Exception {
 
     /*
-    Udostępniany jest interface Shape do tworzenia obiektów w ramach klasy bazowej.
+    Udostępniany jest interface IShape (lub lasa abstrakcyjna Shape) do tworzenia obiektów w ramach klasy bazowej.
     Jednocześnie pozwala podklasom zmieniać typ tworzonych obiektów.
 
     Fabryka oddziela kod implementacyjny (tworzący dany obiekt) od kodu, który korzysta z tego obiektu.
