@@ -6,7 +6,7 @@ import com.company.mdel.Triangle;
 
 public class ShapeFactory {
 
-    public Shape createShape(ShapeType type) throws Exception {
+    public IShape /*Shape*/ createShape(ShapeType type) throws Exception {
         switch (type) {
             case Circle: return new Circle();
             case Rectangle: return new Rectangle();
