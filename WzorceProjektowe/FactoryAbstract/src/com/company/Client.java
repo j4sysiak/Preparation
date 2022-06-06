@@ -6,7 +6,7 @@ public class Client {
 
     /*
     Celem jest dostarczenie interfejsu do tworzenia różnych obiektów jednego typu
-    dla tej samej rodziny klas bez specyfikowania ich konkretnych klas.
+    dla tej samej rodziny klas bez specyfikowania ich konkretnych klas - ale nie chcemy, żeby ściśle był powiązany z jakimś konkretnym typem.
     Przy czym, umożliwia jednemu obiektowi tworzenie różnych, powiązanych ze sobą, reprezentacji podobiektów
     określając ich typy podczas działania programu
     */
@@ -16,7 +16,7 @@ public class Client {
         uiApplicationForWindows.renderUI();
 
         /*tutaj decydujemy dla jakiego systemu budujem aplikację: dla Mac, czy Windows*/
-        var uiApplicationForMac = new Application(new WindowsFactory());
+        var uiApplicationForMac = new Application(new MacFactory());
         uiApplicationForMac.renderUI();
     }
 }
