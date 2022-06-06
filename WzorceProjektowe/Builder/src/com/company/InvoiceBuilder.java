@@ -9,30 +9,42 @@ import java.util.Collection;
 @Setter
 @Getter
 public class InvoiceBuilder {
+
     private Invoice invoice = new Invoice();
 
-    public void setInvoiceNumber(String number) {
+    public Invoice Build() {
+        return invoice;
+    }
+
+
+    public InvoiceBuilder setInvoiceNumber(String number) {
         invoice.number = number;
+        return this;
     }
 
-    public void setDate(LocalDateTime date) {
+    public InvoiceBuilder setDate(LocalDateTime date) {
         invoice.date = date;
+        return this;
     }
 
-    public void setVendor(String vendor) {
+    public InvoiceBuilder setVendor(String vendor) {
         invoice.vendor = vendor;
+        return this;
     }
 
-    public void setVendee(String vendee) {
+    public InvoiceBuilder setVendee(String vendee) {
         invoice.vendee = vendee;
+        return this;
     }
 
-    public void setNote(String note) {
+    public InvoiceBuilder setNote(String note) {
         invoice.note = note;
+        return this;
     }
 
-    public void setLineItems(Collection<String> lineItems) {
+    public InvoiceBuilder setLineItems(Collection<String> lineItems) {
         invoice.lineItems = lineItems;
+        return this;
     }
 
 

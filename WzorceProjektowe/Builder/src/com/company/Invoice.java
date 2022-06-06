@@ -1,13 +1,17 @@
 package com.company;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.time.LocalDateTime;
 import java.util.Collection;
 
 @Setter
 @Getter
+@ToString
+//@Builder
 public class Invoice {
     public String number;
     public LocalDateTime date;
