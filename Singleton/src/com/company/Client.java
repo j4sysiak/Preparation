@@ -2,6 +2,21 @@ package com.company;
 
 public class Client {
 
+    /*
+    Kreacyjny wzorzec projektowy, którego celem jest ograniczenie możliwości tworzenia obiektów danej klasy do jednej instancji.
+    Może być tylko jeden obiekt tej klasy.
+    Singleton zapewnia też globalny dostęp do stworzonego obiektu.
+    */
+
     public static void main(String[] args) {
+
+        // musi być prywatny konstruktor Configuration, żeeby nie było można tworzyć obiektów Configuration
+        // var cfg = new Configuration();
+        var cfg1 = Configuration.getInstatnce();
+        var cfg2 = Configuration.getInstatnce();
+
+        if (cfg1 == cfg2) {
+            System.out.println("cfg1 == cfg2  ->  to znaczy, że jest to jeden obiekt, czyli singleton");
+        }
     }
 }
