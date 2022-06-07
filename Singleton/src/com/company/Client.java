@@ -6,6 +6,10 @@ public class Client {
     Kreacyjny wzorzec projektowy, którego celem jest ograniczenie możliwości tworzenia obiektów danej klasy do jednej instancji.
     Może być tylko jeden obiekt tej klasy.
     Singleton zapewnia też globalny dostęp do stworzonego obiektu.
+
+    Zalety: jeden globalny obiekt danej klasy - globalny dostęp do niego (może być używany do zapewnienia transakcyjności, persystencji)
+    Wady: łamie zasady SOLID: SingleResponsibility, OpenClose i może utrudnić pisanie testów jednostkowych
+
     */
 
     public static void main(String[] args) {
