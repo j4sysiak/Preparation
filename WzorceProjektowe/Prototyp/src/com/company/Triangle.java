@@ -1,6 +1,6 @@
 package com.company;
 
-public class Triange extends Shape implements Cloneable {
+public class Triangle extends Shape {
     @Override
     public void render() {
         System.out.println("Render Triangle ...");

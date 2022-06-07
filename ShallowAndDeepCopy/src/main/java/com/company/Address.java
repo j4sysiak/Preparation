@@ -17,5 +17,13 @@ class Address {
         this(address.getStreet(), address.getCity(), address.getCountry());
     }
 
+    @Override
+    public Object clone() {
+        try {
+            return (Address) super.clone();
+        } catch (CloneNotSupportedException e) {
+            return new Address(this.street, this.getCity(), this.getCountry());
+        }
+    }
 
 }

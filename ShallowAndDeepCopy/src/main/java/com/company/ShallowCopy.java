@@ -10,14 +10,18 @@ public class ShallowCopy {
     public void setUp() {
     }
 
+    /*Copy Constructor*/
     @Test
     public void whenModifyingOriginalObject_ThenCopyShouldChange() {
 
         Address address = new Address("Downing St 10", "London", "England");
         User pm = new User("Prime", "Minister", address);
-        User shallowCopy = new User(
-                pm.getFirstName(), pm.getLastName(), pm.getAddress());
+        User shallowCopy = new User(pm.getFirstName(), pm.getLastName(), pm.getAddress());
+
         address.setCountry("Great Britain");
-        Assert.assertEquals(shallowCopy, pm);
+
+        Assert.assertNotEquals(shallowCopy, pm);
     }
+
+    /*Cloneable Interface*/
 }
