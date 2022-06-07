@@ -10,7 +10,6 @@ public class ShallowCopy {
     public void setUp() {
     }
 
-    /*Copy Constructor*/
     @Test
     public void whenModifyingOriginalObject_ThenCopyShouldChange() {
 
@@ -19,9 +18,6 @@ public class ShallowCopy {
         User shallowCopy = new User(pm.getFirstName(), pm.getLastName(), pm.getAddress());
 
         address.setCountry("Great Britain");
-
         Assert.assertNotEquals(shallowCopy, pm);
     }
-
-    /*Cloneable Interface*/
 }
