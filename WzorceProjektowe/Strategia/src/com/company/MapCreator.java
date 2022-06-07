@@ -1,10 +1,12 @@
 package com.company;
 
+import com.company.model.Coordinate;
+
 public class MapCreator {
 
     private IRouteStrategy iRouteStrategy;  // wartość tego wstrzykujemy przez konstruktor do MapCreator
 
-    //Depemdency injection throut constructor
+    //Dependency Injection przez constructor
     public MapCreator(IRouteStrategy routeStrategy) {
         this.iRouteStrategy = routeStrategy;
     }
