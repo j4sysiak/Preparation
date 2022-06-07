@@ -10,9 +10,17 @@ public class Client {
 
     public static void main(String[] args) {
 
-        Border border = Border.builder()
-                .color("Red")
-                .size("2px")
+        Circle c1 = Circle.builder()
+                .radius(5)
+                .x(1)
+                .y(2)
+                .border(Border.builder()
+                        .color("Red")
+                        .size("2px")
+                        .build())
                 .build();
+
+        System.out.println(c1);
+
     }
 }
