@@ -15,16 +15,16 @@ public class Client {
         // w obrębie danego obiektu w trakcie działania programu
         // oddziela szczegóły implementacyjne od warstwy biznesowej
 
-        var strategy1= new BikeStrategy();
-        var mapCalculator = new MapCreator(strategy1);
-        mapCalculator.createRoute(start, stop);
+        var bikeStrategy= new BikeStrategy();
+        var mapCreator1 = new MapCreator(bikeStrategy);
+        mapCreator1.createRoute(start, stop);
 
-        var strategy2 = new CarStrategy();
-        var mapCalculator2 = new MapCreator(strategy2);
-        mapCalculator2.createRoute(start, stop);
+        var carStrategy = new CarStrategy();
+        var mapCreator2 = new MapCreator(carStrategy);
+        mapCreator2.createRoute(start, stop);
 
-        var strategy3 = new WalkStrategy();
-        var mapCalculator3 = new MapCreator(strategy3);
-        mapCalculator3.createRoute(start, stop);
+        var walkStrategy = new WalkStrategy();
+        var mapCreator3 = new MapCreator(walkStrategy);
+        mapCreator3.createRoute(start, stop);
 }
 }
