@@ -2,9 +2,11 @@ package com.company;
 
 import lombok.Builder;
 import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 
 @Getter
+@Setter
 @ToString
 public class Circle extends Shape {
     public int radius;
@@ -31,6 +33,24 @@ public class Circle extends Shape {
 
     @Override
     public Shape cloning() throws CloneNotSupportedException {
-        return (Circle) this.clone();  //shallowCopy
+        return (Circle) this.clone();  //deepCopy
+    }
+
+    @Override
+    //deepCopy
+    public Object clone() {
+        Circle circle = null;
+        try {
+            //Note that the super.clone() call returns a shallow copy of an object,
+            // but we set deep copies of mutable fields manually, so the result is correct:
+            circle = (Circle) super.clone();
+        } catch (CloneNotSupportedException e) {
+            //shallow clone
+            circle = new Circle(
+                    this.radius, this.x, this.y, this.getBorder());
+        }
+        //deep cloce
+        circle.border = (Border) this.border.clone();
+        return circle;
     }
 }
