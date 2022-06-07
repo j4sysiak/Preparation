@@ -28,7 +28,7 @@ public class Triangle extends Shape {
     }
 
     @Override
-    public Shape cloning() throws CloneNotSupportedException {
+    public Shape cloning() {
         return (Triangle) this.clone();  //deepCopy
     }
 
@@ -41,11 +41,11 @@ public class Triangle extends Shape {
             // but we set deep copies of mutable fields manually, so the result is correct:
             triangle = (Triangle) super.clone();
         } catch (CloneNotSupportedException e) {
-            //shallow clone
+            //only shallow clone
             triangle = new Triangle(
                     this.x, this.y, this.getBorder());
         }
-        //deep cloce
+        //deep clone
         triangle.border = (Border) this.border.clone();
         return triangle;
     }

@@ -32,7 +32,7 @@ public class Circle extends Shape {
     }
 
     @Override
-    public Shape cloning() throws CloneNotSupportedException {
+    public Shape cloning() {
         return (Circle) this.clone();  //deepCopy
     }
 
@@ -45,11 +45,11 @@ public class Circle extends Shape {
             // but we set deep copies of mutable fields manually, so the result is correct:
             circle = (Circle) super.clone();
         } catch (CloneNotSupportedException e) {
-            //shallow clone
+            //only shallow clone
             circle = new Circle(
                     this.radius, this.x, this.y, this.getBorder());
         }
-        //deep cloce
+        //deep clone
         circle.border = (Border) this.border.clone();
         return circle;
     }
