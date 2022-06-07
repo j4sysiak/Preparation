@@ -5,15 +5,15 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Triangle extends Shape {
+public class Rectangle extends Shape {
 
     @Override
     public void render() {
-        System.out.println("Render Triangle ...");
+        System.out.println("Render Rectangle ...");
     }
 
     @Override
     public Shape cloning() throws CloneNotSupportedException {
-       return (Triangle) this.clone();  //shallowCopy
+       return (Rectangle) this.clone();  //shallowCopy
     }
 }
