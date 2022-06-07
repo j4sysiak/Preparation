@@ -9,5 +9,10 @@ public class Client {
     */
 
     public static void main(String[] args) {
+
+        Border border = Border.builder()
+                .color("Red")
+                .size("2px")
+                .build();
     }
 }

@@ -3,8 +3,6 @@ package com.company;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.swing.border.Border;
-
 @Getter
 @Setter
 public abstract class Shape {
