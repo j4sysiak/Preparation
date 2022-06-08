@@ -12,6 +12,6 @@ public class MapCreator {
     }
 
     public void createRoute(Coordinate start, Coordinate stop) {
-        iRouteStrategy.CreateRoute(start, stop);
+        iRouteStrategy.createRoute(start, stop);
     }
 }
