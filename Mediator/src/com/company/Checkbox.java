@@ -8,6 +8,6 @@ public class Checkbox extends Component {
     }
 
     public void saveValue() {
-        System.out.println("Checkbox saveValue ...");
+        System.out.println("Checkbox value save ...");
     }
 }

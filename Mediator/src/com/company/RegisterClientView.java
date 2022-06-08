@@ -9,16 +9,16 @@ public class RegisterClientView implements IMediator {
         this.checkbox = checkbox;
         this.button = button;
 
-        this.button.setMediator(this);
         this.checkbox.setMediator(this);
+        this.button.setMediator(this);
+
     }
 
     @Override
     public void notify(Component sender, String event) {
-
         if (event == "checkboxSelected") {
             this.button.render();
-        } else if (event == "cklick") {
+        } else if (event == "click") {
             this.checkbox.saveValue();
         }
     }

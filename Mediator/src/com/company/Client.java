@@ -9,5 +9,12 @@ public class Client {
 //        Dobrym przykłądem może być wieża kontroli lotów
 
 
+        Button button = new Button();
+        Checkbox checkbox = new Checkbox();
+
+        new RegisterClientView(checkbox, button);
+
+        button.click();
+        checkbox.select();
     }
 }
