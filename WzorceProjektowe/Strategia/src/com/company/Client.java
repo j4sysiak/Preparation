@@ -9,7 +9,7 @@ public class Client {
         var start = new Coordinate();
         var stop = new Coordinate();
 
-        // Obrazowo Google map - trzy warianty: samochód, pieszo, rower
+        // Obrazowo Google map - trzy strategie wyboru drogi do jednego celu: samochód, pieszo, rower
 
         // strategia pozwala na używanie różnych wariantów jednego algorytmu
         // w obrębie danego obiektu w trakcie działania programu
