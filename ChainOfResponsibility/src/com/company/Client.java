@@ -27,7 +27,7 @@ public class Client {
         authorizationHandler.handle(requestContext);
 
         System.out.println("IsSuccessful: " + requestContext.response.isSuccessful);
-        System.out.println("IsSuccessful: " + requestContext.response.message);
-        System.out.println("IsSuccessful: " + requestContext.response.data);
+        System.out.println("Message: " + requestContext.response.message);
+        System.out.println("Data: " + requestContext.response.data);
     }
 }

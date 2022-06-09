@@ -32,7 +32,7 @@ public class AuthorizationHandler extends BaseHandler {
         }
         // sprawdzamy, czy w słowniku istnieje taki obiekt
         if (Objects.equals(entityOwners.get(requestContext.request.entityId), requestContext.request.userId)) {
-            next.handle(requestContext);
+            super.next.handle(requestContext);
             return;
         }
         requestContext.response.isSuccessful = false;

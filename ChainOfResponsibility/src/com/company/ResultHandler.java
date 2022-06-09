@@ -12,7 +12,8 @@ public class ResultHandler extends BaseHandler {
     @Override
     public void handle(RequestContext requestContext) {
         System.out.println("ResultHandler");
-        requestContext.response.isSuccessful = false;
-        requestContext.response.data = "some value";
+        requestContext.response.isSuccessful = true;
+        requestContext.response.message = "MEEEEEEEEEEEEE";
+        requestContext.response.data = "Return Some value";
     }
 }
