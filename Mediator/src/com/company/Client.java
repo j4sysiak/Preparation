@@ -4,8 +4,8 @@ public class Client {
 
     public static void main(String[] args) {
 
-//        Behawioralny wzorzec projektowy, pozwalający zredukować liczbę zależności pomiędzy różnymi obiektami.
-//        Ogranicza bezpośrednią komunikację pomiędzy obiektami i wymusza komunikację miedzy nimi za pomocą obiektu zwanego mediatorem.
+//        Mediator - behawioralny wzorzec projektowy, pozwalający zredukować liczbę zależności pomiędzy różnymi obiektami.
+//        Ogranicza bezpośrednią komunikację pomiędzy obiektami input-button-checkbox i wymusza komunikację miedzy nimi za pomocą obiektu zwanego mediatorem.
 //        Dobrym przykłedem może być wieża kontroli lotów
 
 
@@ -16,12 +16,12 @@ public class Client {
         new RegisterClientView(checkbox, button, input);
 
         button.click();
-        button.render();
+        //button.render(); // metoda nie podpięta do mediatora
 
         checkbox.select();
-        checkbox.saveValue();
+        //checkbox.saveValue();  // metoda nie podpięta do mediatora
 
         input.select();
-        input.saveValue();
+        //input.saveValue();  // metoda nie podpięta do mediatora
     }
 }

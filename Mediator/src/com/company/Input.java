@@ -8,6 +8,6 @@ public class Input extends Component {
     }
 
     public void saveValue() {
-        System.out.println("Inserted Text seve...");
+        System.out.println("Save Inserted Text...");
     }
 }
