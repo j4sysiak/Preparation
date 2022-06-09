@@ -13,7 +13,7 @@ public class ResultHandler extends BaseHandler {
     public void handle(RequestContext requestContext) {
         System.out.println("ResultHandler");
         requestContext.response.isSuccessful = true;
-        requestContext.response.message = "MEEEEEEEEEEEEE";
+        requestContext.response.message = "OK";
         requestContext.response.data = "Return Some value";
     }
 }
