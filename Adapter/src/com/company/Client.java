@@ -13,6 +13,11 @@ public class Client {
     @Test
     public void test() {
 
-        INotificationSender iNotificationSender =
+        var iNotificationSender = new EmailSender();
+        iNotificationSender.sendNotification(1, Notification.builder().
+                Title("TestTitle")
+                .Body("TestBody")
+                .build()
+        );
     }
 }
