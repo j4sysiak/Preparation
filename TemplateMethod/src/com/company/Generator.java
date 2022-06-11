@@ -10,14 +10,19 @@ public abstract class Generator {
         sendFile();
     }
 
+    //każda metoda wysyłki ma inny sposób przygotowania danych
     protected abstract void preparedData();
+
+    //każda metoda wysyłki ma inny sposób generowania pliku
     protected abstract void generateFile();
 
+    //dla wszystkich metod wysyłki taka sama
     protected void getData() {
-        System.out.println("Base get data ...");
+        System.out.println("Base: Get Data ...");
     }
 
+    //dla wszystkich metod wysyłki taka sama
     protected void sendFile() {
-        System.out.println("Sending generated report");
+        System.out.println("Base: Sending generated report");
     }
 }
