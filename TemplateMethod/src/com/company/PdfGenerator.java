@@ -1,6 +1,7 @@
 package com.company;
 
 public class PdfGenerator extends Generator {
+
     @Override
     protected void preparedData() {
         System.out.println("PdfGenerator: prepare data for PDF ...");

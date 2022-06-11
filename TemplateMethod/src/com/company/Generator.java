@@ -2,6 +2,7 @@ package com.company;
 
 public abstract class Generator {
 
+    // szkielet algorytmu
     //to jest metoda szablonowa - wykonywana będzie dla każdego z trzech algorytmów (pdf, cvs, excel)w poszczególnych klasach
     public void generateReport() {
         getData();
@@ -16,7 +17,7 @@ public abstract class Generator {
     //każda metoda wysyłki ma inny sposób generowania pliku
     protected abstract void generateFile();
 
-    //dla wszystkich metod wysyłki taka sama
+    //dla pdf specyficzna metoda wysyłki (@ w pdfGenerator) dla pozostałych taka sama - tzn excel i csv korzysta z tej metody
     protected void getData() {
         System.out.println("Base: Get Data ...");
     }
