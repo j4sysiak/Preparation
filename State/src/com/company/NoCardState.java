@@ -6,10 +6,11 @@ public class NoCardState extends State {
         super(context);
     }
 
+    //zmieniaczka stanów
     @Override
     public void insertCard() {
         System.out.println("Card inserted");
-        // context.changeState -> CardInsertedState
+        context.changeState(new CardInsertedState(context)); // powstaje nowy stan -> CardInsertedState
     }
 
     @Override

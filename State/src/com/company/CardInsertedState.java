@@ -14,17 +14,17 @@ public class CardInsertedState extends State {
     @Override
     public void ejectCard() {
         System.out.println("Card ejected");
-        //context changeState NoCardState
+        context.changeState(new NoCardState(context)); // powstaje nowy stan -> NoCardState
     }
 
     @Override
     public void insertPin(int pin) {
         if (pin == 8888) {
             System.out.println("Correct PIN inserted");
-            //context changeState to PinInsertedState
+            context.changeState(new PinInsertedState(context)); // powstaje nowy stan -> PinInsertedState
         } else {
             System.out.println("Incorrect PIN inserted");
-            //context changeState NoCardState
+            context.changeState(new NoCardState(context));   // powstaje nowy stan -> NoCardState
         }
     }
 
