@@ -27,7 +27,7 @@ public class Client {
         context.insertPin(1111);
         context.insertCard();
         context.insertPin(8888);
-        context.withdrawalCash(2001);
+        context.withdrawalCash(100);
         context.insertCard();
     }
 }
