@@ -2,6 +2,7 @@ package com.company;
 
 import org.junit.jupiter.api.Test;
 
+//klient fasady
 public class Client {
 
     @Test
@@ -20,7 +21,11 @@ public class Client {
     Jeżeli zajdzie konieczność zmiana implementacji jakiegokolwiek typu skanowania, to korzystając z fasady
     nie będzie konieczności zmiany implementacji klienta (klasa Client)
 */
+
+        //tworzymy fasadę
         var scanFasade = new ScanFasade();
+
+        //korzystamy z fasady
         scanFasade.scan("http://jdhasdhaskh");  //publiczny interface fasady
     }
 }
