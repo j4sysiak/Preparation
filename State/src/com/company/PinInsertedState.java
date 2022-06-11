@@ -14,7 +14,7 @@ public class PinInsertedState extends State {
     @Override
     public void ejectCard() {
         System.out.println("Card ejected");
-        //context changeState NoCardState
+        context.changeState(new NoCardState(context));  // powstaje nowy stan NoCardState
     }
 
     @Override
@@ -30,10 +30,10 @@ public class PinInsertedState extends State {
             System.out.println("You have withdrawal " + amount + " from the machine");
             context.availebleCash -= amount;
             if (context.availebleCash == 0) {
-                //context changeState NoCashState
+                context.changeState(new NoCashState(context)); // powstaje nowy stan NoCashState
             } else {
                 System.out.println("Card ejected");
-                //context changeState to NoCardState
+                context.changeState(new NoCardState(context)); // powstaje nowy stan NoCardState
             }
         }
     }
