@@ -32,7 +32,8 @@ public class PinInsertedState extends State {
             if (context.availebleCash == 0) {
                 context.changeState(new NoCashState(context)); // powstaje nowy stan NoCashState
             } else {
-                System.out.println("Card ejected");
+                //wyjmujemy już kartę
+                System.out.println("Card will be ejected");
                 context.changeState(new NoCardState(context)); // powstaje nowy stan NoCardState
             }
         }

@@ -1,8 +1,14 @@
 package com.company;
 
 // jej zadaniem będzie oddelegowanie knkretnej implementacji do poszczególnego stanu
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class Context {
-    public int availebleCash=200;
+    public int availebleCash=2000;
 
     private State currentState;
 

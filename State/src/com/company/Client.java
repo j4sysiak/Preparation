@@ -13,10 +13,21 @@ Rozdzielamy implementację od stanu bankomatu
 Wprowadzamy kontekst, który będzie w stanie trzymać aktualny stan bankomatu oraz będzie w stanie zmienić go w zależności od wykonanej akcji.
 */
 
+import org.junit.jupiter.api.Test;
+
 public class Client {
 
-    public static void main(String[] args) {
+    @Test
+    public void test (){
 
+        var context = new Context();
 
+        context.ejectCard();
+        context.insertCard();
+        context.insertPin(1111);
+        context.insertCard();
+        context.insertPin(8888);
+        context.withdrawalCash(2001);
+        context.insertCard();
     }
 }
