@@ -28,7 +28,7 @@ public class Client {
                         .password("test@wp.pl").phoneNumber("13579").build()
         );
 
-        //SmslNotification
+        //SmsNotification
         AuthenticationManager.builder().iNotificationSender(new SmslNotification()).build().authenticate(
                 User.builder().name("Jacek Nowak").email("test@wp.pl")
                         .password("test@wp.pl").phoneNumber("123456").build()

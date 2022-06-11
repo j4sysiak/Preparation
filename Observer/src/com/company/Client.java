@@ -4,7 +4,7 @@ public class Client {
 
     public static void main(String[] args) {
 
-        // wzorzec Obserwator używamy, jeżeli zmiany jednego obiektu mogą wymmagać zmian w innych obiektach
+        // wzorzec Obserwator używamy, jeżeli zmiany jednego obiektu mogą wymagać zmian w innych obiektach,
         // a konkretny zestaw obiektów nie jest nam znany na początku lub jego stan się zmienia
 
         var subscriber1 = new Subscriber("subscriber1");

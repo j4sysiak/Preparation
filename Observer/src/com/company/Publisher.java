@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 public class Publisher {
 
     // Mając subsciber'a tworzymy klasę Publishera notyfikacji.
-    // Publisher będzię w sobie agregowała subscibentów, czyli posiada listę subscribentó i będzie tą listę modyfikował
+    // Publisher będzię w sobie agregował subscibentów, czyli posiada listę subscribentów i będzie tą listę modyfikował
     // dodawał / usuwał z listy subscybentów do notyfikacji
 
 
