@@ -1,12 +1,15 @@
 package com.company;
 
+import org.junit.jupiter.api.Test;
+
 import java.util.List;
 
 import static java.time.LocalDateTime.now;
 
 public class Client {
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
 
         /*
         Można tworzyć etapami złożone obiekty.
