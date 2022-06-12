@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 public class Client {
 
+
     /*
     Kreacyjny wzorzec projektowy, którego celem jest ograniczenie możliwości tworzenia obiektów danej klasy do jednej instancji.
     Może być tylko jeden obiekt tej klasy.
