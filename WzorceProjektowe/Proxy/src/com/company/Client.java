@@ -1,5 +1,6 @@
 package com.company;
 
+
 /*
 Strukturalny wzorzec projektowy, którego celem jest stworzenie obiektu zastępczego w miejsce innego obiektu.
 Pełnomocnik kontroluje dostęp do pierwotnego obiektu umożliwiając wykonanie czynności po lub przed przekazaniem do niego zapytania.
@@ -22,7 +23,26 @@ W tym przykładzie zadaniem naszego Proxy będzie udostępnienie tego samego int
 
 */
 
+import org.junit.jupiter.api.Test;
+
+
 public class Client {
+
+    @Test
+    public void test() {
+
+        // bez Proxy
+         YouTubeService youTubeService = new YouTubeService();
+//        youTubeService.getVideo(10);
+//        youTubeService.getVideo(10);
+
+        // z Proxy
+        ProxyYouTubeService proxyYouTubeService = new ProxyYouTubeService(youTubeService);
+        proxyYouTubeService.getVideo(11);
+        proxyYouTubeService.getVideo(101);
+    }
+
+
 
 }
 
