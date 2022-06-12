@@ -19,10 +19,9 @@ Zaczniemy od implementacji pizzy, następnie będziemy w stanie nałożyć już 
 Te trzy klasy (upiększające bazę "pizza") będą dziedziczyć po klasie PizzaDecorator, a więc możemy je traktować jako obiekt bazowy IPizza.
 W ten sposób tworząc bazową pizzę samego ciasta, będziemy mogli nakładać nieskończoną liczbę różnych składników ("dekorować pizzę") poprzez opakowanie na kilku poziomach konkretne dekoratory.
 Kalkulacja ceny - na każdym poziomie ta cena będzie się powiększać o konkretną wartość, czyli pizze bazowe mają wartość zahardkodowaną a następnie poprzez dodawanie składników będziemy zwiększać tą bazową wartość pizzy.
-
 */
 public class Client {
-    
+
     @Test
     public void test() {
 
