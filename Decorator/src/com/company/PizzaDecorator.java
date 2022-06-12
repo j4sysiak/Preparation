@@ -12,7 +12,7 @@ public abstract class PizzaDecorator implements IPizza {
     }
 
     // każda implementacja dekoratora (HamPizzaDecorator, CheesePizzaDecorator, SelamiPizzaDecorator)
-    //  musi wprowadzić własną mplementację tej właśnie metody
+    //  musi wprowadzić własną mplementację tej właśnie metody tzn. muszą te klasy nadpisać @Override tą metodę
     public double calculatePrice() {
         return iPizza.calculatePrice();
     }
