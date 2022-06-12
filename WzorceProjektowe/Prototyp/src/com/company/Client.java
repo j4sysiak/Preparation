@@ -1,5 +1,7 @@
 package com.company;
 
+import org.junit.jupiter.api.Test;
+
 public class Client {
 
     /*
@@ -9,7 +11,8 @@ public class Client {
       bez tworzenia zależności pomiędzy kodem programu, a klasami obiektów.
     */
 
-    public static void main(String[] args) throws CloneNotSupportedException {
+    @Test
+    public void test() throws CloneNotSupportedException {
 
         Circle c1 = Circle.builder()
                 .radius(5)
