@@ -4,6 +4,7 @@ public class Client {
 
     public static void main(String[] args) {
 
+
     /*
     Celem jest dostarczenie interfejsu do tworzenia różnych obiektów jednego typu
     dla tej samej rodziny klas bez specyfikowania ich konkretnych klas - ale nie chcemy, żeby ściśle był powiązany z jakimś konkretnym typem.
