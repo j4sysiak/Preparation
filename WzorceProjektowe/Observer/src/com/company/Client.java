@@ -7,6 +7,7 @@ public class Client {
     @Test
     public void main() {
 
+
         // wzorzec Obserwator używamy, jeżeli zmiany jednego obiektu mogą wymagać zmian w innych obiektach,
         // a konkretny zestaw obiektów nie jest nam znany na początku lub jego stan się zmienia
 
