@@ -8,6 +8,7 @@ import lombok.ToString;
 @ToString
 public class Rectangle extends Shape {
 
+
     @Builder
     public Rectangle(int x, int y, Border border) {
         super(x, y, border);
