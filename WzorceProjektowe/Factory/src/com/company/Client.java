@@ -1,10 +1,11 @@
 package com.company;
 
-import com.company.mdel.Circle;
+import org.junit.jupiter.api.Test;
 
 public class Client {
 
-    public static void main(String[] args) throws Exception {
+    @Test
+    public void test() throws Exception {
 
     /*
     Udostępniany jest interface IShape (lub lasa abstrakcyjna Shape) do tworzenia obiektów w ramach klasy bazowej.
@@ -13,6 +14,7 @@ public class Client {
     Fabryka oddziela kod implementacyjny (tworzący dany obiekt) od kodu, który korzysta z tego obiektu - Clienta.
     Dodanie nowego kształtu nie powoduje zmiany kodu klienta (klasa Client) - dodajemy tylko w fabryce nowy case i budujemy klasę nowego obiektu.
     */
+
 
         var shapeFactory = new ShapeFactory();
 
