@@ -26,5 +26,46 @@ public class Client {
     @Test
     public void test() {
 
+        var pizzaBase = new MediumPizza();
+
+        // bazową pizzę dekorujemy serem
+        var mediumPizzaWithCheese = new CheesePizzaDecorator(pizzaBase);
+
+        System.out.println("Cena pizzy typu (mediumPizzaWithCheese): " + mediumPizzaWithCheese.calculatePrice());
+
+        //dorzucamy salami
+        var p2 = new SalamiPizzaDecorator(mediumPizzaWithCheese);
+        System.out.println("Cena pizzy typu (ser + salami): " + p2.calculatePrice());
+
+        //dorzucamy kolejne salami
+        var p3 = new SalamiPizzaDecorator(p2);
+        System.out.println("Cena pizzy typu (ser + 2 X salami): " + p3.calculatePrice());
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
