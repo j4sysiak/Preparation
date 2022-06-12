@@ -1,5 +1,7 @@
 package com.company;
 
+import org.junit.jupiter.api.Test;
+
 public class Client {
 
     /*
@@ -11,7 +13,8 @@ public class Client {
     Wady: łamie zasady SOLID: SingleResponsibility, OpenClose i może utrudnić pisanie testów jednostkowych
     */
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
 
         // musi być prywatny konstruktor Configuration, żeeby nie było można tworzyć obiektów Configuration
         // var cfg = new Configuration();
