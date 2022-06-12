@@ -9,7 +9,6 @@ public class Client {
 
     Zalety: jeden globalny obiekt danej klasy - globalny dostęp do niego (może być używany do zapewnienia transakcyjności, persystencji)
     Wady: łamie zasady SOLID: SingleResponsibility, OpenClose i może utrudnić pisanie testów jednostkowych
-
     */
 
     public static void main(String[] args) {
