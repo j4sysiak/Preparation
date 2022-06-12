@@ -10,7 +10,6 @@ public class Client {
 
     @Test
     public void test() {
-
         /*
         Można tworzyć etapami złożone obiekty.
         Rozdziela sposób tworzenia obiektów od ich reprezentacji.
