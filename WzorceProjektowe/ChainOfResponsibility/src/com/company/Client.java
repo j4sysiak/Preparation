@@ -1,10 +1,11 @@
 package com.company;
 
+import org.junit.jupiter.api.Test;
+
 public class Client {
 
-    public static void main(String[] args) {
-
-        
+    @Test
+    public void test() {
      var requestContext = RequestContext.builder()
              .request(Request.builder().entityId(101).userId(14).userRole("User").build())
              .response(Response.builder().build())
