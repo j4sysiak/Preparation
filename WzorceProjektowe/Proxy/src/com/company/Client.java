@@ -20,8 +20,8 @@ byte[] getVideo(int id);
 Klasa Proxy YouTubeService, która implementuje ten sam service i dodatkowo będzie agregować ten konkretny YouTubeService.
 Client: korzysta z abstrakcji IYouTubeService nie wiedząc, że korzysta z naszego Proxy, które ułatwi pracę i zoptymalizuje pracę.
 W tym przykładzie zadaniem naszego Proxy będzie udostępnienie tego samego interfejsu jakim jest pobranie video z tym, że w sposób kontrolowany tzn. jeżeli już mamy w pamięci video pod danym id to nie pobieramy go ponownie, tylko wysyłamy te z pamięci.
-
 */
+
 
 import org.junit.jupiter.api.Test;
 
@@ -31,7 +31,7 @@ public class Client {
     @Test
     public void test() {
 
-        
+
         // bez Proxy
          YouTubeService youTubeService = new YouTubeService();
 //        youTubeService.getVideo(10);
