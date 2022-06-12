@@ -1,8 +1,11 @@
 package com.company;
 
+import org.junit.jupiter.api.Test;
+
 public class Client {
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
 
 
 //        Mediator - behawioralny wzorzec projektowy, pozwalający zredukować liczbę zależności pomiędzy różnymi obiektami.
