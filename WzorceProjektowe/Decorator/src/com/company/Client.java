@@ -22,7 +22,7 @@ Kalkulacja ceny - na każdym poziomie ta cena będzie się powiększać o konkre
 
 */
 public class Client {
-
+    
     @Test
     public void test() {
 
