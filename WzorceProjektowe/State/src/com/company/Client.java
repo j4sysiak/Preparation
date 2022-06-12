@@ -13,7 +13,6 @@ Rozdzielamy implementację od stanu bankomatu
 Wprowadzamy kontekst, który będzie w stanie trzymać aktualny stan bankomatu oraz będzie w stanie zmienić go w zależności od wykonanej akcji.
 */
 
-
 import org.junit.jupiter.api.Test;
 
 public class Client {
