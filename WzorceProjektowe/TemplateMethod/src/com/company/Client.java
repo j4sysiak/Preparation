@@ -1,5 +1,7 @@
 package com.company;
 
+import org.junit.jupiter.api.Test;
+
 public class Client {
 
 /*
@@ -12,7 +14,8 @@ Metoda wspólna jako abstract a specyficzne działanie programu pod konkretny sp
 Te specyficzne metody definiujemy we wspólnej klasie abstrakcyjnej. Każda z podklas będzie musiała w specyficzny dla siebie sposób zaimplementować rozwiązanie.
 */
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
 
         System.out.println("**** PDF ****");
         var pdfGenerator = new PdfGenerator();
