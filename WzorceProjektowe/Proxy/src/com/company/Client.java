@@ -1,6 +1,5 @@
 package com.company;
 
-
 /*
 Strukturalny wzorzec projektowy, którego celem jest stworzenie obiektu zastępczego w miejsce innego obiektu.
 Pełnomocnik kontroluje dostęp do pierwotnego obiektu umożliwiając wykonanie czynności po lub przed przekazaniem do niego zapytania.
@@ -22,18 +21,15 @@ Client: korzysta z abstrakcji IYouTubeService nie wiedząc, że korzysta z nasze
 W tym przykładzie zadaniem naszego Proxy będzie udostępnienie tego samego interfejsu jakim jest pobranie video z tym, że w sposób kontrolowany tzn. jeżeli już mamy w pamięci video pod danym id to nie pobieramy go ponownie, tylko wysyłamy te z pamięci.
 */
 
-
 import org.junit.jupiter.api.Test;
-
 
 public class Client {
 
     @Test
     public void test() {
 
-
         // bez Proxy
-         YouTubeService youTubeService = new YouTubeService();
+        YouTubeService youTubeService = new YouTubeService();
 //        youTubeService.getVideo(10);
 //        youTubeService.getVideo(10);
 
@@ -43,29 +39,4 @@ public class Client {
         proxyYouTubeService.getVideo(101);
     }
 
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
