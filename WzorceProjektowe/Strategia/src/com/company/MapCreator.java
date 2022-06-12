@@ -1,7 +1,5 @@
 package com.company;
 
-import com.company.model.Coordinate;
-
 public class MapCreator {
 
     private IRouteStrategy iRouteStrategy;  // wartość tego wstrzykujemy przez konstruktor do MapCreator

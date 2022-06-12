@@ -1,10 +1,11 @@
 package com.company;
 
-import com.company.model.Coordinate;
+import org.junit.jupiter.api.Test;
 
 public class Client {
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
 
         var start = new Coordinate();
         var stop = new Coordinate();
