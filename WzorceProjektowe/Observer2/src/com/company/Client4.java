@@ -1,9 +1,6 @@
 package com.company;
 
-public class Client implements IObserver {
-
-    //Client wykorzystuje polimorfizm - jest jednocześnie klientem i Observerem
-
+public class Client4 implements IObserver {
     @Override
     public void update() {
         System.out.println("Zakończono wątek! " + getClass().getName());

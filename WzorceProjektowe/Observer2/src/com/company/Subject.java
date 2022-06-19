@@ -9,7 +9,6 @@ public class Subject {
     // i jeżeli np. wątek zakończy się
     // to observer poinformuje o tym
     public Subject(IObserver iObserver) {
-        System.out.println("ssssssss");
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
