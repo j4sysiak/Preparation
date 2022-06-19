@@ -1,6 +1,6 @@
 package com.company;
 
-public interface ISubscriber {
+public interface IObserver {
 
     void update(String context);
 }

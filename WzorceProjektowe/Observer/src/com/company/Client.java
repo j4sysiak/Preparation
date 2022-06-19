@@ -11,18 +11,18 @@ public class Client {
         // wzorzec Obserwator używamy, jeżeli zmiany jednego obiektu mogą wymagać zmian w innych obiektach,
         // a konkretny zestaw obiektów nie jest nam znany na początku lub jego stan się zmienia
 
-        var subscriber1 = new Subscriber("subscriber1");
-        var subscriber2 = new Subscriber("subscriber2");
-        var subscriber3 = new Subscriber("subscriber3");
+        var observer1 = new Observer("observer1");
+        var observer2 = new Observer("observer2");
+        var observer3 = new Observer("observer3");
 
         var publish = new Publisher();
-        publish.subscribe(subscriber1);
-        publish.subscribe(subscriber2);
-        publish.subscribe(subscriber3);
+        publish.subscribe(observer1);
+        publish.subscribe(observer2);
+        publish.subscribe(observer3);
 
         publish.notify("wiadomość 1");
 
-        publish.unSubscribe(subscriber3);
+        publish.unSubscribe(observer3);
 
         publish.notify("wiadomość 2");
     }

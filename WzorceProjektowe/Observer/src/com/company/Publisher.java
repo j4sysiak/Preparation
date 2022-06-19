@@ -2,7 +2,6 @@ package com.company;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Publisher {
 
@@ -11,19 +10,19 @@ public class Publisher {
     // dodawał / usuwał z listy subscybentów do notyfikacji
 
 
-    private List<ISubscriber> iSubscribers = new ArrayList();
+    private List<IObserver> iobservers = new ArrayList();
 
 
-    public void subscribe(ISubscriber iSubscriber) {
-        iSubscribers.add(iSubscriber);
+    public void subscribe(IObserver iobserver) {
+        iobservers.add(iobserver);
     }
 
-    public void unSubscribe(ISubscriber iSubscriber) {
-        iSubscribers.remove(iSubscriber);
+    public void unSubscribe(IObserver iobserver) {
+        iobservers.remove(iobserver);
     }
 
     public void notify(String context) {
-        iSubscribers.forEach(s -> s.update(context));
+        iobservers.forEach(s -> s.update(context));
     }
 
 }
