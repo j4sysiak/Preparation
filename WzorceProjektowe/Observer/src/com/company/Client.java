@@ -20,10 +20,12 @@ public class Client {
         publish.subscribe(observer2);
         publish.subscribe(observer3);
 
+        // powiadamamy wszystkich obserwatorów
         publish.notify("wiadomość 1");
 
         publish.unSubscribe(observer3);
 
+        // powiadamamy wszystkich obserwatorów
         publish.notify("wiadomość 2");
     }
 }
