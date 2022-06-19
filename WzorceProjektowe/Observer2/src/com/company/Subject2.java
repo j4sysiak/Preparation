@@ -28,7 +28,7 @@ public class Subject2 {
                         e.printStackTrace();
                     }
                 }
-                // o zakończonej pracy powiadamiamy wszystkich observerów
+                // o zakończonej pracy powiadamiamy wszystkich observerów po kolei
                 listOfObservers.stream()
                         .forEach(observer -> observer.update());
             }
