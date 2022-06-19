@@ -2,6 +2,7 @@ package pl.bykowski.designpatternobserver;
 
 public class User implements MailObserver {
 
+
     private String name;
 
     public User(String name) {
