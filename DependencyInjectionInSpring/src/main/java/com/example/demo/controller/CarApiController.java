@@ -40,6 +40,7 @@ public class CarApiController {
         return "Hello";
     }
 
+
     @GetMapping("/say-hello")
     public String seyHelloWithParam(@RequestParam String name) {
         return "Hello " + name;
