@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+//obiekt takiej klasy to Singleton - tylko jedna instancja może być w obrębie całego procesu
+//to jest Beat Springa zarządzany przez Context Springa
 @Service
 public class CarManager {
 
