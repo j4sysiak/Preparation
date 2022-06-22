@@ -11,6 +11,9 @@ public class Client {
     @Test
     public void test() {
 
+        // IService iService = new ServiceImpl();  nie stosujemy bezpośredniego strzału do metod ServiceImpl
+        // w obiekcie Proxy tworzymy dopiero obiekt klasy ServiceImpl (lazy loading) - ponieważ nie musimy tego wcześniej robić i zabierać zasoby
+        // tworzymy taki obiekt jak go potrzebujemy - przy wywołaniu jego metody (w warstwie pośredniej Proxy)
         IService iService = new Proxy();
         iService.method();
     }
