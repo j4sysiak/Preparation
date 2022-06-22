@@ -1,5 +1,6 @@
-package com.example.demo;
+package com.example.demo.service;
 
+import com.example.demo.model.Car;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.stereotype.Service;
@@ -17,10 +18,13 @@ public class CarService {
 
     private List<Car> carList;
 
-
     public CarService() {
         this.carList = new ArrayList();
         carList.add(new Car("Polo", "VW"));
         carList.add(new Car("Starlet", "Toyota"));
+    }
+
+    public boolean addCar(Car car) {
+        return carList.add(car);
     }
 }

@@ -1,8 +1,9 @@
-package com.example.demo;
+package com.example.demo.controller;
 
+import com.example.demo.service.CarService;
+import com.example.demo.model.Car;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -39,8 +40,18 @@ public class CarApiController {
         return "Hello";
     }
 
+    @GetMapping("/say-hello")
+    public String seyHelloWithParam(@RequestParam String name) {
+        return "Hello " + name;
+    }
+
     @GetMapping("/get-cars")
     public List<Car> getCarList() {
         return carService.getCarList();
+    }
+
+    @PostMapping("/add-car")
+    public boolean addCar(@RequestBody Car car) {
+         return carService.addCar(car);
     }
 }

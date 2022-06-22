@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.model;
 
 import lombok.*;
 
@@ -9,9 +9,13 @@ import lombok.*;
 @Setter
 @ToString
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
 public class Car {
+
+    // musi być konstruktor bezparametrowy żeby rest-api chodziło
+    // muszą być też settery i gettery do wszystkich pól
+    public Car() {}
+
     private String type;
     private String make;
 }
