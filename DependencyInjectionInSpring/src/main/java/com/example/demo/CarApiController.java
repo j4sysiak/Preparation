@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 public class CarApiController {
 
@@ -14,12 +16,31 @@ public class CarApiController {
     //w klasie CarApiController widzi adnotację na polu prywatnym @Autowired - szuka w Context Springa klasę, która jest przez niego zarządzana
     // i widzi ją tzn. CarSerwice - bierze ją i wstrzykuje do klasy CarApiController
 
-    @Autowired
+    // rodzaje wstrzykiwania: do pola, konstruktora i settera
+
+    //wstrzykiwanie do pola
+    //@Autowired
     private CarService carService;
 
+    //lub wstrzykiwanie poprzez settera
+    //@Autowired
+    public void setCarService(CarService carService) {
+        this.carService = carService;
+    }
+
+    //lub wstrzykiwanie do konstruktora - zalecana metoda wstrzykiwania
+    @Autowired
+    public CarApiController(CarService carService) {
+        this.carService = carService;
+    }
 
     @GetMapping("/hello")
     public String seyHello() {
         return "Hello";
+    }
+
+    @GetMapping("/get-cars")
+    public List<Car> getCarList() {
+        return carService.getCarList();
     }
 }
