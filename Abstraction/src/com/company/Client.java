@@ -6,6 +6,6 @@ public class Client {
 
         /*jedyna publiczna metoda*/
         /*sendEmail wywoła pozostałe metody privat : te metody są już dla nas tylko abstrakcyjne */
-        EmailSender.create().sendEmail();
+        EmailSender.create().sendEmail("jacek@wp.pl", "myMessage", "bla bla bla");
     }
 }

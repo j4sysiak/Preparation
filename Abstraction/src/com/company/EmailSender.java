@@ -14,10 +14,10 @@ public class EmailSender {
     }
 
     /*jedyna publiczna metoda*/
-    public void sendEmail() {
+    public void sendEmail(String email, String title, String body) {
         connectToSmtpServer();
         insertCredentials();
-        sendMyEmail("jacek@wp.pl", "myMessage", "bla bla bla");
+        sendMyEmail(email, title, body);
         disconnect();
     }
 
