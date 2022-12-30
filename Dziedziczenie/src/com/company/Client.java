@@ -16,7 +16,7 @@ public class Client { ;
         // bankAccount.requestPersolanLoan();
 
         CompanyBankAccount bankAccount = new CompanyBankAccount(BigDecimal.valueOf(1999) /*, "llll"*/);
-        bankAccount.takeLoan(BigDecimal.valueOf(300000));
+        bankAccount.takeCompanyLoan(BigDecimal.valueOf(300000));
 
         bankAccount.setBalance(BigDecimal.valueOf(1000));
         System.out.println(bankAccount.getBalance());

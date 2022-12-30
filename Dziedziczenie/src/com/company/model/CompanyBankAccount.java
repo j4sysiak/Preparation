@@ -14,7 +14,7 @@ public class CompanyBankAccount extends BankAccount {
         //this.label = label;
     }
 
-    public void takeLoan(BigDecimal loan) {
+    public void takeCompanyLoan(BigDecimal loan) {
         System.out.println("Loan TakeLoan ...");
     }
 }
