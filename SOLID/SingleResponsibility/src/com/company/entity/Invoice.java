@@ -26,6 +26,8 @@ public class Invoice {
                 .build();
     }
 
+    /* SingleResponsibility */
+    /* mamy tutaj tylko jedną odpwiedzialność dla klasy Invoice: zliczać total na fakturze -  calculateTotal(...) */
     public static float calculateTotal(Collection<LineItem> lineItems) {
         return lineItems.stream()
                 .map(lineItem -> lineItem.price)
