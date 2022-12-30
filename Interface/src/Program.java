@@ -1,4 +1,4 @@
-public class Main {
+public class Program {
 
     static IPrinter getPrinter(Boolean x) {
         if (x){
