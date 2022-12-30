@@ -1,5 +1,17 @@
 public class Main {
+
+    static IPrinter getPrinter(Boolean x) {
+        if (x){
+            return new HP();
+        }
+        return new Cannon();
+    }
+
+
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        IPrinter myUsedPrinter = getPrinter(false);
+        System.out.println("myUsedPrinter: " + myUsedPrinter.getClass());
+
+        myUsedPrinter.print("bla bla bla ...");
     }
 }
