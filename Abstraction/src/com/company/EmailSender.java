@@ -17,12 +17,12 @@ public class EmailSender {
     public void sendEmail() {
         connectToSmtpServer();
         insertCredentials();
-        sendMyEmail();
+        sendMyEmail("jacek@wp.pl", "myMessage", "bla bla bla");
         disconnect();
     }
 
-    private void sendMyEmail() {
-        System.out.println("sendMyEmail ...");
+    private void sendMyEmail(String email, String title, String body) {
+        System.out.println("sendMyEmail ..."  +":"+ email +":"+ title +":"+ body);
     }
 
     private void connectToSmtpServer() {
