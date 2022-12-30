@@ -9,8 +9,11 @@ class A {
     @Autowired
     IC ic;
 
+    @Autowired
+    A a;
+
     public void sendMessage(String s) {
-        ic.sendMessage("Hello from A");
+        a.sendMessage("Hello from A");
     }
 
 }
