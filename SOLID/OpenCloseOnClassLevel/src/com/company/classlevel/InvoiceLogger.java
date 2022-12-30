@@ -14,8 +14,9 @@ public class InvoiceLogger {
     // inną implementację invoiceDisplayer
     // jednocześnie jest zamknięta na modyfikację, ponieważ z perspektywy tej klasy
     // nie jest wymagane, aby zmieniła ona swoją implementację
-    // po to, żeby obsłużyć jakiś inny typ wyświetlania kwoty na fakturze
+    // po to, żeby obsłużyć jakiś inny typ wyświetlania kwoty na fakturze np. bruttoAngielskie
 
+    // WAŻNE: wstrykujemy dwa obiekty: Obiekt klasy Invoice i Objekt Interfejsu IInvoiceDisplayer
     public static InvoiceLogger create(Invoice invoice, IInvoiceDisplayer iInvoiceDisplayer) {
         return InvoiceLogger.builder()
                 .invoice(invoice)
@@ -25,6 +26,7 @@ public class InvoiceLogger {
 
     // clue OpenClose
     //Metoda display ma ten sam kod niezależnie od tego jaki total chcemy wyświetlić (brutto czy netto)
+    //ale implementacja leci do klasy, która ją wywołuje poprzez interface IInvoiceDisplayer invoiceDisplayer: od BruttoInvoiceDisplayer lub NettoInvoiceDisplayer
     public void display() {
         invoiceDisplayer.display(invoice);
     }
