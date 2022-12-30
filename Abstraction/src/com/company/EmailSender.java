@@ -17,8 +17,12 @@ public class EmailSender {
     public void sendEmail() {
         connectToSmtpServer();
         insertCredentials();
-        System.out.println("sendEmail ...");
+        sendMyEmail();
         disconnect();
+    }
+
+    private void sendMyEmail() {
+        System.out.println("sendMyEmail ...");
     }
 
     private void connectToSmtpServer() {
