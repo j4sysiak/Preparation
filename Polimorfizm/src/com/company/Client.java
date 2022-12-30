@@ -1,14 +1,13 @@
 package com.company;
 
 import com.company.model.BankAccount;
-import com.company.model.CompanyBankAccount;
 import com.company.model.PersonalBankAccount;
 
 import java.math.BigDecimal;
 
 public class Client {
 
-    // private static BankAccount bankAccount;
+    private static BankAccount bankAccount;
 
     public static void main(String[] args) {
 
@@ -18,15 +17,16 @@ public class Client {
         to konkretna implementacja zostanie wywołana (nadpisujemy metodę w klasach dziedziczących @Override)
 
         np. dla wywołania metody makeWithdrawal z typu PersonalBankAccount będzie się inaczej zachowywała, niż dla wywołania z CompanyBankAccount
+        (bo będzie wywoływana inna metoda, raz z klasy PersonalBankAccount a innym razem z CompanyBankAccount)
         */
 
-//        var bankAccount = BankAccount.create(BigDecimal.valueOf(0));
+        // var bankAccount = BankAccount.create(BigDecimal.valueOf(0));
 
-        var bankAccount = new PersonalBankAccount(BigDecimal.valueOf(1) /*, "llll"*/);
+        bankAccount = new PersonalBankAccount(BigDecimal.valueOf(1) /*, "llll"*/);
         bankAccount.requestPersolanLoan();
 
-//        var bankAccount = new CompanyBankAccount(BigDecimal.valueOf(1999) /*, "llll"*/);
-//        bankAccount.takeLoan(BigDecimal.valueOf(300000));
+        // var bankAccount = new CompanyBankAccount(BigDecimal.valueOf(1999) /*, "llll"*/);
+        // bankAccount.takeLoan(BigDecimal.valueOf(300000));
 
         bankAccount.setBalance(BigDecimal.valueOf(1000));
         System.out.println(bankAccount.getBalance());
