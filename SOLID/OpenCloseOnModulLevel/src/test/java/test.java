@@ -1,7 +1,5 @@
-package com.company.test;
-
-import com.company.modulelevel.Circle;
-import com.company.modulelevel.Point;
+import com.company.modulelevel.model.Circle;
+import com.company.modulelevel.model.Point;
 import com.company.modulelevel.ShapeType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
