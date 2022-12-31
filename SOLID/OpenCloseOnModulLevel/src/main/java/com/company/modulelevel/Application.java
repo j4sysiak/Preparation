@@ -15,6 +15,7 @@ public class Application {
 
     public static void render(Collection<Shape> shapes) {
 
+        // POLIMORFIZM: każdy kształt wywoła swoją metodę renderowania kształtu (w swojej klasie)
     for (Shape shape : shapes) {
         shape.render();
     }
