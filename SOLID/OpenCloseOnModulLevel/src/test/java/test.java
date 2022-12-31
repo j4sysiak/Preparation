@@ -1,6 +1,6 @@
 import com.company.modulelevel.model.Circle;
 import com.company.modulelevel.model.Point;
-import com.company.modulelevel.ShapeType;
+import com.company.modulelevel.model.ShapeType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

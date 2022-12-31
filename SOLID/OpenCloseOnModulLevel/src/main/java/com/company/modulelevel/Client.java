@@ -3,6 +3,7 @@ package com.company.modulelevel;
 import com.company.modulelevel.model.Circle;
 import com.company.modulelevel.model.Point;
 import com.company.modulelevel.model.Rectangle;
+import com.company.modulelevel.model.ShapeType;
 
 import java.util.ArrayList;
 import java.util.Arrays;

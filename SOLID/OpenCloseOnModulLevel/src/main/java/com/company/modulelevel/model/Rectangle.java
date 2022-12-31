@@ -1,7 +1,5 @@
 package com.company.modulelevel.model;
 
-import com.company.modulelevel.Shape;
-import com.company.modulelevel.ShapeType;
 import lombok.Builder;
 import lombok.Getter;
 

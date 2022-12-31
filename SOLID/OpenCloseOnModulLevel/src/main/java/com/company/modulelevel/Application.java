@@ -1,5 +1,7 @@
 package com.company.modulelevel;
 
+import com.company.modulelevel.model.Shape;
+
 import java.util.Collection;
 
 public class Application {

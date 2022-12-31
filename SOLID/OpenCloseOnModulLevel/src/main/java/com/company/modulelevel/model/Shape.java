@@ -1,4 +1,4 @@
-package com.company.modulelevel;
+package com.company.modulelevel.model;
 
 import lombok.*;
 
