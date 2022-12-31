@@ -6,8 +6,9 @@ import java.util.Collection;
 
 public class Application {
 
-
-    //Jeżeli chcemy dodać nowy typ,
+    // Wszystkie klasy są otwarte na modyfikację i jednocześnie zamknięte.
+    // Otwarte, bo dodając nowy kształt nic nie musimy robić w tych klasach (a jednocześnie są zamknięte) a funkcjonalność render() zadziała.
+    // Jeżeli chcemy dodać nowy typ,
     // to po prostu rozszerzamy model np. o klasę Triangle i w tej klasie tworzymy swoisty render dla niej - tj. metodę render(), która opisuję tylko ten wybrany model.
     // Wywołanie render dla nowej klasy np. Triangle nie powoduje rozszerzenia klasy Application (jest zamknięta na rozszerzenia) i jedncześnie otwarta na nowy typ.
     // Tylko do listy shapes (w klasie Client) dopisujemy nowy obiekt Triangle.
