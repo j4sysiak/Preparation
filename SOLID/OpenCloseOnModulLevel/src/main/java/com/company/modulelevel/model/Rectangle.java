@@ -11,7 +11,7 @@ public class Rectangle extends Shape {
 
     @Builder
     public Rectangle(ShapeType type, int widht, int height, Point topLeft) {
-        super(type);
+       // super(type);
         this.widht = widht;
         this.height = height;
         this.topLeft = topLeft;

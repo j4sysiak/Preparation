@@ -9,7 +9,7 @@ public class Circle extends Shape {
 
     @Builder
     public Circle(ShapeType type, int radius, Point center) {
-        super(type);
+        //super(type);
         this.radius = radius;
         this.center = center;
     }
