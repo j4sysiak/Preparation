@@ -9,6 +9,7 @@ import lombok.Setter;
 @Getter
 @Builder
 @NoArgsConstructor
+
 /*Moduł niskopoziomowy*/
 public class SmslNotification implements INotificationSender {
 
