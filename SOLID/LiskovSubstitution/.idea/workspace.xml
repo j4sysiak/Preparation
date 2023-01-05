@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="367e497d-d5b9-4041-bfb4-6705da0d3754" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Duck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Duck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/RubberDuck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/RubberDuck.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -158,12 +156,27 @@
       <option name="project" value="LOCAL" />
       <updated>1672472448457</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="05-01-2023 07:34">
+      <created>1672896867137</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1672896867137</updated>
+    </task>
+    <task id="LOCAL-00007" summary="05-01-2023 07:34">
+      <created>1672896978358</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1672896978358</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="04-06-2022 12:50" />
     <MESSAGE value="31-12-2022 08:40" />
-    <option name="LAST_COMMIT_MESSAGE" value="31-12-2022 08:40" />
+    <MESSAGE value="05-01-2023 07:34" />
+    <option name="LAST_COMMIT_MESSAGE" value="05-01-2023 07:34" />
   </component>
 </project>

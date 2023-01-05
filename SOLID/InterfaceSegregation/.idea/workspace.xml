@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53b29f28-4dab-447d-a074-396a6a917031" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Dziedziczenie/src/com/company/model/BankAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Dziedziczenie/src/com/company/model/PersonalBankAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Dziedziczenie/src/com/company/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dziedziczenie/src/com/company/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LiskovSubstitution/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../LiskovSubstitution/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LiskovSubstitution/src/com/company/RubberDuck.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LiskovSubstitution/src/com/company/RubberDuck.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +88,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "C:/Users/Jacek/Documents/JAVA/SpringBoot/Preparation/SOLID/InterfaceSegregation"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.company" />
