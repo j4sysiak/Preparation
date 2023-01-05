@@ -1,6 +1,6 @@
 package com.company;
 
-public class Cannon6754 implements IPrinter, IFax{
+public class Cannon6754 implements IPrinter, IFax {
     @Override
     public void printGray(String context) {
         System.out.println("Cannon6754 printGray ....");
