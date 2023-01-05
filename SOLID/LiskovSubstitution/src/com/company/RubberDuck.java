@@ -13,7 +13,7 @@ public class RubberDuck extends Duck {
 
     @Override
     public void fly() {
-        //nie jest w stanie reprezentować bazowej klasy Duck
+        // nie jest w stanie reprezentować bazowej klasy Duck
         throw new RuntimeException("RubberDuck cannot fly :) ...........!!!!");
     }
 }
