@@ -37,6 +37,7 @@ public class AuthenticationManager {
                 .map(pass -> getRunIfExist(pass, email, password))
                 .orElseGet(() -> runIfEmpty())) {
             //EmailNotification.builder().build().sendNotification(user);
+            // lub
             iNotificationSender.sendNotification(user);
         }
 
