@@ -16,15 +16,20 @@ public class Client {
 */
 
         //EmailNotification
-        AuthenticationManager.builder().iNotificationSender(new EmailNotification()).build().authenticate(
-                User.builder().name("Marek Kowalski").email("test@wp.pl")
-                        .password("test@wp.pl").phoneNumber("13579").build(),
+        AuthenticationManager.builder()
+                .iNotificationSender(new EmailNotification()).build().authenticate(
+                User.builder()
+                        .name("Marek Kowalski")
+                        .email("test@wp.pl")
+                        .password("test@wp.pl")
+                        .phoneNumber("13579")
+                        .build(),
                 "test@wp.pl" ,
                 "test@wp.pl"
         );
 
-        //SmslNotification
-        AuthenticationManager.builder().iNotificationSender(new SmslNotification()).build().authenticate(
+        //SmsNotification
+        AuthenticationManager.builder().iNotificationSender(new SmsNotification()).build().authenticate(
                 User.builder().name("Jacek Nowak").email("test@wp.pl")
                         .password("test@wp.pl").phoneNumber("123456").build(),
                 "test@wp.pl" ,
