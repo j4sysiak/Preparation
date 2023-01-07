@@ -13,7 +13,7 @@ public class Client {
         /*
         Można tworzyć etapami złożone obiekty.
         Rozdziela sposób tworzenia obiektów od ich reprezentacji.
-        Przykła z budowaniem złożonego obiektu "faktura" (klasa Invoice).
+        Przykład z budowaniem złożonego obiektu "faktura" (klasa Invoice).
         Nie tworzymy takiego obiektu jednym konstruktorem, tylko budujemy poszczególne elementy i dokładamy do
         obiektu "faktura" (klasa Invoice).
         Do obiektu (klasy Invoice) "faktura" wprowadzamy klasę InvoiceBuilder, której celem będzie utworzenie konkretnej faktury
@@ -41,17 +41,21 @@ public class Client {
         */
 
         // pierwszy sposób - mega prymitywny
-        /*InvoiceBuilder ale lepiej var*/ var invoiceBuilder = new InvoiceBuilder();
+        /*InvoiceBuilder ale lepiej var*/ var invoiceBuilder = new InvoiceBuilder(); // tworzymy tutaj na początku pusty obiekt faktury: invoice w konstruktorze InvoiceBuilder()
+        // dokładamy poszczególne elementy do faktury:
         invoiceBuilder.setDate(now());
         invoiceBuilder.setInvoiceNumber("A13132-2022");
         invoiceBuilder.setVendor("Ford Motors Company Co. Limited");
         invoiceBuilder.setVendee("Jacek");
         invoiceBuilder.setNote("flsjdfjlsjdlfjlsjdfjsdjfsdlflsj");
         invoiceBuilder.setLineItems(List.of("Line item1", "Line item2"));
-        Invoice invoice1 = invoiceBuilder.myCustomBuild();
+
+        // i mamy naszą piękną fakturę
+        Invoice invoice1 = invoiceBuilder.create();
         System.out.println(invoice1);
 
-        // drugi sposób
+
+        // drugi sposób - to w sumie to samo co powyżej ale szybciej i ładniej
         Invoice invoice2 = invoiceBuilder
                 .setDate(now())
                 .setInvoiceNumber("A13132-2022")
