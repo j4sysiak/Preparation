@@ -1,6 +1,7 @@
 package com.company;
 
 import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 
 import java.util.List;
 
@@ -24,7 +25,7 @@ public class Client {
         - setLineItems()
         - setPaymentTepe()
         - build()
-        Każda z tych metod, przyjmuje konkretne elementy (obiekty), które ustawią te parametry na fakturze.
+        Każda z tych metod, przyjmuje konkretne elementy (obiekty), które ustawiają te parametry na fakturze.
         Wszystkie metody set, w pewien sposób modyfikują fakturę, którą chcemy otrzymać.
         Końcowym momentem do wygenerowania tej faktury jest metoda build().
         Build() zwróci konkretną fakturę, którą klient chce uzyskać.
