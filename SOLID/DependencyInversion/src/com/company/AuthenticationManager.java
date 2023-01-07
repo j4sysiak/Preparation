@@ -44,9 +44,11 @@ public class AuthenticationManager {
         if (maybeString
                 .map(pass -> getRunIfExist(pass, email, password))
                 .orElseGet(() -> runIfEmpty())) {
-            //EmailNotification.builder().build().sendNotification(user);
-            // lub
-            iNotificationSender.sendNotification(user);
+            //EmailNotification.builder().build().sendNotification(user); // tutaj klasa wysokiego poziomu zalezy od klasy niskiego poziomu
+            //SmsNotification.builder().build().sendNotification(user);   // tutaj klasa wysokiego poziomu zalezy od klasy niskiego poziomu
+            // lub uzywamy DependencyInversion
+            // tutaj klasa wysokiego poziomu NIE zalezy od klasy niskiego poziomu tylko od pewnej abstrakcji
+            iNotificationSender.sendNotification(user);   // tu jest klucz, w zaleznosci jaki jest wywołany modul niskopoziomowy (EmailNotification , SmsNotification) - taka bedzie implementacja
         }
 
     }
