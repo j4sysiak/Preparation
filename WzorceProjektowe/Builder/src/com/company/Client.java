@@ -1,7 +1,6 @@
 package com.company;
 
 import org.junit.jupiter.api.Test;
-import org.testng.annotations.Test;
 
 import java.util.List;
 
@@ -34,7 +33,7 @@ public class Client {
         Interfejsy będą zawierały deklarację wszystkich metod set() + build() do implementaccji faktury danego typu.
         Np. faktura VAT, None_VAT, etc.
 
-        Potem wprowadzamy koncept Dyrektora (klasa Director), który będzie zarządzał tworzeniem knkretnych faktur.
+        Potem wprowadzamy koncept Dyrektora (klasa Director), który będzie zarządzał tworzeniem konkretnych faktur.
         Zawierałby on metody np. createMonthlyInvoice(), createBlankInvoice(), etc. Metody te zwracałyby obiekt Invoice.
 
         Nasza klasa Client może używać bezpośrednio klasy tworzącej fakturę InvoiceBuilder lub z klasy Director i posłużyć się
@@ -42,27 +41,28 @@ public class Client {
         */
 
         // pierwszy sposób - mega prymitywny
-        var builder = new InvoiceBuilder();
-        builder.setDate(now());
-        builder.setInvoiceNumber("A13132-2022");
-        builder.setVendor("Ford Motors Company Co. Limited");
-        builder.setVendee("Jacek");
-        builder.setNote("flsjdfjlsjdlfjlsjdfjsdjfsdlflsj");
-        builder.setLineItems(List.of("Line item1", "Line item2"));
-        Invoice invoice1 = builder.Build();
+        /*InvoiceBuilder ale lepiej var*/ var invoiceBuilder = new InvoiceBuilder();
+        invoiceBuilder.setDate(now());
+        invoiceBuilder.setInvoiceNumber("A13132-2022");
+        invoiceBuilder.setVendor("Ford Motors Company Co. Limited");
+        invoiceBuilder.setVendee("Jacek");
+        invoiceBuilder.setNote("flsjdfjlsjdlfjlsjdfjsdjfsdlflsj");
+        invoiceBuilder.setLineItems(List.of("Line item1", "Line item2"));
+        Invoice invoice1 = invoiceBuilder.myCustomBuild();
         System.out.println(invoice1);
 
         // drugi sposób
-        Invoice invoice2 = builder
+        Invoice invoice2 = invoiceBuilder
                 .setDate(now())
                 .setInvoiceNumber("A13132-2022")
                 .setVendor("Ford Motors Company Co. Limited")
                 .setVendee("Jacek")
                 .setNote("flsjdfjlsjdlfjlsjdfjsdjfsdlflsj")
                 .setLineItems(List.of("Line item1", "Line item2"))
-                .Build();
+                .create();
         System.out.println(invoice2);
 
+        // UWAGA - nie uzywmy tutaj invoiceBuilder - to tylko bezposrednie tworzenie klasy Invoice (taki rzyklad tylko)
         // trzeci sposób - używa anotacji @Builder Lomboka w bezpośrednio klasie Invoice
 //        Invoice invoice3 = Invoice.builder()
 //                        .date(now())

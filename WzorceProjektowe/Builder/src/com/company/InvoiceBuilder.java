@@ -1,5 +1,6 @@
 package com.company;
 
+//import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,11 +9,17 @@ import java.util.Collection;
 
 @Setter
 @Getter
+//@Builder
 public class InvoiceBuilder {
 
-    private Invoice invoice = new Invoice();
+    private Invoice invoice;
 
-    public Invoice Build() {
+    InvoiceBuilder(){
+        // najpierw tworzymy instancję klasy Invoice - przez wstrzyknięcie.
+        this.invoice = new Invoice();
+    }
+
+    public Invoice myCustomBuild() {
         return invoice;
     }
 
@@ -47,5 +54,7 @@ public class InvoiceBuilder {
         return this;
     }
 
-
+    public Invoice create() {
+        return this.getInvoice();
+    }
 }
