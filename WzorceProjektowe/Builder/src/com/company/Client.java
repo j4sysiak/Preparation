@@ -66,7 +66,7 @@ public class Client {
                 .create();
         System.out.println(invoice2);
 
-        // UWAGA - nie uzywmy tutaj invoiceBuilder - to tylko bezposrednie tworzenie klasy Invoice (taki rzyklad tylko)
+        // UWAGA - nie uzywamy tutaj invoiceBuildera - to tylko bezposrednie tworzenie klasy Invoice (taki przyklad tylko)
         // trzeci sposób - używa anotacji @Builder Lomboka w bezpośrednio klasie Invoice
 //        Invoice invoice3 = Invoice.builder()
 //                        .date(now())
