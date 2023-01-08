@@ -11,9 +11,9 @@ public class InvoiceManager {
 
     private IInvoiceBuilder iInvoiceBuilder;
 
-//    InvoiceManager(IInvoiceBuilder iInvoiceBuilder) {
-//        this.iInvoiceBuilder = iInvoiceBuilder;
-//    }
+    InvoiceManager(IInvoiceBuilder iInvoiceBuilder) {
+        this.iInvoiceBuilder = iInvoiceBuilder;
+    }
 
     public Invoice showInvoice() {
         return iInvoiceBuilder

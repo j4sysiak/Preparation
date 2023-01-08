@@ -17,6 +17,7 @@ public class Client {
 
         im.getIInvoiceBuilder().setVendor("ss");
         im.getIInvoiceBuilder().setNote("ss");
-        im.showInvoice();
+        Invoice invoice = im.showInvoice();
+        System.out.println(invoice);
     }
 }
