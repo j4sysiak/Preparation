@@ -1,9 +1,12 @@
 package com.company;
 
+import org.testng.annotations.Test;
+
 public class Client {
 
-    public static void main(String[] args) {
-/*
+    @Test
+    public void test() {
+        /*
         Wszystkie zależności z wyskopoziomowych modułów ustalających politykę dla niskopoziomowych (nadrzędnych) modułów - są odwrócone.
         To właśnie dlatego tajniki implementacyjne wysokopoziomowych modułów są niezależne od sposobów implementacji dla niskopoziomowych modułów.
         Moduły wysokiego poziomu nie powinny zależeć od modułów niskiego poziomu.
@@ -39,11 +42,11 @@ public class Client {
                 .iNotificationSender(new EmailNotification())  // tutaj wprowadzamy pośrednika (abstrakcję iNotificationSender) pomiedzy modulem wysokopoziomowym i niskopoziomowym
                 .build()
                 .authenticate(User.builder()
-                               .name("Marek Kowalski")
-                               .email("test@wp.pl")
-                               .password("test@wp.pl")
-                               .phoneNumber("13579")
-                             .build(),
+                                .name("Marek Kowalski")
+                                .email("test@wp.pl")
+                                .password("test@wp.pl")
+                                .phoneNumber("13579")
+                                .build(),
                         "test@wp.pl",
                         "test@wp.pl"
                 );
@@ -62,6 +65,5 @@ public class Client {
                         "test@wp.pl",
                         "test@wp.pl"
                 );
-
     }
 }
