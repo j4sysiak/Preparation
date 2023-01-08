@@ -13,9 +13,9 @@ public class Client {
     @Test
     public void test() {
         InvoiceBuilder builder = new InvoiceBuilder();
-        Director director = new Director(builder);
+        InvoiceManager invoiceManager = new InvoiceManager(builder);
 
-        Invoice monthlyInvoice = director.createMonthlyInvoice();
-        Invoice blankInvoice = director.createBlankInvoice();
+        Invoice monthlyInvoice = invoiceManager.createMonthlyInvoice();
+        Invoice blankInvoice = invoiceManager.createBlankInvoice();
     }
 }
