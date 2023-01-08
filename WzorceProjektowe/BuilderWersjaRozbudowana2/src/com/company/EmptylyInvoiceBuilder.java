@@ -8,23 +8,21 @@ import lombok.Setter;
 @Setter
 @Getter
 //@Builder
-public class InvoiceBuilder   {
+public class EmptylyInvoiceBuilder implements IInvoiceBuilder {
 
     private Invoice invoice;
 
-    InvoiceBuilder() {
-        // najpierw tworzymy instancję klasy Invoice - przez wstrzyknięcie w konstruktorze.
-        this.invoice = new Invoice();
-    }
+//    MonthlyInvoiceBuilder() {
+//        // najpierw tworzymy instancję klasy Invoice - przez wstrzyknięcie w konstruktorze.
+//        this.invoice = new Invoice();
+//    }
 
-    public InvoiceBuilder setVendor(String vendor) {
+    public void setVendor(String vendor) {
         invoice.vendor = vendor;
-        return this;
     }
 
-    public InvoiceBuilder setNote(String note) {
+    public void setNote(String note) {
         invoice.note = note;
-        return this;
     }
 
     // to jest metoda, która zwróci naszą fakturę

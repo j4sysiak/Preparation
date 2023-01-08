@@ -1,6 +1,5 @@
 package com.company;
 
-
 import lombok.Getter;
 import lombok.Setter;
 import org.junit.jupiter.api.Test;
@@ -12,10 +11,12 @@ public class Client {
 
     @Test
     public void test() {
-        InvoiceBuilder builder = new InvoiceBuilder();
-        Director director = new Director(builder);
+        InvoiceManager im =InvoiceManager.builder()
+                .iInvoiceBuilder(new MonthlyInvoiceBuilder())
+                .build();
 
-        Invoice monthlyInvoice = director.createMonthlyInvoice();
-        Invoice blankInvoice = director.createBlankInvoice();
+        im.getIInvoiceBuilder().setVendor("ss");
+        im.getIInvoiceBuilder().setNote("ss");
+        im.showInvoice();
     }
 }
