@@ -35,9 +35,9 @@ public class AuthenticationManager {
     private INotificationSender iNotificationSender;
 
     //DependencyInjection
-    public AuthenticationManager(INotificationSender iNotificationSender) {
-        this.iNotificationSender = iNotificationSender;
-    }
+//    public AuthenticationManager(INotificationSender iNotificationSender) {
+//        this.iNotificationSender = iNotificationSender;
+//    }
 
     public void authenticate(User user, String email, String password) {
         Optional<String> maybeString = Optional.ofNullable(User.create("test@wp.pl").getPassword());

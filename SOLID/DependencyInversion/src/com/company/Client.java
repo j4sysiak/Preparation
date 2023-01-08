@@ -28,7 +28,7 @@ public class Client {
 //                .build());
 
 //        AuthenticationManager am1 = AuthenticationManager.builder()
-//                .iNotificationSender(new EmailNotification())
+//                .iNotificationSender(new EmailNotification())   //to się równa temu: INotificationSender iem = new EmailNotification();
 //                .build();
 
 //        AuthenticationManager am2 = AuthenticationManager.builder()
@@ -36,9 +36,10 @@ public class Client {
 //                .build();
 
 
-        // EmailNotification - Moduł niskopoziomowy
+        // EmailNotification     - Moduł niskopoziomowy
         // AuthenticationManager - Moduł wysokopoziomowy
         AuthenticationManager.builder()
+                //to się równa temu: INotificationSender iem = new EmailNotification();
                 .iNotificationSender(new EmailNotification())  // tutaj wprowadzamy pośrednika (abstrakcję iNotificationSender) pomiedzy modulem wysokopoziomowym i niskopoziomowym
                 .build()
                 .authenticate(User.builder()
@@ -51,9 +52,10 @@ public class Client {
                         "test@wp.pl"
                 );
 
-        // SmsNotification - Moduł niskopoziomowy
+        // SmsNotification       - Moduł niskopoziomowy
         // AuthenticationManager - Moduł wysokopoziomowy
         AuthenticationManager.builder()
+                //to się równa temu: INotificationSender iem = new SmsNotification();
                 .iNotificationSender(new SmsNotification())  // tutaj wprowadzamy pośrednika (abstrakcję iNotificationSender) pomiedzy modulem wysokopoziomowym i niskopoziomowym
                 .build()
                 .authenticate(User.builder()
