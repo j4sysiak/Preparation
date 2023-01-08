@@ -22,12 +22,9 @@ public class Client {
         - setVendee()
         - setNotes()
         - setLineItems()
-        - setPaymentTepe()
-        - build()
         Każda z tych metod, przyjmuje konkretne elementy (obiekty), które ustawiają te parametry na fakturze.
         Wszystkie metody set, w pewien sposób modyfikują fakturę, którą chcemy otrzymać.
-        Końcowym momentem do wygenerowania tej faktury jest metoda build().
-        Build() zwróci konkretną fakturę, którą klient chce uzyskać.
+        Końcowym momentem do wygenerowania tej faktury jest metoda build(), zwróci konkretną fakturę, którą klient chce uzyskać.
 
         Możemy też wyabstrachować interfejsy IInvoiceBuilderVAT, IInvoiceBuilderNoneVAT, które będą implementować nasz builder.
         Interfejsy będą zawierały deklarację wszystkich metod set() + build() do implementaccji faktury danego typu.
@@ -51,10 +48,11 @@ public class Client {
         invoiceBuilder.setLineItems(List.of("Line item1", "Line item2"));
 
         // i mamy naszą piękną fakturę
-        Invoice invoice1 = invoiceBuilder.create();
+        Invoice invoice1 = invoiceBuilder.build();  // i odbieramy naszą fakturę
         System.out.println(invoice1);
 
 
+        // tak zwane płynne wywołanie (łańcuchowe)
         // drugi sposób - to w sumie to samo co powyżej ale szybciej i ładniej
         Invoice invoice2 = invoiceBuilder
                 .setDate(now())
@@ -63,7 +61,7 @@ public class Client {
                 .setVendee("Jacek")
                 .setNote("flsjdfjlsjdlfjlsjdfjsdjfsdlflsj")
                 .setLineItems(List.of("Line item1", "Line item2"))
-                .create();
+                .build();  // i odbieramy naszą fakturę
         System.out.println(invoice2);
 
         // UWAGA - nie uzywamy tutaj invoiceBuildera - to tylko bezposrednie tworzenie klasy Invoice (taki przyklad tylko)

@@ -16,7 +16,7 @@ public class InvoiceBuilder {
     private Invoice invoice;
 
     InvoiceBuilder(){
-        // najpierw tworzymy instancję klasy Invoice - przez wstrzyknięcie.
+        // najpierw tworzymy instancję klasy Invoice InvoiceBuilder - przez wstrzyknięcie w konstruktorze.
         this.invoice = new Invoice();
     }
 
@@ -50,7 +50,8 @@ public class InvoiceBuilder {
         return this;
     }
 
-    public Invoice create() {
+    // to jest metoda, która zwróci naszą fakturę
+    public Invoice build() {
         return this.getInvoice();
     }
 }
