@@ -40,6 +40,7 @@ public class InvoiceBuilder {
         return this;
     }
 
+
     public InvoiceBuilder setNote(String note) {
         invoice.note = note;
         return this;
