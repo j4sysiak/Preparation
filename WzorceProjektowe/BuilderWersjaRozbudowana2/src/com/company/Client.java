@@ -15,9 +15,10 @@ public class Client {
                 .iInvoiceBuilder(new MonthlyInvoiceBuilder())
                 .build();
 
+        // budowniczy
         im.getIInvoiceBuilder().setVendor("ss");
         im.getIInvoiceBuilder().setNote("ss");
-        Invoice invoice = im.showInvoice();
+        Invoice invoice = im.getIInvoiceBuilder().build();  // zwraca obiekt w ostatnim kroku
         System.out.println(invoice);
     }
 }
