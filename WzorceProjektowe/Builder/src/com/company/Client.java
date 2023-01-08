@@ -25,16 +25,6 @@ public class Client {
         Każda z tych metod, przyjmuje konkretne elementy (obiekty), które ustawiają te parametry na fakturze.
         Wszystkie metody set, w pewien sposób modyfikują fakturę, którą chcemy otrzymać.
         Końcowym momentem do wygenerowania tej faktury jest metoda build(), zwróci konkretną fakturę, którą klient chce uzyskać.
-
-        Możemy też wyabstrachować interfejsy IInvoiceBuilderVAT, IInvoiceBuilderNoneVAT, które będą implementować nasz builder.
-        Interfejsy będą zawierały deklarację wszystkich metod set() + build() do implementaccji faktury danego typu.
-        Np. faktura VAT, None_VAT, etc.
-
-        Potem wprowadzamy koncept Dyrektora (klasa Director), który będzie zarządzał tworzeniem konkretnych faktur.
-        Zawierałby on metody np. createMonthlyInvoice(), createBlankInvoice(), etc. Metody te zwracałyby obiekt Invoice.
-
-        Nasza klasa Client może używać bezpośrednio klasy tworzącej fakturę InvoiceBuilder lub z klasy Director i posłużyć się
-        konkretną metodą do tworzenia konkretnego typu faktury.
         */
 
         // pierwszy sposób - mega prymitywny
