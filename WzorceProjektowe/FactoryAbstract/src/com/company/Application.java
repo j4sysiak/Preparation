@@ -14,6 +14,7 @@ public class Application {
 
     private IUIElementFactory iuiElementFactory;
 
+    // wstrzykujemy przez konstruktor element, na którym bazujemy
     public Application(IUIElementFactory iuiElementFactory) {
         this.iuiElementFactory = iuiElementFactory;
     }

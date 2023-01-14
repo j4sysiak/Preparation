@@ -4,11 +4,11 @@ public class WindowsFactory implements IUIElementFactory {
 
     @Override
     public IButton createButton() {
-        return new WindowsButton();
+        return new WindowsButton(); // zwraca konkretne elementy
     }
 
     @Override
     public ITextbox createTextbox() {
-        return new WindowsTextbox();
+        return new WindowsTextbox();  // zwraca konkretne elementy
     }
 }
