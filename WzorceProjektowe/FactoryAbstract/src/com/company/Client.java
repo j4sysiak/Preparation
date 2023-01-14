@@ -8,7 +8,8 @@ public class Client {
 
     /*
     Celem jest dostarczenie interfejsu do tworzenia różnych obiektów jednego typu
-    dla tej samej rodziny klas bez specyfikowania ich konkretnych klas - ale nie chcemy, żeby ściśle był powiązany z jakimś konkretnym typem.
+    dla tej samej rodziny klas bez specyfikowania ich konkretnych klas - ale nie chcemy, żeby ściśle był powiązany
+    z jakimś konkretnym typem.
     Przy czym, umożliwia jednemu obiektowi tworzenie różnych, powiązanych ze sobą, reprezentacji pod-obiektów
     określając ich typy podczas działania programu
     */
