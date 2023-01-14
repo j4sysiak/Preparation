@@ -2,6 +2,8 @@ package com.company;
 
 public interface IUIElementFactory {
 
+    //  Abstrakcyjna fabryka
+
     /*
     Bazowy interface
     Abstrakcyjna fabryka, której zadanie będzie utworzenie elementów bazowych typów (MacButton, WindowsButton, MacTexbox, WindowsTexbox)
