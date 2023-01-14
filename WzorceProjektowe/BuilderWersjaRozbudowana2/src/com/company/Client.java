@@ -11,7 +11,7 @@ public class Client {
 
     @Test
     public void test() {
-        InvoiceManager im =InvoiceManager.builder()
+        InvoiceManager im = InvoiceManager.builder()
                 .iInvoiceBuilder(new MonthlyInvoiceBuilder())
                 .build();
 
