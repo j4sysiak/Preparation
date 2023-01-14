@@ -20,11 +20,12 @@ public class Application {
     }
 
     /*tworzenie UI aplikacji niezależnie od systemu: Mac i Windows*/
+
     public void renderUI(){
-        var createNewFileButton = iuiElementFactory.createButton();
+        var createNewFileButton = iuiElementFactory.createButton();  /*tutaj bazujemy jeszcze na abstrakcji*/
         createNewFileButton.render();
 
-        var textbox = iuiElementFactory.createTextbox();
+        var textbox = iuiElementFactory.createTextbox();  /*tutaj bazujemy jeszcze na abstrakcji*/
         textbox.render();
     }
 }
