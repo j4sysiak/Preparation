@@ -7,6 +7,8 @@ import com.company.mdel.Triangle;
 public class ShapeFactory {
 
     public IShape /* może tez byc alternatywniw klasa astrakcyjna: Shape */ createShape(ShapeType type) throws Exception {
+        // public Shape /* może tez byc alternatywniw klasa astrakcyjna: Shape */ createShape(ShapeType type) throws Exception {
+
 
         /* banalne co ...*/
         switch (type) {
