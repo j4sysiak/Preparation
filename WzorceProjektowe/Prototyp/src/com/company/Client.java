@@ -3,9 +3,6 @@ package com.company;
 import org.junit.Test;
 
 public class Client {
-
-
-
     /*
       Prototyp:
       kreacyjny wzorzec projektowy, który umożliwia kopiowanie istniejących już obiektów  (shallow and deep cloning)
@@ -26,6 +23,9 @@ public class Client {
                         .build())
                 .build();
 
+        c1.render();  // to pestka
+
+        // to ważne - cloning zwraca obiekt bazowy Shape, więc trzeba rzutować
         Circle deepCopyOfC1 = (Circle) c1.cloning();
 
         if (c1 == deepCopyOfC1) {

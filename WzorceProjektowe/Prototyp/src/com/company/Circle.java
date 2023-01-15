@@ -32,8 +32,10 @@ public class Circle extends Shape {
     }
 
     @Override
+    // musi być zwrotka na biekcie Shape, bo interfajce tak jest zdefiniowany (musi być generyczny)
     public Shape cloning() {
-        return (Circle) this.clone();  //deepCopy
+        // jesteśmy w Circle, więc chcemy żeby zwrotka była Circle, więc rzutujemy na Circle
+        return (Circle) clone();  //deepCopy
     }
 
     @Override

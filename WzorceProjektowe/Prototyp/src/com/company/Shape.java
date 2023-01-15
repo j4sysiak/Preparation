@@ -14,5 +14,6 @@ public abstract class Shape {
    public Border border;
 
    public abstract void render();
+
    public abstract Shape cloning() throws CloneNotSupportedException;
 }

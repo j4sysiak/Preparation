@@ -28,7 +28,9 @@ public class Rectangle extends Shape {
     }
 
     @Override
+    // musi być zwrotka na biekcie Shape, bo interfajce tak jest zdefiniowany (musi być generyczny)
     public Shape cloning() {
+        // jesteśmy w Rectangle, więc chcemy żeby zwrotka była Rectangle, więc rzutujemy na Rectangle
         return (Rectangle) this.clone();  //deepCopy
     }
 
