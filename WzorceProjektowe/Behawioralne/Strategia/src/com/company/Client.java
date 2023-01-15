@@ -19,13 +19,20 @@ public class Client {
         // w obrębie danego obiektu w trakcie działania programu
         // oddziela szczegóły implementacyjne od warstwy biznesowej
 
+        //pierwszy sposób - SOLID DependencyInversion
+        MapCreator.builder()
+                .iRouteStrategy(new WalkStrategy())
+                .build()
+                .creatingRoute(start, stop);
+
+        //drugi sposób - na to samo wychodzi
         var mapCreator1 = new MapCreator(new BikeStrategy());
-        mapCreator1.createRoute(start, stop);
+        mapCreator1.creatingRoute(start, stop);
 
         var mapCreator2 = new MapCreator(new CarStrategy());
-        mapCreator2.createRoute(start, stop);
+        mapCreator2.creatingRoute(start, stop);
 
         var mapCreator3 = new MapCreator(new WalkStrategy());
-        mapCreator3.createRoute(start, stop);
+        mapCreator3.creatingRoute(start, stop);
 }
 }

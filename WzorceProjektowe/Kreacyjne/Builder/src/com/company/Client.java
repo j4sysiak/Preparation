@@ -8,7 +8,6 @@ import static java.time.LocalDateTime.now;
 
 public class Client {
 
-
     @Test
     public void test() {
         /*
