@@ -1,9 +1,8 @@
 package com.company;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class Client {
-
 
     @Test
     public void test() {
@@ -20,16 +19,13 @@ public class Client {
         // w obrębie danego obiektu w trakcie działania programu
         // oddziela szczegóły implementacyjne od warstwy biznesowej
 
-        var bikeStrategy= new BikeStrategy();
-        var mapCreator1 = new MapCreator(bikeStrategy);
+        var mapCreator1 = new MapCreator(new BikeStrategy());
         mapCreator1.createRoute(start, stop);
 
-        var carStrategy = new CarStrategy();
-        var mapCreator2 = new MapCreator(carStrategy);
+        var mapCreator2 = new MapCreator(new CarStrategy());
         mapCreator2.createRoute(start, stop);
 
-        var walkStrategy = new WalkStrategy();
-        var mapCreator3 = new MapCreator(walkStrategy);
+        var mapCreator3 = new MapCreator(new WalkStrategy());
         mapCreator3.createRoute(start, stop);
 }
 }
