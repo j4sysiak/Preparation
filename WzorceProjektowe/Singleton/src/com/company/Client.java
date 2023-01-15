@@ -4,8 +4,6 @@ import org.junit.jupiter.api.Test;
 
 public class Client {
 
-
-
     /*
     Kreacyjny wzorzec projektowy, którego celem jest ograniczenie możliwości tworzenia obiektów danej klasy do jednej instancji.
     Może być tylko jeden obiekt tej klasy.
@@ -18,8 +16,8 @@ public class Client {
     @Test
     public void test() {
 
-        // musi być prywatny konstruktor Configuration, żeeby nie było można tworzyć obiektów Configuration
-        // var cfg = new Configuration();
+        // musi być prywatny konstruktor Configuration, żeeeeeby nie było można tworzyć obiektów Configuration
+        // var cfg = new Configuration();  E R R O R
         var cfg1 = Configuration.getInstatnce();
         var cfg2 = Configuration.getInstatnce();
 
