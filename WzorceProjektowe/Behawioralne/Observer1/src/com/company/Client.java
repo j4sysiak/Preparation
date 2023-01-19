@@ -14,8 +14,8 @@ public class Client {
         var iObserver2 = new Observer("observer2");
         var iObserver3 = new Observer("observer3");
 
-        IObserver x = new Observer("s");
-        x.update("ssss");
+        IObserver x = new Observer("test");
+        x.update("test");
 
         var publish = new Publisher();
         publish.subscribe(iObserver1);
