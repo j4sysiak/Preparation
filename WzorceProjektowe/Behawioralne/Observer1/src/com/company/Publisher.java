@@ -13,12 +13,12 @@ public class Publisher {
     private List<IObserver> iobservers = new ArrayList();
 
 
-    public void subscribe(IObserver iobserver) {
-        iobservers.add(iobserver);
+    public void subscribe(IObserver iObserver) {
+        iobservers.add(iObserver);
     }
 
-    public void unSubscribe(IObserver iobserver) {
-        iobservers.remove(iobserver);
+    public void unSubscribe(IObserver iObserver) {
+        iobservers.remove(iObserver);
     }
 
     public void notify(String context) {

@@ -1,6 +1,6 @@
 package com.company;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 
 public class Client {
 
@@ -10,19 +10,22 @@ public class Client {
         // wzorzec Obserwator używamy, jeżeli zmiany jednego obiektu mogą wymagać zmian w innych obiektach,
         // a konkretny zestaw obiektów nie jest nam znany na początku lub jego stan się zmienia
 
-        var observer1 = new Observer("observer1");
-        var observer2 = new Observer("observer2");
-        var observer3 = new Observer("observer3");
+        IObserver iObserver1 = new Observer("observer1");
+        var iObserver2 = new Observer("observer2");
+        var iObserver3 = new Observer("observer3");
+
+        IObserver x = new Observer("s");
+        x.update("ssss");
 
         var publish = new Publisher();
-        publish.subscribe(observer1);
-        publish.subscribe(observer2);
-        publish.subscribe(observer3);
+        publish.subscribe(iObserver1);
+        publish.subscribe(iObserver2);
+        publish.subscribe(iObserver3);
 
         // powiadamamy wszystkich obserwatorów
         publish.notify("wiadomość 1");
 
-        publish.unSubscribe(observer3);
+        publish.unSubscribe(iObserver3);
 
         // powiadamamy wszystkich obserwatorów
         publish.notify("wiadomość 2");
