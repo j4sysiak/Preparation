@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Publisher {
 
-    // Mając subsciber'a tworzymy klasę Publishera notyfikacji.
+    // Mając Subsciber'a tworzymy klasę Publishera notyfikacji.
     // Publisher będzię w sobie agregował subscibentów, czyli posiada listę subscribentów i będzie tą listę modyfikował
     // dodawał / usuwał z listy subscybentów do notyfikacji
 
