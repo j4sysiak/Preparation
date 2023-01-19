@@ -19,6 +19,7 @@ public class Client {
         // w obrębie danego obiektu w trakcie działania programu
         // oddziela szczegóły implementacyjne od warstwy biznesowej
 
+
         //pierwszy sposób - SOLID DependencyInversion
         MapCreator.builder()
                 .iRouteStrategy(new WalkStrategy())
