@@ -7,14 +7,14 @@ import lombok.Setter;
 @Setter
 public class Subsciber implements ISubsciber {
 
-    public String observerName;
+    public String subscriberName;
 
     public Subsciber(String name) {
-        this.observerName = name;
+        this.subscriberName = name;
     }
 
     @Override
-    public void update(String context) {
-        System.out.println("observer notified: " + observerName + ": " + context);
+    public void update(String message) {
+        System.out.println("Subscriber notified: " + subscriberName + ": " + message);
     }
 }

@@ -13,6 +13,7 @@ public class Client {
         ISubsciber iSubsciber1 = new Subsciber("Jacek Sysiak");
         var iSubsciber2 = new Subsciber("Marek Kowalski");
         var iSubsciber3 = new Subsciber("Jan Nowak");
+        iSubsciber3.update("Andrzej Nowak");
 
         // ISubsciber x = new Subsciber("test");
         // x.update("test");
