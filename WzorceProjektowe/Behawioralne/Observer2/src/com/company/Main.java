@@ -4,14 +4,12 @@ public class Main {
 
     public static void main(String [] args) {
         // uruchamiamy wątek jakiegoś zadania i czekamy kiedy się zakończy wątek z pracy (działania) jakiejś maszynerii Subject
+        // var cli = new Client1();
+        IObserver cli1 = new Client1();
+        new Subject(cli1);
 
-        System.out.println("sssssssssss");
-        Client1 cli = new Client1();
-
-        Subject sub = new Subject(cli);
-
-        // new Subject(new Client2());
-        //  new Subject(new Client3());
+        new Subject(new Client2());
+        new Subject(new Client3());
 
         /*
         // hurtowe powiadamianie obserwatorów (czyli klientów) kiedy skończy się wątek z pracy (działania) jakiejś maszynerii Subject
