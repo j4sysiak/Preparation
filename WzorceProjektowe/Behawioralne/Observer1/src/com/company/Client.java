@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 public class Client {
 
     @Test
-    public void main() {
+    public void test() {
 
         // wzorzec Obserwator używamy, jeżeli zmiany jednego obiektu mogą wymagać zmian w innych obiektach,
         // a konkretny zestaw obiektów nie jest nam znany na początku lub jego stan się zmienia
