@@ -26,9 +26,12 @@ public class Blog {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                for (MailObserver observer : mailObservers) {
-                    observer.newsletter("time: " + randomDelay + ", content: " + UUID.randomUUID().toString());
-                }
+//                for (MailObserver observer : mailObservers) {
+//                    observer.newsletter("time: " + randomDelay + ", content: " + UUID.randomUUID());
+//                }
+            }
+            for (MailObserver observer : mailObservers) {
+                observer.newsletter("content: " + UUID.randomUUID());
             }
         });
         thread.start();
