@@ -2,7 +2,6 @@ package com.company;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Function;
 
 public class Subject2 {
 
@@ -12,7 +11,7 @@ public class Subject2 {
         listOfObservers = new ArrayList();
     }
 
-    public void addObserverToList(IObserver iObserver) {
+    public void subscribe(IObserver iObserver) {
         this.listOfObservers.add(iObserver);
     }
 
