@@ -4,8 +4,8 @@ public class Subject {
 
     // wątkowi zarządzanemu przez Subject przekazujemy element Observatora
 
-    //Wstrzykujemy Obserwer - który jest jednocześnie Clientem
-    // ten obiekt observer będzie obserwował stan wykonania wątku
+    //Wstrzykujemy obiekt Observera - który jest jednocześnie Clientem
+    // ten obiekt observera będzie obserwował stan wykonania wątku
     // i jeżeli np. wątek zakończy się
     // to observer poinformuje o tym
     public Subject(IObserver iObserver) {
@@ -20,7 +20,7 @@ public class Subject {
                         e.printStackTrace();
                     }
                 }
-                iObserver.update();
+                  iObserver.update();
             }
         });
         thread.start();

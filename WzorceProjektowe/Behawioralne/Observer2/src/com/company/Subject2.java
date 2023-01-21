@@ -12,7 +12,7 @@ public class Subject2 {
         listOfObservers = new ArrayList();
     }
 
-    public void addObserver(IObserver iObserver) {
+    public void addObserverToList(IObserver iObserver) {
         this.listOfObservers.add(iObserver);
     }
 

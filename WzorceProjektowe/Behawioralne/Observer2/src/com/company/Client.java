@@ -16,9 +16,9 @@ public class Client {
 
         // hurtowe powiadamianie obserwatorów (czyli klientów) kiedy skończy się wątek z pracy (działania) jakiejś maszynerii Subject
         var subject2 = new Subject2();
-        subject2.addObserver(new Observer1());
-        subject2.addObserver(new Observer2());
-        subject2.addObserver(new Observer3());
+        subject2.addObserverToList(new Observer1());
+        subject2.addObserverToList(new Observer2());
+        subject2.addObserverToList(new Observer3());
         subject2.startWork();
     }
 
