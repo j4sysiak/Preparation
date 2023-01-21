@@ -17,6 +17,23 @@ public class Blog {
         this.mailObservers.add(observers);
     }
 
+    public void startWork2() {
+        Thread thread = new Thread(() -> {
+            for (int i = 0; i < 100; i++) {
+                System.out.println(i);
+                try {
+                    Thread.sleep(11);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+            for (MailObserver observer : mailObservers) {
+                observer.newsletter("content: " + UUID.randomUUID());
+            }
+        });
+        thread.start();
+    }
+
     public void startWork() {
         Thread thread = new Thread(() -> {
             while (Thread.currentThread().isAlive()) {
@@ -26,12 +43,9 @@ public class Blog {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-//                for (MailObserver observer : mailObservers) {
-//                    observer.newsletter("time: " + randomDelay + ", content: " + UUID.randomUUID());
-//                }
-            }
-            for (MailObserver observer : mailObservers) {
-                observer.newsletter("content: " + UUID.randomUUID());
+                for (MailObserver observer : mailObservers) {
+                    observer.newsletter("time: " + randomDelay + ", content: " + UUID.randomUUID());
+                }
             }
         });
         thread.start();
