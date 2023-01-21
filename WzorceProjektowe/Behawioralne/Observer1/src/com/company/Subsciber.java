@@ -5,11 +5,11 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Observer implements IObserver {
+public class Subsciber implements ISubsciber {
 
     public String observerName;
 
-    public Observer(String name) {
+    public Subsciber(String name) {
         this.observerName = name;
     }
 
