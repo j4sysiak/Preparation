@@ -23,11 +23,11 @@ public class Client {
         InvoiceLogger.create(invoice, nettoDisplay).display();
 
 
-        // wyswietlanie w pdf
+        // wyswietlanie w PDF
         IInvoiceSaver pdfFormatSaver= new PdfInvoiceSaver();
         InvoicePersistence.create(invoice, pdfFormatSaver).save();
 
-        // wyswietlanie w word
+        // wyswietlanie w Word
         IInvoiceSaver wordFormatSaver= new WordInvoiceSaver();
         InvoicePersistence.create(invoice, wordFormatSaver).save();
     }
