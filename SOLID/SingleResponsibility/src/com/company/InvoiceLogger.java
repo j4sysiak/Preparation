@@ -4,7 +4,6 @@ import com.company.entity.Invoice;
 import lombok.Builder;
 
 /* jedna odpowiedzialność klasy InvoiceLogger - display(...) */
-
 @Builder
 public class InvoiceLogger {
 
@@ -21,6 +20,6 @@ public class InvoiceLogger {
     }
 
     public void display() {
-        System.out.println("Total: " + invoice.total);
+        System.out.println("Total: " + invoice.getTotal()  + " (lub):  " + invoice.total);
     }
 }

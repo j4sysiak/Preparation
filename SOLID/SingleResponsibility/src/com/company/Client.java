@@ -14,7 +14,7 @@ public class Client {
         Collection<LineItem> lineItems = Arrays.asList(lineItem1, lineItem2, lineItem3);
 
         Invoice invoice = Invoice.create(lineItems, "www", "sss");
-        invoice.getTotal();
+        System.out.println(invoice.getTotal());
 
         InvoiceLogger.create(invoice).display();
         InvoicePersistence.create(invoice).saveToPdf();

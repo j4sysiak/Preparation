@@ -18,8 +18,8 @@ public class CompanyBankAccount extends BankAccount {
         System.out.println("Loan TakeLoan ...");
     }
 
-    //obsługa polimorfizmu - specyficzne działanie metody makeWithdrawal dla wywołania z typu: CompanyBankAccount
-    //nadpisujemy medodę makeWithdrawal z BankAccount
+    // obsługa polimorfizmu - specyficzne działanie metody makeWithdrawal dla wywołania z typu: CompanyBankAccount
+    // nadpisujemy medodę makeWithdrawal z BankAccount
     @Override
     public BigDecimal makeWithdrawal(BigDecimal amount) {
         System.out.println("specyficzne działanie metody makeWithdrawal dla wywołania z typu: CompanyBankAccount");

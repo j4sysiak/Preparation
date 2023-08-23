@@ -1,6 +1,7 @@
 package com.company.modulelevel.model;
 
-import lombok.*;
+import lombok.Builder;
+import lombok.Getter;
 
 @Getter
 public class Circle extends Shape {
