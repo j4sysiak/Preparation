@@ -22,7 +22,7 @@ public class Application {
         shape.render();
     }
 
-/*
+            /*
              for (Shape shape : shapes) {
             ShapeType type = shape.shapeType;
             switch (type) {

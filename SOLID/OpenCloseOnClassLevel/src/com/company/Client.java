@@ -14,25 +14,24 @@ public class Client {
         LineItem lineItem3 = LineItem.builder().name("ccc").price(13.99f).count(3f).taxRate(19).build();
         lineItems = Arrays.asList(lineItem1, lineItem2, lineItem3);
     }
-
     public static void main(String[] args) {
-
-        //Collection<LineItem> lineItems = Arrays.asList(lineItem1, lineItem2, lineItem3);
 
         Invoice invoice = Invoice.create(lineItems, "www", "sss");
 
+        // wyswietlanie ceny Brutto
         IInvoiceDisplayer bruttoDisplay = new BruttoInvoiceDisplayer();
         InvoiceLogger.create(invoice, bruttoDisplay).display();
 
+        // wyswietlanie ceny Netto
         IInvoiceDisplayer nettoDisplay = new NettoInvoiceDisplayer();
         InvoiceLogger.create(invoice, nettoDisplay).display();
 
 
-        // wyswietlanie w PDF
+        // zapis dokumentu w formacie PDF
         IInvoiceSaver pdfFormatSaver= new PdfInvoiceSaver();
         InvoicePersistence.create(invoice, pdfFormatSaver).save();
 
-        // wyswietlanie w Word
+        // zapis dokumentu w formacie Word
         IInvoiceSaver wordFormatSaver= new WordInvoiceSaver();
         InvoicePersistence.create(invoice, wordFormatSaver).save();
     }
