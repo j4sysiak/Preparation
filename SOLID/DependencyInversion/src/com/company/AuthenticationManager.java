@@ -20,7 +20,7 @@ Dependency Injection
 Skorzystamy tutaj z DependencyInjection:  czyli wstrzyknięcie zależności (przez konstruktor, metodę lub set()).
 DependencyInjection: to mechanizm, który pozwoli nam dostarczyć implementację metod z konkretnej klasy z modułu niskopoziomowego
  (EmailNotification, SMSNotification) dzięki Interfejsowi INotificationSender do klasy wysokopoziomowego modułu (tej klasy) AuthenticationManager.
-Przez konstruktor klasy AuthenticationManager (wysokopoziomowej) dostarczymy obiekt INotificationSender (jako abstrakcja do klasy niskopoziomowej)
+Przez konstruktor klasy AuthenticationManager (wysokopoziomowej) dostarczymy obiekt INotificationSender (jako abstrakcja do klasy niskopoziomowej - może to być SMSNotification lub EmailNotification)
  i następnie przypiszemy go do pola prywatnego iNotificationSender.
 Przez to klasa wysokopoziomowego modułu, nie jest już bezpośrednio zależna od modułów niskopoziomowych: (EmailNotification, SMSNotification).
 Dzięki temu, możemy w dowolny sposób dostarczać implementację jakiejś dowolnej klasy z niskopoziomowego modułu,
@@ -42,12 +42,12 @@ public class AuthenticationManager {
     public void authenticate(User user, String email, String password) {
         Optional<String> maybeString = Optional.ofNullable(User.create("test@wp.pl").getPassword());
         if (maybeString
-                .map(pass -> getRunIfExist(pass, email, password))
+                .map(p -> getRunIfExist(p, email, password))
                 .orElseGet(() -> runIfEmpty())) {
-            //EmailNotification.builder().build().sendNotification(user); // tutaj klasa wysokiego poziomu zalezy od klasy niskiego poziomu
-            //SmsNotification.builder().build().sendNotification(user);   // tutaj klasa wysokiego poziomu zalezy od klasy niskiego poziomu
-            // lub uzywamy DependencyInversion
-            // tutaj klasa wysokiego poziomu NIE zalezy od klasy niskiego poziomu tylko od pewnej abstrakcji
+            //EmailNotification.builder().build().sendNotification(user); // tutaj klasa wysokiego poziomu (AuthenticationManager) zalezy od klasy niskiego poziomu EmailNotification
+            //SmsNotification.builder().build().sendNotification(user);   // tutaj klasa wysokiego poziomu (AuthenticationManager) zalezy od klasy niskiego poziomu SmsNotification
+            // lub uzywamy DependencyInversionPrinciple
+            // tutaj klasa wysokiego poziomu (AuthenticationManager) NIE zalezy od klasy niskiego poziomu tylko od pewnej abstrakcji  (wstrzyknęliśmy przy tworzeniu AuthenticationManager EmailNotification poprzez interface: .iNotificationSender(new EmailNotification()))
             iNotificationSender.sendNotification(user);   // tu jest klucz, w zaleznosci jaki jest wywołany modul niskopoziomowy (EmailNotification , SmsNotification) - taka bedzie implementacja
         }
 
