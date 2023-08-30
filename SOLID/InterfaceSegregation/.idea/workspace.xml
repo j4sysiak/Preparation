@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="53b29f28-4dab-447d-a074-396a6a917031" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Abstraction/out/production/Abstraction/com/company/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Abstraction/out/production/Abstraction/com/company/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Polimorfizm/out/production/untitled104/com/company/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Polimorfizm/out/production/untitled104/com/company/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DependencyInversion/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DependencyInversion/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/IPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/IPrinter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/IScanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/IScanner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LiskovSubstitution/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../LiskovSubstitution/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LiskovSubstitution/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../LiskovSubstitution/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OpenCloseOnClassLevel/out/production/OpenCloseOnClassLevel/com/company/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/../OpenCloseOnClassLevel/out/production/OpenCloseOnClassLevel/com/company/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OpenCloseOnClassLevel/out/production/OpenCloseOnClassLevel/com/company/classlevel/InvoiceLogger.class" beforeDir="false" afterPath="$PROJECT_DIR$/../OpenCloseOnClassLevel/out/production/OpenCloseOnClassLevel/com/company/classlevel/InvoiceLogger.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OpenCloseOnClassLevel/out/production/OpenCloseOnClassLevel/com/company/classlevel/InvoicePersistence.class" beforeDir="false" afterPath="$PROJECT_DIR$/../OpenCloseOnClassLevel/out/production/OpenCloseOnClassLevel/com/company/classlevel/InvoicePersistence.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OpenCloseOnClassLevel/src/com/company/classlevel/InvoiceLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OpenCloseOnClassLevel/src/com/company/classlevel/InvoiceLogger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OpenCloseOnModulLevel/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OpenCloseOnModulLevel/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OpenCloseOnModulLevel/target/classes/com/company/modulelevel/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/../OpenCloseOnModulLevel/target/classes/com/company/modulelevel/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SingleResponsibility/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SingleResponsibility/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SingleResponsibility/out/production/SingleResponsibility/com/company/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SingleResponsibility/out/production/SingleResponsibility/com/company/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SingleResponsibility/out/production/SingleResponsibility/com/company/InvoiceLogger.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SingleResponsibility/out/production/SingleResponsibility/com/company/InvoiceLogger.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SingleResponsibility/out/production/SingleResponsibility/com/company/InvoicePersistence.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SingleResponsibility/out/production/SingleResponsibility/com/company/InvoicePersistence.class" afterDir="false" />
-    </list>
+    <list default="true" id="53b29f28-4dab-447d-a074-396a6a917031" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -185,12 +165,20 @@
       <option name="project" value="LOCAL" />
       <updated>1672898721531</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="30-08-2023 2101">
+      <created>1693422129475</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1693422129476</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="04-06-2022 13:57" />
     <MESSAGE value="05-12-2023 06:43" />
-    <option name="LAST_COMMIT_MESSAGE" value="05-12-2023 06:43" />
+    <MESSAGE value="30-08-2023 2101" />
+    <option name="LAST_COMMIT_MESSAGE" value="30-08-2023 2101" />
   </component>
 </project>

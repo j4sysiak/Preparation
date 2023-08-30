@@ -13,7 +13,7 @@ public class Client {
         Oba powinny zależeć od abstrakcji np. interfejsów.
         Abstrakcje nie powinny zależeć od szczegółów.
         Szczegóły też powinny zależeć od abstrakcji.
-        Zasada Odwócenia Zależności - żeby klasy nie wiedziały o swoich tajnikach implementacyjnych
+        Zasada Odwócenia Zależności (Dependency Inversion Principle) - żeby klasy nie wiedziały o swoich tajnikach implementacyjnych
         ale nie chodzi o hermetyzację
         Obiekty powinny zależeć od abstrakcji a nie od typów.
 */
