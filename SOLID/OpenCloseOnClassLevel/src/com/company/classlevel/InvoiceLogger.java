@@ -16,10 +16,10 @@ public class InvoiceLogger {
     // nie jest wymagane, aby zmieniła ona swoją implementację
     // po to, żeby obsłużyć jakiś inny typ wyświetlania kwoty na fakturze np. bruttoAngielskie
 
-    // WAŻNE: wstrykujemy dwa obiekty: Obiekt klasy Invoice i Objekt Interfejsu IInvoiceDisplayer
+    // WAŻNE: wstrzykujemy dwa obiekty: Obiekt klasy Invoice i Objekt Interfejsu IInvoiceDisplayer
     public static InvoiceLogger create(Invoice invoice, IInvoiceDisplayer iInvoiceDisplayer) {
         return InvoiceLogger.builder()
-                .invoice(invoice)
+                .invoice(invoice)         //wstrzykujemy dwa obiekty: Obiekt klasy Invoice i Objekt Interfejsu IInvoiceDisplayer
                 .invoiceDisplayer(iInvoiceDisplayer)
                 .build();
     }

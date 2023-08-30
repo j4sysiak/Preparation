@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="367e497d-d5b9-4041-bfb4-6705da0d3754" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/company/RubberDuck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/RubberDuck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Abstraction/out/production/Abstraction/com/company/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Abstraction/out/production/Abstraction/com/company/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Polimorfizm/out/production/untitled104/com/company/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Polimorfizm/out/production/untitled104/com/company/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DependencyInversion/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DependencyInversion/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OpenCloseOnClassLevel/out/production/OpenCloseOnClassLevel/com/company/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/../OpenCloseOnClassLevel/out/production/OpenCloseOnClassLevel/com/company/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OpenCloseOnClassLevel/out/production/OpenCloseOnClassLevel/com/company/classlevel/InvoiceLogger.class" beforeDir="false" afterPath="$PROJECT_DIR$/../OpenCloseOnClassLevel/out/production/OpenCloseOnClassLevel/com/company/classlevel/InvoiceLogger.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OpenCloseOnClassLevel/out/production/OpenCloseOnClassLevel/com/company/classlevel/InvoicePersistence.class" beforeDir="false" afterPath="$PROJECT_DIR$/../OpenCloseOnClassLevel/out/production/OpenCloseOnClassLevel/com/company/classlevel/InvoicePersistence.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OpenCloseOnClassLevel/src/com/company/classlevel/InvoiceLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OpenCloseOnClassLevel/src/com/company/classlevel/InvoiceLogger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OpenCloseOnModulLevel/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OpenCloseOnModulLevel/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OpenCloseOnModulLevel/target/classes/com/company/modulelevel/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/../OpenCloseOnModulLevel/target/classes/com/company/modulelevel/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SingleResponsibility/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SingleResponsibility/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SingleResponsibility/out/production/SingleResponsibility/com/company/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SingleResponsibility/out/production/SingleResponsibility/com/company/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SingleResponsibility/out/production/SingleResponsibility/com/company/InvoiceLogger.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SingleResponsibility/out/production/SingleResponsibility/com/company/InvoiceLogger.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SingleResponsibility/out/production/SingleResponsibility/com/company/InvoicePersistence.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SingleResponsibility/out/production/SingleResponsibility/com/company/InvoicePersistence.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
