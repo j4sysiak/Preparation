@@ -15,6 +15,7 @@ public class Client {
         InvoiceBuilder builder = new InvoiceBuilder();
         InvoiceManager invoiceManager = new InvoiceManager(builder);
 
+
         Invoice monthlyInvoice = invoiceManager.createMonthlyInvoice();
         Invoice blankInvoice = invoiceManager.createBlankInvoice();
     }
