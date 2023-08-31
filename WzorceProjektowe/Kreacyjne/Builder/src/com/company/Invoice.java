@@ -16,6 +16,6 @@ public class Invoice {
     public LocalDateTime date;
     public String vendor;
     public String vendee;
-    public Collection<String> lineItems;
+    public Collection<String> lineItems;  //lista pozycji na fakturze
     public String note;
 }

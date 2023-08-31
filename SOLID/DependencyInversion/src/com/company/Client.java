@@ -40,7 +40,7 @@ public class Client {
         // AuthenticationManager - Moduł wysokopoziomowy
         AuthenticationManager.builder()
                 //to się równa temu: INotificationSender iem = new EmailNotification();
-                .iNotificationSender(new EmailNotification())  // tutaj wprowadzamy pośrednika (abstrakcję iNotificationSender) pomiedzy modulem wysokopoziomowym i niskopoziomowym
+                .iNotificationSender(new EmailNotification())  // tutaj wprowadzamy (wstrzykujemy) pośrednika (abstrakcję iNotificationSender) pomiedzy modulem wysokopoziomowym i niskopoziomowym
                 .build()
                 .authenticate(User.builder()
                                 .name("Marek Kowalski")
@@ -56,7 +56,7 @@ public class Client {
         // AuthenticationManager - Moduł wysokopoziomowy
         AuthenticationManager.builder()
                 //to się równa temu: INotificationSender iem = new SmsNotification();
-                .iNotificationSender(new SmsNotification())  // tutaj wprowadzamy pośrednika (abstrakcję iNotificationSender) pomiedzy modulem wysokopoziomowym i niskopoziomowym
+                .iNotificationSender(new SmsNotification())  // tutaj wprowadzamy (wstrzykujemy) pośrednika (abstrakcję iNotificationSender) pomiedzy modulem wysokopoziomowym i niskopoziomowym
                 .build()
                 .authenticate(User.builder()
                                 .name("Jacek Nowak")
