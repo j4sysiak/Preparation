@@ -17,8 +17,8 @@ public class Client {
 
 
         // budowniczy
-        im.getIInvoiceBuilder().setVendor("ss");
-        im.getIInvoiceBuilder().setNote("ss");
+        im.getIInvoiceBuilder().setVendor("Sanex");
+        im.getIInvoiceBuilder().setNote("dupa-dupa-dupa");
         Invoice invoice = im.getIInvoiceBuilder().build();  // zwraca obiekt w ostatnim kroku
         System.out.println(invoice);
     }
