@@ -1,8 +1,8 @@
 package com.company;
 
-import com.company.mdel.Circle;
-import com.company.mdel.Rectangle;
-import com.company.mdel.Triangle;
+import com.company.shapes.Circle;
+import com.company.shapes.Rectangle;
+import com.company.shapes.Triangle;
 
 public class ShapeFactory {
 

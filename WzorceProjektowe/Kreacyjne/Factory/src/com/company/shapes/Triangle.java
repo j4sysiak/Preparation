@@ -1,7 +1,6 @@
-package com.company.mdel;
+package com.company.shapes;
 
 import com.company.IShape;
-import com.company.Shape;
 
 public class Triangle  /*extends Shape*/ implements IShape {
 
