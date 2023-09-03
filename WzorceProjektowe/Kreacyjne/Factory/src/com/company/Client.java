@@ -10,9 +10,9 @@ public class Client {
     Udostępniany jest interface IShape (lub klasa abstrakcyjna Shape) do tworzenia obiektów w ramach klasy bazowej.
     Jednocześnie pozwala podklasom zmieniać typ tworzonych obiektów.
 
-    Fabryka oddziela kod implementacyjny (tworzący dany obiekt) od kodu, który korzysta z tego obiektu - Clienta.
+    Fabryka oddziela kod implementacyjny (ShapeFactory: tworzący dany obiekt) od kodu, który korzysta z tego obiektu - Clienta.
     Dodanie nowego kształtu nie powoduje zmiany kodu klienta (klasa Client)
-                - dodajemy tylko w fabryce nowy case i budujemy klasę nowego obiektu.
+                - dodajemy tylko w fabryce (ShapeFactory) nowy case i budujemy klasę nowego obiektu.
     */
 
 
