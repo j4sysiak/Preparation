@@ -6,7 +6,7 @@ import com.company.shapes.Triangle;
 
 public class ShapeFactory {
 
-    public IShape /* może tez byc alternatywniw klasa astrakcyjna: Shape */ createShape(ShapeType type) throws Exception {
+    public IShape /* może tez byc alternatywnie klasa astrakcyjna: Shape */ createShape(ShapeType type) throws Exception {
         // public Shape /* może tez byc alternatywniw klasa astrakcyjna: Shape */ createShape(ShapeType type) throws Exception {
 
 

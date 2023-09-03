@@ -1,11 +1,10 @@
 package com.company.shapes;
 
 import com.company.IShape;
-import com.company.Shape;
 
 public class Rectangle  /*extends Shape*/ implements IShape {
 
-   // @Override
+    @Override
     public void render() {
         System.out.println("Render Rectangle ... ");
     }
