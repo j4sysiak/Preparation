@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.mac.MacFactory;
+import com.company.windows.WindowsFactory;
 import org.junit.jupiter.api.Test;
 
 public class Client {

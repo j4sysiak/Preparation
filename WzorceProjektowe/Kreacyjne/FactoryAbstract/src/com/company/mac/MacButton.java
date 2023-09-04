@@ -1,4 +1,6 @@
-package com.company;
+package com.company.mac;
+
+import com.company.IButton;
 
 public class MacButton implements IButton {
 

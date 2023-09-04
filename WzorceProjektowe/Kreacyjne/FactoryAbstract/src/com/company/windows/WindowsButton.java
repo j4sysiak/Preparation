@@ -1,4 +1,6 @@
-package com.company;
+package com.company.windows;
+
+import com.company.IButton;
 
 public class WindowsButton implements IButton {
 

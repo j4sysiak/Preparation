@@ -1,4 +1,8 @@
-package com.company;
+package com.company.windows;
+
+import com.company.IButton;
+import com.company.IPanelElementFactory;
+import com.company.ITextbox;
 
 public class WindowsFactory implements IPanelElementFactory {
 

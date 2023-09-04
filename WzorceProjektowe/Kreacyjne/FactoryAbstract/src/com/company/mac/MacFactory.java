@@ -1,4 +1,8 @@
-package com.company;
+package com.company.mac;
+
+import com.company.IButton;
+import com.company.IPanelElementFactory;
+import com.company.ITextbox;
 
 public class MacFactory implements IPanelElementFactory {
 
