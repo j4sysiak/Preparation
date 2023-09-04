@@ -15,12 +15,12 @@ public class Client {
     określając ich typy podczas działania programu
     */
 
-        /*tutaj decydujemy dla jakiego systemu budujemy aplikację: dla Mac, czy Windows*/
+        /*tutaj decydujemy dla jakiego systemu budujemy aplikację: dla Mac, czy Windows - wybraliśmy Windows*/
         Application applicationForWindows = new Application(new WindowsFactory());  // w konstruktorze Application, przekazujemy konkretną implementację dla Windowsa
-        applicationForWindows.renderPanel();
+        applicationForWindows.createPanel();
 
-        /*tutaj decydujemy dla jakiego systemu budujem aplikację: dla Mac, czy Windows*/
+        /*tutaj decydujemy dla jakiego systemu budujem aplikację: dla Mac, czy Windows - wybraliśmy Mac*/
         Application applicationForMac = new Application(new MacFactory()); // w konstruktorze Applikation, przekazujemy konkretną implementację dla Mac'a
-        applicationForMac.renderPanel();
+        applicationForMac.createPanel();
     }
 }

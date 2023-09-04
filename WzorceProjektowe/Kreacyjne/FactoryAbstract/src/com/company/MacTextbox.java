@@ -3,7 +3,7 @@ package com.company;
 public class MacTextbox implements ITextbox {
 
     @Override
-    public void render() {
+    public void create() {
         System.out.println("Render Mac textbox");
     }
 

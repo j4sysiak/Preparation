@@ -2,7 +2,8 @@ package com.company;
 
 public interface ITextbox {
 
-    void render();
+    void create();
 
     void handleInput();
+
 }

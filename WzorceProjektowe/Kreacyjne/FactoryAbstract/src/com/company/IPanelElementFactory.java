@@ -14,7 +14,7 @@ public interface IPanelElementFactory {
     ta abstrakcyjnan fabryka nie wie nic o systemie Windows, czy systemie Mac
     */
 
-    IButton createButton();
+    IButton createButton();  // może dla Win a może dla Mac to zależey jak zbudowaliśmy Application tj. co wstrzyknęliśmy do konstruktora: new MacFactory() czy new WindowsFactory()
 
     ITextbox createTextbox();
 }

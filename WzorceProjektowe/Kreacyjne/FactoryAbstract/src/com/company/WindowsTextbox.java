@@ -3,7 +3,7 @@ package com.company;
 public class WindowsTextbox implements ITextbox {
 
     @Override
-    public void render() {
+    public void create() {
         System.out.println("Render Windows textbox");
     }
 

@@ -3,7 +3,7 @@ package com.company;
 public class WindowsButton implements IButton {
 
     @Override
-    public void render() {
+    public void create() {
         System.out.println("Render Windows button");
     }
 

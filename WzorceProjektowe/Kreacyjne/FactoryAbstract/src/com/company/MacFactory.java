@@ -1,7 +1,5 @@
 package com.company;
 
-import java.awt.*;
-
 public class MacFactory implements IPanelElementFactory {
 
     @Override
