@@ -5,5 +5,4 @@ public interface ITextbox {
     void createTextbox();
 
     void handleTextboxInput();
-
 }
