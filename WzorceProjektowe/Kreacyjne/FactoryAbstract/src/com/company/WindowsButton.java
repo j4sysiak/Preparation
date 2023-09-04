@@ -3,12 +3,12 @@ package com.company;
 public class WindowsButton implements IButton {
 
     @Override
-    public void create() {
+    public void createButton() {
         System.out.println("Render Windows button");
     }
 
     @Override
-    public void handleClick() {
+    public void handleClickButton() {
         System.out.println("Handle Windows click event");
     }
 }

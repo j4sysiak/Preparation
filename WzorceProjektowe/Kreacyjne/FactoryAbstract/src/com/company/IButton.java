@@ -2,7 +2,7 @@ package com.company;
 
 public interface IButton {
 
-    void create();
+    void createButton();
 
-    void handleClick();
+    void handleClickButton();
 }
