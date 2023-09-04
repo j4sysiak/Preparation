@@ -8,19 +8,19 @@ public class Client {
     public void test() {
 
     /*
-    Celem jest dostarczenie interfejsu do tworzenia różnych obiektów jednego typu
+    Celem jest dostarczenie interfejsu do tworzenia różnych obiektów jednego typu (elementy dla panelu Windowsa i elementy dla panelu Mac"a)
     dla tej samej rodziny klas bez specyfikowania ich konkretnych klas - ale nie chcemy, żeby ściśle był powiązany
     z jakimś konkretnym typem.
     Przy czym, umożliwia jednemu obiektowi tworzenie różnych, powiązanych ze sobą, reprezentacji pod-obiektów
     określając ich typy podczas działania programu
     */
 
-        /*tutaj decydujemy dla jakiego systemu budujem aplikację: dla Mac, czy Windows*/
-        var uiApplicationForWindows = new Application(new WindowsFactory());  // w konstruktorze Applikation, przekazujemy konkretną implementację dla Windowsa
-        uiApplicationForWindows.renderUI();
+        /*tutaj decydujemy dla jakiego systemu budujemy aplikację: dla Mac, czy Windows*/
+        Application applicationForWindows = new Application(new WindowsFactory());  // w konstruktorze Applikation, przekazujemy konkretną implementację dla Windowsa
+        applicationForWindows.renderUI();
 
         /*tutaj decydujemy dla jakiego systemu budujem aplikację: dla Mac, czy Windows*/
-        var uiApplicationForMac = new Application(new MacFactory()); // w konstruktorze Applikation, przekazujemy konkretną implementację dla Mac'a
-        uiApplicationForMac.renderUI();
+        Application applicationForMac = new Application(new MacFactory()); // w konstruktorze Applikation, przekazujemy konkretną implementację dla Mac'a
+        applicationForMac.renderUI();
     }
 }
