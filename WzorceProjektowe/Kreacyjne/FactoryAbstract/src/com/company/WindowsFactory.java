@@ -1,6 +1,6 @@
 package com.company;
 
-public class WindowsFactory implements IUIElementFactory {
+public class WindowsFactory implements IPanelElementFactory {
 
     @Override
     public IButton createButton() {

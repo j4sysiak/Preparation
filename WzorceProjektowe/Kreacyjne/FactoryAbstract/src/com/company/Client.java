@@ -16,11 +16,11 @@ public class Client {
     */
 
         /*tutaj decydujemy dla jakiego systemu budujemy aplikację: dla Mac, czy Windows*/
-        Application applicationForWindows = new Application(new WindowsFactory());  // w konstruktorze Applikation, przekazujemy konkretną implementację dla Windowsa
-        applicationForWindows.renderUI();
+        Application applicationForWindows = new Application(new WindowsFactory());  // w konstruktorze Application, przekazujemy konkretną implementację dla Windowsa
+        applicationForWindows.renderPanel();
 
         /*tutaj decydujemy dla jakiego systemu budujem aplikację: dla Mac, czy Windows*/
         Application applicationForMac = new Application(new MacFactory()); // w konstruktorze Applikation, przekazujemy konkretną implementację dla Mac'a
-        applicationForMac.renderUI();
+        applicationForMac.renderPanel();
     }
 }

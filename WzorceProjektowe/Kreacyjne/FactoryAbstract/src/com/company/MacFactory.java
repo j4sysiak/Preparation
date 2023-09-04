@@ -1,6 +1,8 @@
 package com.company;
 
-public class MacFactory implements IUIElementFactory {
+import java.awt.*;
+
+public class MacFactory implements IPanelElementFactory {
 
     @Override
     public IButton createButton() {

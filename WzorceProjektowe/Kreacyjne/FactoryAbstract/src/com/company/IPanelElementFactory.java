@@ -1,6 +1,6 @@
 package com.company;
 
-public interface IUIElementFactory {
+public interface IPanelElementFactory {
 
     //  Abstrakcyjna fabryka
 
@@ -15,5 +15,6 @@ public interface IUIElementFactory {
     */
 
     IButton createButton();
+
     ITextbox createTextbox();
 }
