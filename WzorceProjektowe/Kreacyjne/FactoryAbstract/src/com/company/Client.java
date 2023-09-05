@@ -19,11 +19,11 @@ public class Client {
     */
 
         /*tutaj decydujemy dla jakiego systemu budujemy aplikację: dla Mac, czy Windows - wybraliśmy Windows*/
-        Application applicationForWindows = new Application(new WindowsFactory());  // w konstruktorze Application, przekazujemy konkretną implementację dla Windowsa
+        var applicationForWindows = new Application(new WindowsFactory());  // w konstruktorze Application, przekazujemy konkretną implementację dla Windowsa
         applicationForWindows.createPanel();
 
         /*tutaj decydujemy dla jakiego systemu budujem aplikację: dla Mac, czy Windows - wybraliśmy Mac*/
-        Application applicationForMac = new Application(new MacFactory()); // w konstruktorze Applikation, przekazujemy konkretną implementację dla Mac'a
+        var applicationForMac = new Application(new MacFactory()); // w konstruktorze Applikation, przekazujemy konkretną implementację dla Mac'a
         applicationForMac.createPanel();
     }
 }
