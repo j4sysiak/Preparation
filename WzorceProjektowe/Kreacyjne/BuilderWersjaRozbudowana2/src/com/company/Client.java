@@ -11,15 +11,30 @@ public class Client {
 
     @Test
     public void test() {
-        InvoiceManager im = InvoiceManager.builder()
+        // MonthlyInvoiceBuilder
+        var im = InvoiceManager.builder()
                 .iInvoiceBuilder(new MonthlyInvoiceBuilder())
                 .build();
-
 
         // budowniczy
         im.getIInvoiceBuilder().setVendor("Sanex");
         im.getIInvoiceBuilder().setNote("dupa-dupa-dupa");
-        Invoice invoice = im.getIInvoiceBuilder().build();  // zwraca obiekt w ostatnim kroku
+        var invoice = im.getIInvoiceBuilder().build();  // zwraca obiekt w ostatnim kroku
         System.out.println(invoice);
+
+
+
+
+
+        // EmptyInvoiceBuilder
+        var iem = InvoiceManager.builder()
+                .iInvoiceBuilder(new EmptyInvoiceBuilder())
+                .build();
+
+        // budowniczy
+        iem.getIInvoiceBuilder().setVendor("Sanex");
+        iem.getIInvoiceBuilder().setNote("dupa-dupa-dupa");
+        var em_invoice = iem.getIInvoiceBuilder().build();  // zwraca obiekt w ostatnim kroku
+        System.out.println(em_invoice);
     }
 }

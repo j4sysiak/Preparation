@@ -1,6 +1,5 @@
 package com.company;
 
-
 //import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
@@ -12,10 +11,10 @@ public class WithVATInvoiceBuilder implements IInvoiceBuilder   {
 
     private Invoice invoice;
 
-//    MonthlyInvoiceBuilder() {
-//        // najpierw tworzymy instancję klasy Invoice - przez wstrzyknięcie w konstruktorze.
-//        this.invoice = new Invoice();
-//    }
+    WithVATInvoiceBuilder() {
+        // najpierw tworzymy instancję klasy Invoice - przez wstrzyknięcie w konstruktorze.
+        this.invoice = new Invoice();
+    }
 
     public void setVendor(String vendor) {
         invoice.vendor = vendor;

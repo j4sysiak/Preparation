@@ -1,6 +1,5 @@
 package com.company;
 
-
 //import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
@@ -8,14 +7,14 @@ import lombok.Setter;
 @Setter
 @Getter
 //@Builder
-public class EmptylyInvoiceBuilder implements IInvoiceBuilder {
+public class EmptyInvoiceBuilder implements IInvoiceBuilder {
 
     private Invoice invoice;
 
-//    MonthlyInvoiceBuilder() {
-//        // najpierw tworzymy instancję klasy Invoice - przez wstrzyknięcie w konstruktorze.
-//        this.invoice = new Invoice();
-//    }
+    EmptyInvoiceBuilder() {
+        // najpierw tworzymy instancję klasy Invoice - przez wstrzyknięcie w konstruktorze.
+        this.invoice = new Invoice();
+   }
 
     public void setVendor(String vendor) {
         invoice.vendor = vendor;
