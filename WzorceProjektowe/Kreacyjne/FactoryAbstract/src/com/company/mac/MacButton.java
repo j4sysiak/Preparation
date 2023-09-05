@@ -5,7 +5,7 @@ import com.company.IButton;
 public class MacButton implements IButton {
 
     @Override
-    public void createButton() {
+    public void renderButton() {
         System.out.println("Render Mac button");
     }
 

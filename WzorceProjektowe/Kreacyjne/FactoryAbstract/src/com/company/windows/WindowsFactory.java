@@ -7,12 +7,12 @@ import com.company.ITextbox;
 public class WindowsFactory implements IPanelElementFactory {
 
     @Override
-    public IButton createButton() {
-        return new WindowsButton(); // zwraca konkretne elementy
+    public IButton renderButton() {
+        return new WindowsButton(); // zwraca konkretny element (Button)  dla Windowsa
     }
 
     @Override
-    public ITextbox createTextbox() {
-        return new WindowsTextbox();  // zwraca konkretne elementy
+    public ITextbox renderTextbox() {
+        return new WindowsTextbox();  // zwraca konkretny element (Textbox)  dla Windowsa
     }
 }

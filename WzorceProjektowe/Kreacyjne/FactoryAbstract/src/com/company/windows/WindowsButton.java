@@ -5,7 +5,7 @@ import com.company.IButton;
 public class WindowsButton implements IButton {
 
     @Override
-    public void createButton() {
+    public void renderButton() {
         System.out.println("Render Windows button");
     }
 

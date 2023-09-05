@@ -7,12 +7,12 @@ import com.company.ITextbox;
 public class MacFactory implements IPanelElementFactory {
 
     @Override
-    public IButton createButton() {
-        return new MacButton();  // zwraca konkretne elementyv
+    public IButton renderButton() {
+        return new MacButton();  // zwraca konkretny element (Button)  dla Mac
     }
 
     @Override
-    public ITextbox createTextbox() {
-        return new MacTextbox();  // zwraca konkretne elementy
+    public ITextbox renderTextbox() {
+        return new MacTextbox();  // zwraca konkretny element (Textbox) dla Mac
     }
 }

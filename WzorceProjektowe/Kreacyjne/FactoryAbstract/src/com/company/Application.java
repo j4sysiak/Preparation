@@ -21,12 +21,12 @@ public class Application {
 
     public void createPanel() {
         //obsługa Buttonu - ale jesccze nie wiem jakiego systemu
-        IButton createAbstractButton = iPanelElementFactory.createButton();  /*tutaj bazujemy jeszcze na abstrakcji bo nie wiemy co przyjdzie tworzyć, element dla Windowsa, czy może Mac'a*/
-        createAbstractButton.createButton();
+        IButton createAbstractButton = iPanelElementFactory.renderButton();  /*tutaj bazujemy jeszcze na abstrakcji bo nie wiemy co przyjdzie tworzyć, element dla Windowsa, czy może Mac'a*/
+        createAbstractButton.renderButton();
         createAbstractButton.handleClickButton();
 
         //obsługa Textbox - ale jesccze nie wiem jakiego systemu
-        ITextbox createAbstractTextbox = iPanelElementFactory.createTextbox();  /*tutaj bazujemy jeszcze na abstrakcji bo nie wiemy co przyjdzie tworzyć, element dla Windowsa, czy może Mac'a*/
+        ITextbox createAbstractTextbox = iPanelElementFactory.renderTextbox();  /*tutaj bazujemy jeszcze na abstrakcji bo nie wiemy co przyjdzie tworzyć, element dla Windowsa, czy może Mac'a*/
         createAbstractTextbox.createTextbox();
         createAbstractTextbox.handleTextboxInput();
     }
