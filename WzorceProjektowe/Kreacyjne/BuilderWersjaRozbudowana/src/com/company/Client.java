@@ -10,13 +10,13 @@ public class Client {
 
     @Test
     public void test() {
-        InvoiceBuilder builder = new InvoiceBuilder();
-        InvoiceManager invoiceManager = new InvoiceManager(builder);
+        var invoiceBuilder = new InvoiceBuilder();
+        var invoiceManager = new InvoiceManager(invoiceBuilder);
 
-        Invoice monthlyInvoice = invoiceManager.createMonthlyInvoice();
+        var monthlyInvoice = invoiceManager.createMonthlyInvoice();
         System.out.println(monthlyInvoice);
 
-        Invoice blankInvoice = invoiceManager.createBlankInvoice();
+        var blankInvoice = invoiceManager.createBlankInvoice();
         System.out.println(blankInvoice);
     }
 }
