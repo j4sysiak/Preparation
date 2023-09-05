@@ -6,8 +6,12 @@ import com.company.shapes.Triangle;
 
 public class ShapeFactory {
 
-    public IShape /* może tez byc alternatywnie klasa astrakcyjna: Shape */ createShape(ShapeType type) throws Exception {
-        // public Shape /* może tez byc alternatywniw klasa astrakcyjna: Shape */ createShape(ShapeType type) throws Exception {
+    public IShape /*lub Shape*/ createShape(ShapeType type) throws Exception {
+
+        Circle circle1 = new Circle();
+        var circle2 = new Circle();
+        /* ciekawostka ...*/
+        IShape circle3 = new Circle();
 
 
         /* banalne co ...*/

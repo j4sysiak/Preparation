@@ -19,7 +19,7 @@ public class Client {
         var shapeFactory = new ShapeFactory();
 
         // Circle circle = (Circle) shapeFactory.createShape(ShapeType.Circle);
-        IShape circle = shapeFactory.createShape(ShapeType.Circle);
+        var circle = shapeFactory.createShape(ShapeType.Circle);
         circle.render();
 
         // Triangle triangle = (Triangle) shapeFactory.createShape(ShapeType.Triangle);
