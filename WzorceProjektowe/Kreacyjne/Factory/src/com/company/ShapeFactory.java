@@ -13,7 +13,6 @@ public class ShapeFactory {
         /* ciekawostka ...*/
         IShape circle3 = new Circle();
 
-
         /* banalne co ...*/
         switch (type) {
             case Circle: return new Circle();
