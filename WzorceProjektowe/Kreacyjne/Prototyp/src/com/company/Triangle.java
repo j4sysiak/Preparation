@@ -27,14 +27,14 @@ public class Triangle extends Shape {
     }
 
     @Override
-    // musi być zwrotka na biekcie Shape, bo interfajce tak jest zdefiniowany (musi być generyczny)
+    // musi być zwrotka na obiekcie Shape, bo interfajce tak jest zdefiniowany (musi być generyczny)
     public Shape cloning() {
         // jesteśmy w Triangle, więc chcemy żeby zwrotka była Triangle, więc rzutujemy na Triangle
         return (Triangle) this.clone();  //deepCopy
     }
 
     @Override
-    //deepCopy
+    //deepCopy  - nadpisujemy sobie oryginalną metodę clone() z klasy Object
     public Object clone() {
         Triangle triangle = null;
         try {

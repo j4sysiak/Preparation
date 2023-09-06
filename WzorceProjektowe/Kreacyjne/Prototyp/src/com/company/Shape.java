@@ -8,7 +8,6 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 public abstract class Shape {
-
    public int x;
    public int y;
    public Border border;

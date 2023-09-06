@@ -27,17 +27,17 @@ public class Client {
         c1.render();  // to pestka
 
         // to ważne - cloning zwraca obiekt bazowy Shape, więc trzeba rzutować
-        Circle deepCopyOfC1 = (Circle) c1.cloning();
+        var deepCopyOfC1 = (Circle) c1.cloning();
 
         if (c1 == deepCopyOfC1) {
-            System.out.println("==");
+            System.out.println("=shallow copy=");
         } else {
             System.out.println("jestem po deep copy zupełnie nowym obiektem z nowymi referencjami do obiektu klasy Border");
         }
 
         //deep copy powoduje uniezależnienie się od referencji do obiektów, które ma orginał (Border) - no bo ma nowe obiekty na podstawie starych wartości.
          if (c1.getBorder() == deepCopyOfC1.getBorder()) {
-             System.out.println("==");
+             System.out.println("=shallow copy=");
          } else {
              System.out.println("jestem po deep copy zupełnie nowym obiektem z nowymi referencjami do obiektu klasy Border");
          }

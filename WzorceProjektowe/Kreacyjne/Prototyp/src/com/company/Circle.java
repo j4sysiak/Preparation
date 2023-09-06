@@ -32,7 +32,7 @@ public class Circle extends Shape {
     }
 
     @Override
-    // musi być zwrotka na biekcie Shape, bo interfajce tak jest zdefiniowany (musi być generyczny)
+    // musi być zwrotka na obiekcie Shape, bo interfajce tak jest zdefiniowany (musi być generyczny)
     public Shape cloning() {
         // jesteśmy w Circle, więc chcemy żeby zwrotka była Circle, więc rzutujemy na Circle
         return (Circle) clone();  //deepCopy
