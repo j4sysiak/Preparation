@@ -30,7 +30,7 @@ public class Triangle extends Shape {
     // musi być zwrotka na obiekcie Shape, bo interfajce tak jest zdefiniowany (musi być generyczny)
     public Shape cloning() {
         // jesteśmy w Triangle, więc chcemy żeby zwrotka była Triangle, więc rzutujemy na Triangle
-        return (Triangle) this.clone();  //deepCopy
+        return (Triangle) this.clone();  //to do deepCopy
     }
 
     @Override

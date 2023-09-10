@@ -8,7 +8,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class Circle extends Shape {
+public class Circle extends Shape implements Cloneable {
     public int radius;
 
     @Builder
@@ -33,14 +33,19 @@ public class Circle extends Shape {
 
     @Override
     // musi być zwrotka na obiekcie Shape, bo interfajce tak jest zdefiniowany (musi być generyczny)
-    public Shape cloning() {
+    public Shape cloning() throws CloneNotSupportedException {
         // jesteśmy w Circle, więc chcemy żeby zwrotka była Circle, więc rzutujemy na Circle
         return (Circle) clone();  //deepCopy
     }
 
     @Override
+    public Circle clone() throws CloneNotSupportedException {
+        return (Circle) super.clone();
+    }
+
+   // @Override
     //deepCopy
-    public Object clone() {
+    public Object clone1() {
         Circle circle = null;
         try {
             //Note that the super.clone() call returns a shallow copy of an object,

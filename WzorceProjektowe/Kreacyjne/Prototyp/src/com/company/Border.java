@@ -18,7 +18,7 @@ public class Border {
     public Object clone() {
         Border border = null;
         try {
-            //Note that the super.clone() call returns a shallow copy of an object,
+            // Note that the super.clone() call returns a shallow copy of an object,
             // but we set deep copies of mutable fields manually, so the result is correct:
             border = (Border) super.clone();
         } catch (CloneNotSupportedException e) {
