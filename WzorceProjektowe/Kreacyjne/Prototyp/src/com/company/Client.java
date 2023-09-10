@@ -13,24 +13,12 @@ public class Client {
     */
 
     @Test
-    public void testDeepCloning() {
-        //KlonowanieGlebokie
+    public void testShallowCloning() {
+        //KlonowaniePlytkie
         Adres adres = new Adres("Główna", 123);
         Osoba osoba1 = new Osoba("Jan Kowalski", adres);
 
-        Osoba osoba2 = (Osoba) osoba1.clone();
-
-        osoba2.setAdres(new Adres("Główna", 123));
-
-    }
-
-    @Test
-    public void testShallowCloning() {
-        //KlonowaniePlytkie
-                Adres adres = new Adres("Główna", 123);
-                Osoba osoba1 = new Osoba("Jan Kowalski", adres);
-
-        Osoba osoba2 = (Osoba) osoba1.clone();
+        Osoba osoba2 = (Osoba) osoba1.cloning();  //KlonowaniePlytkie
         System.out.println("Osoba 1: " + osoba1.getImie() + ", Adres: " + osoba1.getAdres().getUlica());
         System.out.println("Osoba 2: " + osoba2.getImie() + ", Adres: " + osoba2.getAdres().getUlica());
 
@@ -48,5 +36,13 @@ public class Client {
 
         System.out.println("Osoba 1 po zmianie adresu w osobie 2: " + osoba1.getAdres().getUlica());
         System.out.println("Osoba 2 po zmianie adresu w osobie 2: " + osoba2.getAdres().getUlica());
+    }
+
+    @Test
+    public void testDeepCloning() {
+        //KlonowanieGlebokie
+        Adres adres = new Adres("Główna", 123);
+        Osoba osoba1 = new Osoba("Jan Kowalski", adres);
+        Osoba osoba2 = (Osoba) osoba1.clone();
     }
 }
