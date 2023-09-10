@@ -1,8 +1,5 @@
 package com.company;
 
-import lombok.Setter;
-import lombok.ToString;
-
 public class Computer {
 
     private Computer(ComputerBuilder builder) {
@@ -16,8 +13,6 @@ public class Computer {
 
 
     //Builder Class  (inner class)
-    @ToString
-    @Setter
     public static class ComputerBuilder{
 
         // required parameters
