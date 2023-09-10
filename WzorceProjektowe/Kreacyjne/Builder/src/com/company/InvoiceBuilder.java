@@ -2,6 +2,8 @@ package com.company;
 
 
 //import lombok.Builder;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,7 +12,8 @@ import java.util.Collection;
 
 @Setter
 @Getter
-//@Builder
+@Builder
+@AllArgsConstructor
 public class InvoiceBuilder {
 
     private Invoice invoice;
