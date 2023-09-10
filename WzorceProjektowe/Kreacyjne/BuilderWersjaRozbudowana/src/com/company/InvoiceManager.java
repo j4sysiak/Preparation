@@ -4,6 +4,7 @@ public class InvoiceManager {
 
     private InvoiceBuilder invoiceBuilder;
 
+
     public InvoiceManager(InvoiceBuilder invoiceBuilder) {
         this.invoiceBuilder = invoiceBuilder;
     }
