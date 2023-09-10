@@ -1,12 +1,8 @@
 package com.company;
 
-//import lombok.Builder;
 import lombok.Getter;
-import lombok.Setter;
 
-@Setter
 @Getter
-//@Builder
 public class InvoiceBuilder   {
 
     private Invoice invoice;
