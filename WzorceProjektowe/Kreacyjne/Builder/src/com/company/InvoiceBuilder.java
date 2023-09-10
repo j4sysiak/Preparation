@@ -54,7 +54,7 @@ public class InvoiceBuilder {
     }
 
     // to jest metoda, która zwróci naszą fakturę
-    public Invoice build() {
+    public Invoice create() {
         return this.getInvoice();
     }
 }

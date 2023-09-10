@@ -39,7 +39,7 @@ public class Client {
         invoiceBuilder.setLineItems(List.of("Line item1", "Line item2"));
 
         // i mamy naszą piękną fakturę
-        Invoice invoice1 = invoiceBuilder.build();  // i odbieramy naszą fakturę
+        Invoice invoice1 = invoiceBuilder.create();  // i odbieramy naszą fakturę
         System.out.println(invoice1);
 
 
@@ -52,7 +52,7 @@ public class Client {
                 .setVendee("Jacek")
                 .setNote("flsjdfjlsjdlfjlsjdfjsdjfsdlflsj")
                 .setLineItems(List.of("Line item1", "Line item2"))
-                .build();  // i odbieramy naszą fakturę
+                .create();  // i odbieramy naszą fakturę
         System.out.println(invoice2);
 
         // UWAGA - nie uzywamy tutaj invoiceBuildera - to tylko bezposrednie tworzenie klasy Invoice (taki przyklad tylko)
