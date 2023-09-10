@@ -1,11 +1,9 @@
 package com.company;
 
 import java.util.List;
-
 import static java.time.LocalDateTime.now;
 
 public class Director {
-
 
     public void createMonthlyInvoice(InvoiceBuilder monthlyInvoice) {
         monthlyInvoice.setDate(now())
