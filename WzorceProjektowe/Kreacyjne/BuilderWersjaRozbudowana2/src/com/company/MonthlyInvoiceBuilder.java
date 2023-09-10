@@ -1,11 +1,11 @@
 package com.company;
 
-//import lombok.Builder;
+
 import lombok.Getter;
 import lombok.Setter;
 
-@Setter
 @Getter
+@Setter
 public class MonthlyInvoiceBuilder implements IInvoiceBuilder   {
 
     private Invoice invoice;

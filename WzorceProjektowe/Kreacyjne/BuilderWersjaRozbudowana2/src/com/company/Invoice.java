@@ -1,13 +1,10 @@
 package com.company;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
 
-@Setter
 @Getter
-@ToString
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
+@Setter
 public class Invoice {
 
     public String vendor;

@@ -2,8 +2,7 @@ package com.company;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.junit.jupiter.api.Test;
-
+import org.junit.Test;
 
 @Setter
 @Getter
