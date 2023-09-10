@@ -12,7 +12,6 @@ public class Director {
                 .setVendee("Jacek")
                 .setNote("flsjdfjlsjdlfjlsjdfjsdjfsdlflsj")
                 .setLineItems(List.of("Line item1", "Line item2"));
-
     }
 
     public void createBlankInvoice(InvoiceBuilder blankInvoice) {
