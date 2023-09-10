@@ -2,8 +2,10 @@ package com.company.car;
 
 import lombok.*;
 
-@Builder
 @Getter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class CarBuilder {
     @Builder.Default
     private int idbuild = 0;

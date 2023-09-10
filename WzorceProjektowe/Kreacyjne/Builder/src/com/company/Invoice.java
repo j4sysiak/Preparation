@@ -4,6 +4,8 @@ import lombok.*;
 
 import java.time.LocalDateTime;
 import java.util.Collection;
+import java.util.Date;
+import java.util.List;
 
 @Setter
 @Getter
@@ -12,10 +14,21 @@ import java.util.Collection;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Invoice {
-    public String number;
-    public LocalDateTime date;
-    public String vendor;
-    public String vendee;
-    public Collection<String> lineItems;  //lista pozycji na fakturze
-    public String note;
+    @Builder.Default
+    public String number="";
+
+    @Builder.Default
+    public LocalDateTime date = LocalDateTime.now();
+
+    @Builder.Default
+    public String vendor="";;
+
+    @Builder.Default
+    public String vendee="";;
+
+    @Builder.Default
+    public Collection<String> lineItems= List.of(null);  //lista pozycji na fakturze
+
+    @Builder.Default
+    public String note="";;
 }

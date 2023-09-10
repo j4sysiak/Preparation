@@ -10,7 +10,7 @@ public class Client {
 
 
     @Test
-    public void test() {
+    public void test1() {
         /*
         Można tworzyć etapami złożone obiekty.
         Rozdziela sposób tworzenia obiektów od ich reprezentacji.
@@ -29,7 +29,8 @@ public class Client {
         */
 
         // pierwszy sposób - mega prymitywny
-        /*InvoiceBuilder ale lepiej var*/ var invoiceBuilder = new InvoiceBuilder(); // tworzymy tutaj na początku pusty obiekt faktury: wstrzykujemy invoice w konstruktorze InvoiceBuilder()
+        /*InvoiceBuilder ale lepiej var*/
+        var invoiceBuilder = new InvoiceBuilder(); // tworzymy tutaj na początku pusty obiekt faktury: wstrzykujemy invoice w konstruktorze InvoiceBuilder()
         // dokładamy poszczególne elementy do faktury:
         invoiceBuilder.setDate(now());
         invoiceBuilder.setInvoiceNumber("A13132-2022");
@@ -41,8 +42,11 @@ public class Client {
         // i mamy naszą piękną fakturę
         Invoice invoice1 = invoiceBuilder.create();  // i odbieramy naszą fakturę
         System.out.println(invoice1);
+    }
 
-
+    @Test
+    public void test2() {
+        var invoiceBuilder = new InvoiceBuilder();
         // tak zwane płynne wywołanie (łańcuchowe)
         // drugi sposób - to w sumie to samo co powyżej ale szybciej i ładniej
         Invoice invoice2 = invoiceBuilder
@@ -54,17 +58,21 @@ public class Client {
                 .setLineItems(List.of("Line item1", "Line item2"))
                 .create();  // i odbieramy naszą fakturę
         System.out.println(invoice2);
+    }
 
+    @Test
+    public void test3() {
         // UWAGA - nie uzywamy tutaj invoiceBuildera - to tylko bezposrednie tworzenie klasy Invoice (taki przyklad tylko)
-        // trzeci sposób - używa anotacji @Builder Lomboka w bezpośrednio klasie Invoice
+        // trzeci sposób - używa anotacji @Builder Lomboka w bezpośrednio klasie Invoice: ale pamietaj, że kazde pole w Invoice musi byc oznaczone: @Builder.Default
+        // i musimy jaks wartosc domyslna podac
 //        Invoice invoice3 = Invoice.builder()
-//                        .date(now())
-//                        .number("A13132-2022")
-//                        .vendor("Ford Motors Company Co. Limited")
-//                        .vendee("Jacek")
-//                        .note("flsjdfjlsjdlfjlsjdfjsdjfsdlflsj")
-//                        .lineItems(List.of("Line item1", "Line item2"))
-//                        .build();
-//         System.out.println(invoice3);
+//                .date(now())
+//                .number("A13132-2022")
+//                .vendor("Ford Motors Company Co. Limited")
+//                .vendee("Jacek")
+//                .note("flsjdfjlsjdlfjlsjdfjsdjfsdlflsj")
+//                .lineItems(List.of("Line item1", "Line item2"))
+//                .build();
+//        System.out.println(invoice3);
     }
 }

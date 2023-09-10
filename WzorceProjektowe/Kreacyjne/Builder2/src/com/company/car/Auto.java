@@ -1,8 +1,12 @@
 package com.company.car;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.NoArgsConstructor;
 
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Auto {
     @Builder.Default
     private int id = 0;
