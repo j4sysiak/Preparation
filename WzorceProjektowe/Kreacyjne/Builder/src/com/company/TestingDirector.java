@@ -19,12 +19,14 @@ public class TestingDirector {
         Director director = new Director();
         InvoiceBuilder invoiceBuilder = new InvoiceBuilder();
 
+        // chcemy miec createMonthlyInvoice
         director.createMonthlyInvoice(invoiceBuilder);
-        Invoice monthlyInvoice = invoiceBuilder.getInvoice();
-        System.out.println(monthlyInvoice);
+        Invoice myMonthlyInvoice = invoiceBuilder.getInvoice();
+        System.out.println(myMonthlyInvoice);
 
+        // chcemy miec createBlankInvoice
         director.createBlankInvoice(invoiceBuilder);
-        Invoice blankInvoice = invoiceBuilder.getInvoice();
-        System.out.println(blankInvoice);
+        Invoice myBlankInvoice = invoiceBuilder.getInvoice();
+        System.out.println(myBlankInvoice);
     }
 }
