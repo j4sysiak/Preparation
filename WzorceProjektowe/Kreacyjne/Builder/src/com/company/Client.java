@@ -65,14 +65,14 @@ public class Client {
         // UWAGA - nie uzywamy tutaj invoiceBuildera - to tylko bezposrednie tworzenie klasy Invoice (taki przyklad tylko)
         // trzeci sposób - używa anotacji @Builder Lomboka w bezpośrednio klasie Invoice: ale pamietaj, że kazde pole w Invoice musi byc oznaczone: @Builder.Default
         // i musimy jaks wartosc domyslna podac
-//        Invoice invoice3 = Invoice.builder()
-//                .date(now())
-//                .number("A13132-2022")
-//                .vendor("Ford Motors Company Co. Limited")
-//                .vendee("Jacek")
-//                .note("flsjdfjlsjdlfjlsjdfjsdjfsdlflsj")
-//                .lineItems(List.of("Line item1", "Line item2"))
-//                .build();
-//        System.out.println(invoice3);
+        Invoice invoice3 = Invoice.builder()
+                .date(now())
+                .number("A13132-2022")
+                .vendor("Ford Motors Company Co. Limited")
+                .vendee("Jacek")
+                .note("flsjdfjlsjdlfjlsjdfjsdjfsdlflsj")
+                .lineItems(List.of("Line item1", "Line item2"))
+                .build();
+        System.out.println(invoice3);
     }
 }

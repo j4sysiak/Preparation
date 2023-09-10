@@ -21,13 +21,13 @@ public class Invoice {
     public LocalDateTime date = LocalDateTime.now();
 
     @Builder.Default
-    public String vendor="";;
+    public String vendor="";
 
     @Builder.Default
-    public String vendee="";;
+    public String vendee="";
 
     @Builder.Default
-    public Collection<String> lineItems= List.of(null);  //lista pozycji na fakturze
+    public Collection<String> lineItems = List.of("");  //lista pozycji na fakturze
 
     @Builder.Default
     public String note="";;
