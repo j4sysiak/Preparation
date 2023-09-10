@@ -6,6 +6,7 @@ import static java.time.LocalDateTime.now;
 
 public class Director {
 
+
     public void createMonthlyInvoice(InvoiceBuilder monthlyInvoice) {
         monthlyInvoice.setDate(now())
                 .setInvoiceNumber("A13132-2022")
