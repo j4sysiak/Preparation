@@ -16,5 +16,5 @@ We should follow the naming convention and if the class name is Computer then bu
 4. The final step is to provide a build() method in the builder class that will return the Object needed by client program. For this we need to have a private constructor in the Class with Builder class as argument.
 
 
-##############################  Car
+##############################  Auto
 https://www.youtube.com/watch?v=MaY_MDdWkQw
