@@ -14,14 +14,4 @@ public class Client {
         Auto auto = carBuilder.create();
         System.out.println(auto);
     }
-
-//    @Test
-//    public void testCar1( ) {
-//        CarBuilder carBuilder = new CarBuilder();
-//        Auto car = carBuilder.setId(1)
-//                .setBrand("TOYOTA")
-//                .setModel("Yaris")
-//                .build();
-//        System.out.println(car);
-//    }
 }
