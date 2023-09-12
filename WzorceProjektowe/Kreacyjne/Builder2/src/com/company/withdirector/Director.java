@@ -2,15 +2,13 @@ package com.company.withdirector;
 
 public class Director {
 
-    public void createKawasakiMotorcycle(MotocycleBuilder kawasakiMotorcycle) {
-
-        MotocycleBuilder vv = kawasakiMotorcycle.builder()
-                .idbuild(1)
-                .brandbuild("")
-                .modelbuild("")
-                .build();
-
-        System.out.println();
+    public void createHondaMotorcycle(Builder builder) {
+        builder.brand("Honda")
+                .model("650W");
     }
 
+    public void createYamahaMotorcycle(Builder builder) {
+        builder.brand("Yamaha")
+                .model("1200CC Power");
+    }
 }

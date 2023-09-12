@@ -16,4 +16,20 @@ public class Client {
         Motocycle motocycle = motocycleBuilder.create();
         System.out.println(motocycle);
     }
+
+    @Test
+    public void testDirector() {
+        Director director = new Director();
+        Builder builder = new Builder();
+
+        // createHonda
+        director.createHondaMotorcycle(motocycleBuilder );
+        Motocycle motocycleHonda = motocycleBuilder.create();
+        System.out.println(motocycleHonda);
+
+        // createYamaha
+        director.createYamahaMotorcycle(motocycleBuilder);
+        Motocycle motocycleYama = motocycleBuilder.create();
+        System.out.println(motocycleYama);
+    }
 }
