@@ -12,6 +12,10 @@ public class Computer {
     private String RAM;
 
 
+
+
+
+
     //Builder Class  (inner class)
     public static class ComputerBuilder{
 

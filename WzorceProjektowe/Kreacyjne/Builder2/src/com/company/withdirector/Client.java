@@ -1,7 +1,9 @@
 package com.company.withdirector;
 
+import lombok.ToString;
 import org.junit.Test;
 
+@ToString
 public class Client {
 
     @Test

@@ -6,15 +6,15 @@ import lombok.*;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class CarBuilder {
+public class AutoBuilder {
     @Builder.Default
-    private int idbuild = 0;
+    int idbuild = 0;
 
     @Builder.Default
-    private String brandbuild = "";
+    String brandbuild = "";
 
     @Builder.Default
-    private String modelbuild = "";
+    String modelbuild = "";
 
     public Auto create() {
         return  Auto.create(this);
@@ -22,17 +22,17 @@ public class CarBuilder {
 
 
 
-//    public CarBuilder setId(int id) {
+//    public AutoBuilder setId(int id) {
 //        this.id = id;
 //        return this;
 //    }
 //
-//    public CarBuilder setBrand(String brand) {
+//    public AutoBuilder setBrand(String brand) {
 //        this.brand = brand;
 //        return this;
 //    }
 //
-//    public CarBuilder setModel(String model) {
+//    public AutoBuilder setModel(String model) {
 //        this.model = model;
 //        return this;
 //    }

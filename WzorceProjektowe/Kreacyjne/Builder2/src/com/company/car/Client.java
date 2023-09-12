@@ -1,17 +1,19 @@
 package com.company.car;
 
+import lombok.ToString;
 import org.junit.Test;
 
+@ToString
 public class Client {
 
     @Test
     public void testCar1() {
-        CarBuilder carBuilder =  CarBuilder.builder()
+        AutoBuilder autoBuilder =  AutoBuilder.builder()
                 .idbuild(1)
                 .brandbuild("Audi")
                 .modelbuild("B80")
                 .build();
-        Auto auto = carBuilder.create();
+        Auto auto = autoBuilder.create();
         System.out.println(auto);
     }
 }

@@ -17,11 +17,11 @@ public class Auto {
     @Builder.Default
     private String model = "";
 
-    public static Auto create(CarBuilder carBuilder) {
+    public static Auto create(com.company.car.AutoBuilder autoBuilder) {
       return  Auto.builder()
-                .id(carBuilder.getIdbuild())
-                .brand(carBuilder.getBrandbuild())
-                .model(carBuilder.getModelbuild())
+                .id(autoBuilder.getIdbuild())
+                .brand(autoBuilder.getBrandbuild())
+                .model(autoBuilder.getModelbuild())
                 .build();
     }
 }
