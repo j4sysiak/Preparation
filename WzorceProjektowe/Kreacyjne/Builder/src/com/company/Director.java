@@ -5,8 +5,8 @@ import static java.time.LocalDateTime.now;
 
 public class Director {
 
-    public void createVATInvoice(InvoiceBuilder monthlyInvoice) {
-        monthlyInvoice.setDate(now())
+    public void createVATInvoice(InvoiceBuilder vatInvoice) {
+        vatInvoice.setDate(now())
                 .setInvoiceNumber("V13132-2022")
                 .setVendor("Suzuki")
                 .setVendee("Blua")

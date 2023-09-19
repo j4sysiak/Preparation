@@ -22,16 +22,13 @@ public class ClientForDirector {
         // chcemy miec createVATInvoice
         director.createVATInvoice(invoiceBuilder);
         Invoice myVATInvoice = invoiceBuilder.getInvoice();
-        System.out.println(myVATInvoice);
 
         // chcemy miec createMonthlyInvoice
         director.createMonthlyInvoice(invoiceBuilder);
         Invoice myMonthlyInvoice = invoiceBuilder.getInvoice();
-        System.out.println(myMonthlyInvoice);
 
         // chcemy miec createBlankInvoice
         director.createBlankInvoice(invoiceBuilder);
         Invoice myBlankInvoice = invoiceBuilder.getInvoice();
-        System.out.println(myBlankInvoice);
     }
 }
