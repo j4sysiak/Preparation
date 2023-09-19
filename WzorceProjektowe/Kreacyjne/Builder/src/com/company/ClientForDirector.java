@@ -2,14 +2,14 @@ package com.company;
 
 import org.junit.jupiter.api.Test;
 
-public class TestingDirector {
+public class ClientForDirector {
 
 //    Możemy też wyabstrachować interfejsy IInvoiceBuilderVAT, IInvoiceBuilderNoneVAT, które będą implementować nasz builder.
 //    Interfejsy będą zawierały deklarację wszystkich metod set() + build() do implementaccji faktury danego typu.
 //    Np. faktura VAT, None_VAT, etc.
 //
 //    Potem wprowadzamy koncept Dyrektora (klasa Director), który będzie zarządzał tworzeniem konkretnych faktur.
-//    Zawierałby on metody np. createMonthlyInvoice(), createBlankInvoice(), etc. Metody te zwracałyby obiekt Invoice.
+//    Zawierałby on metody np. createVATInvoice(), createMonthlyInvoice(), createBlankInvoice(), etc. Metody te zwracałyby obiekt Invoice.
 //
 //    Nasza klasa Client może używać bezpośrednio klasy tworzącej fakturę InvoiceBuilder lub z klasy Director i posłużyć się
 //    konkretną metodą do tworzenia konkretnego typu faktury.
@@ -18,6 +18,11 @@ public class TestingDirector {
     public void test() {
         Director director = new Director();
         InvoiceBuilder invoiceBuilder = new InvoiceBuilder();
+
+        // chcemy miec createVATInvoice
+        director.createVATInvoice(invoiceBuilder);
+        Invoice myVATInvoice = invoiceBuilder.getInvoice();
+        System.out.println(myVATInvoice);
 
         // chcemy miec createMonthlyInvoice
         director.createMonthlyInvoice(invoiceBuilder);
