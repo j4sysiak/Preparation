@@ -12,18 +12,20 @@ public class InvoiceBuilder   {
         this.invoice = new Invoice();
     }
 
+    // to jest najwazniejsza metoda, która zwróci naszą fakturę
+    public Invoice build() {
+        return this.getInvoice();
+    }
+
     public InvoiceBuilder setVendor(String vendor) {
-        invoice.vendor = vendor;
+        this.invoice.vendor = vendor;
         return this;
     }
 
     public InvoiceBuilder setNote(String note) {
-        invoice.note = note;
+        this.invoice.note = note;
         return this;
     }
 
-    // to jest metoda, która zwróci naszą fakturę
-    public Invoice build() {
-        return this.getInvoice();
-    }
+
 }

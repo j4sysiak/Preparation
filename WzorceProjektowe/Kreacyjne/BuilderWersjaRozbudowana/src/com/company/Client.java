@@ -12,10 +12,10 @@ public class Client {
         var invoiceBuilder = new InvoiceBuilder();
         var invoiceManager = new InvoiceManager(invoiceBuilder);
 
+        var vatInvoice = invoiceManager.createVATInvoice();
+
         var monthlyInvoice = invoiceManager.createMonthlyInvoice();
-        System.out.println(monthlyInvoice);
 
         var blankInvoice = invoiceManager.createBlankInvoice();
-        System.out.println(blankInvoice);
     }
 }
