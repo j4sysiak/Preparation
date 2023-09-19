@@ -15,11 +15,11 @@ public class WithVATInvoiceBuilder implements IInvoiceBuilder   {
     }
 
     public void setVendor(String vendor) {
-        invoice.vendor = vendor;
+        this.invoice.vendor = vendor;
     }
 
     public void setNote(String note) {
-        invoice.note = note;
+        this.invoice.note = note;
     }
 
     // to jest metoda, która zwróci naszą fakturę
