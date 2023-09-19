@@ -25,26 +25,26 @@ public class InvoiceBuilder {
 
     // najwazniejsza metoda:  która zwróci naszą fakturę
     public Invoice create() {
-        return this.getInvoice();
+        return this.getInvoice();  // to jest getter na polu Invoice
     }
 
     public InvoiceBuilder setInvoiceNumber(String number) {
-        invoice.number = number;
+        this.invoice.number = number;
         return this;
     }
 
     public InvoiceBuilder setDate(LocalDateTime date) {
-        invoice.date = date;
+        this.invoice.date = date;
         return this;
     }
 
     public InvoiceBuilder setVendor(String vendor) {
-        invoice.vendor = vendor;
+        this.invoice.vendor = vendor;
         return this;
     }
 
     public InvoiceBuilder setVendee(String vendee) {
-        invoice.vendee = vendee;
+        this.invoice.vendee = vendee;
         return this;
     }
 
