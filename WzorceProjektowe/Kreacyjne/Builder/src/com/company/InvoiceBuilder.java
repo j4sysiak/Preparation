@@ -23,6 +23,11 @@ public class InvoiceBuilder {
         this.invoice = new Invoice();
     }
 
+    // najwazniejsza metoda:  która zwróci naszą fakturę
+    public Invoice create() {
+        return this.getInvoice();
+    }
+
     public InvoiceBuilder setInvoiceNumber(String number) {
         invoice.number = number;
         return this;
@@ -53,8 +58,5 @@ public class InvoiceBuilder {
         return this;
     }
 
-    // to jest metoda, która zwróci naszą fakturę
-    public Invoice create() {
-        return this.getInvoice();
-    }
+
 }
