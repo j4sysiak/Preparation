@@ -17,6 +17,7 @@ public class MapCreator {
     }
 
 
+    // to jest taki przekaznik (switch), w zaleznoci na jakim elemencie zdefiniujemz interfej to taka będie strategia  /- droga do celu (piechota, rower, samochód)
     public void creatingRoute(Coordinate start, Coordinate stop) {
         iRouteStrategy.createRoute(start, stop);
     }
