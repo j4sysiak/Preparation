@@ -12,22 +12,23 @@ public class Client {
 
         // Obrazowo Google map - trzy strategie wyboru drogi do jednego celu: samochód, pieszo, rower
         // Zaproponowano wzorzec strategii w kontekście klasy MapCreator
-        // W zależlości od wyboru użytkownika, klasa ta dostanie konkretną implementację dla samochód, pieszo, rower
-        // Dla klasy MapStrategy nie ma znaczenia jaką strategię dostanie
-        // strategia zostaje wstrzyknięta poprzez konstruktor do MapStrategy
+        // W zależlości od wyboru jaki ma uzytkownik, klasa ta dostanie konkretną implementację dla samochód, pieszo, rower
+        // Dla klasy MapCreator nie ma znaczenia jaką strategię dostanie
+        // strategia zostaje wstrzyknięta poprzez konstruktor do MapCreator
         // strategia pozwala na używanie różnych wariantów jednego algorytmu
         // w obrębie danego obiektu w trakcie działania programu
         // oddziela szczegóły implementacyjne od warstwy biznesowej
 
 
-        //pierwszy sposób - SOLID DependencyInversion
+        /* pierwszy sposób - SOLID DependencyInversion */
         MapCreator.builder()
                 .iRouteStrategy(new WalkStrategy())
                 .build()
                 .creatingRoute(start, stop);
 
-        //drugi sposób - na to samo wychodzi
-        var mapCreator1 = new MapCreator(new BikeStrategy());
+        /* drugi sposób - na to samo wychodzi  */
+        IRouteStrategy irouteStrategy = new BikeStrategy();
+        var mapCreator1 = new MapCreator(irouteStrategy);
         mapCreator1.creatingRoute(start, stop);
 
         var mapCreator2 = new MapCreator(new CarStrategy());
