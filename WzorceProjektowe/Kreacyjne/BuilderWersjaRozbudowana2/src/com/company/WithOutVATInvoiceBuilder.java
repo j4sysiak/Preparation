@@ -14,16 +14,18 @@ public class WithOutVATInvoiceBuilder implements IInvoiceBuilder   {
         this.invoice = new Invoice();
     }
 
-    public void setVendor(String vendor) {
-        invoice.vendor = vendor;
-    }
-
-    public void setNote(String note) {
-        invoice.note = note;
-    }
-
     // to jest metoda, która zwróci naszą fakturę
     public Invoice build() {
         return this.getInvoice();
     }
+
+    public void setVendor(String vendor) {
+        this.invoice.vendor = vendor;
+    }
+
+    public void setNote(String note) {
+        this.invoice.note = note;
+    }
+
+
 }

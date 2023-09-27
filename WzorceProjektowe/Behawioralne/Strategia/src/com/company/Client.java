@@ -26,6 +26,7 @@ public class Client {
                 .build()
                 .creatingRoute(start, stop);
 
+
         /* drugi sposób - na to samo wychodzi  */
         IRouteStrategy irouteStrategy = new BikeStrategy();
         var mapCreator1 = new MapCreator(irouteStrategy);

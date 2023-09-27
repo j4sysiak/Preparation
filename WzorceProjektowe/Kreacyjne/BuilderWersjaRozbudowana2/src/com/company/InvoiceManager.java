@@ -15,7 +15,6 @@ public class InvoiceManager {
     }
 
     public Invoice showInvoice() {
-        return iInvoiceBuilder
-                .build();
+        return this.iInvoiceBuilder.build();
     }
 }

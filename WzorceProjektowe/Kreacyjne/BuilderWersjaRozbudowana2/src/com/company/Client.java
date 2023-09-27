@@ -10,7 +10,7 @@ public class Client {
 
     @Test
     public void test1() {
-        // MonthlyInvoiceBuilder
+        // bedziemy tworzy MonthlyInvoiceBuilder
         var im = InvoiceManager.builder()
                 .iInvoiceBuilder(new MonthlyInvoiceBuilder())
                 .build();
