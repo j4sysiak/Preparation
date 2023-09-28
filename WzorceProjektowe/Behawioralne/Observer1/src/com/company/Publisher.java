@@ -16,9 +16,7 @@ public class Publisher {
     }
 
     public void notify(String messageToSubscribers) {
-        for (ISubsciber s : listOfISubscibers) {
-            s.update(messageToSubscribers);
-        }
+        listOfISubscibers.forEach(s -> s.update(messageToSubscribers));
     }
 
 }
