@@ -27,9 +27,10 @@ public class Blog {
                     e.printStackTrace();
                 }
             }
-            for (MailObserver observer : mailObservers) {
-                observer.newsletter("content: " + UUID.randomUUID());
-            }
+            mailObservers.forEach(s -> s.newsletter("content: " + UUID.randomUUID()));
+//            for (MailObserver observer : mailObservers) {
+//                observer.newsletter("content: " + UUID.randomUUID());
+//            }
         });
         thread.start();
     }
@@ -43,9 +44,10 @@ public class Blog {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                for (MailObserver observer : mailObservers) {
-                    observer.newsletter("time: " + randomDelay + ", content: " + UUID.randomUUID());
-                }
+                mailObservers.forEach(s -> s.newsletter("time: " + randomDelay + ", content: " + UUID.randomUUID()));
+//                for (MailObserver observer : mailObservers) {
+//                    observer.newsletter("time: " + randomDelay + ", content: " + UUID.randomUUID());
+//                }
             }
         });
         thread.start();
