@@ -10,7 +10,7 @@ public class Blog {
     private List<MailObserver> mailObservers;
 
     public Blog() {
-        mailObservers = new ArrayList<>();
+        this.mailObservers = new ArrayList<>();
     }
 
     public void subscribe(MailObserver observers) {
@@ -27,9 +27,9 @@ public class Blog {
                     e.printStackTrace();
                 }
             }
-            mailObservers.forEach(s -> s.newsletter("content: " + UUID.randomUUID()));
+            this.mailObservers.forEach(s -> s.newsletter("content: " + UUID.randomUUID()));
 //            for (MailObserver observer : mailObservers) {
-//                observer.newsletter("content: " + UUID.randomUUID());
+//                this.observer.newsletter("content: " + UUID.randomUUID());
 //            }
         });
         thread.start();
@@ -44,9 +44,9 @@ public class Blog {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                mailObservers.forEach(s -> s.newsletter("time: " + randomDelay + ", content: " + UUID.randomUUID()));
+                this.mailObservers.forEach(s -> s.newsletter("time: " + randomDelay + ", content: " + UUID.randomUUID()));
 //                for (MailObserver observer : mailObservers) {
-//                    observer.newsletter("time: " + randomDelay + ", content: " + UUID.randomUUID());
+//                    this.observer.newsletter("time: " + randomDelay + ", content: " + UUID.randomUUID());
 //                }
             }
         });

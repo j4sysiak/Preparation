@@ -12,6 +12,5 @@ public class Client {
         blog.subscribe(new User("Adam"));
         blog.subscribe(new User("Wacek"));
         blog.startWork();
-        
     }
 }
