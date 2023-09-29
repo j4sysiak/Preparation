@@ -7,10 +7,11 @@ public class Main {
         // powiadomianie po kolei każdego klienta po zakończeniu wątku
         // var cli = new Client1();
         IObserver cli1 = new Client1();
-        new Subject(cli1);
+        Subject subject1 = new Subject(cli1);
+        subject1.startWork();
 
-        new Subject(new Client2());
-        new Subject(new Client3());
+        new Subject(new Client2()).startWork();
+        new Subject(new Client3()).startWork();
 
 
         // hurtowe powiadamianie obserwatorów (czyli klientów) kiedy skończy się wątek z pracy (działania) jakiejś maszynerii Subject
