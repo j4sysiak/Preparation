@@ -8,7 +8,7 @@ public class Subject2 {
     private List<IObserver> listOfObservers;
 
     public Subject2() {
-        listOfObservers = new ArrayList();
+        this.listOfObservers = new ArrayList();
     }
 
     public void subscribe(IObserver iObserver) {

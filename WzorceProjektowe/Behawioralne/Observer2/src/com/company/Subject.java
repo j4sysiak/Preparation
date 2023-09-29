@@ -9,19 +9,16 @@ public class Subject {
     // i jeżeli np. wątek zakończy się
     // to observer poinformuje o tym
     public Subject(IObserver iObserver) {
-        Thread thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                for (int i = 0; i < 100; i++) {
-                    System.out.println(i);
-                    try {
-                        Thread.sleep(11);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+        Thread thread = new Thread(() -> {
+            for (int i = 0; i < 100; i++) {
+                System.out.println(i);
+                try {
+                    Thread.sleep(11);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
-                iObserver.update();
             }
+            iObserver.update();
         });
         thread.start();
     }
