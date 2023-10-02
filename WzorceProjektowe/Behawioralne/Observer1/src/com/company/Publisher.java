@@ -7,16 +7,16 @@ public class Publisher {
 
     private List<ISubsciber> listOfISubscibers = new ArrayList();
 
-    public void subscribe(ISubsciber iSubsciber) {
-        listOfISubscibers.add(iSubsciber);
+    public void addUser(ISubsciber iSubsciber) {
+        this.listOfISubscibers.add(iSubsciber);
     }
 
-    public void unSubscribe(ISubsciber iSubsciber) {
-        listOfISubscibers.remove(iSubsciber);
+    public void removeUser(ISubsciber iSubsciber) {
+        this.listOfISubscibers.remove(iSubsciber);
     }
 
-    public void notify(String messageToSubscribers) {
-        listOfISubscibers.forEach(s -> s.update(messageToSubscribers));
+    public void notifyUser(String messageToSubscribers) {
+        this.listOfISubscibers.forEach(s -> s.notify(messageToSubscribers));
     }
 
 }

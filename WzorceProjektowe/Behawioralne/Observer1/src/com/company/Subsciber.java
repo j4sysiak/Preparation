@@ -14,7 +14,7 @@ public class Subsciber implements ISubsciber {
     }
 
     @Override
-    public void update(String message) {
+    public void notify(String message) {
         System.out.println("Subscriber notified: " + subscriberName + ": " + message);
     }
 }

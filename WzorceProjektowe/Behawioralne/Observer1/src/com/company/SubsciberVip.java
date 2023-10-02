@@ -14,7 +14,7 @@ public class SubsciberVip implements ISubsciber {
     }
 
     @Override
-    public void update(String message) {
+    public void notify(String message) {
         System.out.println("Królu nie musisz placić: " + subscriberName + ": " + message);
     }
 }

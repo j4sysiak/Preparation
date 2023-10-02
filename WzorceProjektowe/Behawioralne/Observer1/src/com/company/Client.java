@@ -16,7 +16,7 @@ public class Client {
         ISubsciber iSubsciberVip = new SubsciberVip("Król Maciuś");
 
         // ISubsciber x = new Subsciber("test");
-        // x.update("test");
+        // x.subscibe("test");
 
         // publisher to taka maszynka do trzymania informacji o subskrybentach i wysyłania powiadomień do nich
         // Mając Subsciber'a tworzymy klasę Publishera notyfikacji.
@@ -25,17 +25,17 @@ public class Client {
         // oraz wysyłał powiadomienia
         Publisher publisherGazetaWyborcza = new Publisher();
         // dodajemy do listy
-        publisherGazetaWyborcza.subscribe(iSubsciber1);
-        publisherGazetaWyborcza.subscribe(iSubsciber2);
-        publisherGazetaWyborcza.subscribe(iSubsciber3);
-        publisherGazetaWyborcza.subscribe(iSubsciberVip);
+        publisherGazetaWyborcza.addUser(iSubsciber1);
+        publisherGazetaWyborcza.addUser(iSubsciber2);
+        publisherGazetaWyborcza.addUser(iSubsciber3);
+        publisherGazetaWyborcza.addUser(iSubsciberVip);
 
         // powiadamamy wszystkich obserwatorów
-        publisherGazetaWyborcza.notify("message 1 dla naszych kochanych subskrybentów: zapłać miesięczy abonament");
+        publisherGazetaWyborcza.notifyUser("message 1 dla naszych kochanych subskrybentów: zapłać miesięczy abonament");
 
-        publisherGazetaWyborcza.unSubscribe(iSubsciber1);  // usuwam subskrybenta z listy subskrybentów (np. usuwam klienta z listy subskrybcji gazety)
+        publisherGazetaWyborcza.removeUser(iSubsciber1);  // usuwam subskrybenta z listy subskrybentów (np. usuwam klienta z listy subskrybcji gazety)
 
         // powiadamamy wszystkich obserwatorów
-        publisherGazetaWyborcza.notify("message 2 dla naszych kochanych subskrybentów: nowa gazeta do już jest pobrania");
+        publisherGazetaWyborcza.notifyUser("message 2 dla naszych kochanych subskrybentów: nowa gazeta do już jest pobrania");
     }
 }

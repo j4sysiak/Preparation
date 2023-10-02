@@ -2,5 +2,5 @@ package com.company;
 
 public interface ISubsciber {
 
-    void update(String messageToSubscribers);
+    void notify(String messageToSubscribers);
 }
