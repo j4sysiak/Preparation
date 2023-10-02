@@ -1,10 +1,8 @@
 package pl.jaceksysiak;
 
-public class Test {
+public class Main {
 
-    @org.junit.Test
-    public void test() {
-
+    public static void main(String[] args) {
         Blog blog = new Blog();
 
         MailObserver user1 = new User("Jacek");
