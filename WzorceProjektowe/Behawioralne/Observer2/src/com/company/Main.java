@@ -21,6 +21,5 @@ public class Main {
         subject2.subscribe(new Client2());
         subject2.subscribe(new Client3());
         subject2.startWork();
-
     }
 }

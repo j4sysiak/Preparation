@@ -1,4 +1,4 @@
-package pl.bykowski.designpatternobserver;
+package pl.jaceksysiak.designpatternobserver;
 public interface MailObserver {
 
     void newsletter(String info);

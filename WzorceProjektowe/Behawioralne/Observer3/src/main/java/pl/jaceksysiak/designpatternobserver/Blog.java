@@ -1,4 +1,4 @@
-package pl.bykowski.designpatternobserver;
+package pl.jaceksysiak.designpatternobserver;
 
 import java.util.ArrayList;
 import java.util.List;
