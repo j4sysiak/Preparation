@@ -17,9 +17,9 @@ public class Main {
         // hurtowe powiadamianie obserwatorów (czyli klientów) kiedy skończy się wątek z pracy (działania) jakiejś maszynerii Subject
         // powiadomianie hurtowo wszystkich klientów po zakończeniu wątku
         Subject2 subject2 = new Subject2();
-        subject2.subscribe(new Client1());
-        subject2.subscribe(new Client2());
-        subject2.subscribe(new Client3());
+        subject2.subscribe(new Client1());   // dodajemy do listy
+        subject2.subscribe(new Client2());   // dodajemy do listy
+        subject2.subscribe(new Client3());   // dodajemy do listy
         subject2.startWork();
     }
 }
