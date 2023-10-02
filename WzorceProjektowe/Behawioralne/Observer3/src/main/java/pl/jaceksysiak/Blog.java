@@ -1,4 +1,4 @@
-package pl.jaceksysiak.designpatternobserver;
+package pl.jaceksysiak;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +13,7 @@ public class Blog {
         this.mailObservers = new ArrayList<>();
     }
 
-    public void subscribe(MailObserver observers) {
+    public void addToSubscribents(MailObserver observers) {
         this.mailObservers.add(observers);
     }
 

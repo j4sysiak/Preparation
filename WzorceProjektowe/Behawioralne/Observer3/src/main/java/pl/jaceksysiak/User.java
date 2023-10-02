@@ -1,4 +1,4 @@
-package pl.jaceksysiak.designpatternobserver;
+package pl.jaceksysiak;
 
 public class User implements MailObserver {
 
