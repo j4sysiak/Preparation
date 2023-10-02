@@ -27,7 +27,7 @@ public class Blog {
                     e.printStackTrace();
                 }
             }
-            this.mailObservers.forEach(s -> s.newsletter("content: " + UUID.randomUUID()));
+            this.mailObservers.forEach(s -> s.sendNewsletter("content: " + UUID.randomUUID()));
 //            for (MailObserver observer : mailObservers) {
 //                this.observer.newsletter("content: " + UUID.randomUUID());
 //            }
@@ -44,7 +44,7 @@ public class Blog {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                this.mailObservers.forEach(s -> s.newsletter("time: " + randomDelay + ", content: " + UUID.randomUUID()));
+                this.mailObservers.forEach(s -> s.sendNewsletter("time: " + randomDelay + ", content: " + UUID.randomUUID()));
 //                for (MailObserver observer : mailObservers) {
 //                    this.observer.newsletter("time: " + randomDelay + ", content: " + UUID.randomUUID());
 //                }

@@ -9,7 +9,7 @@ public class User implements MailObserver {
     }
 
     @Override
-    public void newsletter(String mail) {
+    public void sendNewsletter(String mail) {
         System.out.println(name + " got email! " + mail);
     }
 }
