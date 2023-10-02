@@ -1,12 +1,9 @@
 package com.company;
 
-import org.junit.Test;
+public class Test {
 
-public class Client {
-
-    @Test
+    @org.junit.Test
     public void test() {
-
         // wzorzec Obserwator używamy, jeżeli zmiany jednego obiektu mogą wymagać zmian w innych obiektach,
         // a konkretny zestaw obiektów nie jest nam znany na początku lub jego stan się zmienia
 
@@ -37,5 +34,6 @@ public class Client {
 
         // powiadamamy wszystkich obserwatorów
         publisherGazetaWyborcza.notifyUser("message 2 dla naszych kochanych subskrybentów: nowa gazeta do już jest pobrania");
+
     }
 }

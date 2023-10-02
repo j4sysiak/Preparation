@@ -1,8 +1,9 @@
 package com.company;
 
-public class Main {
+public class Test {
 
-    public static void main(String [] args) {
+    @org.junit.Test
+    public void test() {
         // uruchamiamy wątek jakiegoś zadania i czekamy kiedy się zakończy wątek z pracy (działania) jakiejś maszynerii Subject
         // powiadomianie po kolei każdego klienta po zakończeniu wątku
         // var cli = new Client1();

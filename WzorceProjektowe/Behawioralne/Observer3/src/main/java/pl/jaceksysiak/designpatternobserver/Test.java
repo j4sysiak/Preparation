@@ -1,10 +1,8 @@
 package pl.jaceksysiak.designpatternobserver;
 
-import org.junit.Test;
+public class Test {
 
-public class Client {
-
-    @Test
+    @org.junit.Test
     public void test() {
 
         Blog blog = new Blog();
