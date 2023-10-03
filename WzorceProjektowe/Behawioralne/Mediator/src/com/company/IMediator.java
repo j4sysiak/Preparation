@@ -1,5 +1,6 @@
 package com.company;
 
+// Cel: notyfikacja komponentów
 // sprawdzamy przesłany event
 // button - "click"
 // checkbox - checkboxSelected

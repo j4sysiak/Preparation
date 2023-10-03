@@ -9,5 +9,7 @@ public class Checkbox extends Component {
 
     public void saveValue() {
         System.out.println("Checkbox value save ...");
+        // i nic dalej nie robimy nie wysyłamy info notyfikacji do mediatora
+        // nie informujemy innych komponentów (przy użyciu mediatora) o tym zdareniu
     }
 }

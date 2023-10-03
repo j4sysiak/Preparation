@@ -9,5 +9,7 @@ public class Input extends Component {
 
     public void saveValue() {
         System.out.println("Save Inserted Text...");
+        //  i  nic dalej nie robimy nie wysyłamy info notyfikacji do mediatora
+        // nie informujemy innych komponentów (przy użyciu mediatora) o tym zdareniu
     }
 }

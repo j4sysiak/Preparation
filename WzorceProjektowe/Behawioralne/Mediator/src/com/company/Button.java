@@ -9,6 +9,7 @@ public class Button extends Component {
 
     public void render(){
         System.out.println("Render button ...");
-        // nic dalej nie robimy nie wysyłamy info notyfikacji do mediatora
+        // i  nic dalej nie robimy nie wysyłamy info notyfikacji do mediatora
+        // nie informujemy innych komponentów (przy użyciu mediatora) o tym zdareniu
     }
 }
