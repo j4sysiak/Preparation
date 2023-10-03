@@ -19,11 +19,11 @@ public class RegisterClientView implements IMediator {
     @Override
     public void notify(Component objectSendingThisEvent, String $event) {
         if ($event == "checkboxSelected") {
-            this.button.render();
+            this.input.saveValue();  // zdarzenie checkboxa: informujemy o tym zdarzeniu input
         } else if ($event == "click") {
-            this.checkbox.saveValue();
+            this.checkbox.saveValue();    // zdarzenie buttona: informujemy o tym zdarzeniu checkbox
         } else if ($event == "insertText") {
-            this.input.saveValue();
+            this.button.render();    // zdarzenie texboxa: informujemy o tym zdarzeniu button
         }
     }
 }

@@ -18,6 +18,7 @@ public class TestClient {
         Checkbox checkbox = new Checkbox();
         Input input = new Input();
 
+        // tworzymy mediator
         new RegisterClientView(checkbox, button, input);
 
         button.click();
