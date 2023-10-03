@@ -6,8 +6,7 @@ public abstract class Component {
 
     protected IMediator iMediator;
 
-    // Dependeny Injection
-    public void setIMediator(IMediator iMediator) {
+    // DependencsetIMediator(IMediator iMediator) {
         this.iMediator = iMediator;
     }
 }

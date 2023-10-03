@@ -1,16 +1,16 @@
 package com.company;
 
-import org.junit.jupiter.api.Test;
 
+import org.junit.Test;
 
-public class Client {
+public class TestClient {
 
     @Test
     public void test() {
 
 
 //        Mediator - behawioralny wzorzec projektowy, pozwalający zredukować liczbę zależności pomiędzy różnymi obiektami.
-//        Ogranicza bezpośrednią komunikację pomiędzy obiektami input-button-checkbox i wymusza komunikację miedzy nimi za pomocą obiektu zwanego mediatorem.
+//        Ogranicza bezpośrednią komunikację pomiędzy obiektami input<-->button<-->checkbox i wymusza komunikację miedzy nimi za pomocą obiektu zwanego mediatorem.
 //        Dobrym przykłedem może być wieża kontroli lotów
 
 
