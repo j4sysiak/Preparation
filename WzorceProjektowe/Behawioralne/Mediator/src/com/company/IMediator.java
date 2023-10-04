@@ -14,5 +14,5 @@ package com.company;
 
 public interface IMediator {
 
-    void notify(Component objectSendingThisEvent, String $event);
+    void notify(Component objectSendingThisEvent, String $event);   //obiekt klasy Component z którego wychodzi komunikat np: Button
 }
