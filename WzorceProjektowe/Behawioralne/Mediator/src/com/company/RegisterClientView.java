@@ -2,6 +2,8 @@ package com.company;
 
 public class RegisterClientView implements IMediator {
 
+    //to jest klasa mediatora
+
     private Checkbox checkbox;
     private Button button;
     private Input input;
@@ -33,7 +35,9 @@ public class RegisterClientView implements IMediator {
         if ($event == "checkboxSelected") {
             this.input.saveValue();  // zdarzenie checkboxa: informujemy o tym zdarzeniu input
         } else if ($event == "click") {
-            this.checkbox.saveValue();    // zdarzenie buttona: informujemy o tym zdarzeniu checkbox
+            this.checkbox.render();    // zdarzenie buttona: informujemy o tym zdarzeniu checkbox
+            this.button.render();         // zdarzenie texboxa: informujemy o tym zdarzeniu button
+            this.input.render();  // zdarzenie checkboxa: informujemy o tym zdarzeniu input
         } else if ($event == "insertText") {
             this.button.render();    // zdarzenie texboxa: informujemy o tym zdarzeniu button
         }

@@ -1,5 +1,7 @@
 package com.company;
 
+//interfejs klasy mediatora RegisterClientView
+
 // Cel: notyfikacja komponentów
 // sprawdzamy przesłany event
 // button - "click"

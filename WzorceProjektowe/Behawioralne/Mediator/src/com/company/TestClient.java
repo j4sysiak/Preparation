@@ -18,8 +18,8 @@ public class TestClient {
         Checkbox checkbox = new Checkbox();
         Input input = new Input();
 
-        //  konkretna implementacja mediatora poprzez klasę RegisterClientView
-        //  tworzymy  - nie potrzebujemy obiektu tej klasy
+        //  klasa mediatora:  konkretna implementacja mediatora poprzez klasę RegisterClientView
+        //  nie potrzebujemy konkretnego obiektu tej klasy mediatora
         new RegisterClientView().register(checkbox, button, input);
 
         button.click();

@@ -15,4 +15,8 @@ public class Checkbox extends Component {
         //  i  nic dalej nie robimy nie wysyłamy info notyfikacji do mediatora
         //  nie informujemy innych komponentów (przy użyciu mediatora) o tym zdareniu
     }
+
+    public void render() {
+        System.out.println("Render Checkbox ...");
+    }
 }
