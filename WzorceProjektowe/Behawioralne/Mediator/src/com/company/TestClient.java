@@ -20,7 +20,7 @@ public class TestClient {
 
         //  klasa mediatora:  konkretna implementacja mediatora poprzez klasę RegisterClientView
         //  nie potrzebujemy konkretnego obiektu tej klasy mediatora
-        new RegisterClientView().register(checkbox, button, input);
+        new RegisterClientView().registerMediator(checkbox, button, input);
 
         button.click();
         //button.render(); // metoda nie podpięta do mediatora

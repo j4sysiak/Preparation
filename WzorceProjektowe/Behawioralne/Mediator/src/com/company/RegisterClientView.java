@@ -24,7 +24,7 @@ public class RegisterClientView implements IMediator {
     }
 
     //  konkretna implementacja mediatora poprzez klasę RegisterClientView
-    public void register(Checkbox checkbox, Button button, Input input) {
+    public void registerMediator(Checkbox checkbox, Button button, Input input) {
         setCheckbox(checkbox);
         setButton(button);
         setInput(input);
