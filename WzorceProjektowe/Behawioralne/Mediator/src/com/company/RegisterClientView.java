@@ -8,26 +8,14 @@ public class RegisterClientView implements IMediator {
     private Button button;
     private Input input;
 
-    public void setCheckbox(Checkbox checkbox) {
+    public RegisterClientView(Checkbox checkbox, Button button, Input input) {
         this.checkbox = checkbox;
-        this.checkbox.setIMediator(this); // bo pole iMediator w klasie Component jest protected
-    }
-
-    public void setButton(Button button) {
         this.button = button;
-        this.button.setIMediator(this);  // bo pole iMediator w klasie Component jest protected
-    }
-
-    public void setInput(Input input) {
         this.input = input;
-        this.input.setIMediator(this);  // bo pole iMediator w klasie Component jest protected
-    }
 
-    //  konkretna implementacja mediatora poprzez klasę RegisterClientView
-    public void registerMediator(Checkbox checkbox, Button button, Input input) {
-        setCheckbox(checkbox);
-        setButton(button);
-        setInput(input);
+        this.checkbox.setIMediator(this); // bo pole iMediator w klasie Component jest protected
+        this.button.setIMediator(this);  // bo pole iMediator w klasie Component jest protected
+        this.input.setIMediator(this);  // bo pole iMediator w klasie Component jest protected
     }
 
     @Override
