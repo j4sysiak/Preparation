@@ -8,6 +8,6 @@ public abstract class BaseHandler implements IHandler {
         this.next = next;
     }
 
-    @Override
-    public abstract void handle(RequestContext requestContext);
+    //@Override
+    //public abstract void handle(RequestContext requestContext);
 }
