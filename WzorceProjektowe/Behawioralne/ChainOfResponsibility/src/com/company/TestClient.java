@@ -14,19 +14,19 @@ public class TestClient {
 
         System.out.println("budujemy prosty łańcuch zależnoći");
 
-        //definiujemy łańcuch 1
+        //definiujemy ogniwo_1
         var resultHandler = ResultHandler.builder()
-                .next(null)  // na początku nic nie wstrzykujemy do next (IHandler)
+                .next(null)  // na początku nic nie wstrzykujemy (do next (IHandler))
                 .build();
 
-        //definiujemy łańcuch 2
+        //definiujemy ogniwo 2
         var validationHandler = ValidationHandler.builder()
-                .next(resultHandler)  // wstrzykujemy kolejne ogniwo resultHandler do next (IHandler)
+                .next(resultHandler)  // wstrzykujemy poprzednie  ogniwo_1 resultHandler (do next (IHandler))
                 .build();
 
-        //definiujemy łańcuch 3
+        //definiujemy ogniwo 3
         var authorizationHandler = AuthorizationHandler.builder()
-                .next(validationHandler)  // wstrzykujemy kolejne ogniwo validationHandler do next (IHandler)
+                .next(validationHandler)  // wstrzykujemy poprzednie ogniwo_2 validationHandler (do next (IHandler))
                 .build();
 
         // Start proces
