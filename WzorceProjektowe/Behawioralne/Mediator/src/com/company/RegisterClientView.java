@@ -13,21 +13,21 @@ public class RegisterClientView implements IMediator {
         this.button = button;
         this.input = input;
 
-        this.checkbox.setIMediator(this); // bo pole iMediator w klasie Component jest protected
-        this.button.setIMediator(this);  // bo pole iMediator w klasie Component jest protected
-        this.input.setIMediator(this);  // bo pole iMediator w klasie Component jest protected
+
+        //pole iMediator w klasie Component jest protected
+        this.checkbox.setIMediator(this);
+        this.button.setIMediator(this);
+        this.input.setIMediator(this);
     }
 
     @Override
     public void notify(Component objectSendingThisEvent, String $event) {
         if ($event == "checkboxSelected") {
-            this.input.saveValue();  // zdarzenie checkboxa: informujemy o tym zdarzeniu input
+            this.input.saveValue();     // przyszła notifikacja od checkboxa a to wywołuje zadanie dla inputu
         } else if ($event == "click") {
-            this.checkbox.render();    // zdarzenie buttona: informujemy o tym zdarzeniu checkbox
-            this.button.render();         // zdarzenie texboxa: informujemy o tym zdarzeniu button
-            this.input.render();  // zdarzenie checkboxa: informujemy o tym zdarzeniu input
+            this.checkbox.render();     // przyszła notifikacja od buttona  a to wywołuje zadanie dla checkboxa
         } else if ($event == "insertText") {
-            this.button.render();    // zdarzenie texboxa: informujemy o tym zdarzeniu button
+            this.button.render();       // przyszła notifikacja od inputu  a to wywołuje zadanie dla buttona
         }
     }
 }

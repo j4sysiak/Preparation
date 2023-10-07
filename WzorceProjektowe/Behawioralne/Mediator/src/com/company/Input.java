@@ -16,7 +16,4 @@ public class Input extends Component {
         //  nie informujemy innych komponentów (przy użyciu mediatora) o tym zdareniu
     }
 
-    public void render() {
-        System.out.println("Render InputBox ...");
-    }
 }
