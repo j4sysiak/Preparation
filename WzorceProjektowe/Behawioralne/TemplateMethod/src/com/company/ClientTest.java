@@ -3,7 +3,7 @@ package com.company;
 import org.junit.jupiter.api.Test;
 
 
-public class Client {
+public class ClientTest {
 
 /*
 Behawioralny wzorzec projektowy definiujący szkielet algorytmu w klasie bazowej, jednocześnie pozwalający podklasom napisać
