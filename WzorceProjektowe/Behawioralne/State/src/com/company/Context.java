@@ -2,7 +2,6 @@ package com.company;
 
 // jej zadaniem będzie oddelegowanie knkretnej implementacji do poszczególnego stanu
 
-import lombok.Getter;
 import lombok.Setter;
 
 @Getter

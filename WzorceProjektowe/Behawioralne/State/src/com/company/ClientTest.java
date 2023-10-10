@@ -16,7 +16,7 @@ Wprowadzamy kontekst, który będzie w stanie trzymać aktualny stan bankomatu o
 
 import org.junit.jupiter.api.Test;
 
-public class Client {
+public class ClientTest {
 
     @Test
     public void test (){
