@@ -8,7 +8,7 @@ public class PinInsertedState extends State {
 
     @Override
     public void insertCard() {
-        System.out.println("You have allready inserted a card");
+        System.out.println("You have already inserted a card");
     }
 
     @Override
@@ -19,7 +19,7 @@ public class PinInsertedState extends State {
 
     @Override
     public void insertPin(int pin) {
-        System.out.println("You have allready inserted correct PIN");
+        System.out.println("You have already inserted correct PIN");
     }
 
     @Override

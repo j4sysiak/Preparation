@@ -25,9 +25,9 @@ public class ClientTest {
 
         context.ejectCard();
         context.insertCard();
-        context.insertPin(1111);
+        context.insertPin(1111);  // wprowadzamy nieprawidłowy pin
         context.insertCard();
-        context.insertPin(8888);
+        context.insertPin(8888);  // prawidłowz pin
         context.withdrawalCash(100);
         context.insertCard();
     }
