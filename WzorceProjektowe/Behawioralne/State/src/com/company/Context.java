@@ -1,6 +1,6 @@
 package com.company;
 
-// jej zadaniem będzie oddelegowanie knkretnej implementacji do poszczególnego stanu
+// jej zadaniem będzie oddelegowanie konkretnej implementacji do poszczególnego stanu
 
 import lombok.Setter;
 
