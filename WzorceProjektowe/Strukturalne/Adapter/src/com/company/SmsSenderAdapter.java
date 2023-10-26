@@ -4,6 +4,7 @@ import external.library.SmsSender;
 
 public class SmsSenderAdapter implements INotificationSender {
 
+    // clue:
     //tworzymy obiekt (pole w tej klasie) zewnętrznej bibioteki: external.library.SmsSender
     //i poprzez ten obiekt dostaniemy się do właściwej metody biblioteki zewnętrznej wysyłającej notyfikacje
     private SmsSender smsSender = new SmsSender();
