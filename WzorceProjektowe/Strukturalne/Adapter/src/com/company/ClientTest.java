@@ -4,12 +4,12 @@ package com.company;
 /*
 Strukturalny wzorzec projektowy, którego celem jest umożliwienie współpracy dwóm klasom o niekompatybilnych interfejsach.
 Adapter przekształca interface jednej klasy na interfejs drugiej klasy.
-Czyli zadaniem adaptera jest "Opakowanie" jednego interfejsu w nowy.
+Czyli zadaniem adaptera jest "Opakowanie" jednego interfejsu w nowy interfejs.
 */
 
 import org.junit.Test;
 
-public class Client {
+public class ClientTest {
 
     @Test
     public void test() {
