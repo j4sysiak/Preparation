@@ -20,7 +20,7 @@ Te trzy klasy (upiększające bazę "pizza") będą dziedziczyć po klasie Pizza
 W ten sposób tworząc bazową pizzę samego ciasta, będziemy mogli nakładać nieskończoną liczbę różnych składników ("dekorować pizzę") poprzez opakowanie na kilku poziomach konkretne dekoratory.
 Kalkulacja ceny - na każdym poziomie ta cena będzie się powiększać o konkretną wartość, czyli pizze bazowe mają wartość zahardkodowaną a następnie poprzez dodawanie składników będziemy zwiększać tą bazową wartość pizzy.
 */
-public class Client {
+public class ClientTest {
 
 
     @Test
