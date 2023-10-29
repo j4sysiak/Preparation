@@ -9,9 +9,9 @@ public class ClientTest {
 
         //wybieramy bazowy model
         var v1 = new Volvo40();
+
         //  i dorzucamy/dekorujemy ABS'em (dodajemy ABS)
         var absCarDecorator = new AbsCarDecorator(v1);
-
         System.out.println("Cena volvo40 typu (a ABS): " + absCarDecorator.description() + ' ' + absCarDecorator.price());
 
         //  i dorzucamy/dekorujemy radio

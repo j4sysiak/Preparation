@@ -17,6 +17,7 @@ public abstract class CarDecorator implements ICar {
     public float price() {
         return iCar.price();
     };
+
     public String description() {
         return iCar.description();
     };
