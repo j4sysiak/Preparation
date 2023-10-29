@@ -41,13 +41,17 @@ public class ClientTest {
         var mediumPizzaWithCheese = new CheesePizzaDecorator(pizzaBase);
         System.out.println("Cena pizzy typu (mediumPizzaWithCheese): " + mediumPizzaWithCheese.calculatePrice());
 
-        // do  MediumPizza z serem dodajemy Ham
+        // do  MediumPizza (z serem) dodajemy Ham
         var mediumPizzaCheeseHam = new HamPizzaDecorator(mediumPizzaWithCheese);
-        System.out.println("Cena pizzy typu (ser + salami): " + mediumPizzaCheeseHam.calculatePrice());
+        System.out.println("Cena pizzy typu (mediumPizzaCheeseHam): " + mediumPizzaCheeseHam.calculatePrice());
 
-        // do  MediumPizza z serem i Ham dodajemy Salami
+        // do  MediumPizza (serem i Ham) dodajemy Salami
         var mediumPizzaCheeseHamSalami = new SalamiPizzaDecorator(mediumPizzaCheeseHam);
-        System.out.println("Cena pizzy typu (ser + 2 X salami): " + mediumPizzaCheeseHamSalami.calculatePrice());
+        System.out.println("Cena pizzy typu (mediumPizzaCheeseHamSalami): " + mediumPizzaCheeseHamSalami.calculatePrice());
+
+        // do  mediumPizzaCheeseHamSalami (z serem i Ham i Salami)  dodajemy jeszcze raz ser
+        var mediumPizzaCheeseHamSalamiChees = new CheesePizzaDecorator(mediumPizzaCheeseHamSalami);
+        System.out.println("Cena pizzy typu (mediumPizzaCheeseHamSalamiChees - podwojny ser): " + mediumPizzaCheeseHamSalamiChees.calculatePrice());
     }
 }
 
