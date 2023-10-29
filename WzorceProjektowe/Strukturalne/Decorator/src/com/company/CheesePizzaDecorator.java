@@ -9,7 +9,7 @@ public class CheesePizzaDecorator extends PizzaDecorator {
         super(iPizza);
     }
 
-    //zwiększamy wartość pizzy dodając ten dadatek
+    // zwiększamy wartość pizzy dodając ten dadatek
     @Override
     public double calculatePrice() {
         //do wartości bazowej dodajemy wartość dodatku Cheese = 2.1
