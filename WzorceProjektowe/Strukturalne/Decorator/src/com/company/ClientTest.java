@@ -49,7 +49,7 @@ public class ClientTest {
         var mediumPizzaCheeseHamSalami = new SalamiPizzaDecorator(mediumPizzaCheeseHam);
         System.out.println("Cena pizzy typu (mediumPizzaCheeseHamSalami): " + mediumPizzaCheeseHamSalami.calculatePrice());
 
-        // do  mediumPizzaCheeseHamSalami (z serem i Ham i Salami)  dodajemy jeszcze raz ser
+        // do  mediumPizzaCheeseHamSalami (z Serem i Ham i Salami)  dodajemy jeszcze raz Ser
         var mediumPizzaCheeseHamSalamiChees = new CheesePizzaDecorator(mediumPizzaCheeseHamSalami);
         System.out.println("Cena pizzy typu (mediumPizzaCheeseHamSalamiChees - podwojny ser): " + mediumPizzaCheeseHamSalamiChees.calculatePrice());
     }
