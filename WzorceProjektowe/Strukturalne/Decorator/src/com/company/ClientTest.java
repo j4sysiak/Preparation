@@ -42,12 +42,12 @@ public class ClientTest {
         System.out.println("Cena pizzy typu (mediumPizzaWithCheese): " + mediumPizzaWithCheese.calculatePrice());
 
         // do  MediumPizza z serem dodajemy Ham
-        var mediumCheeseHam = new HamPizzaDecorator(mediumPizzaWithCheese);
-        System.out.println("Cena pizzy typu (ser + salami): " + mediumCheeseHam.calculatePrice());
+        var mediumPizzaCheeseHam = new HamPizzaDecorator(mediumPizzaWithCheese);
+        System.out.println("Cena pizzy typu (ser + salami): " + mediumPizzaCheeseHam.calculatePrice());
 
         // do  MediumPizza z serem i Ham dodajemy Salami
-        var mediumCheeseHamSalami = new SalamiPizzaDecorator(mediumCheeseHam);
-        System.out.println("Cena pizzy typu (ser + 2 X salami): " + mediumCheeseHamSalami.calculatePrice());
+        var mediumPizzaCheeseHamSalami = new SalamiPizzaDecorator(mediumPizzaCheeseHam);
+        System.out.println("Cena pizzy typu (ser + 2 X salami): " + mediumPizzaCheeseHamSalami.calculatePrice());
     }
 }
 
