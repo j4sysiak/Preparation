@@ -26,7 +26,6 @@ W tym przykładzie zadaniem naszego Proxy będzie udostępnienie tego samego int
 że w sposób kontrolowany tzn. jeżeli już mamy w pamięci video pod danym id to nie pobieramy go ponownie, tylko wysyłamy te z pamięci.
 */
 
-
 import org.junit.Test;
 
 public class ClientTest {
@@ -36,13 +35,12 @@ public class ClientTest {
 
         // bez Proxy
         YouTubeService youTubeService = new YouTubeService();
-//        youTubeService.getVideo(10);
-//        youTubeService.getVideo(10);
+         youTubeService.getVideo(10);
+         youTubeService.getVideo(10);
 
         // z Proxy
         ProxyYouTubeService proxyYouTubeService = new ProxyYouTubeService(youTubeService);
         proxyYouTubeService.getVideo(11);
         proxyYouTubeService.getVideo(101);
     }
-
 }
