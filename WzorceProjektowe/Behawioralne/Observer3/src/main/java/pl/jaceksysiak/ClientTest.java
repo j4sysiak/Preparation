@@ -1,6 +1,6 @@
 package pl.jaceksysiak;
 
-public class Test {
+public class ClientTest {
 
     @org.junit.Test
     public void test() {

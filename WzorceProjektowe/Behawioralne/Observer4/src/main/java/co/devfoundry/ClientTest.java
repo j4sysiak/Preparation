@@ -6,9 +6,10 @@ import co.devfoundry.notification.TextMessage;
 import co.devfoundry.order.Order;
 import co.devfoundry.order.OrderStatus;
 
-public class Main {
+public class ClientTest {
 
-    public static void main(String[] args) {
+    @org.junit.Test
+    public void test() {
 
         Order order = new Order(110L, OrderStatus.ZAREJESTROWANE);
 
