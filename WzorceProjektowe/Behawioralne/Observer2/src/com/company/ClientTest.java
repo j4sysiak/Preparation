@@ -1,6 +1,6 @@
 package com.company;
 
-public class Test {
+public class ClientTest {
 
     @org.junit.Test
     public void test() {
