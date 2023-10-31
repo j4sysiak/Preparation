@@ -2,3 +2,10 @@
 
 https://www.udemy.com/course/wzorce-projektowe/learn/lecture/9593490#overview
 
+
+ 
+
+https://www.udemy.com/course/wzorce-projektowe/learn/lecture/9875440#overview
+
+ 
+
