@@ -5,9 +5,10 @@ import co.devfoundry.notification.RadioNews;
 import co.devfoundry.notification.TvNews;
 import co.devfoundry.weather_forecast.WeatherForecast;
 
-public class Main {
+public class ClientTest {
 
-    public static void main(String[] args) {
+    @org.junit.Test
+    public void test() {
 
         WeatherForecast weatherForecast = new WeatherForecast(25, 1003);
 
