@@ -25,7 +25,7 @@ public class Subject {
                     e.printStackTrace();
                 }
             }
-            this.iObserver.update();
+            this.iObserver.notifyMe();
         });
         thread.start();
     }

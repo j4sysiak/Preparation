@@ -29,7 +29,7 @@ public class Subject2 {
                 }
                 // o zakończonej pracy powiadamiamy wszystkich observerów po kolei
                 listOfObservers.stream()
-                        .forEach(observer -> observer.update());
+                        .forEach(observer -> observer.notifyMe());
             }
 
         });
