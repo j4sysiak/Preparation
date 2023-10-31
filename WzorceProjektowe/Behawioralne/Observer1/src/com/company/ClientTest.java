@@ -1,6 +1,6 @@
 package com.company;
 
-public class Test {
+public class ClientTest {
 
     @org.junit.Test
     public void test() {
@@ -22,18 +22,18 @@ public class Test {
         // oraz wysyłał powiadomienia
         Publisher publisherGazetaWyborcza = new Publisher();
         // dodajemy do listy
-        publisherGazetaWyborcza.addUser(iSubsciber1);
-        publisherGazetaWyborcza.addUser(iSubsciber2);
-        publisherGazetaWyborcza.addUser(iSubsciber3);
-        publisherGazetaWyborcza.addUser(iSubsciberVip);
+        publisherGazetaWyborcza.subscribe(iSubsciber1);
+        publisherGazetaWyborcza.subscribe(iSubsciber2);
+        publisherGazetaWyborcza.subscribe(iSubsciber3);
+        publisherGazetaWyborcza.subscribe(iSubsciberVip);
 
         // powiadamamy wszystkich obserwatorów
-        publisherGazetaWyborcza.notifyUser("message 1 dla naszych kochanych subskrybentów: zapłać miesięczy abonament");
+        publisherGazetaWyborcza.notify("message 1 dla naszych kochanych subskrybentów: zapłać miesięczy abonament");
 
-        publisherGazetaWyborcza.removeUser(iSubsciber1);  // usuwam subskrybenta z listy subskrybentów (np. usuwam klienta z listy subskrybcji gazety)
+        publisherGazetaWyborcza.unsubscribe(iSubsciber1);  // usuwam subskrybenta z listy subskrybentów (np. usuwam klienta z listy subskrybcji gazety)
 
         // powiadamamy wszystkich obserwatorów
-        publisherGazetaWyborcza.notifyUser("message 2 dla naszych kochanych subskrybentów: nowa gazeta do już jest pobrania");
+        publisherGazetaWyborcza.notify("message 2 dla naszych kochanych subskrybentów: nowa gazeta do już jest pobrania");
 
     }
 }
