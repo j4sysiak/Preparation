@@ -11,7 +11,7 @@ public class ClientTest {
         IObserver cli1 = new Client1();
         Subject subject1 = new Subject(cli1);  // wrzucamy tyklo jednego klienta
         subject1.startWork();
-            //lub inaczej
+
         new Subject(new Client2()).startWork();
         new Subject(new Client3()).startWork();
 
