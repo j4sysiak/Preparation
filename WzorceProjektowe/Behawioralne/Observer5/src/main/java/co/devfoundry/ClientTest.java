@@ -27,7 +27,7 @@ public class ClientTest {
 
         System.out.println("\nNowa prognoza - powiadomienie tylko dla serwisu internetowego:");
 
-        weatherForecast.updateForecast(18, 1007);
+        weatherForecast.setForecast(18, 1007);
 
     }
 

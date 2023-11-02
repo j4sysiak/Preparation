@@ -30,7 +30,7 @@ public class WeatherForecast implements Observable {
         }
     }
 
-    public void updateForecast(int temperature, int pressure) {
+    public void setForecast(int temperature, int pressure) {
         setTemperature(temperature);
         setPressure(pressure);
         notifyObservers();
