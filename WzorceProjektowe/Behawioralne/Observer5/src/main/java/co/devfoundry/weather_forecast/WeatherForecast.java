@@ -9,7 +9,7 @@ public class WeatherForecast implements Observable {
 
     private int temperature;
     private int pressure;
-    private Set<Observer> registeredObservers = new HashSet<Observer>();
+    private Set<Observer> registeredObservers = new HashSet<>();
 
     public WeatherForecast(int temperature, int pressure) {
         this.temperature = temperature;
