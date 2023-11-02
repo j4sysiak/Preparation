@@ -25,8 +25,9 @@ public class ClientTest {
         weatherForecast.unregisterObserver(tvNews);
         weatherForecast.unregisterObserver(radioNews);
 
-        System.out.println("\nNowa prognoza - powiadomienie tylko dla serwisu internetowego:");
-
+        System.out.println("\nNowa prognoza - będzie powiadomienie tylko dla serwisu internetowego:");
+        weatherForecast.notifyObservers();
+            // lub też tą drogą notyfikacja będzie (tylko dla pozostałego internetu)
         weatherForecast.setForecast(18, 1007);
 
     }
