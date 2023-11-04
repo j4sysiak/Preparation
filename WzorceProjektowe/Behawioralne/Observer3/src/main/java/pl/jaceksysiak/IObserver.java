@@ -1,5 +1,5 @@
 package pl.jaceksysiak;
-public interface MailObserver {
+public interface IObserver {
 
     void sendNewsletter(String info);
 }

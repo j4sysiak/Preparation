@@ -5,18 +5,18 @@ public class ClientTest {
     @org.junit.Test
     public void test() {
 
-        Blog blog = new Blog();
+        Blog blog = new Blog();  // klasa agregująca obserwatorów
 
-        MailObserver user1 = new User("Jacek");
+        IObserver user1 = new Observer("Jacek");
         blog.addToSubscribents(user1);
 
-        MailObserver user2 = new User("Adam");
+        IObserver user2 = new Observer("Adam");
         blog.addToSubscribents(user2);
 
-        MailObserver user3 = new User("Wacek");
+        IObserver user3 = new Observer("Wacek");
         blog.addToSubscribents(user3);
 
-        blog.startWork();
+        blog.startWork1();
         blog.startWork2();
     }
 }

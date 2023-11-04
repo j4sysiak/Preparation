@@ -1,10 +1,10 @@
 package pl.jaceksysiak;
 
-public class User implements MailObserver {
+public class Observer implements IObserver {
 
     private String name;
 
-    public User(String name) {
+    public Observer(String name) {
         this.name = name;
     }
 
