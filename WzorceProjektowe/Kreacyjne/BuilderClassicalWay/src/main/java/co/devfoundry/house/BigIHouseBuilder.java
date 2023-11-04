@@ -1,42 +1,43 @@
 package co.devfoundry.house;
 
-public class SmallHouseBuilder implements HouseBuilder {
+public class BigIHouseBuilder implements IHouseBuilder {
 
     private House house;
 
-    public SmallHouseBuilder() {
+    public BigIHouseBuilder() {
         this.house = new House();
     }
 
     public void buildWalls() {
-        this.house.setWalls("small walls");
+        this.house.setWalls("big walls");
     }
 
     public void buildFloors() {
-        this.house.setFloors("small floors");
+        this.house.setFloors("big floors");
     }
 
     public void buildRooms() {
-        this.house.setRooms("small rooms");
+        this.house.setRooms("big rooms");
     }
 
     public void buildRoof() {
-        this.house.setRoof("small roof");
+        this.house.setRoof("big roof");
     }
 
     public void buildWindows() {
-        this.house.setWindows("small windows");
+        this.house.setWindows("big windows");
     }
 
     public void biuldDoors() {
-        this.house.setDoors("small doors");
+        this.house.setDoors("big doors");
     }
 
     public void buildGarage() {
-        this.house.setGarage("small garage");
+        this.house.setGarage("big garage");
     }
 
     public House getHouse() {
         return house;
     }
+
 }

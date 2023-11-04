@@ -1,9 +1,9 @@
 package co.devfoundry;
 
-import co.devfoundry.house.BigHouseBuilder;
+import co.devfoundry.house.BigIHouseBuilder;
 import co.devfoundry.house.House;
 import co.devfoundry.house.HouseDirector;
-import co.devfoundry.house.SmallHouseBuilder;
+import co.devfoundry.house.SmallIHouseBuilder;
 
 public class Main {
 
@@ -12,8 +12,8 @@ public class Main {
 //        House house1 = new House("walls", "floors", "rooms", "windows", "doors", "garage");
 //        House house2 = new House("")
 
-        SmallHouseBuilder smallHouseBuilder = new SmallHouseBuilder();
-        BigHouseBuilder bigHouseBuilder = new BigHouseBuilder();
+        SmallIHouseBuilder smallHouseBuilder = new SmallIHouseBuilder();
+        BigIHouseBuilder bigHouseBuilder = new BigIHouseBuilder();
 
         HouseDirector smallHouseDirector = new HouseDirector(smallHouseBuilder);
         smallHouseDirector.buildHouse();

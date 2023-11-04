@@ -1,6 +1,6 @@
 package co.devfoundry.house;
 
-public interface HouseBuilder {
+public interface IHouseBuilder {
 
     void buildWalls();
     void buildFloors();

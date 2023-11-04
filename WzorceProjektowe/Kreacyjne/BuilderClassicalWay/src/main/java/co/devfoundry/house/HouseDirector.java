@@ -2,24 +2,24 @@ package co.devfoundry.house;
 
 public class HouseDirector {
 
-    private HouseBuilder houseBuilder;
+    private IHouseBuilder IHouseBuilder;
 
-    public HouseDirector(HouseBuilder houseBuilder) {
-        this.houseBuilder = houseBuilder;
+    public HouseDirector(IHouseBuilder IHouseBuilder) {
+        this.IHouseBuilder = IHouseBuilder;
     }
 
     public void buildHouse(){
-        houseBuilder.buildWalls();
-        houseBuilder.buildFloors();
-        houseBuilder.buildRooms();
-        houseBuilder.buildRoof();
-        houseBuilder.buildWindows();
-        houseBuilder.biuldDoors();
-        houseBuilder.buildGarage();
+        IHouseBuilder.buildWalls();
+        IHouseBuilder.buildFloors();
+        IHouseBuilder.buildRooms();
+        IHouseBuilder.buildRoof();
+        IHouseBuilder.buildWindows();
+        IHouseBuilder.biuldDoors();
+        IHouseBuilder.buildGarage();
     }
 
     public House getHouse(){
-        return this.houseBuilder.getHouse();
+        return this.IHouseBuilder.getHouse();
     }
 
 }
