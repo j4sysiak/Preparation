@@ -16,13 +16,12 @@ public class ClientTest {
     @Test
     public void test() {
 
-        // musi być prywatny konstruktor Configuration, żeeeeeby nie było można tworzyć obiektów Configuration
-        // var cfg = new Configuration();  E R R O R
-        var cfg1 = Configuration.getInstatnce();
-        var cfg2 = Configuration.getInstatnce();
+        // musi być prywatny konstruktor GameEngine_solvation1, żeeeeeby nie było można tworzyć obiektów GameEngine_solvation1
+        // GameEngine_solvation1 gameEngine = new GameEngine_solvation1();  E R R O R
+        var gameEngine1 = GameEngine_solvation1.getInstatnce();
+        var gameEngine2 = GameEngine_solvation1.getInstatnce();
 
-        if (cfg1 == cfg2) {
-            System.out.println("cfg1 == cfg2  ->  to znaczy, że jest to jeden obiekt, czyli singleton");
-        }
+        System.out.println(gameEngine1 == gameEngine2);  //true
+
     }
 }
