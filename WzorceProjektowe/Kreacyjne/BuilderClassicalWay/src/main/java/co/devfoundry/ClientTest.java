@@ -7,7 +7,8 @@ import co.devfoundry.house.SmallIHouseBuilder;
 
 public class ClientTest {
 
-    public static void main(String[] args) {
+    @org.junit.Test
+    public void test() {
 
 //        House house1 = new House("walls", "floors", "rooms", "windows", "doors", "garage");
 //        House house2 = new House("")
@@ -17,16 +18,12 @@ public class ClientTest {
 
         HouseDirector smallHouseDirector = new HouseDirector(smallHouseBuilder);
         smallHouseDirector.buildHouse();
+        House smallHouse = smallHouseDirector.getHouse();
+        System.out.println(smallHouse);
 
         HouseDirector bigHouseDirector = new HouseDirector(bigHouseBuilder);
         bigHouseDirector.buildHouse();
-
-        House smallHouse = smallHouseDirector.getHouse();
         House bigHouse = bigHouseDirector.getHouse();
-
-        System.out.println(smallHouse);
         System.out.println(bigHouse);
-
     }
-
 }
