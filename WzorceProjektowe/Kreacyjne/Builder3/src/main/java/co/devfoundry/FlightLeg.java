@@ -15,13 +15,13 @@ public class FlightLeg {
         this.price = builder.price;
     }
 
-    public void setDelayed(boolean delayed) {
-        this.delayed = delayed;
-    }
+//    public void setDelayed(boolean delayed) {
+//        this.delayed = delayed;
+//    }
 
-    public void setPrice(int price) {
-        this.price = price;
-    }
+//    public void setPrice(int price) {
+//        this.price = price;
+//    }
 
     @Override
     public String toString() {
@@ -34,11 +34,9 @@ public class FlightLeg {
     }
 
 
-
     // Immer class
 
     public static class FlightLegBuilder {
-
         private final String from;
         private final String to;
         private final boolean delayed;
@@ -55,19 +53,11 @@ public class FlightLeg {
             return this;
         }
 
-
-
         public FlightLeg build() {
-            if(this.price==0) {
+            if (this.price == 0) {
                 throw new IllegalStateException("Brak wymaganego pola - cena");
             }
-
             return new FlightLeg(this);
         }
-
-
     }
-
-
-
 }
