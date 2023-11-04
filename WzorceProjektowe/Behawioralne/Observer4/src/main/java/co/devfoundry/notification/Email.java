@@ -2,7 +2,9 @@ package co.devfoundry.notification;
 
 import co.devfoundry.order.Order;
 
-public class Email implements Observer {
+// Obserwator1
+
+public class Email implements IObserver {
 
 
     public void update(Order order) {

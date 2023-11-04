@@ -11,12 +11,13 @@ public class ClientTest {
     @org.junit.Test
     public void test() {
 
-        Order order = new Order(110L, OrderStatus.ZAREJESTROWANE);
+        Order order = new Order(110L, OrderStatus.ZAREJESTROWANE);  // klasa agregująca
 
         TextMessage textMessage = new TextMessage();
         MobileApp mobileApp = new MobileApp();
         Email email = new Email();
 
+        // agregujemy obserwatorów
         order.registerObserver(textMessage);
         order.registerObserver(mobileApp);
         order.registerObserver(email);

@@ -2,7 +2,7 @@ package co.devfoundry.notification;
 
 import co.devfoundry.order.Order;
 
-public interface Observer {
+public interface IObserver {
 
     void update(Order order);
 

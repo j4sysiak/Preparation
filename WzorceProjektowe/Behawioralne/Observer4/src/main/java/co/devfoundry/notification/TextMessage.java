@@ -2,7 +2,9 @@ package co.devfoundry.notification;
 
 import co.devfoundry.order.Order;
 
-public class TextMessage implements Observer {
+// Obserwator3
+
+public class TextMessage implements IObserver {
 
     public void update(Order order) {
         System.out.println("SMS - zamówienie numer: " +
