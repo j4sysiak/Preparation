@@ -11,7 +11,7 @@ public class ClientForDirector {
 //    Potem wprowadzamy koncept Dyrektora (klasa Director), który będzie zarządzał tworzeniem konkretnych faktur.
 //    Zawierałby on metody np. createVATInvoice(), createMonthlyInvoice(), createBlankInvoice(), etc. Metody te zwracałyby obiekt Invoice.
 //
-//    Nasza klasa Client może używać bezpośrednio klasy tworzącej fakturę InvoiceBuilder lub z klasy Director i posłużyć się
+//    Nasza klasa ClientTest może używać bezpośrednio klasy tworzącej fakturę InvoiceBuilder lub z klasy Director i posłużyć się
 //    konkretną metodą do tworzenia konkretnego typu faktury.
 
     @Test
