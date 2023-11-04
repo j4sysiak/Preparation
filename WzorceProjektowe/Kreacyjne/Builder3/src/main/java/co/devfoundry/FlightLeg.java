@@ -35,12 +35,11 @@ public class FlightLeg {
 
 
     // Immer class
-
     public static class FlightLegBuilder {
         private final String from;
         private final String to;
         private final boolean delayed;
-        private int price;
+        private int price = 100;
 
         public FlightLegBuilder(String from, String to) {
             this.from = from;

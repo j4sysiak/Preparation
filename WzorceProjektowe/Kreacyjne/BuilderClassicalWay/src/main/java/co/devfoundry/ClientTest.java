@@ -13,14 +13,15 @@ public class ClientTest {
 //        House house1 = new House("walls", "floors", "rooms", "windows", "doors", "garage");
 //        House house2 = new House("")
 
-        SmallIHouseBuilder smallHouseBuilder = new SmallIHouseBuilder();
-        BigIHouseBuilder bigHouseBuilder = new BigIHouseBuilder();
 
+        SmallIHouseBuilder smallHouseBuilder = new SmallIHouseBuilder();
         HouseDirector smallHouseDirector = new HouseDirector(smallHouseBuilder);
         smallHouseDirector.buildHouse();
         House smallHouse = smallHouseDirector.getHouse();
         System.out.println(smallHouse);
 
+
+        BigIHouseBuilder bigHouseBuilder = new BigIHouseBuilder();
         HouseDirector bigHouseDirector = new HouseDirector(bigHouseBuilder);
         bigHouseDirector.buildHouse();
         House bigHouse = bigHouseDirector.getHouse();
