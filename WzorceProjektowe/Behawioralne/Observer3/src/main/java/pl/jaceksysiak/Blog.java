@@ -7,6 +7,8 @@ import java.util.UUID;
 
 
 // klasa agregująca obserwatorów
+// ważne jest, żeby klasa agregująca miała listę obserwatorów i metody agregujące: dodaj do listy , usuń z listy
+// i wywołanie notyfikacji do obserwatoró (po jakimś tam zdarzeniu)
 
 public class Blog {
 
