@@ -2,7 +2,7 @@ package com.company;
 
 import org.junit.Test;
 
-public class Client {
+public class ClientTest {
 
     /*
     Kreacyjny wzorzec projektowy, którego celem jest ograniczenie możliwości tworzenia obiektów danej klasy do jednej instancji.
