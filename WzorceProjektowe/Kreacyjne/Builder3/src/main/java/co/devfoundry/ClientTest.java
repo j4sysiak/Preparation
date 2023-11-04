@@ -8,8 +8,6 @@ public class ClientTest {
         FlightLeg leg = new FlightLeg
                 .FlightLegBuilder("Las Vegas","Los Angeles")
                 .build();
-
         System.out.println(leg);
     }
-
 }

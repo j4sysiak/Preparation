@@ -9,7 +9,6 @@ public class FlightLeg {
 
 
     private FlightLeg(FlightLegBuilder builder) {
-
         this.from = builder.from;
         this.to = builder.to;
         this.delayed = builder.delayed;
@@ -33,6 +32,10 @@ public class FlightLeg {
                 ", delayed=" + delayed +
                 '}';
     }
+
+
+
+    // Immer class
 
     public static class FlightLegBuilder {
 
