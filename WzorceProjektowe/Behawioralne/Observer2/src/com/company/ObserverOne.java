@@ -1,6 +1,9 @@
 package com.company;
 
-public class Client3 implements IObserver {
+
+// Observator1
+
+public class ObserverOne implements IObserver {
 
     @Override
     public void notifyMe() {

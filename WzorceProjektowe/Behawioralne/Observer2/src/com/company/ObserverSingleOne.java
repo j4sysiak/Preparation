@@ -1,15 +1,17 @@
 package com.company;
 
-public class Subject {
+// ta klasa agregująca nie ma co agregować, opiera się tylko na jednym z obserwatorów:  ObserverOne lub ObserverTwo lub ObserverThree
+
+public class ObserverSingleOne {
 
     private IObserver  iObserver;
 
-    public Subject(IObserver iObserver) {
+    public ObserverSingleOne(IObserver iObserver) {
         this.iObserver = iObserver;
     }
 
 
-    // wątkowi zarządzanemu przez Subject przekazujemy element Observatora
+    // wątkowi zarządzanemu przez ObserverSingleOne przekazujemy element Observatora
 
     // Wstrzykujemy obiekt Observera - który jest jednocześnie Clientem
     // ten obiekt observera będzie obserwował stan wykonania wątku

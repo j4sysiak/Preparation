@@ -3,11 +3,14 @@ package com.company;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Subject2 {
+
+// klasa agregująca obserwatorów: ObserverOne, ObserverTwo, ObserverThree
+
+public class ObserversAgregator {
 
     private List<IObserver> listOfObservers;
 
-    public Subject2() {
+    public ObserversAgregator() {
         this.listOfObservers = new ArrayList();
     }
 
