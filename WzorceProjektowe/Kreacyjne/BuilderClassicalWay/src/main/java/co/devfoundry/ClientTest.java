@@ -5,7 +5,7 @@ import co.devfoundry.house.House;
 import co.devfoundry.house.HouseDirector;
 import co.devfoundry.house.SmallIHouseBuilder;
 
-public class Main {
+public class ClientTest {
 
     public static void main(String[] args) {
 
