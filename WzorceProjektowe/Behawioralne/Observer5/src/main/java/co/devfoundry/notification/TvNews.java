@@ -2,7 +2,9 @@ package co.devfoundry.notification;
 
 import co.devfoundry.weather_forecast.WeatherForecast;
 
-public class TvNews implements Observer {
+// obserwator3
+
+public class TvNews implements IObserver {
 
     public void updateForecast(WeatherForecast weatherForecast) {
         System.out.println("Telewizja - nowa prognoza pogody: temperatura: " +

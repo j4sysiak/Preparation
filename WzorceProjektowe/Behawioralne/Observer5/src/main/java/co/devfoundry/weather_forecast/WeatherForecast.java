@@ -1,32 +1,34 @@
 package co.devfoundry.weather_forecast;
 
-import co.devfoundry.notification.Observer;
+import co.devfoundry.notification.IObserver;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class WeatherForecast implements Observable {
+// klasa agregująca
+
+public class WeatherForecast implements IObservable {
 
     private int temperature;
     private int pressure;
-    private Set<Observer> registeredObservers = new HashSet<>();
+    private Set<IObserver> registeredIObservers = new HashSet<>();
 
     public WeatherForecast(int temperature, int pressure) {
         this.temperature = temperature;
         this.pressure = pressure;
     }
 
-    public void registerObserver(Observer observer) {
-        registeredObservers.add(observer);
+    public void registerObserver(IObserver IObserver) {
+        registeredIObservers.add(IObserver);
     }
 
-    public void unregisterObserver(Observer observer) {
-        registeredObservers.remove(observer);
+    public void unregisterObserver(IObserver IObserver) {
+        registeredIObservers.remove(IObserver);
     }
 
     public void notifyObservers() {
-        for (Observer observer : registeredObservers) {
-            observer.updateForecast(this);
+        for (IObserver IObserver : registeredIObservers) {
+            IObserver.updateForecast(this);
         }
     }
 
