@@ -1,0 +1,1 @@
+https://www.udemy.com/course/wzorce-projektowe/learn/lecture/9593300#overview
