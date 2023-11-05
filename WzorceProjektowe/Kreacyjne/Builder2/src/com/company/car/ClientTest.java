@@ -1,10 +1,12 @@
 package com.company.car;
 
+import com.company.withdirector.IMotocycleBuilder;
+import com.company.withdirector.Motocycle;
 import lombok.ToString;
 import org.junit.Test;
 
 @ToString
-public class Client {
+public class ClientTest {
 
     @Test
     public void testCar1() {

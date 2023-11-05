@@ -1,8 +1,8 @@
-package com.company.computer;
+package com.company.classicalwaywithinnerclass;
 
 import org.junit.Test;
 
-public class Client {
+public class ClientTest {
 
     @Test
     public void testComputer() {

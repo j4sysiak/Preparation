@@ -4,23 +4,12 @@ import lombok.ToString;
 import org.junit.Test;
 
 @ToString
-public class Client {
-
-    @Test
-    public void testCar1() {
-        MotocycleBuilder motocycleBuilder =  MotocycleBuilder.builder()
-                .idbuild(1)
-                .brandbuild("Kawasaki")
-                .modelbuild("900R")
-                .build();
-        Motocycle motocycle = motocycleBuilder.create();
-        System.out.println(motocycle);
-    }
+public class ClientTest {
 
     @Test
     public void testDirector() {
         Director director = new Director();
-        Builder builder = new Builder();
+        IMotocycleBuilder imotocycleBuilder = new IMotocycleBuilder();
 
         // createHonda
         director.createHondaMotorcycle(motocycleBuilder );
