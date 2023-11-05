@@ -1,10 +1,10 @@
 package com.company;
 
-public class InvoiceManager {
+public class Director {
 
     private InvoiceBuilder invoiceBuilder;
 
-    public InvoiceManager(InvoiceBuilder invoiceBuilder) {
+    public Director(InvoiceBuilder invoiceBuilder) {
         this.invoiceBuilder = invoiceBuilder;
     }
 

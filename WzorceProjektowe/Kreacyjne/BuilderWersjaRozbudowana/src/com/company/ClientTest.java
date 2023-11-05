@@ -10,12 +10,12 @@ public class ClientTest {
     @Test
     public void test() {
         var invoiceBuilder = new InvoiceBuilder();
-        var invoiceManager = new InvoiceManager(invoiceBuilder);
+        var director = new Director(invoiceBuilder);
 
-        var vatInvoice = invoiceManager.createVATInvoice();
+        var vatInvoice = director.createVATInvoice();
 
-        var monthlyInvoice = invoiceManager.createMonthlyInvoice();
+        var monthlyInvoice = director.createMonthlyInvoice();
 
-        var blankInvoice = invoiceManager.createBlankInvoice();
+        var blankInvoice = director.createBlankInvoice();
     }
 }
