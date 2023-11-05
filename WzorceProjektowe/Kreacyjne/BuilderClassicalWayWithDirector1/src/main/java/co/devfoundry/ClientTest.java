@@ -2,10 +2,12 @@ package co.devfoundry;
 
 import co.devfoundry.house.BigIHouseBuilder;
 import co.devfoundry.house.House;
-import co.devfoundry.house.HouseDirector;
+import co.devfoundry.house.Director;
 import co.devfoundry.house.SmallIHouseBuilder;
 
 public class ClientTest {
+
+    private Director director = null;
 
     @org.junit.Test
     public void test() {
@@ -13,18 +15,16 @@ public class ClientTest {
 //        House house1 = new House("walls", "floors", "rooms", "windows", "doors", "garage");
 //        House house2 = new House("")
 
-
         SmallIHouseBuilder smallHouseBuilder = new SmallIHouseBuilder();
-        HouseDirector smallHouseDirector = new HouseDirector(smallHouseBuilder);
-        smallHouseDirector.buildHouse();
-        House smallHouse = smallHouseDirector.getHouse();
+        director = new Director(smallHouseBuilder);
+        director.buildHouse();
+        House smallHouse = director.getHouse();
         System.out.println(smallHouse);
 
-
         BigIHouseBuilder bigHouseBuilder = new BigIHouseBuilder();
-        HouseDirector bigHouseDirector = new HouseDirector(bigHouseBuilder);
-        bigHouseDirector.buildHouse();
-        House bigHouse = bigHouseDirector.getHouse();
+        director = new Director(bigHouseBuilder);
+        director.buildHouse();
+        House bigHouse = director.getHouse();
         System.out.println(bigHouse);
     }
 }

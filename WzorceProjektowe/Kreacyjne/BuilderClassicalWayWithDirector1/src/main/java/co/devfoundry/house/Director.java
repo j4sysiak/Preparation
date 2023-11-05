@@ -1,10 +1,10 @@
 package co.devfoundry.house;
 
-public class HouseDirector {
+public class Director {
 
     private IHouseBuilder ihouseBuilder;
 
-    public HouseDirector(IHouseBuilder IHouseBuilder) {
+    public Director(IHouseBuilder IHouseBuilder) {
         this.ihouseBuilder = IHouseBuilder;
     }
 

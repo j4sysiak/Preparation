@@ -26,6 +26,4 @@ public class InvoiceBuilder   {
         this.invoice.note = note;
         return this;
     }
-
-
 }
