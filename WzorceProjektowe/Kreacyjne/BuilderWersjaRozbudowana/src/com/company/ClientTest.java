@@ -5,7 +5,7 @@ import org.junit.Test;
 
 @Setter
 @Getter
-public class Client {
+public class ClientTest {
 
     @Test
     public void test() {
