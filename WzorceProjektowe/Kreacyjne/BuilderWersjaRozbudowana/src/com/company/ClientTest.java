@@ -9,11 +9,11 @@ public class ClientTest {
 
     @Test
     public void test() {
-        var invoiceBuilder = new InvoiceBuilder();
-        var director = new Director(invoiceBuilder);
+        InvoiceBuilder invoiceBuilder = new InvoiceBuilder();
+        Director director = new Director(invoiceBuilder);
 
-        var vatInvoice = director.createVATInvoice();
-        var monthlyInvoice = director.createMonthlyInvoice();
-        var blankInvoice = director.createBlankInvoice();
+        Invoice vatInvoice = director.createVATInvoice();
+        Invoice monthlyInvoice = director.createMonthlyInvoice();
+        Invoice blankInvoice = director.createBlankInvoice();
     }
 }
