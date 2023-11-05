@@ -34,12 +34,15 @@ public class FlightLeg {
     }
 
 
+
+
+
     // Immer class
     public static class FlightLegBuilder {
         private final String from;
         private final String to;
         private final boolean delayed;
-        private int price = 100;
+        private int price;
 
         public FlightLegBuilder(String from, String to) {
             this.from = from;
@@ -47,6 +50,13 @@ public class FlightLeg {
             this.delayed = false;
         }
 
+         //  nie może być bo from jest final, tak samo to i delayed
+//        public FlightLegBuilder from(String from) {
+//            this.from = from;
+//            return this;
+//        }
+
+        //  price nie jest final więc można go wyciągać stąd:
         public FlightLegBuilder price(int price) {
             this.price = price;
             return this;
