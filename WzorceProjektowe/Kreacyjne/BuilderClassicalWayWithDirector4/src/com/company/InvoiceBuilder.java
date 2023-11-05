@@ -3,7 +3,7 @@ package com.company;
 import lombok.Getter;
 
 @Getter
-public class InvoiceBuilder   {
+public class InvoiceBuilder {
 
     private Invoice invoice;
 

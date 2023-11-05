@@ -9,7 +9,6 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Invoice {
-
     public String vendor;
     public String note;
 }
