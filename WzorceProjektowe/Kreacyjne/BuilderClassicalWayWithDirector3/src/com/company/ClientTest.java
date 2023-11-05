@@ -6,12 +6,12 @@ import org.junit.Test;
 
 @Setter
 @Getter
-public class Client {
+public class ClientTest {
 
     @Test
     public void test1() {
         // bedziemy tworzy MonthlyInvoiceBuilder
-        var im = InvoiceManager.builder()
+        Director im = Director.builder()
                 .iInvoiceBuilder(new MonthlyInvoiceBuilder())
                 .build();
 
@@ -25,7 +25,7 @@ public class Client {
     @Test
     public void test2() {
         // EmptyInvoiceBuilder
-        var iem = InvoiceManager.builder()
+        var iem = Director.builder()
                 .iInvoiceBuilder(new EmptyInvoiceBuilder())
                 .build();
 
@@ -40,7 +40,7 @@ public class Client {
     @Test
     public void test3() {
         // WithOutVATInvoiceBuilder
-        var im = InvoiceManager.builder()
+        var im = Director.builder()
                 .iInvoiceBuilder(new WithOutVATInvoiceBuilder())
                 .build();
 
@@ -56,7 +56,7 @@ public class Client {
     @Test
     public void test4() {
         // MonthlyInvoiceBuilder
-        var im = InvoiceManager.builder()
+        var im = Director.builder()
                 .iInvoiceBuilder(new MonthlyInvoiceBuilder())
                 .build();
 

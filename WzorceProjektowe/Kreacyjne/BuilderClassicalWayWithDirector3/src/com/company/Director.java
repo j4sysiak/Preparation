@@ -1,20 +1,22 @@
 package com.company;
 
 
+//import lombok.Builder;
 import lombok.Builder;
 import lombok.Getter;
 
 @Getter
 @Builder
-public class InvoiceManager {
+public class Director {
 
     private IInvoiceBuilder iInvoiceBuilder;
 
-    InvoiceManager(IInvoiceBuilder iInvoiceBuilder) {
+    Director(IInvoiceBuilder iInvoiceBuilder) {
         this.iInvoiceBuilder = iInvoiceBuilder;
     }
 
-    public Invoice showInvoice() {
-        return this.iInvoiceBuilder.build();
+    public Invoice build() {
+        return new Invoice();
     }
+
 }
