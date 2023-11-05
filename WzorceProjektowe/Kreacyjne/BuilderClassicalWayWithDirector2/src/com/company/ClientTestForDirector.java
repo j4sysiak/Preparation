@@ -2,7 +2,7 @@ package com.company;
 
 import org.junit.jupiter.api.Test;
 
-public class ClientForDirector {
+public class ClientTestForDirector {
 
 //    Możemy też wyabstrachować interfejsy IInvoiceBuilderVAT, IInvoiceBuilderNoneVAT, które będą implementować nasz builder.
 //    Interfejsy będą zawierały deklarację wszystkich metod set() + build() do implementaccji faktury danego typu.
