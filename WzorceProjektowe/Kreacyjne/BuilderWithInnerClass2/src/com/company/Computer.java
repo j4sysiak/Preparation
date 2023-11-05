@@ -1,4 +1,4 @@
-package com.company.classicalwaywithinnerclass;
+package com.company;
 
 public class Computer {
 
@@ -7,11 +7,8 @@ public class Computer {
         this.RAM = builder.RAM;
     }
 
-    //required parameters
     private String HDD;
     private String RAM;
-
-
 
 
 
@@ -32,14 +29,8 @@ public class Computer {
             return this;
         }
 
-//        public ComputerBuilder(String hdd){
-//            this.HDD=hdd;
-//        }
-
         public Computer build() {
             return new Computer(this);
         }
-
     }
-
 }
