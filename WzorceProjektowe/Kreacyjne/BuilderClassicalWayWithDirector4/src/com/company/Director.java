@@ -8,21 +8,15 @@ public class Director {
         this.invoiceBuilder = invoiceBuilder;
     }
 
-    public Invoice createVATInvoice() {
-        this.invoiceBuilder.setVendor("Prefabet");
-        this.invoiceBuilder.setNote("dupadupadupadupa");
-        Invoice invoice = this.invoiceBuilder.build();
-        return invoice;
-    }
-
     public Invoice createMonthlyInvoice() {
-        this.invoiceBuilder.setVendor("Brukbet");
-        this.invoiceBuilder.setNote("dupa");
-        Invoice invoice = this.invoiceBuilder.build();
-        return invoice;
+        return invoiceBuilder.setVendor("Brukbet")
+                .setNote("dupa")
+                .build();
     }
 
-    public Invoice createBlankInvoice() {
-        return new Invoice();
+    public Invoice createVATInvoice() {
+        return invoiceBuilder.setVendor("Prefabet")
+                .setNote("dupadupadupadupa")
+                .build();
     }
 }

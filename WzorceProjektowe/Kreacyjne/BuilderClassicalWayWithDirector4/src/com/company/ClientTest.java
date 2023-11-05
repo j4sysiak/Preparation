@@ -15,6 +15,6 @@ public class ClientTest {
 
         Invoice vatInvoice = director.createVATInvoice();
         Invoice monthlyInvoice = director.createMonthlyInvoice();
-        Invoice blankInvoice = director.createBlankInvoice();
+        Invoice blankInvoice = director.createVATInvoice();
     }
 }
