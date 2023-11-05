@@ -2,14 +2,17 @@ package com.company.withdirector;
 
 public class Director {
 
-    public void createHondaMotorcycle() {
-        return imotocycleBuilder
-                .buildBrand("Honda")
-                .b("650W");
+    public Motocycle createHondaMotorcycle(MotorcycleBuilder motocycleBuilder) {
+        return motocycleBuilder
+                .setBrand("Honda")
+                .setdModel("650W")
+                .build();
     }
 
-    public void createYamahaMotorcycle() {
-        imotocycleBuilder.buildModel("Yamaha")
-                .model("1200CC Power");
+    public Motocycle createYamahaMotorcycle(MotorcycleBuilder motocycleBuilder) {
+        return motocycleBuilder
+                .setBrand("Yamaha")
+                .setdModel("1200CC Power")
+                .build();
     }
 }

@@ -9,16 +9,15 @@ public class ClientTest {
     @Test
     public void testDirector() {
         Director director = new Director();
-        IMotocycleBuilder imotocycleBuilder = new IMotocycleBuilder();
+        MotorcycleBuilder motocycleBuilder = new MotorcycleBuilder();
 
         // createHonda
-        director.createHondaMotorcycle(motocycleBuilder );
-        Motocycle motocycleHonda = motocycleBuilder.create();
+        director.createHondaMotorcycle(motocycleBuilder);
+        Motocycle motocycleHonda = motocycleBuilder.build();
         System.out.println(motocycleHonda);
 
         // createYamaha
         director.createYamahaMotorcycle(motocycleBuilder);
-        Motocycle motocycleYama = motocycleBuilder.create();
-        System.out.println(motocycleYama);
+        Motocycle motocycleYama = motocycleBuilder.build();
     }
 }

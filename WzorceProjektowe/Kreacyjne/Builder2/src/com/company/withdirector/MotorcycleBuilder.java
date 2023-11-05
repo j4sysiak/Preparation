@@ -1,22 +1,20 @@
 package com.company.withdirector;
 
-public class MotorcycleBuilder implements IMotocycleBuilder {
+public class MotorcycleBuilder {
 
     private Motocycle motocycle;
 
-
-    @Override
-    public void setBrand(String brand) {
-
+    public MotorcycleBuilder setBrand(String brand) {
+      this.motocycle.setBrand(brand);
+      return this;
     }
 
-    @Override
-    public void setdModel(String model) {
-
+    public MotorcycleBuilder setdModel(String model) {
+        this.motocycle.setModel(model);
+        return this;
     }
 
-    @Override
     public Motocycle build() {
-        return null;
+        return motocycle;
     }
 }
