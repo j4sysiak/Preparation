@@ -22,8 +22,7 @@ public class InvoiceBuilder {
         return this;
     }
 
-    // to jest najwazniejsza metoda, która zwróci naszą fakturę
     public Invoice build() {
-        return this.getInvoice();
+        return invoice;
     }
 }
