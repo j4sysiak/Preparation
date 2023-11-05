@@ -1,7 +1,5 @@
 package com.company;
 
-
-//import lombok.Builder;
 import lombok.Builder;
 import lombok.Getter;
 
@@ -14,9 +12,4 @@ public class Director {
     Director(IInvoiceBuilder iInvoiceBuilder) {
         this.iInvoiceBuilder = iInvoiceBuilder;
     }
-
-    public Invoice build() {
-        return new Invoice();
-    }
-
 }
