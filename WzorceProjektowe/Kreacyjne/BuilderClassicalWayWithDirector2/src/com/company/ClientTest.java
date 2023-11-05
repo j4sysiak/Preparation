@@ -40,8 +40,8 @@ public class ClientTest {
         invoiceBuilder.setLineItems(List.of("Line item1", "Line item2"));
 
         // i mamy naszą piękną fakturę
-        Invoice invoice1 = invoiceBuilder.create();  // i odbieramy naszą fakturę
-        System.out.println(invoice1);
+        Invoice invoice = invoiceBuilder.build();  // i odbieramy naszą fakturę
+        System.out.println(invoice);
     }
 
     @Test
@@ -49,30 +49,31 @@ public class ClientTest {
         var invoiceBuilder = new InvoiceBuilder();
         // tak zwane płynne wywołanie (łańcuchowe)
         // drugi sposób - to w sumie to samo co powyżej ale szybciej i ładniej
-        Invoice invoice2 = invoiceBuilder
+        Invoice invoice = invoiceBuilder
                 .setDate(now())
                 .setInvoiceNumber("A13132-2022")
                 .setVendor("Ford Motors Company Co. Limited")
                 .setVendee("Jacek")
                 .setNote("flsjdfjlsjdlfjlsjdfjsdjfsdlflsj")
                 .setLineItems(List.of("Line item1", "Line item2"))
-                .create();  // i odbieramy naszą fakturę
-        System.out.println(invoice2);
+                .build();  // i odbieramy naszą fakturę
+        System.out.println(invoice);
     }
 
     @Test
     public void test3() {
+        // korzystamy z lomboka w klasie Invoice
         // UWAGA - nie uzywamy tutaj invoiceBuildera - to tylko bezposrednie tworzenie klasy Invoice (taki przyklad tylko)
         // trzeci sposób - używa anotacji @Builder Lomboka w bezpośrednio klasie Invoice: ale pamietaj, że kazde pole w Invoice musi byc oznaczone: @Builder.Default
         // i musimy jaks wartosc domyslna podac
-        Invoice invoice3 = Invoice.builder()
+        Invoice invoice = Invoice.builder()
                 .date(now())
                 .number("A13132-2022")
                 .vendor("Ford Motors Company Co. Limited")
                 .vendee("Jacek")
                 .note("flsjdfjlsjdlfjlsjdfjsdjfsdlflsj")
                 .lineItems(List.of("Line item1", "Line item2"))
-                .build();
-        System.out.println(invoice3);
+                .build();  // lombok
+        System.out.println(invoice);
     }
 }

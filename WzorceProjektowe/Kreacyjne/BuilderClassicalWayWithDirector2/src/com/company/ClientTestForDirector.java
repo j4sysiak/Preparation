@@ -19,16 +19,8 @@ public class ClientTestForDirector {
         Director director = new Director();
         InvoiceBuilder invoiceBuilder = new InvoiceBuilder();
 
-        // chcemy miec createVATInvoice
-        director.createVATInvoice(invoiceBuilder);
-        Invoice myVATInvoice = invoiceBuilder.getInvoice();
-
-        // chcemy miec createMonthlyInvoice
-        director.createMonthlyInvoice(invoiceBuilder);
-        Invoice myMonthlyInvoice = invoiceBuilder.getInvoice();
-
-        // chcemy miec createBlankInvoice
-        director.createBlankInvoice(invoiceBuilder);
-        Invoice myBlankInvoice = invoiceBuilder.getInvoice();
+        Invoice vatInvoice = director.createVATInvoice(invoiceBuilder);
+        Invoice monthlyInvoice = director.createMonthlyInvoice(invoiceBuilder);
+        Invoice blankInvoice = director.createBlankInvoice(invoiceBuilder);
     }
 }

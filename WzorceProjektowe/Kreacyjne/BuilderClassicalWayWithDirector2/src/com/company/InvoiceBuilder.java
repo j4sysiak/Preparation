@@ -12,30 +12,14 @@ import java.util.Collection;
 
 @Setter
 @Getter
-@Builder
-@AllArgsConstructor
+//@Builder
+//@AllArgsConstructor
 public class InvoiceBuilder {
 
-    private Invoice invoice;
+    private Invoice invoice = new Invoice();
 
-    InvoiceBuilder(){
-        // najpierw tworzymy instancję klasy Invoice InvoiceBuilder - przez wstrzyknięcie w konstruktorze.
-        this.invoice = new Invoice();
-    }
-
-    // najwazniejsza metoda:  która zwróci naszą fakturę
-    public Invoice create() {
-        return this.getInvoice();  // to jest getter na polu Invoice
-    }
-
-    public InvoiceBuilder setInvoiceNumber(String number) {
-        this.invoice.number = number;
-        return this;
-    }
-
-    public InvoiceBuilder setDate(LocalDateTime date) {
-        this.invoice.date = date;
-        return this;
+    public Invoice build() {
+        return invoice;
     }
 
     public InvoiceBuilder setVendor(String vendor) {
@@ -53,10 +37,19 @@ public class InvoiceBuilder {
         return this;
     }
 
+    public InvoiceBuilder setDate(LocalDateTime date) {
+        this.invoice.date = date;
+        return this;
+    }
+
     public InvoiceBuilder setLineItems(Collection<String> lineItems) {
         invoice.lineItems = lineItems;
         return this;
     }
 
+    public InvoiceBuilder setInvoiceNumber(String number) {
+        this.invoice.number = number;
+        return this;
+    }
 
 }
