@@ -34,7 +34,6 @@ public class ClientTest {
         Invoice invoice = director.getIInvoiceBuilder().build();  // zwraca obiekt w ostatnim kroku
     }
 
-
     @Test
     public void test3() {
         // budujemy obiekt Director przy użyciu lombok na bazie klasy WithOutVATInvoiceBuilder
@@ -47,8 +46,6 @@ public class ClientTest {
         director.getIInvoiceBuilder().setNote("dupa-dupa-dupa");
         Invoice invoice = director.getIInvoiceBuilder().build();  // zwraca obiekt w ostatnim kroku
     }
-
-
 
     @Test
     public void test4() {
