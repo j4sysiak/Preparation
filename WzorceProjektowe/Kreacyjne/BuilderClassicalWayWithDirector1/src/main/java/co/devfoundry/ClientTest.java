@@ -21,6 +21,7 @@ public class ClientTest {
         House smallHouse = director.getHouse();
         System.out.println(smallHouse);
 
+
         BigIHouseBuilder bigHouseBuilder = new BigIHouseBuilder();
         director = new Director(bigHouseBuilder);
         director.buildHouse();

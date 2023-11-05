@@ -8,17 +8,12 @@ public class Director {
         this.ihouseBuilder = IHouseBuilder;
     }
 
-    public void buildHouse(){
+    public void buildHouse() {
         ihouseBuilder.buildWalls();
         ihouseBuilder.buildFloors();
-        ihouseBuilder.buildRooms();
-        ihouseBuilder.buildRoof();
-        ihouseBuilder.buildWindows();
-        ihouseBuilder.biuldDoors();
-        ihouseBuilder.buildGarage();
     }
 
-    public House getHouse(){
+    public House getHouse() {
         return this.ihouseBuilder.getHouse();
     }
 
