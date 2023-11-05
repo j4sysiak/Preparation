@@ -2,7 +2,9 @@ package com.company.withdirector;
 
 public class MotorcycleBuilder {
 
-    private Motocycle motocycle;
+    private Motocycle motocycle = new Motocycle();
+
+    public MotorcycleBuilder() {}
 
     public MotorcycleBuilder setBrand(String brand) {
       this.motocycle.setBrand(brand);

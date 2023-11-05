@@ -7,17 +7,11 @@ import org.junit.Test;
 public class ClientTest {
 
     @Test
-    public void testDirector() {
+    public void test() {
         Director director = new Director();
         MotorcycleBuilder motocycleBuilder = new MotorcycleBuilder();
 
-        // createHonda
-        director.createHondaMotorcycle(motocycleBuilder);
-        Motocycle motocycleHonda = motocycleBuilder.build();
-        System.out.println(motocycleHonda);
-
-        // createYamaha
-        director.createYamahaMotorcycle(motocycleBuilder);
-        Motocycle motocycleYama = motocycleBuilder.build();
+        Motocycle honda = director.createHondaMotorcycle(motocycleBuilder);
+        Motocycle yamaha = director.createYamahaMotorcycle(motocycleBuilder);
     }
 }
