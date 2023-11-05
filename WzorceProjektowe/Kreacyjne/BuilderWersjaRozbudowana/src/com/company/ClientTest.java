@@ -13,9 +13,7 @@ public class ClientTest {
         var director = new Director(invoiceBuilder);
 
         var vatInvoice = director.createVATInvoice();
-
         var monthlyInvoice = director.createMonthlyInvoice();
-
         var blankInvoice = director.createBlankInvoice();
     }
 }
