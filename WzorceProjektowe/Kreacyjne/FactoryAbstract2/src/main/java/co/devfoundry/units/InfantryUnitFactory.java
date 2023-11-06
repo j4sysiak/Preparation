@@ -2,6 +2,8 @@ package co.devfoundry.units;
 
 public class InfantryUnitFactory extends Factory {
 
+
+
     @Override
     public Unit createUnit(UnitType unitType) {
 

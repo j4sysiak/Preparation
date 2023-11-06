@@ -4,7 +4,7 @@ import com.company.mac.MacFactory;
 import com.company.windows.WindowsFactory;
 import org.junit.jupiter.api.Test;
 
-public class Client {
+public class ClientTest {
 
     @Test
     public void test() {
