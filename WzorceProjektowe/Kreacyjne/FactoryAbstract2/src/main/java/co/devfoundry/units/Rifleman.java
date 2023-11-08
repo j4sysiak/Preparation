@@ -1,8 +1,10 @@
 package co.devfoundry.units;
 
+import co.devfoundry.units.unit.InfantryUnit;
+
 public class Rifleman extends InfantryUnit {
 
-    Rifleman(int hp, int exp, int dmgDone) {
+    public Rifleman(int hp, int exp, int dmgDone) {
         super(hp, exp, dmgDone);
     }
 }

@@ -1,12 +1,12 @@
-package co.devfoundry.units;
+package co.devfoundry.units.unit;
 
-public abstract class InfantryUnit {
+abstract public class AirUnit {
 
     private int hp;
     private int exp;
     private int dmgDone;
 
-    protected InfantryUnit(int hp, int exp, int dmgDone) {
+    protected AirUnit(int hp, int exp, int dmgDone) {
         this.hp = hp;
         this.exp = exp;
         this.dmgDone = dmgDone;
@@ -23,4 +23,5 @@ public abstract class InfantryUnit {
     public int getDmgDone() {
         return dmgDone;
     }
+
 }

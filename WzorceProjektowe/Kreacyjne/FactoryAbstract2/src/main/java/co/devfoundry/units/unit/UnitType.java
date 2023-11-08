@@ -1,4 +1,4 @@
-package co.devfoundry.units;
+package co.devfoundry.units.unit;
 
 public enum UnitType {
     RIFLEMAN, TANK, HELICOPTER, SAPER;

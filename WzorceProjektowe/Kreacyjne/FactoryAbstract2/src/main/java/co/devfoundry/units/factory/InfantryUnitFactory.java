@@ -1,7 +1,12 @@
-package co.devfoundry.units;
+package co.devfoundry.units.factory;
+
+import co.devfoundry.units.Rifleman;
+import co.devfoundry.units.unit.AirUnit;
+import co.devfoundry.units.unit.InfantryUnit;
+import co.devfoundry.units.unit.MechanizedUnit;
+import co.devfoundry.units.unit.UnitType;
 
 public class InfantryUnitFactory extends Factory {
-
 
 
     public Rifleman createUnit(UnitType unitType) {

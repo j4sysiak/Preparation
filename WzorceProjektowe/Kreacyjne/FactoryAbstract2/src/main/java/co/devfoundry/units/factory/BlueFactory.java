@@ -1,12 +1,20 @@
-package co.devfoundry.units;
+package co.devfoundry.units.factory;
 
-public class RedFactory extends Factory {
+import co.devfoundry.units.Helicopter;
+import co.devfoundry.units.Rifleman;
+import co.devfoundry.units.Tank;
+import co.devfoundry.units.unit.AirUnit;
+import co.devfoundry.units.unit.InfantryUnit;
+import co.devfoundry.units.unit.MechanizedUnit;
+import co.devfoundry.units.unit.UnitType;
+
+public class BlueFactory extends Factory {
 
     @Override
     public InfantryUnit createInfantryUnit(UnitType type) {
         switch (type) {
             case RIFLEMAN:
-                return new Rifleman(20, 0, 6);
+                return new Rifleman(25, 0, 5);
             default:
                 throw new UnsupportedOperationException("Nieznany typ");
         }
@@ -16,17 +24,18 @@ public class RedFactory extends Factory {
     public MechanizedUnit createMechanizedUnit(UnitType type) {
         switch (type) {
             case TANK:
-                return new Tank(75, 0, 35);
+                return new Tank(100, 0, 25);
             default:
                 throw new UnsupportedOperationException("Nieznany typ");
         }
     }
 
+
     @Override
     public AirUnit createAirUnit(UnitType type) {
         switch (type) {
             case HELICOPTER:
-                return new Helicopter(20, 0, 30);
+                return new Helicopter(50, 0, 25);
             default:
                 throw new UnsupportedOperationException("Nieznany typ");
         }
