@@ -4,8 +4,7 @@ public class InfantryUnitFactory extends Factory {
 
 
 
-    @Override
-    public Unit createUnit(UnitType unitType) {
+    public Rifleman createUnit(UnitType unitType) {
 
         switch (unitType) {
             case RIFLEMAN:
@@ -17,4 +16,18 @@ public class InfantryUnitFactory extends Factory {
         }
     }
 
+    @Override
+    public InfantryUnit createInfantryUnit(UnitType type) {
+        return null;
+    }
+
+    @Override
+    public MechanizedUnit createMechanizedUnit(UnitType type) {
+        return null;
+    }
+
+    @Override
+    public AirUnit createAirUnit(UnitType type) {
+        return null;
+    }
 }

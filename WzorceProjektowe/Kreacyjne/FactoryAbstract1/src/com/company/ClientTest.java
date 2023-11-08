@@ -10,12 +10,12 @@ public class ClientTest {
     public void test() {
 
     /*
-    Celem jest dostarczenie interfejsu (IPanelElementFactory  Panel Faktoria) do tworzenia różnych obiektów jednego typu
-    (elementy dla panelu Windowsa i elementy dla panelu Mac'a)
-    dla tej samej rodziny klas bez specyfikowania ich konkretnych klas - ale nie chcemy, żeby ściśle był powiązany
-    z jakimś konkretnym typem.
-    Przy czym, umożliwia jednemu obiektowi tworzenie różnych, powiązanych ze sobą, reprezentacji pod-obiektów
-    określając ich typy podczas działania programu
+     Celem jest dostarczenie interfejsu (IPanelElementFactory  Panel Faktoria) do tworzenia różnych obiektów jednego typu
+     (elementy dla panelu Windowsa i elementy dla panelu Mac'a)
+     dla tej samej rodziny klas bez specyfikowania ich konkretnych klas - ale nie chcemy, żeby ściśle był powiązany
+     z jakimś konkretnym typem.
+     Przy czym, umożliwia jednemu obiektowi tworzenie różnych, powiązanych ze sobą, reprezentacji pod-obiektów
+     określając ich typy podczas działania programu
     */
 
         /*tutaj decydujemy dla jakiego systemu budujemy aplikację: dla Mac, czy Windows - wybraliśmy Windows*/

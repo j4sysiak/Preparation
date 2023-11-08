@@ -4,7 +4,6 @@ public class BlueFactory extends Factory {
 
     @Override
     public InfantryUnit createInfantryUnit(UnitType type) {
-
         switch (type) {
             case RIFLEMAN:
                 return new Rifleman(25, 0, 5);
