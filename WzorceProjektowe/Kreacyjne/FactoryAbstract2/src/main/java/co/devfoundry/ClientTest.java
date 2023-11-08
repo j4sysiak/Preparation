@@ -13,6 +13,7 @@ public class ClientTest {
 
     @Test
     public void test() {
+
         Factory redFactory = new RedFactory();
         MechanizedUnit redTank = redFactory.createMechanizedUnit(UnitType.TANK);
         InfantryUnit redInfantry = redFactory.createInfantryUnit(UnitType.RIFLEMAN);
