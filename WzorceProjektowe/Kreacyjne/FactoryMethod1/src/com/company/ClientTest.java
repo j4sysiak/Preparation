@@ -19,15 +19,12 @@ public class ClientTest {
 
         ShapeFactory shapeFactory = new ShapeFactory();
 
-        // Circle circle = (Circle) shapeFactory.createShape(ShapeType.Circle);
-        Circle circle = (Circle) shapeFactory.createShape(ShapeType.Circle);
+        var circle = shapeFactory.createShape(ShapeType.Circle);
         circle.render();
 
-        // Triangle triangle = (Triangle) shapeFactory.createShape(ShapeType.Triangle);
         IShape triangle = shapeFactory.createShape(ShapeType.Triangle);
         triangle.render();
 
-        // Rectangle rectangle = (Rectangle) shapeFactory.createShape(ShapeType.Rectangle);
         IShape rectangle = shapeFactory.createShape(ShapeType.Rectangle);
         rectangle.render();
     }
