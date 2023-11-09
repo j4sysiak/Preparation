@@ -2,7 +2,7 @@ package com.company;
 
 import org.junit.jupiter.api.Test;
 
-public class Client {
+public class ClientTest {
     @Test
     public void test() throws Exception {
 
@@ -11,7 +11,7 @@ public class Client {
     Jednocześnie pozwala podklasom zmieniać typ tworzonych obiektów.
 
     Fabryka oddziela kod implementacyjny (ShapeFactory: tworzący dany obiekt) od kodu, który korzysta z tego obiektu - Clienta.
-    Dodanie nowego kształtu nie powoduje zmiany kodu klienta (klasa Client)
+    Dodanie nowego kształtu nie powoduje zmiany kodu klienta (klasa ClientTest)
                 - dodajemy tylko w fabryce (ShapeFactory) nowy case i budujemy klasę nowego obiektu.
     */
 

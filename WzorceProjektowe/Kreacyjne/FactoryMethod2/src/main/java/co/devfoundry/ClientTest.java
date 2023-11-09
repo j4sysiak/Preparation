@@ -1,10 +1,12 @@
 package co.devfoundry;
 
 import co.devfoundry.units.*;
+import org.junit.Test;
 
-public class Main {
+public class ClientTest {
 
-    public static void main(String[] args) {
+    @Test
+    public void test() throws Exception {
 
         Factory factory = new UnitFactory();
 
