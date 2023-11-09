@@ -13,6 +13,6 @@ public class Triangle  /*lub extends Shape*/ implements IShape {
 
     @Override
     public void render() {
-        System.out.println("Render Triangle ... ");
+        System.out.println("Render Triangle ... " + this.a  +":"+ this.b);
     }
 }

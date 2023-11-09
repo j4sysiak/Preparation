@@ -13,6 +13,6 @@ public class Rectangle  /*lub extends Shape*/ implements IShape {
 
     @Override
     public void render() {
-        System.out.println("Render Rectangle ... ");
+        System.out.println("Render Rectangle ... " + this.a  +":"+ this.b);
     }
 }

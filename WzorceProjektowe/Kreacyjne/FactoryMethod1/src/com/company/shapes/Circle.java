@@ -13,6 +13,6 @@ public class Circle /*lub extends Shape*/ implements IShape {
 
     @Override
     public void render() {
-        System.out.println("Render Circle ... ");
+        System.out.println("Render Circle ... " + this.a  +":"+ this.b);
     }
 }
