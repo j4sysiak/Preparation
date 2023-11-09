@@ -7,8 +7,8 @@ import lombok.Setter;
 @Setter
 public abstract class Shape {
 
-    public int x;
-    public int y;
+     int x;
+     int y;
 
     public abstract void render();
 }

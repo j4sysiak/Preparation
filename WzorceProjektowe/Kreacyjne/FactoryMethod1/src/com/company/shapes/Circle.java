@@ -2,13 +2,13 @@ package com.company.shapes;
 
 import com.company.IShape;
 
-public class Circle /*extends Shape*/ implements IShape {
+public class Circle /*lub extends Shape*/ implements IShape {
 
     int a, b;
 
     public Circle(int a, int b) {
-        this.a=a;
-        this.b=b;
+        this.a = a;
+        this.b = b;
     }
 
     @Override

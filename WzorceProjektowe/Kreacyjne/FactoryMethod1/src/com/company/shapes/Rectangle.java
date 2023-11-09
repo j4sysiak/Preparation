@@ -2,13 +2,13 @@ package com.company.shapes;
 
 import com.company.IShape;
 
-public class Rectangle  /*extends Shape*/ implements IShape {
+public class Rectangle  /*lub extends Shape*/ implements IShape {
 
     int a, b;
 
     public Rectangle(int a, int b) {
-        this.a=a;
-        this.b=b;
+        this.a = a;
+        this.b = b;
     }
 
     @Override

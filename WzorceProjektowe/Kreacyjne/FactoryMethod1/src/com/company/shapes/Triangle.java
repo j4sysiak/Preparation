@@ -2,13 +2,13 @@ package com.company.shapes;
 
 import com.company.IShape;
 
-public class Triangle  /*extends Shape*/ implements IShape {
+public class Triangle  /*lub extends Shape*/ implements IShape {
 
     int a, b;
 
     public Triangle(int a, int b) {
-        this.a=a;
-        this.b=b;
+        this.a = a;
+        this.b = b;
     }
 
     @Override
