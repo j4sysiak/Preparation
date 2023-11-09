@@ -4,7 +4,11 @@ import com.company.IShape;
 
 public class Circle /*extends Shape*/ implements IShape {
 
-    public Circle(int i, int i1) {
+    int a, b;
+
+    public Circle(int a, int b) {
+        this.a=a;
+        this.b=b;
     }
 
     @Override

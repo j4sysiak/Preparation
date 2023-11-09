@@ -4,7 +4,11 @@ import com.company.IShape;
 
 public class Rectangle  /*extends Shape*/ implements IShape {
 
-    public Rectangle(int i, int i1) {
+    int a, b;
+
+    public Rectangle(int a, int b) {
+        this.a=a;
+        this.b=b;
     }
 
     @Override

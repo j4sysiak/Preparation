@@ -6,6 +6,8 @@ import com.company.shapes.Triangle;
 
 public class ShapeFactory {
 
+
+
     public IShape /*lub Shape*/ createShape(ShapeType type) throws Exception {
 
         switch (type) {

@@ -4,7 +4,11 @@ import com.company.IShape;
 
 public class Triangle  /*extends Shape*/ implements IShape {
 
-    public Triangle(int i, int i1) {
+    int a, b;
+
+    public Triangle(int a, int b) {
+        this.a=a;
+        this.b=b;
     }
 
     @Override
