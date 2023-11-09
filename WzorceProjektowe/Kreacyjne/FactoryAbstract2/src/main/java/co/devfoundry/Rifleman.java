@@ -1,6 +1,6 @@
-package co.devfoundry.units;
+package co.devfoundry;
 
-import co.devfoundry.units.unit.InfantryUnit;
+import co.devfoundry.unit.InfantryUnit;
 
 public class Rifleman extends InfantryUnit {
 

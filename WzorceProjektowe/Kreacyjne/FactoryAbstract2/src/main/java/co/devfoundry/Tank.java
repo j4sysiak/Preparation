@@ -1,6 +1,6 @@
-package co.devfoundry.units;
+package co.devfoundry;
 
-import co.devfoundry.units.unit.MechanizedUnit;
+import co.devfoundry.unit.MechanizedUnit;
 
 public class Tank extends MechanizedUnit {
 

@@ -1,12 +1,12 @@
 package co.devfoundry;
 
-import co.devfoundry.units.factory.BlueFactory;
-import co.devfoundry.units.factory.Factory;
-import co.devfoundry.units.factory.RedFactory;
-import co.devfoundry.units.unit.AirUnit;
-import co.devfoundry.units.unit.InfantryUnit;
-import co.devfoundry.units.unit.MechanizedUnit;
-import co.devfoundry.units.unit.UnitType;
+import co.devfoundry.fabryki.BlueFactory;
+import co.devfoundry.fabryki.Factory;
+import co.devfoundry.fabryki.RedFactory;
+import co.devfoundry.unit.AirUnit;
+import co.devfoundry.unit.InfantryUnit;
+import co.devfoundry.unit.MechanizedUnit;
+import co.devfoundry.unit.UnitType;
 import org.junit.Test;
 
 public class ClientTest {

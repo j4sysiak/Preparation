@@ -1,5 +1,10 @@
-package co.devfoundry.units.unit;
+package co.devfoundry.unit;
 
+import lombok.Setter;
+import lombok.Getter;
+
+@Getter
+@Setter
 abstract public class MechanizedUnit {
 
     private int hp;
@@ -10,17 +15,5 @@ abstract public class MechanizedUnit {
         this.hp = hp;
         this.exp = exp;
         this.dmgDone = dmgDone;
-    }
-
-    public int getHp() {
-        return hp;
-    }
-
-    public int getExp() {
-        return exp;
-    }
-
-    public int getDmgDone() {
-        return dmgDone;
     }
 }

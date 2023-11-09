@@ -1,6 +1,6 @@
-package co.devfoundry.units;
+package co.devfoundry;
 
-import co.devfoundry.units.unit.AirUnit;
+import co.devfoundry.unit.AirUnit;
 
 public class Helicopter extends AirUnit {
 

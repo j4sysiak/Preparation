@@ -17,16 +17,16 @@ public class Application {
         this.iPanelElementFactory = iPanelElementFactory;
     }
 
-    /*tworzenie  Astrakcyjnego Panelu (abstrakcyjna Faktoria)  niezależnie od systemu: Mac czy Windows*/
+    /* tworzenie  Astrakcyjnego Panelu (abstrakcyjna Faktoria)  niezależnie od systemu: Mac czy Windows */
 
     public void createPanel() {
         //obsługa Buttonu - ale jesccze nie wiem jakiego systemu
-        var createAbstractButton = iPanelElementFactory.renderButton();  /*tutaj bazujemy jeszcze na abstrakcji bo nie wiemy co przyjdzie tworzyć, element dla Windowsa, czy może Mac'a*/
+        IButton createAbstractButton = iPanelElementFactory.renderButton();  /*tutaj bazujemy jeszcze na abstrakcji, bo nie wiemy co przyjdzie tworzyć, element dla Windowsa, czy może Mac'a*/
         createAbstractButton.renderButton();
         createAbstractButton.handleClickButton();
 
         //obsługa Textbox - ale jesccze nie wiem jakiego systemu
-        var createAbstractTextbox = iPanelElementFactory.renderTextbox();  /*tutaj bazujemy jeszcze na abstrakcji bo nie wiemy co przyjdzie tworzyć, element dla Windowsa, czy może Mac'a*/
+        ITextbox createAbstractTextbox = iPanelElementFactory.renderTextbox();  /*tutaj bazujemy jeszcze na abstrakcji bo nie wiemy co przyjdzie tworzyć, element dla Windowsa, czy może Mac'a*/
         createAbstractTextbox.createTextbox();
         createAbstractTextbox.handleTextboxInput();
     }

@@ -1,12 +1,12 @@
-package co.devfoundry.units.factory;
+package co.devfoundry.fabryki;
 
-import co.devfoundry.units.Helicopter;
-import co.devfoundry.units.Rifleman;
-import co.devfoundry.units.Tank;
-import co.devfoundry.units.unit.AirUnit;
-import co.devfoundry.units.unit.InfantryUnit;
-import co.devfoundry.units.unit.MechanizedUnit;
-import co.devfoundry.units.unit.UnitType;
+import co.devfoundry.unit.InfantryUnit;
+import co.devfoundry.unit.MechanizedUnit;
+import co.devfoundry.Helicopter;
+import co.devfoundry.Rifleman;
+import co.devfoundry.Tank;
+import co.devfoundry.unit.AirUnit;
+import co.devfoundry.unit.UnitType;
 
 public class RedFactory extends Factory {
 

@@ -1,9 +1,9 @@
-package co.devfoundry.units.factory;
+package co.devfoundry.fabryki;
 
-import co.devfoundry.units.unit.AirUnit;
-import co.devfoundry.units.unit.InfantryUnit;
-import co.devfoundry.units.unit.MechanizedUnit;
-import co.devfoundry.units.unit.UnitType;
+import co.devfoundry.unit.AirUnit;
+import co.devfoundry.unit.InfantryUnit;
+import co.devfoundry.unit.MechanizedUnit;
+import co.devfoundry.unit.UnitType;
 
 abstract public class Factory {
 
