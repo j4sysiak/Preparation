@@ -1,7 +1,5 @@
 package co.devfoundry.cars;
 
-import co.devfoundry.cars.SteeringWheelPosition;
-
 public abstract class Car {
 
     private final String productionYear;
