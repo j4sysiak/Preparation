@@ -1,6 +1,5 @@
 package com.company;
 
-import com.company.shapes.Circle;
 import org.junit.jupiter.api.Test;
 
 public class ClientTest {

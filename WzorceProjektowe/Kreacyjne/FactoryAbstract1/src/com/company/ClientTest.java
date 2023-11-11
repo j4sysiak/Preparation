@@ -10,7 +10,7 @@ public class ClientTest {
     public void test() {
 
     /*
-     Celem jest dostarczenie interfejsu (IPanelElementFactory  Panel Faktoria) do tworzenia różnych obiektów jednego typu
+     Celem jest dostarczenie interfejsu (IPanelFactory  Panel Faktoria) do tworzenia różnych obiektów jednego typu
      (elementy dla panelu Windowsa i elementy dla panelu Mac'a)
      dla tej samej rodziny klas bez specyfikowania ich konkretnych klas - ale nie chcemy, żeby ściśle był powiązany
      z jakimś konkretnym typem.

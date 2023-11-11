@@ -1,7 +1,6 @@
 package com.company.shapes;
 
 import com.company.IShape;
-
 public class Circle /*lub extends Shape*/ implements IShape {
 
     int a, b;

@@ -1,18 +1,18 @@
 package com.company.mac;
 
 import com.company.IButton;
-import com.company.IPanelElementFactory;
+import com.company.IPanelFactory;
 import com.company.ITextbox;
 
-public class MacFactory implements IPanelElementFactory {
+public class MacFactory implements IPanelFactory {
 
     @Override
-    public IButton renderButton() {
+    public IButton createButton() {
         return new MacButton();  // zwraca konkretny element (Button)  dla Mac
     }
 
     @Override
-    public ITextbox renderTextbox() {
+    public ITextbox createTextbox() {
         return new MacTextbox();  // zwraca konkretny element (Textbox) dla Mac
     }
 }

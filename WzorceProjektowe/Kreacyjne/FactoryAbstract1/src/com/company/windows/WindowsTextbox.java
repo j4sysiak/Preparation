@@ -5,7 +5,7 @@ import com.company.ITextbox;
 public class WindowsTextbox implements ITextbox {
 
     @Override
-    public void createTextbox() {
+    public void renderTextbox() {
         System.out.println("Render Windows textbox");
     }
 

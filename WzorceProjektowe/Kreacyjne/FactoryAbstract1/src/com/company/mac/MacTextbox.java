@@ -5,7 +5,7 @@ import com.company.ITextbox;
 public class MacTextbox implements ITextbox {
 
     @Override
-    public void createTextbox() {
+    public void renderTextbox() {
         System.out.println("Render Mac textbox");
     }
 
