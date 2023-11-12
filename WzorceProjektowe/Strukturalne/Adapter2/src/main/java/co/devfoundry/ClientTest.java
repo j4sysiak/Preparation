@@ -1,10 +1,12 @@
 package co.devfoundry;
 
 import co.devfoundry.patterns.adapter.*;
+import org.junit.Test;
 
-public class Main {
+public class ClientTest {
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
 
         ContinentalSocket continentalSocket = new ContinentalSocket();
 
