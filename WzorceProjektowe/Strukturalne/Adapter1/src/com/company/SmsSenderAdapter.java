@@ -1,13 +1,13 @@
 package com.company;
 
-import external.library.SmsSender;
+//import external.library.SmsSender;
 
 public class SmsSenderAdapter implements INotificationSender {
 
     // clue:
     //tworzymy obiekt (pole w tej klasie) zewnętrznej bibioteki: external.library.SmsSender
     //i poprzez ten obiekt dostaniemy się do właściwej metody biblioteki zewnętrznej wysyłającej notyfikacje
-    private SmsSender smsSender = new SmsSender();
+    private external.library.SmsSender smsSender = new external.library.SmsSender();
 
     @Override
     public void sendNotification(int userId, Notification notification) {
