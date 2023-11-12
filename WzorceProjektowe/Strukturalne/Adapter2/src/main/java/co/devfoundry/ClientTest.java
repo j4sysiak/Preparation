@@ -22,14 +22,16 @@ public class ClientTest {
                 System.out.println("London calling to the underworld");
             }
         };
-     /*
+
+     /*   pierwszy sposób: oddzielne  adaptery  dla każdej strony oddzielnie: UKToContinentalAdapter i ContinentalToUKAdapter
         UKToContinentalAdapter adapter1 = new UKToContinentalAdapter(iukRadio);
         continentalSocket.plugIn(adapter1);
 
         ContinentalToUKAdapter adapter2 = new ContinentalToUKAdapter(icontinentalRadio);
         ukSocket.plugIn(adapter2);
       */
-        //lub drugi sposób
+
+        //lub drugi sposób, jeden adapter dla dwóch stron: TwoWayAdapter
          TwoWayAdapter adapter = new TwoWayAdapter(iukRadio, icontinentalRadio);
          continentalSocket.plugIn(adapter);
          ukSocket.plugIn(adapter);
