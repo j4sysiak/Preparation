@@ -1,6 +1,6 @@
 package co.devfoundry.patterns.adapter;
 
-public class TwoWayAdapter implements IUKDevice, IContinentalDevice {
+public class TwoWayAdapter /*implements IUKDevice, IContinentalDevice*/  {
 
     IUKDevice iUKDevice;
     IContinentalDevice iContinentalDevice;
