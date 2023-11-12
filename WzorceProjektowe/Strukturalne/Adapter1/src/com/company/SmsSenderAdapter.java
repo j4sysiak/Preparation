@@ -13,7 +13,7 @@ public class SmsSenderAdapter implements INotificationSender {
     public void sendNotification(int userId, Notification notification) {
 
         // musimy w odpowiedni dla nas sposób zaadoptować zewnętrzny interface SmsSender do naszego INotificationSender
-        String userPhoneNr = "1111111111";  //  wybierany z klasy User na podstawie userId
+        String userPhoneNr = "11-111-11-111";  //  wybierany z klasy User na podstawie userId
         smsSender.sendSms(userPhoneNr, notification.Title + ":" + notification.Body);
     }
 }
