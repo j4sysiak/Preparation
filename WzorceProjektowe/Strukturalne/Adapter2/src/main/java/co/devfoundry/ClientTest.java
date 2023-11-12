@@ -22,15 +22,15 @@ public class ClientTest {
                 System.out.println("London calling to the underworld");
             }
         };
-
+     /*
         UKToContinentalAdapter adapter1 = new UKToContinentalAdapter(iukRadio);
         continentalSocket.plugIn(adapter1);
 
         ContinentalToUKAdapter adapter2 = new ContinentalToUKAdapter(icontinentalRadio);
         ukSocket.plugIn(adapter2);
-
-        //lub
-        // TwoWayAdapter adapter = new TwoWayAdapter(iukRadio, icontinentalRadio);
-        // ukSocket.plugIn(adapter)
+      */
+        //lub drugi sposób
+         TwoWayAdapter adapter = new TwoWayAdapter(iukRadio, icontinentalRadio);
+         ukSocket.plugIn(adapter);
     }
 }
