@@ -31,6 +31,7 @@ public class ClientTest {
       */
         //lub drugi sposób
          TwoWayAdapter adapter = new TwoWayAdapter(iukRadio, icontinentalRadio);
+         continentalSocket.plugIn(adapter);
          ukSocket.plugIn(adapter);
     }
 }
