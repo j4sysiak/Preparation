@@ -1,5 +1,5 @@
 package co.devfoundry.patterns.adapter;
 
-public interface  ContinentalDevice {
+public interface IContinentalDevice {
     void on();
 }

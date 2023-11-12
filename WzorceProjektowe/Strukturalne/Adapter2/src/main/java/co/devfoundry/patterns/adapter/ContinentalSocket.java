@@ -2,7 +2,7 @@ package co.devfoundry.patterns.adapter;
 
 public class ContinentalSocket {
 
-    public void plugIn(ContinentalDevice device) {
+    public void plugIn(IContinentalDevice device) {
         device.on();
     }
 }

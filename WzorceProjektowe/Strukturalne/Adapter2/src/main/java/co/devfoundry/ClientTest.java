@@ -12,13 +12,13 @@ public class ClientTest {
 
         UKSocket ukSocket = new UKSocket();
 
-        UKDevice ukRadio = new UKDevice() {
+        IUKDevice ukRadio = new IUKDevice() {
             public void powerOn() {
                 System.out.println("London calling to the faraway towns");
             }
         };
 
-        ContinentalDevice continentalRadio = new ContinentalDevice() {
+        IContinentalDevice continentalRadio = new IContinentalDevice() {
             public void on() {
                 System.out.println("London calling to the underworld");
             }

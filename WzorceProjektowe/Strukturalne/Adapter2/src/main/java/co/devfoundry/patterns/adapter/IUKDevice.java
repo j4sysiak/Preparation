@@ -1,5 +1,5 @@
 package co.devfoundry.patterns.adapter;
 
-public interface UKDevice {
+public interface IUKDevice {
     void powerOn();
 }
