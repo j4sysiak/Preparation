@@ -23,14 +23,14 @@ public class ClientTest {
             }
         };
 
-        // TwoWayAdapter adapter = new TwoWayAdapter(iukRadio, icontinentalRadio);
         UKToContinentalAdapter adapter1 = new UKToContinentalAdapter(iukRadio);
-        ContinentalToUKAdapter adapter2 = new ContinentalToUKAdapter(icontinentalRadio);
-
-
         continentalSocket.plugIn(adapter1);
-        ukSocket.plugIn(adapter2);
-       // ukSocket.plugIn(adapter);
-    }
 
+        ContinentalToUKAdapter adapter2 = new ContinentalToUKAdapter(icontinentalRadio);
+        ukSocket.plugIn(adapter2);
+
+        //lub
+        // TwoWayAdapter adapter = new TwoWayAdapter(iukRadio, icontinentalRadio);
+        // ukSocket.plugIn(adapter)
+    }
 }

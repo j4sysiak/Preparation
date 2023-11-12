@@ -9,6 +9,6 @@ public class ContinentalToUKAdapter implements IUKDevice {
     }
     @Override
     public void powerOn() {
-
+        iContinentalDevice.on();
     }
 }
