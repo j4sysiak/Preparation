@@ -2,19 +2,19 @@ package co.devfoundry.patterns.adapter;
 
 public class TwoWayAdapter implements IUKDevice, IContinentalDevice {
 
-    IUKDevice IUKDevice;
-    IContinentalDevice device;
+    IUKDevice iUKDevice;
+    IContinentalDevice iContinentalDevice;
 
-    public TwoWayAdapter(IUKDevice IUKDevice, IContinentalDevice device) {
-        this.IUKDevice = IUKDevice;
-        this.device = device;
+    public TwoWayAdapter(IUKDevice iUKDevice, IContinentalDevice iContinentalDevice) {
+        this.iUKDevice = iUKDevice;
+        this.iContinentalDevice = iContinentalDevice;
     }
 
     public void on() {
-       IUKDevice.powerOn();
+        iUKDevice.powerOn();
     }
 
     public void powerOn() {
-        device.on();
+        iContinentalDevice.on();
     }
 }
