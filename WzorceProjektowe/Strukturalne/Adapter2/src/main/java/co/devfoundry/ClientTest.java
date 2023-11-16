@@ -13,22 +13,24 @@ public class ClientTest {
                 System.out.println("Gra muzyka");
             }
         };
+        ContinentalSocket continentalSocket = new ContinentalSocket();
+        continentalSocket.plugIn(icontinentalRadio);
 
         IUKDevice iukRadio = new IUKDevice() {
             public void powerOn() {
                 System.out.println("London calling to the underworld");
             }
         };
+        UKSocket ukSocket = new UKSocket();
+        ukSocket.plugIn(iukRadio);
 
 
 
         // pierwszy sposób: oddzielne  adaptery  dla każdej strony oddzielnie: UKToContinentalAdapter i ContinentalToUKAdapter
         UKToContinentalAdapter uKToContinentalAdapter = new UKToContinentalAdapter(iukRadio); //  angielski adapter dostaje kontynentalna wtyczke
-        ContinentalSocket continentalSocket = new ContinentalSocket();
         continentalSocket.plugIn(uKToContinentalAdapter);  // do kontynentalnego gniazdka wpinamy adapter z angielska wtyczka
 
         ContinentalToUKAdapter continentalToUKAdapter = new ContinentalToUKAdapter(icontinentalRadio);  //  kontynentalny adapter dostaje angielska wtyczke
-        UKSocket ukSocket = new UKSocket();
         ukSocket.plugIn(continentalToUKAdapter);  // do angielskiego gniazdka wpinamy adapter z kontynentalna wtyczka
 
 
