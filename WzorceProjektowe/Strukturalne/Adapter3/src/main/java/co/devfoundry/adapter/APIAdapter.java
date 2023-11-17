@@ -5,7 +5,7 @@ import co.devfoundry.adapter.api.LibraryAPIv2;
 
 import java.time.LocalDate;
 
-public class APIAdapter implements LibraryAPI{
+public class APIAdapter implements LibraryAPI {
 
 
     private final User user;

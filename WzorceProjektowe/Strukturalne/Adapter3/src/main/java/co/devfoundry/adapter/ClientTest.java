@@ -2,10 +2,12 @@ package co.devfoundry.adapter;
 
 import co.devfoundry.adapter.api.LibraryAPIv2;
 import co.devfoundry.adapter.api.LibraryAPIv2Impl;
+import org.junit.Test;
 
-public class Main {
+public class ClientTest {
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
 
         User user = new User("Paweł","Cwik","32131212");
 
