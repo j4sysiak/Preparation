@@ -31,7 +31,7 @@ public class TestClient {
 
         // Start proces
         System.out.println("wywołanie procesu zaczynamy od wywołania pierwszego handlera, " +
-                "czyli w klasie AuthorizationHandler");
+                "czyli w klasie AuthorizationHandler (idziemy od góry na dół do ResultHandler)");
         authorizationHandler.handle(requestContext);
 
         System.out.println("IsSuccessful: " + requestContext.response.isSuccessful);
