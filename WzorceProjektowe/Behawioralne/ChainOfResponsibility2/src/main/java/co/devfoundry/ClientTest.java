@@ -2,10 +2,12 @@ package co.devfoundry;
 
 import co.devfoundry.message.Message;
 import co.devfoundry.officer.*;
+import org.junit.Test;
 
-public class Main {
+public class ClientTest {
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
 
         Message message = new Message("Atakować!", 20, OfficerRank.GENERAL);
 
