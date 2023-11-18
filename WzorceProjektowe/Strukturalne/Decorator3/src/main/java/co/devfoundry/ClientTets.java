@@ -1,8 +1,11 @@
 package co.devfoundry;
 
+import org.junit.Test;
+
 public class ClientTets {
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
         generateMap();
     }
 
