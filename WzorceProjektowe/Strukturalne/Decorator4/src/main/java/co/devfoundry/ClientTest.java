@@ -18,6 +18,7 @@ public class ClientTest {
         Meal riceAndShrimp = new ShrimpMealDecorator(rice);
         riceAndShrimp.prepareMeal();
 
+        // a teraz wszystko za jednym razem: potato and  Chicken and Sauce
         System.out.println("\nNowy posiłek: ");
         Meal potatoMealWithChickenAndSauce = new SauceMealDecorator(new ChickenMealDecorator(new PotatoMeal()));
         potatoMealWithChickenAndSauce.prepareMeal();
