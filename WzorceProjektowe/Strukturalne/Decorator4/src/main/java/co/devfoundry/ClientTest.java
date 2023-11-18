@@ -1,10 +1,12 @@
 package co.devfoundry;
 
 import co.devfoundry.meal.*;
+import org.junit.Test;
 
 public class ClientTest {
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
 
         System.out.println("Nowy posiłek: ");
         Meal riceMeal = new RiceMeal();
