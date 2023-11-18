@@ -8,9 +8,9 @@ import java.util.Objects;
 
 public class AuthorizationHandler extends BaseHandler {
 
-    // słownik jaki zasób dostępny dla danego usera
-    // creating a My HashTable Dictionary
-    static Map<Integer, Integer> entityOwners = new Hashtable() {};
+    // słownik definiuje jaki zasób dostępny dla danego usera
+    // creating my HashTable Dictionary
+    static Map<Integer, Integer> entityOwners = new Hashtable(){};
 
 
     static {
