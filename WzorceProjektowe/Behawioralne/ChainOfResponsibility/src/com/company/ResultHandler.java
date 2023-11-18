@@ -2,6 +2,7 @@ package com.company;
 
 import lombok.Builder;
 
+
 public class ResultHandler extends BaseHandler {
 
     @Builder

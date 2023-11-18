@@ -15,7 +15,7 @@ public class TestClient {
         System.out.println("budujemy prosty łańcuch zależnoći");
 
         //definiujemy ogniwo_1
-        var resultHandler = ResultHandler.builder()
+        ResultHandler resultHandler = ResultHandler.builder()
                 .next(null)  // na początku nic nie wstrzykujemy (do next (IHandler))
                 .build();
 
