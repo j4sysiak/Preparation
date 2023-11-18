@@ -8,6 +8,7 @@ import lombok.Setter;
 @Setter
 @Builder
 public class RequestContext {
+
     public Request request;
     public Response response;
 }
