@@ -7,7 +7,6 @@ public class LibraryAPIv2Impl implements LibraryAPIv2 {
     public int numberOfAviableCopies(String bookTitle) {
         System.out.println("Sprawdzam dostepnosc " + bookTitle);
         return 3;
-
     }
 
     public LocalDate dueDate(String bookTitle, String firstName, String lastName, LocalDate dateOfBirth) {
