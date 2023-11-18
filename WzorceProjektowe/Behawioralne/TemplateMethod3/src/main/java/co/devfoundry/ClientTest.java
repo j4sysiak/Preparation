@@ -1,8 +1,11 @@
 package co.devfoundry;
 
-public class Main {
+import org.junit.Test;
 
-    public static void main(String[] args) {
+public class ClientTest {
+
+    @Test
+    public void test() {
 
         WeekDay day = new MyDay();
         day.everyDayIsExaclyTheSame(TypeOfTransport.BIKE);
