@@ -3,9 +3,9 @@ package com.company;
 import org.junit.jupiter.api.Test;
 
 /*
+Kiedy mamy jakiś obiekt i chcemy poszerzyć jego zachowanie.
 Strukturalny wzorzec projektowy, którego celem jest umożliwienie rozszerzania zachowania istniejących obiektów,
 poprzez opakowanie ich w specjalnych obiektach, które będą zawierać dane zachowanie.
-Kiedy mamy jakiś obiekt i chcemy poszerzyć jego zachowanie.
 Dekorator pomorze utworzyć jakiś obiekt warstwowo, poczynając od bazy i rozszerzamy funkcjonalności.
 
 Przykład z Pizzą:
@@ -35,22 +35,23 @@ public class ClientTest {
     @Test
     public void test() {
 
-        var pizzaBase = new MediumPizza();
+        //baza pizzy
+        MediumPizza pizzaBase = new MediumPizza();
 
         // do base (MediumPizza) dorzucamy ser, czyli robimy sobie średnią pizzę z serem
-        var mediumPizzaWithCheese = new CheesePizzaDecorator(pizzaBase);
+        CheesePizzaDecorator mediumPizzaWithCheese = new CheesePizzaDecorator(pizzaBase);
         System.out.println("Cena pizzy typu (mediumPizzaWithCheese): " + mediumPizzaWithCheese.calculatePrice());
 
         // do  MediumPizza (z serem) dodajemy Ham
-        var mediumPizzaCheeseHam = new HamPizzaDecorator(mediumPizzaWithCheese);
+        HamPizzaDecorator mediumPizzaCheeseHam = new HamPizzaDecorator(mediumPizzaWithCheese);
         System.out.println("Cena pizzy typu (mediumPizzaCheeseHam): " + mediumPizzaCheeseHam.calculatePrice());
 
         // do  MediumPizza (serem i Ham) dodajemy Salami
-        var mediumPizzaCheeseHamSalami = new SalamiPizzaDecorator(mediumPizzaCheeseHam);
+        SalamiPizzaDecorator mediumPizzaCheeseHamSalami = new SalamiPizzaDecorator(mediumPizzaCheeseHam);
         System.out.println("Cena pizzy typu (mediumPizzaCheeseHamSalami): " + mediumPizzaCheeseHamSalami.calculatePrice());
 
         // do  mediumPizzaCheeseHamSalami (z Serem i Ham i Salami)  dodajemy jeszcze raz Ser
-        var mediumPizzaCheeseHamSalamiChees = new CheesePizzaDecorator(mediumPizzaCheeseHamSalami);
+        CheesePizzaDecorator mediumPizzaCheeseHamSalamiChees = new CheesePizzaDecorator(mediumPizzaCheeseHamSalami);
         System.out.println("Cena pizzy typu (mediumPizzaCheeseHamSalamiChees - podwojny ser): " + mediumPizzaCheeseHamSalamiChees.calculatePrice());
     }
 }
