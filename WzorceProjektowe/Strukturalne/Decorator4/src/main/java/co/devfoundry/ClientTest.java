@@ -9,12 +9,14 @@ public class ClientTest {
     public void test() {
 
         System.out.println("Nowy posiłek: ");
-        Meal riceMeal = new RiceMeal();
-        riceMeal.prepareMeal();
+        //bazowy posiłem: ryż
+        Meal rice = new RiceMeal();
+        rice.prepareMeal();
 
         System.out.println("\nNowy posiłek: ");
-        Meal riceMealWithShrimp = new ShrimpMealDecorator(new RiceMeal());
-        riceMealWithShrimp.prepareMeal();
+        // dorzucamy  krewetki
+        Meal riceAndShrimp = new ShrimpMealDecorator(rice);
+        riceAndShrimp.prepareMeal();
 
         System.out.println("\nNowy posiłek: ");
         Meal potatoMealWithChickenAndSauce = new SauceMealDecorator(new ChickenMealDecorator(new PotatoMeal()));
