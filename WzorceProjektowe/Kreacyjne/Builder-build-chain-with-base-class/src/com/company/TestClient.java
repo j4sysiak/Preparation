@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 
 public class TestClient {
 
-
     @Test
     public void test() {
      var requestContext = RequestContext.builder()
@@ -13,7 +12,6 @@ public class TestClient {
              .build();
 
         System.out.println("budujemy prosty łańcuch zależnoći");
-
 
         ResultHandler resultHandler = ResultHandler.builder()
                 .next(null)  // na początku nic nie wstrzykujemy (do next (IHandler))
