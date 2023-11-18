@@ -27,7 +27,7 @@ public class AuthorizationHandler extends BaseHandler {
     public void handle(RequestContext requestContext) {
         System.out.println("AuthorizationHandler");
         if (requestContext.request.userRole == "Admin") {
-            super.next.handle(requestContext);
+            super.next.handle(requestContext);  // obsługa idzie do następnego handlera (super)
             return;
         }
         // sprawdzamy, czy w słowniku istnieje taki obiekt
