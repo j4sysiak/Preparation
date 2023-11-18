@@ -2,11 +2,9 @@ package co.devfoundry;
 
 abstract public class Terrain {
 
-    private String description;
-    private int fuelCost;
+    private int fuelCost; // zuzycie paliwa przez jednostkę, która przez dany teren przejeżdźa
 
-    public Terrain(String description, int fuelCost) {
-        this.description = description;
+    public Terrain(int fuelCost) {
         this.fuelCost = fuelCost;
     }
 
@@ -14,7 +12,4 @@ abstract public class Terrain {
         return fuelCost;
     }
 
-    public String getDescription() {
-        return description;
-    }
 }

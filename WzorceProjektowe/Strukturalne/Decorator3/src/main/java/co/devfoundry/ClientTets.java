@@ -8,7 +8,7 @@ public class ClientTets {
     }
 
     private static void generateMap() {
-        Terrain terrain = new Plain();
+        Terrain terrain  = new Plain();
         Terrain terrain1 = new Hill();
         Terrain terrain2 = new SwampDecorator(new Hill());
         Terrain terrain3 = new SwampDecorator(new ForestDecorator(new Plain()));

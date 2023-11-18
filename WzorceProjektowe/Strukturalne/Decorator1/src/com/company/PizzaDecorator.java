@@ -5,8 +5,9 @@ public abstract class PizzaDecorator implements IPizza {
     // informacja o pizzy, którą dekorujemy (duza, mala, srednia)
     private IPizza iPizza;
 
-    // ponieważ jest to klasa abstrakcyjna, więc nie można utworzyć obiektu tej klasy - dlatego dostęp do konstruktora robimy protected
-    // nie może być public
+    // ponieważ jest to klasa abstrakcyjna, więc nie można utworzyć obiektu tej klasy
+    // - dlatego dostęp do konstruktora robimy protected
+    // nie może być public !!!!
     protected PizzaDecorator(IPizza iPizza) {
         this.iPizza = iPizza;
     }
