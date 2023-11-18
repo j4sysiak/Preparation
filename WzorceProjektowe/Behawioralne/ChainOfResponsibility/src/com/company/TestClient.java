@@ -16,7 +16,7 @@ public class TestClient {
 
         //definiujemy ogniwo_1
         ResultHandler resultHandler = ResultHandler.builder()
-                .next(null)  // na początku nic nie wstrzykujemy (do next (IHandler))
+                .next(null)  // na początku nic nie wstrzykujemy do next ( czyli IHandler )
                 .build();
 
         //definiujemy ogniwo 2
