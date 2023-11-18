@@ -28,10 +28,15 @@ public class ClientTest {
 
         // z adapterem jedno-kierunkowym
         // pierwszy sposób: oddzielne  adaptery  dla każdej strony oddzielnie: UKToContinentalAdapter i ContinentalToUKAdapter
-        UKToContinentalAdapter uKToContinentalAdapter = new UKToContinentalAdapter(iukRadio); //  angielski adapter dostaje kontynentalna wtyczke
+
+        // podpinamy angielskie radio w europie kontynentalnej
+        // W Europie kontynentalnej potrzebujemy takiego adaptera
+        UKToContinentalAdapter uKToContinentalAdapter = new UKToContinentalAdapter(iukRadio);  // wstrzykujemy sprzęt angielski
         continentalSocket.plugIn(uKToContinentalAdapter);  // do kontynentalnego gniazdka wpinamy adapter z angielska wtyczka
 
-        ContinentalToUKAdapter continentalToUKAdapter = new ContinentalToUKAdapter(icontinentalRadio);  //  kontynentalny adapter dostaje angielska wtyczke
+        // podpinamy kontynentalne radio w Anglii
+        // w Anglii potrzebujemy takiego adaptera
+        ContinentalToUKAdapter continentalToUKAdapter = new ContinentalToUKAdapter(icontinentalRadio); // wstrzykujemy sprzęt kontynentalny
         ukSocket.plugIn(continentalToUKAdapter);  // do angielskiego gniazdka wpinamy adapter z kontynentalna wtyczka
 
 

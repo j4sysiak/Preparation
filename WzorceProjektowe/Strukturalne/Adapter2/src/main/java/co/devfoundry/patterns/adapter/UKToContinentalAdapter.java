@@ -10,7 +10,7 @@ public class UKToContinentalAdapter implements IContinentalDevice {
 
     @Override
     public void on() {
-        iUKDevice.powerOn();
+        iUKDevice.powerOn(); // to uruchomi radio angielskie
     }
 }
 
