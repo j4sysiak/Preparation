@@ -4,7 +4,7 @@ import co.devfoundry.chef.Chef;
 import co.devfoundry.chef.egg_cooker.HardBoiledEggCooker;
 import co.devfoundry.chef.egg_cooker.SoftBoiledEggCooker;
 
-public class Main {
+public class ClientTest {
 
     public static void main(String[] args) {
 
