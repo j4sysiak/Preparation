@@ -10,7 +10,7 @@ public class ClientTest {
     @Test
     public void test() {
 
-        Chef chef = new Chef("Gordon Gessler");
+        Chef chef = new Chef();
 
         //Nowe zamówienie - jajka na twardo!
         chef.setEggCooker(new HardBoiledEggCooker());
