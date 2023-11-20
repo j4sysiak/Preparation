@@ -9,7 +9,6 @@ public class ClientTest {
 
     @Test
     public void test() {
-
         Chef chef = new Chef();
 
         //Nowe zamówienie - jajka na twardo!
