@@ -12,11 +12,14 @@ public class ClientTest {
         Chef chef = new Chef();
 
         //Nowe zamówienie - jajka na twardo!
-        chef.setEggCooker(new HardBoiledEggCooker());
+        chef.setEggCooker(new HardBoiledEggCooker());  // wstrzykujemy abstrakcje (możnaby było też przez konstruktor)
+                                                       // w trakcie tworzenie obiektu Chef np.
+                                                       // Chef chef = new Chef(new HardBoiledEggCooker());
+                                                       // i potem chef.cook();
         chef.cook();
 
         //Nowe zamówienie - jajka na miękko!
-        chef.setEggCooker(new SoftBoiledEggCooker());
+        chef.setEggCooker(new SoftBoiledEggCooker());  // wstrzykujemy abstrakcje
         chef.cook();
     }
 

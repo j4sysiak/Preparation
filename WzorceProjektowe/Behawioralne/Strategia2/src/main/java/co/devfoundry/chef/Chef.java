@@ -4,7 +4,8 @@ import co.devfoundry.chef.egg_cooker.EggCooker;
 
 public class Chef {
 
-    private EggCooker eggCooker;
+    private EggCooker eggCooker;  // to możemy zapodać przez konstruktor lub w set jakiejś właściwości
+    // lub jak tu w metodzie setEggCooker(...)
 
     public void cook() {
         this.eggCooker.cookEgg();
