@@ -18,7 +18,6 @@ public class ClientTest {
         //Nowe zamówienie - jajka na miękko!
         chef.setEggCooker(new SoftBoiledEggCooker());
         chef.cook();
-
     }
 
 }
