@@ -2,7 +2,7 @@ package com.company;
 
 import org.junit.Test;
 
-public class Client {
+public class ClientTest {
 
     @Test
     public void test() {
@@ -28,8 +28,8 @@ public class Client {
 
 
         /* drugi sposób - na to samo wychodzi  */
-        IRouteStrategy irouteStrategy = new BikeStrategy();
-        var mapCreator1 = new MapCreator(irouteStrategy);
+        IRouteStrategy bikeRouteStrategy = new BikeStrategy();
+        var mapCreator1 = new MapCreator(bikeRouteStrategy);
         mapCreator1.creatingRoute(start, stop);
 
         var mapCreator2 = new MapCreator(new CarStrategy());
