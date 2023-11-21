@@ -2,27 +2,25 @@ package co.devfoundry;
 
 public class CoffeeMachine {
 
-    State state;
+    State currentState;
 
     public CoffeeMachine() {
-        state = new NoCoinState();
+        currentState = new NoCoinState();
     }
 
     public void insertTheCoin() {
-
-        state.insertTheCoin(this);
-
+        currentState.insertTheCoin(this);
     }
 
     public void pushTheButton() {
-        state.pushTheButton(this);
+        currentState.pushTheButton(this);
     }
 
     public void takeTheCup() {
-        state.takeTheCup(this);
+        currentState.takeTheCup(this);
     }
 
     public void returnTheCoin() {
-        state.returnTheCoin(this);
+        currentState.returnTheCoin(this);
     }
 }

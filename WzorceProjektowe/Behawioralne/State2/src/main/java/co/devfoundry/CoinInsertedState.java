@@ -8,7 +8,7 @@ public class CoinInsertedState implements State {
 
     public void pushTheButton(CoffeeMachine coffeeMachine) {
         System.out.println("Nalewam kawe");
-        coffeeMachine.state = new CupFullState();
+        coffeeMachine.currentState = new CupFullState();  // zmieniamy stan
     }
 
     public void takeTheCup(CoffeeMachine coffeeMachine) {
@@ -17,6 +17,6 @@ public class CoinInsertedState implements State {
 
     public void returnTheCoin(CoffeeMachine coffeeMachine) {
         System.out.println("Zwracam monete");
-        coffeeMachine.state = new NoCoinState();
+        coffeeMachine.currentState = new NoCoinState();
     }
 }

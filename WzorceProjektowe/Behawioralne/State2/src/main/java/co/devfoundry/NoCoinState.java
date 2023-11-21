@@ -4,7 +4,7 @@ public class NoCoinState implements State {
 
     public void insertTheCoin(CoffeeMachine coffeeMachine) {
         System.out.println("Moneta zostala wrzucona");
-        coffeeMachine.state = new CoinInsertedState();
+        coffeeMachine.currentState = new CoinInsertedState(); // zmieniamy stan
     }
 
     public void pushTheButton(CoffeeMachine coffeeMachine) {

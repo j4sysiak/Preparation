@@ -12,7 +12,7 @@ public class CupFullState implements State {
 
     public void takeTheCup(CoffeeMachine coffeeMachine) {
         System.out.println("Zabrano kubek");
-        coffeeMachine.state = new NoCoinState();
+        coffeeMachine.currentState = new NoCoinState();  // zmieniamy stan
     }
 
     public void returnTheCoin(CoffeeMachine coffeeMachine) {
