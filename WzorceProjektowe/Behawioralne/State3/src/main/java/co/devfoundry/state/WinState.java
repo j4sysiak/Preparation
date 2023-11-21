@@ -12,7 +12,7 @@ public class WinState implements State {
 
     public void collectTheWinnings(SlotMachine context) {
         System.out.println("Zabrano monety. Gratulacje.");
-        context.state = new NoCoinState();
+        context.currentState = new NoCoinState();
     }
 
     public void currentState(SlotMachine context) {

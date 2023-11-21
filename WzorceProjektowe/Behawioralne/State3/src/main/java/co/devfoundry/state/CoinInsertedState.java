@@ -15,10 +15,10 @@ public class CoinInsertedState implements State {
         int result = random.nextInt(99);
         if(result<20) {
             System.out.println("Wygrana! Odbierz swoją nagrodę");
-            context.state = new WinState();
+            context.currentState = new WinState();
         } else {
             System.out.println("Przegrana. Może następnym razem się uda?");
-            context.state = new NoCoinState();
+            context.currentState = new NoCoinState();
         }
     }
 

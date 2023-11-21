@@ -2,25 +2,25 @@ package co.devfoundry.state;
 
 public class SlotMachine {
 
-    State state;
+    State currentState;
 
     public SlotMachine() {
-        this.state = new NoCoinState();
+        this.currentState = new NoCoinState();
     }
 
     public void insertTheCoin() {
-        state.insertTheCoin(this);
+        currentState.insertTheCoin(this);
     }
 
     public void pushTheLever() {
-        state.pushTheLever(this);
+        currentState.pushTheLever(this);
     }
 
     public void collectTheWinnings() {
-        state.collectTheWinnings(this);
+        currentState.collectTheWinnings(this);
     }
 
     public void currentState() {
-        state.currentState(this);
+        currentState.currentState(this);
     }
 }
