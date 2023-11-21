@@ -15,7 +15,6 @@ Wprowadzamy context, który będzie w stanie trzymać aktualny stan bankomatu or
 
 
 import org.junit.Test;
-import org.junit.jupiter.api.Test;
 
 public class ClientTest {
 
