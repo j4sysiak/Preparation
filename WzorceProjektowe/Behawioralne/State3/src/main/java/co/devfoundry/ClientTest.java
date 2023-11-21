@@ -2,7 +2,7 @@ package co.devfoundry;
 
 import co.devfoundry.state.SlotMachine;
 
-public class Main {
+public class ClientTest {
 
     public static void main(String[] args) {
 
