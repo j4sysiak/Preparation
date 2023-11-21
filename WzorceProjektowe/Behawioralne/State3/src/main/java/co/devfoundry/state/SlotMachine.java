@@ -5,7 +5,7 @@ public class SlotMachine {
     State currentState;
 
     public SlotMachine() {
-        this.currentState = new NoCoinState();
+        this.currentState = new NoCoinState();  // stann podstawowy defaultowy
     }
 
     public void insertTheCoin() {

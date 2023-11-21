@@ -8,7 +8,7 @@ public class ClientTest {
     @Test
     public void test () {
 
-        SlotMachine slotMachine = new SlotMachine();
+        SlotMachine slotMachine = new SlotMachine();   //tak jak Context() --  new NoCoinState();  stan podstawowy defaultowy
 
         slotMachine.insertTheCoin();
         slotMachine.currentState();

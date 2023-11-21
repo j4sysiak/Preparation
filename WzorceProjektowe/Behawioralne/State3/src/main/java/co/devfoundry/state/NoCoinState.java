@@ -4,7 +4,7 @@ public class NoCoinState implements State {
 
     public void insertTheCoin(SlotMachine context) {
         System.out.println("Wrzucono monetę.");
-        context.currentState = new CoinInsertedState();
+        context.currentState = new CoinInsertedState();  // tworzymy nowy stan
     }
 
     public void pushTheLever(SlotMachine context) {
