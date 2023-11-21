@@ -10,7 +10,7 @@ Lepiej będzie wprowadzić do procesu stany - 4 klasy dla konkretnych stanów - 
 - ma kartę ale bez PIN
 - jest karta pin OK
 Rozdzielamy implementację od stanu bankomatu
-Wprowadzamy kontekst, który będzie w stanie trzymać aktualny stan bankomatu oraz będzie w stanie zmienić go w zależności od wykonanej akcji.
+Wprowadzamy context, który będzie w stanie trzymać aktualny stan bankomatu oraz będzie w stanie zmienić go w zależności od wykonanej akcji.
 */
 
 
@@ -21,7 +21,7 @@ public class ClientTest {
     @Test
     public void test (){
 
-        var context = new Context();
+        var context = new Context();  // domyślny stan bankomatu - karta jeszcze nie została wprowadzona
 
         context.ejectCard();
         context.insertCard();
