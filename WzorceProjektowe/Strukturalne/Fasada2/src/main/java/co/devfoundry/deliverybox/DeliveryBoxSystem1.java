@@ -1,6 +1,6 @@
 package co.devfoundry.deliverybox;
 
-class DeliveryBoxSystem {
+class DeliveryBoxSystem1 {
 
     void sendNotification() {
         System.out.println("Text message sent to the client.");

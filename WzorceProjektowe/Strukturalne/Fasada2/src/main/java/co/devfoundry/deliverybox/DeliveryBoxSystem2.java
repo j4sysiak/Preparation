@@ -1,6 +1,6 @@
 package co.devfoundry.deliverybox;
 
-class DeliveryBox {
+class DeliveryBoxSystem2 {
 
     boolean isDeliveryBoxFull() {
         System.out.println("Delivery Box is not full.");

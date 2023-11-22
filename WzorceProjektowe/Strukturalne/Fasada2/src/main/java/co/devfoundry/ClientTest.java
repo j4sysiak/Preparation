@@ -1,10 +1,12 @@
 package co.devfoundry;
 
 import co.devfoundry.deliverybox.DeliveryBoxFacade;
+import org.junit.Test;
 
-public class Main {
+public class ClientTest {
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
 
         DeliveryBoxFacade deliveryBoxFacade = new DeliveryBoxFacade();
         deliveryBoxFacade.pickupPackage();
