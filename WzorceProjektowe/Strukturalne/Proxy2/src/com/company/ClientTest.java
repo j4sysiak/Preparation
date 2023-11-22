@@ -8,6 +8,7 @@ public class ClientTest {
     // nasz ClientTest nie ma bezpośrednio dostępu do metod klasy ServiceImpl
     // ale za pośrednictwem klasy Proxy odpalamy metody w klasie ServiceImpl
 
+
     @Test
     public void test() {
 
