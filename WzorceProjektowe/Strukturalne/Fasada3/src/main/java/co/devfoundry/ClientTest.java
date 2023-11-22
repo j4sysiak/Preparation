@@ -1,10 +1,12 @@
 package co.devfoundry;
 
 import co.devfoundry.bank.AtmMachineFacade;
+import org.junit.Test;
 
-public class Main {
+public class ClientTest {
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
 
         AtmMachineFacade atmMachineFacade = new AtmMachineFacade();
         atmMachineFacade.withdrawMoney();
