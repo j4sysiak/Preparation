@@ -1,6 +1,6 @@
 package co.devfoundry;
 
-import co.devfoundry.bank.AtmMachineFacade;
+import co.devfoundry.bank.Facade;
 import org.junit.Test;
 
 public class ClientTest {
@@ -8,8 +8,8 @@ public class ClientTest {
     @Test
     public void test() {
 
-        AtmMachineFacade atmMachineFacade = new AtmMachineFacade();
-        atmMachineFacade.withdrawMoney();
+        Facade facade = new Facade();
+        facade.withdrawMoney();
 
     }
 

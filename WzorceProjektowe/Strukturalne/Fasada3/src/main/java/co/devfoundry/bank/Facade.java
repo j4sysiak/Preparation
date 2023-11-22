@@ -1,11 +1,11 @@
 package co.devfoundry.bank;
 
-public class AtmMachineFacade {
+public class Facade {
 
     private AtmMachine atmMachine;
     private BankSystem bankSystem;
 
-    public AtmMachineFacade() {
+    public Facade() {
         atmMachine = new AtmMachine();
         bankSystem = new BankSystem();
     }
