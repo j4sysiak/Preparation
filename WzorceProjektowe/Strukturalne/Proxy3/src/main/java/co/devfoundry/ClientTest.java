@@ -1,11 +1,14 @@
 package co.devfoundry;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class ClientTest {
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
 
         List<SavedGame> savedGames = loadSavedGames();
         listSavedGames(savedGames);
