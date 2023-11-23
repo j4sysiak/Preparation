@@ -35,8 +35,8 @@ public class ClientTest {
 
         // bez Proxy
         YouTubeService youTubeService = new YouTubeService();
-         youTubeService.getVideo(10);
-         youTubeService.getVideo(10);
+        youTubeService.getVideo(10);
+        youTubeService.getVideo(10);
 
         // z Proxy
         ProxyYouTubeService proxyYouTubeService = new ProxyYouTubeService(youTubeService);
