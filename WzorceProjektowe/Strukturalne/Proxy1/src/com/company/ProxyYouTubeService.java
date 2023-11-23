@@ -4,7 +4,8 @@ import java.util.Hashtable;
 import java.util.Map;
 
 /*
-Logika Proxy:   zadanie dodanie dodatkowej logiki, aby aplikacja była bardziej wydajniejsza i zużywała mniej zewnętrznych zasobóe
+Logika Proxy:   zadanie dodanie dodatkowej logiki, aby aplikacja była bardziej
+wydajniejsza i zużywała mniej zewnętrznych zasobów
 */
 
 public class ProxyYouTubeService implements IYouTubeService {
@@ -37,8 +38,40 @@ public class ProxyYouTubeService implements IYouTubeService {
         }
 
         //będziemy musieli odnieść się do tego prawdziwego serwisu jakim jest YouTubeService
-        var video = youTubeService.getVideo(viedeoId);
+        byte[] video = youTubeService.getVideo(viedeoId);
         _cache.put(viedeoId, video);
         return video;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
