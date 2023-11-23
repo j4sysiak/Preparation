@@ -18,11 +18,11 @@ public class ProxyYouTubeService implements IYouTubeService {
         _cache.put(101, new byte[54355654]);
     }
 
-    //referencja do bazowego YouTubeService
-    private YouTubeService youTubeService;
+    //referencja do bazowego YouTubeService poprzez abstrakcję
+    private IYouTubeService iyouTubeService;
 
     public ProxyYouTubeService(YouTubeService youTubeService) {
-        this.youTubeService = youTubeService;
+        this.iyouTubeService = youTubeService;
     }
 
     @Override
@@ -38,7 +38,7 @@ public class ProxyYouTubeService implements IYouTubeService {
         }
 
         //będziemy musieli odnieść się do tego prawdziwego serwisu jakim jest YouTubeService
-        byte[] video = youTubeService.getVideo(viedeoId);
+        byte[] video = iyouTubeService.getVideo(viedeoId);
         _cache.put(viedeoId, video);
         return video;
     }
