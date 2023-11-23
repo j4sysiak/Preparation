@@ -13,20 +13,20 @@ public class SavedGameFull implements SavedGame{
         this.gameData = loadFromStorage();
     }
 
+    public String getName() {
+        return this.name;
+    }
+
     public void loadGame() {
         System.out.println("Game loaded");
     }
 
     private String loadFromStorage() {
         try {
-            sleep(500);  // load From Storage: Data base
+            sleep(777);  // load From Storage: Data base
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         return "Loaded";
-    }
-
-    public String getName() {
-        return this.name;
     }
 }
