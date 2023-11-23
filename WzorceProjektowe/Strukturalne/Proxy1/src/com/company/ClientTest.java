@@ -46,7 +46,7 @@ public class ClientTest {
 
         // tworzymy obiekt zastępczy: proxyYouTubeService
         // z Proxy  - sprawdzamy, czy film już pobrany:  pobież z cashe'a  ?  pobież z YT
-        ProxyYouTubeService proxyYouTubeService = new ProxyYouTubeService(youTubeService);
+        IYouTubeService proxyYouTubeService = new ProxyYouTubeService(youTubeService);
         proxyYouTubeService.getVideo(11);
         proxyYouTubeService.getVideo(101);
     }
