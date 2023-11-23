@@ -18,17 +18,17 @@ public class ClientTest {
 
         int savedGamesCount = 20;
         List<SavedGame> savedGames = new ArrayList<>(savedGamesCount);
-        for(int i=0;i<20;i++) {
-            SavedGame sg = new SavedGameProxy();
-            sg.initialize();
-            savedGames.add(sg);
+        for (int i = 0; i < 22; i++) {
+                SavedGame sg = new SavedGameProxy();
+                sg.initialize();
+                savedGames.add(sg);
         }
 
         return savedGames;
     }
 
     private static void listSavedGames(List<SavedGame> savedGames) {
-        for(SavedGame savedGame : savedGames) {
+        for (SavedGame savedGame : savedGames) {
             System.out.println(savedGame.getName());
         }
     }

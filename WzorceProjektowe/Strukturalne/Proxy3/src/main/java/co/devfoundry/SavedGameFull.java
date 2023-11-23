@@ -19,7 +19,7 @@ public class SavedGameFull implements SavedGame{
 
     private String loadFromStorage() {
         try {
-            sleep(500);
+            sleep(500);  // load From Storage: Data base
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

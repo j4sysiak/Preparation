@@ -3,7 +3,8 @@ package co.devfoundry;
 public class SavedGameProxy implements SavedGame {
 
     private String name;
-    private SavedGame sg;
+    private SavedGame sg;  // docelowo ma być obiekt SavedGameFull
+
 
     @Override
     public void initialize() {
@@ -12,7 +13,7 @@ public class SavedGameProxy implements SavedGame {
 
     @Override
     public void loadGame() {
-        sg = new SavedGameFull();
+        sg = new SavedGameFull();  // tworzymy pełny obiekt docelowz
         sg.initialize();
         sg.loadGame();
     }
