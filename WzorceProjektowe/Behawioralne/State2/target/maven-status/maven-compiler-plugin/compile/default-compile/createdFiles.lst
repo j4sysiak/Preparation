@@ -1,0 +1,6 @@
+co\devfoundry\CupFullState.class
+co\devfoundry\CoffeeMachine.class
+co\devfoundry\CoinInsertedState.class
+co\devfoundry\NoCoinState.class
+co\devfoundry\Main.class
+co\devfoundry\State.class

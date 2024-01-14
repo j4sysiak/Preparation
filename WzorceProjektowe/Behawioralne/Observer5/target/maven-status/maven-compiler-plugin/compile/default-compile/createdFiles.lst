@@ -1,0 +1,7 @@
+co\devfoundry\weather_forecast\WeatherForecast.class
+co\devfoundry\notification\TvNews.class
+co\devfoundry\notification\RadioNews.class
+co\devfoundry\notification\InternetNews.class
+co\devfoundry\Main.class
+co\devfoundry\weather_forecast\Observable.class
+co\devfoundry\notification\Observer.class
