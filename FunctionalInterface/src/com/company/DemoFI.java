@@ -19,6 +19,21 @@ interface Welcome {
     //void absMethod();
 }
 
+@FunctionalInterface
+interface WelcomeWithOneParam {
+    void welcomeMessage(String message);
+}
+
+@FunctionalInterface
+interface WelcomeWithOneParamAndReturnValue {
+    String welcomeMessage(String message);
+}
+
+@FunctionalInterface
+interface WelcomeWithTwoParam {
+    void welcomeMessage(String message1, String message2);
+}
+
 
 //Kazdy interface funkcyjny musi mieć:
 //        Some key point -
@@ -32,11 +47,28 @@ interface Welcome {
 public class DemoFI {
 
     public static void main(String[] args) {
-
         Welcome welcome = () -> System.out.println("Welcome Interface is implemented");
         welcome.welcomeMessage();
 
+
+        WelcomeWithOneParam welcomeWithOneParam = (message)
+                -> System.out.println("Welcome Interface is implemented " + message);
+        welcomeWithOneParam.welcomeMessage("KAKA");
+
+
+        WelcomeWithTwoParam welcomeWithTwoParam = (message1, message2)
+                -> System.out.println("Welcome Interface is implemented " + message1 + ":" + message2);
+        welcomeWithTwoParam.welcomeMessage("KAKA1", "KAKA2");
+
+
+        WelcomeWithOneParamAndReturnValue welcomeWithOneParamAndReturnValue =  (m) ->  "some string " + m;
+        System.out.println(welcomeWithOneParamAndReturnValue.welcomeMessage("KAKA"));
+
+        //iteration using Lambda
+
+
     }
+
 }
 
 
