@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2c8cef2-eb05-4b06-9b88-f45277c9f017" name="Changes" comment="03-02-2024 2048">
-      <change afterPath="$PROJECT_DIR$/src/com/company/LambdaEffectivelyFinal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/MethodReferenceTypes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/TestFunction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/TestUnaryOperator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="f2c8cef2-eb05-4b06-9b88-f45277c9f017" name="Changes" comment="04-02-2024 1746">
+      <change afterPath="$PROJECT_DIR$/src/com/company/MethodRefsAndContext.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,13 +125,22 @@
       <option name="project" value="LOCAL" />
       <updated>1706989722234</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="04-02-2024 1746">
+      <option name="closed" value="true" />
+      <created>1707065308463</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1707065308463</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="15-01-2024 2040" />
     <MESSAGE value="03-02-2024 2048" />
-    <option name="LAST_COMMIT_MESSAGE" value="03-02-2024 2048" />
+    <MESSAGE value="04-02-2024 1746" />
+    <option name="LAST_COMMIT_MESSAGE" value="04-02-2024 1746" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
