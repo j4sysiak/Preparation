@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2c8cef2-eb05-4b06-9b88-f45277c9f017" name="Changes" comment="05-02-2024 2151">
-      <change afterPath="$PROJECT_DIR$/src/com/company/lab/BasicLambdasRart1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/lab/BasicLambdasRart2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/lab/Evaluate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/lab/Functionable.java" afterDir="false" />
+    <list default="true" id="f2c8cef2-eb05-4b06-9b88-f45277c9f017" name="Changes" comment="06-02-2024 2028">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/lab/BasicLambdas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/lab/BasicLambdasRart2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/lab/BasicLambdasRart2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/lab/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/lab/Person.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -169,7 +165,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707166319620</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="06-02-2024 2028">
+      <option name="closed" value="true" />
+      <created>1707247710494</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707247710494</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -178,7 +182,8 @@
     <MESSAGE value="03-02-2024 2048" />
     <MESSAGE value="04-02-2024 1746" />
     <MESSAGE value="05-02-2024 2151" />
-    <option name="LAST_COMMIT_MESSAGE" value="05-02-2024 2151" />
+    <MESSAGE value="06-02-2024 2028" />
+    <option name="LAST_COMMIT_MESSAGE" value="06-02-2024 2028" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -200,6 +205,24 @@
             <option name="lambda-ordinal" value="-1" />
           </properties>
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../../../../devtools/JDK_11/lib/src.zip!/java.base/java/util/Comparator.java</url>
+          <line>464</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/lab/BasicLambdasRart2.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/lab/BasicLambdasRart2.java</url>
+          <line>99</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
