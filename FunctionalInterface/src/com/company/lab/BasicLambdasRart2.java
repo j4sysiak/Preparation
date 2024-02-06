@@ -81,7 +81,6 @@ public class BasicLambdasRart2 {
 
 
         listPeople.sort(Comparator.comparing(p -> p.getAge()));
-        //lub
         listPeople.sort(Comparator.comparing(Person::getAge));
 
 
@@ -104,11 +103,13 @@ public class BasicLambdasRart2 {
 
     private void sortName(List<Person> listPeople) {
         listPeople.sort(Comparator.comparing(p -> p.getName()));
+        listPeople.sort(Comparator.comparing(Person::getName));
         listPeople.forEach(   p -> System.out.println(p.getName())    );
     }
 
     private void sortHeight(List<Person> listPeople) {
         listPeople.sort(Comparator.comparing(p -> p.getHeight()));
+        listPeople.sort(Comparator.comparing(Person::getHeight));
         listPeople.forEach(   p -> System.out.println(p.getHeight())    );
     }
 
