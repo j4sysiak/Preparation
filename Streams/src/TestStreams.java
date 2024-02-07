@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Stream;
 
 public class TestStreams {
@@ -8,7 +6,36 @@ public class TestStreams {
     public static void main(String[] args) {
        // firstPipeline();
       //  lazyRetrieveDataPipeline();
-        beneficialOfUsingSreamsLazyOPerationPipeline();
+      // beneficialOfUsingSreamsLazyOPerationPipeline();
+
+        collectionStreams();
+        mapStreams();
+    }
+
+    private static void mapStreams() {
+        //Map
+        // Mapy nie imlementują wprawdzie interfejsu Collection, ale są także częścią Java Collections API.
+        // Mapy i Collection łączymy za pomocą metod Map  entrySet() to return a Set view of the Ma:  Set<Map.Entry<K, V>> entrySet();  bo public interface Set<E> extends Collection<E> {
+        // Set is Collection
+        Map<String, Integer> namesToAges = new HashMap<>();
+        namesToAges.put("Mike", 22);
+        namesToAges.put("David", 11);
+        namesToAges.put("Tom", 44);
+
+        Long ile = namesToAges
+                .entrySet()
+                .stream()
+                .count();
+        System.out.println(ile);
+    }
+
+    private static void collectionStreams() {
+        //Collection
+        List<String> names = Arrays.asList("April", "Ben", "Charlie", "David", "Benildus", "Christian");
+        // using stream() method, which is defalt method in Collection Interface
+        // and therefore is inherited by all classes that implement Collection.
+        Stream<String> straemOfNames = names.stream();
+        System.out.println(straemOfNames.count());
     }
 
     private static void beneficialOfUsingSreamsLazyOPerationPipeline() {
@@ -32,6 +59,7 @@ public class TestStreams {
                            return s.length() > 3; } )
                 .limit(1)  // intermediate operation (pośrednia operacja)  Stream<T> limit(long)
                 .forEach(System.out::println);  // terminate operation
+
     }
 
     private static void lazyRetrieveDataPipeline() {
