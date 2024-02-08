@@ -1,10 +1,7 @@
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Stream;
 
 public class TestStreams {
@@ -22,11 +19,19 @@ public class TestStreams {
 
     private static void streamFromFileLines() {
         String fileName = "src/example.txt"; // Assuming example.txt exists in the current directory
+
+        List<String> items = new ArrayList<>();
+
+
         try (Stream<String> linesStream = Files.lines(Paths.get(fileName))) {
-            linesStream.forEach(System.out::println); // Print each line to the console
+            linesStream.forEach( line -> {
+                        String[] itemsArray = line.split("/");
+                        items.add(itemsArray[0]);
+                    });
         } catch (IOException e) {
             e.printStackTrace(); // Handle the exception
         }
+        items.forEach(System.out::println);
     }
 
 
