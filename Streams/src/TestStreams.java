@@ -2,6 +2,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
+import java.util.function.BinaryOperator;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.function.UnaryOperator;
 import java.util.stream.Stream;
@@ -10,19 +12,104 @@ public class TestStreams {
 
     public static void main(String[] args) {
         // firstPipeline();
-        //  lazyRetrieveDataPipeline();
+        // lazyRetrieveDataPipeline();
         // beneficialOfUsingSreamsLazyOPerationPipeline();
         // collectionStreams();
-        //  mapStreams();
+        // mapStreams();
         // streamOfExample();
         // streamFromFileLines();
         // infiniteStream();
         // optionalStream();    //Optional<T> it replace null - If stream is empty then Optional will be empty (we do not deal with null at all)
         // terminalStream();
-        reduceStream();
+        // reduceWithoutOptionalStream();  // allways will return some value
+        reduceWithOptionalStream();    // samethimes stream could be empty ( return null )
     }
 
-    private static void reduceStream() {
+    private static void reduceWithOptionalStream() {
+        // Optional<T> reduce (BinaryOperator<T> accumulator)
+        // When leave out the identity parameter,  an Optional is
+        // returned because there may not be any data (all elements may be filtered earlier).
+        // We have 3 possibilities:
+        // 1. empty stream => empty Optional returned
+        // 2. one element in stream => that element is returned
+        // 3. multiple elements in strem=> accumulator is applied
+
+        BinaryOperator<Integer> op = (a,b)-> a + b;
+
+        Stream<Integer> empty = Stream.empty();
+        empty.reduce(op).ifPresent(System.out::println);  // null => empty
+
+        Stream<Integer> oneElement = Stream.of(6);
+        oneElement.reduce(op).ifPresent(System.out::println);  //6
+
+        Stream<Integer> multipleElements = Stream.of(3, 4, 5);
+        multipleElements.reduce(op).ifPresent(System.out::println);  // 12
+
+        Integer val = Stream.of(1, 1, 1)
+                .filter(i -> i > 5)  // nie będzie żadnych elementów
+                .reduce(1, (a, b) -> a);
+        System.out.println(val);
+
+        // step1:  1  wzięta z initiala
+        // step2:  1
+        // step3:  1
+        // step4:  1
+        //final: 1
+
+        Stream<Integer> sval = Stream.of(1, 1, 1)
+                .filter(i -> i > 5);  // nie będzie żadnych elementów
+        sval.forEach(System.out::println);
+        //Integer i = sval.reduce(1, (a, b) -> a);  //Exception in thread "main" java.lang.IllegalStateException: stream has already been operated upon or clos
+        //System.out.println(i);
+    }
+
+    private static void reduceWithoutOptionalStream() {
+        // The reduce() method combine stream into a single object.
+        // Reducing it process all elements
+        // starts with initial value and keep merging it with the next value and etc
+        // T reduce(T identity, BinaryOperator<T> accumulator)
+        //
+        //             BinaryOperator<T> functionl method:  T apply(T, T);
+
+        //   T identity   - is the initial value of the reduction and alse what is returned if stream is empty.
+        // Acumulator combined the current result with the curr value in the stream.
+
+        BinaryOperator<String> stringBinaryOperator = new BinaryOperator<String>() {
+            @Override
+            public String apply(String s, String s2) {
+                return null;
+            }
+        } ;
+        //as lambda
+        BinaryOperator<String> aslambda = (s1, s2) -> s1+s2;
+
+        // Example of reduction
+
+        String combineLetters = Stream.of("s", "e", "a", "n")
+               // .filter(s -> s.length() > 2)
+               // .reduce("nothing", (s, c) -> s + c);
+                        .reduce("", (s, c) -> s + c);
+
+        // step1:  ""+s        initial value is empty
+        // step2:  s+e         accumulating
+        // step3:  se+a         accumulating
+        // step4:  sea+n         accumulating
+        // finish:  sean
+        System.out.println(combineLetters);  // sean
+
+
+
+        String combineLetters2 = Stream.of("s", "e", "a", "n")
+          .filter(s -> s.length() > 2)   // to nam wszysko wyklucza
+         .reduce("nothing", (s, c) -> s + c);    // i zostanie tylko initial
+        System.out.println(combineLetters2);   // nothing
+
+        Integer i = Stream.of(1, 2, 3)
+                .reduce(1, (a,b) -> a * b);
+         // step1: 1*1 =1
+         // step2: 1*2 =2
+         // step3: 2*3 =6
+        System.out.println(i);   // 6
 
     }
 
