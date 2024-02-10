@@ -23,12 +23,195 @@ public class TestStreams {
         // reduceWithOptionalStream();    // samethimes stream could be empty ( return null )
         // reduceBiFunctionAndBinaryOperatorStream();
         // mutableCollection();  // collect() - for mutable object (tłum. zmienny) mutuable object:  StringBuilder and ArrayList  collect()
-          preDefinedCollectors();
+        // preDefinedCollectors();
+        // collectingIntoMap();
+        collectorsGroupingBy();
+    }
+
+    private static void collectorsGroupingBy() {
+        // groupingBy() tells collector to group all elements into Map
+        // groupingBy() takes Function Interface which determines the key in the Map
+        // Each value is a List of all entries that match the key. The List is a default, which can be changed
+
+        /*
+            public static <T, K> Collector<T, ?, Map<K, List<T>>>
+                  groupingBy(Function<? super T, ? extends K> classifier) {
+                                                                           return groupingBy(classifier, toList());
+                                                                           }
+
+
+              public interface Function<T, R> {   R apply(T t);   }
+
+
+        */
+
+        // Example.1
+        Stream<String> names = Stream.of("Joe", "Tom", "Tom", "Alan", "Peter");
+        Map<Integer, List<String>> map =
+                names.collect(
+                // passing in a Function that determines the key in Map
+                        Collectors.groupingBy(s -> s.length())   // OR String::length
+        );
+        System.out.println(map);
+
+        // Example.2   we want Set instead of List as the value in the map (Set will remove duplication of "Tom")
+
+        /*
+            public static <T, K, A, D> Collector<T, ?, Map<K, D>> groupingBy(Function<? super T, ? extends K> classifier,
+                                          Collector<? super T, A, D> downstream) {
+                                                                                  return groupingBy(classifier, HashMap::new, downstream);
+                                                                                    }
+        */
+
+        Stream<String> names2 = Stream.of("Joe", "Tom", "Tom", "Alan", "Peter");
+        Map<Integer, Set<String>> map2 =
+                names2.collect(
+                        Collectors.groupingBy(
+                                String::length,  // key function   Function<? super T, ? extends K> classifier
+                                Collectors.toSet() // what to do with the values
+                        )
+                );
+        System.out.println(map2);
+
+        // Example.3
+        // We want to TreeMap but leave the values as a List.
+        // We must then use Optional map Suppier while passing down the toList() collector.
+
+        Stream<String> names3 = Stream.of("Joe", "Tom", "Tom", "Alan", "Peter");
+        TreeMap<Integer, List<String>> map3 =
+                names3.collect(
+                        Collectors.groupingBy(
+                                String::length,
+                                TreeMap::new,   //map type Supplier
+                                Collectors.toList()  // downstream collector
+                        )
+                );
+        System.out.println(map3);
+        System.out.println(map3.getClass());
+    }
+
+    private static void collectingIntoMap() {
+        // We will required two function
+        // 1. tell collector how to create the key
+        // 2. tell collector how to create the value
+
+        //Example - we want to map: dessert name -> number of chars in deseret name
+        // Output:  {biscuit=8, cake=4, appletarrt=10}
+
+        Function<String, String> keyMapper1 = new Function<>() {
+            @Override
+            public String apply(String s) {
+                return s;
+            }
+        };
+        //lambda
+        Function<String, String> keyMapper2 = s -> s;
+        String  key = keyMapper2.apply("cake");
+
+        Function<String, Integer> keyValueMapper = new Function<>() {
+            @Override
+            public Integer apply(String s) {
+                return s.length();
+            }
+        };
+        //lambda
+        Function<String, Integer> keyValueMapper2 = s -> s.length();
+        Integer keyValue = keyValueMapper2.apply("cake");
+
+
+        // Example.1
+        Map<String, Integer> map = Stream.of("cake", "biscuit", "tart")
+                .collect(Collectors.toMap(
+                        s -> s,           //key:       input String, return String
+                        s -> s.length()   //keyValue:  input String, return Integer
+                ));
+        System.out.println(map);
+
+
+
+        BinaryOperator<String> merge = new BinaryOperator<String>() {
+            @Override
+            public String apply(String s1, String s2) {
+                return s1 + ", " + s2;
+            }
+        };
+        // lambda
+        BinaryOperator<String> merge2 = (s1, s2) -> s1 + ", " + s2;
+        String mergedStrings = merge2.apply("kaka1", "kaka12");
+
+
+
+        // Example.2
+        /*
+        Returns a Collector that accumulates elements into a Map whose keys and values are the result
+        of applying the provided mapping functions to the input elements.
+If the mapped keys contain duplicates (according to Object.equals(Object)), the value mapping function
+is applied to each equal element, and the results are merged using the provided merging function.
+Params:
+keyMapper     – a mapping function to produce keys
+valueMapper   – a mapping function to produce values
+mergeFunction – a merge function, used to resolve collisions between values associated with the same key,
+                as supplied to Map.merge(Object, Object, BiFunction)
+        */
+
+        Map<Integer, String> map2 = Stream.of("cake", "biscuit", "tart", "tart", "tart", "tart", "tart")
+                .collect(
+                        Collectors.toMap(
+                                s -> s.length(), //key is the lenght
+                                s -> s,  //value is the String
+                                (s1, s2) -> s1 + ", " + s2)  //Merge function - what to do if we have duplicate keys
+                                                             // - append the values
+                );
+        System.out.println(map2);
+
+
+
+        // Example.3
+        // The maps returned are HashMaps. If we want to have a TreeMap (values will be sorted automaticly)
+        TreeMap<String, Integer> treeMap = Stream.of("cake", "biscuit", "tart")
+                .collect(
+                        Collectors.toMap(
+                                s -> s,   //key is the String
+                                s -> s.length(),  //value is the length of the String
+                                (len1, len2) -> len1 + len2,  //want to do if we have duplicate keys -- add the value
+                                () -> new TreeMap<>()   //TreeMp::new  not works!!!  TreeMap is not part of Collector and Map
+                                                        // nie imlementują interfejsu Collection<E>
+                        )
+                );
+
+        /*
+            Collector<T, ?, M> toMap(Function<? super T, ? extends K> keyMapper,
+                             Function<? super T, ? extends U> valueMapper,
+                             BinaryOperator<U> mergeFunction,
+                             Supplier<M> mapFactory) {
+        */
+
     }
 
     private static void preDefinedCollectors() {
+      // Access these collectors via static methods on the Collector  interface
+      // It is important to pass the Collector to collect() method. Collector do not do anything
+        // It helps collect elements
+
+        String s = Stream.of("cake", "biscuit", "alle tart")
+                .collect(Collectors.joining(", "));
+        System.out.println(s);
 
 
+        //  averagingInt(ToIntFunction<? super T> mapper)    functional method is:
+        //    int applyAsInt(T value);
+        ToIntFunction<String> toIntFunc = new ToIntFunction<>() {
+            @Override
+            public int applyAsInt(String s) {
+                return s.length();
+            }
+        };
+        // lambda
+        ToIntFunction<String> lambda = f -> f.length();
+
+        Double avg = Stream.of("cake", "biscuit", "alle tart")
+                .collect(Collectors.averagingInt(f -> f.length()));
+        System.out.println(avg);
     }
 
     private static void mutableCollection() {
