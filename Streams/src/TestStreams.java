@@ -25,7 +25,28 @@ public class TestStreams {
         // mutableCollection();  // collect() - for mutable object (tłum. zmienny) mutuable object:  StringBuilder and ArrayList  collect()
         // preDefinedCollectors();
         // collectingIntoMap();
-        collectorsGroupingBy();
+        // collectorsGroupingBy();
+        collectorsPartitioningBy();
+    }
+
+    private static void collectorsPartitioningBy() {
+        // Partitioning is a special case of grouping where there are only two possible groups - true and false
+        // key will be booleans true and false
+
+        /*
+            Collector<T, ?, Map<Boolean, List<T>>> partitioningBy(Predicate<? super T> predicate) {
+                                                                                                    return partitioningBy(predicate, toList());
+                                                                                                   }
+         */
+
+        // Example.1
+        Stream<String> names = Stream.of("Joe", "Tom", "Tom", "Alan", "Peter");
+        Map<Boolean, List<String>> map =
+                names.collect(
+                        // pass in a Predicate
+                        Collectors.partitioningBy(s -> s.startsWith("T"))
+                );
+        System.out.println(names);
     }
 
     private static void collectorsGroupingBy() {
