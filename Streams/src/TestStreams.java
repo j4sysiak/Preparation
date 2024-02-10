@@ -6,6 +6,7 @@ import java.util.function.BinaryOperator;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.function.UnaryOperator;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class TestStreams {
@@ -22,7 +23,27 @@ public class TestStreams {
         // optionalStream();    //Optional<T> it replace null - If stream is empty then Optional will be empty (we do not deal with null at all)
         // terminalStream();
         // reduceWithoutOptionalStream();  // allways will return some value
-        reduceWithOptionalStream();    // samethimes stream could be empty ( return null )
+        // reduceWithOptionalStream();    // samethimes stream could be empty ( return null )
+        reduceBiFunctionAndBinaryOperatorStream();
+    }
+
+    private static void reduceBiFunctionAndBinaryOperatorStream() {
+        /*
+        <U> U reduce (U identity,
+                      BiFunction accumulator,
+                      BinaryOperator combiner)
+         We use it when dealing with differennt types,
+         allow to create intermediate reductions  (pośrednie redukcje) and finaly combine themm at end
+         Useful when working with parallel streams. Streams can be decomposed and reassembled by separate
+         treads.
+         */
+        Stream<String> stream = Stream.of("car", "bus", "train", "aeroplane");
+        int lenghtOfAllletters = stream
+                .reduce(0,
+                        (n, str) -> n + str.length(),   //accumulator
+                        (n1, n2) -> n1 + n2);   //combiner
+        System.out.println(lenghtOfAllletters);
+
     }
 
     private static void reduceWithOptionalStream() {
@@ -46,11 +67,11 @@ public class TestStreams {
         multipleElements.reduce(op).ifPresent(System.out::println);  // 12
 
         Integer val = Stream.of(1, 1, 1)
-                .filter(i -> i > 5)  // nie będzie żadnych elementów
-                .reduce(1, (a, b) -> a);
+                .filter(i -> i > 1115)  // nie będzie żadnych elementów po tym filtrze, jednak reduce() i tak bieze te elementy
+                .reduce(1, (a, b) -> a);  //
         System.out.println(val);
 
-        // step1:  1  wzięta z initiala
+        // step1:  1  wzięta z identity
         // step2:  1
         // step3:  1
         // step4:  1
@@ -59,8 +80,14 @@ public class TestStreams {
         Stream<Integer> sval = Stream.of(1, 1, 1)
                 .filter(i -> i > 5);  // nie będzie żadnych elementów
         sval.forEach(System.out::println);
-        //Integer i = sval.reduce(1, (a, b) -> a);  //Exception in thread "main" java.lang.IllegalStateException: stream has already been operated upon or clos
-        //System.out.println(i);
+        // Integer i = sval.reduce(1, (a, b) -> a);  //Exception in thread "main" java.lang.IllegalStateException: stream has already been operated upon or clos
+        // System.out.println(i);
+
+        Collection<Integer> cval = Stream.of(1, 1, 1)
+                .filter(i -> i > 5)
+                .collect(Collectors.toList());
+        System.out.println(cval);
+
     }
 
     private static void reduceWithoutOptionalStream() {
