@@ -2,10 +2,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
-import java.util.function.BinaryOperator;
-import java.util.function.Consumer;
-import java.util.function.Predicate;
-import java.util.function.UnaryOperator;
+import java.util.function.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -24,8 +21,37 @@ public class TestStreams {
         // terminalStream();
         // reduceWithoutOptionalStream();  // allways will return some value
         // reduceWithOptionalStream();    // samethimes stream could be empty ( return null )
-        reduceBiFunctionAndBinaryOperatorStream();
+        // reduceBiFunctionAndBinaryOperatorStream();
+        mutableReduction();  // collect() - for mutable object (tłum. zmienny) mutuable object:  StringBuilder and ArrayList  collect()
     }
+
+    private static void mutableReduction() {
+        // mutuable object:  StringBuilder and ArrayList
+        // we use the same mutable (zmienny)object while accumulating
+        // this make more efficient then regular reductions
+        // Useful method when let us get data out of streams and put into Map, List, Set
+
+        //  StringBuilder collect (Supplier<StringBuilder> supplier,
+        //                       BiConsumer<StringBuilder, String> accumulator,
+        //                       BiConsumer<StringBuilder, StringBuilder> combiner)
+        // help us control over how collecting should work.
+        // Accumulator adds an element to the collection - next String to StringBuilder
+        // Combiner takes two collections and merge them. It is usefull in pararell processing.
+
+        Supplier<StringBuilder> supplier = new Supplier<>() {
+            @Override
+            public StringBuilder get() {
+                return new StringBuilder();
+            }
+            // lambda(s)
+            Supplier<StringBuilder> supplier = () -> new StringBuilder();
+            Supplier<StringBuilder> supplier2 = StringBuilder::new;
+
+            StringBuilder word = Stream.of("ad", "jud", "i", "cate")
+                    .collect(
+
+
+        }
 
     private static void reduceBiFunctionAndBinaryOperatorStream() {
         /*
@@ -36,14 +62,35 @@ public class TestStreams {
          allow to create intermediate reductions  (pośrednie redukcje) and finaly combine themm at end
          Useful when working with parallel streams. Streams can be decomposed and reassembled by separate
          treads.
+         "car" and "bus" is taken as first thread  - it gives 6
+         "train" and "aeroplane" is taken as second thread  - it gives 14
+         then it goes to combiner and gives 6+14=20
          */
-        Stream<String> stream = Stream.of("car", "bus", "train", "aeroplane");
-        int lenghtOfAllletters = stream
+        Stream<String> stream = Stream.of("car", "bus", "train", "train", "aeroplane");
+        int lenghtOfAllLetters = stream
                 .reduce(0,
-                        (n, str) -> n + str.length(),   //accumulator
-                        (n1, n2) -> n1 + n2);   //combiner
-        System.out.println(lenghtOfAllletters);
+                        (n, str) -> n + str.length(),   //accumulator give two treads: one 6 letters  second 14 letters
+                        (n1, n2) -> n1 + n2);   // na samym końcu uruchamia się,zlicza wartości pośrednie
+                                                // z wątków pośrednich zliczających iloci znaków
+                                                // combiner give 20
+        System.out.println(lenghtOfAllLetters);
 
+        BiFunction<Integer, String, Integer> accumulator = new BiFunction<Integer, String, Integer>() {
+            @Override
+            public Integer apply(Integer n, String s) {
+                return n + s.length();
+            }
+        };
+        // lambda
+        BiFunction<Integer, String, Integer> lambda = (n, s) -> n + s.length();
+
+        BinaryOperator<Integer> combiner = new BinaryOperator<Integer>() {
+            @Override
+            public Integer apply(Integer n1, Integer n2) {
+                return n1 + n2;
+            }
+        };
+        BinaryOperator<Integer> combLambda = (n1, n2) -> n1 + n2;
     }
 
     private static void reduceWithOptionalStream() {
