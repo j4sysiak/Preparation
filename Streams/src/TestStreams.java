@@ -22,10 +22,16 @@ public class TestStreams {
         // reduceWithoutOptionalStream();  // allways will return some value
         // reduceWithOptionalStream();    // samethimes stream could be empty ( return null )
         // reduceBiFunctionAndBinaryOperatorStream();
-        mutableReduction();  // collect() - for mutable object (tłum. zmienny) mutuable object:  StringBuilder and ArrayList  collect()
+        // mutableCollection();  // collect() - for mutable object (tłum. zmienny) mutuable object:  StringBuilder and ArrayList  collect()
+          preDefinedCollectors();
     }
 
-    private static void mutableReduction() {
+    private static void preDefinedCollectors() {
+
+
+    }
+
+    private static void mutableCollection() {
         // mutuable object:  StringBuilder and ArrayList
         // we use the same mutable (zmienny)object while accumulating
         // this make more efficient then regular reductions
@@ -43,15 +49,39 @@ public class TestStreams {
             public StringBuilder get() {
                 return new StringBuilder();
             }
-            // lambda(s)
-            Supplier<StringBuilder> supplier = () -> new StringBuilder();
-            Supplier<StringBuilder> supplier2 = StringBuilder::new;
+        };
+        // lambda(s)
+        Supplier<StringBuilder> supplier2a = () -> new StringBuilder();
+            //lub
+        Supplier<StringBuilder> supplier2b = StringBuilder::new;
 
-            StringBuilder word = Stream.of("ad", "jud", "i", "cate")
-                    .collect(
+        BiConsumer<StringBuilder, String> consumer = new BiConsumer<StringBuilder, String>() {
+                @Override
+                public void accept(StringBuilder sb, String s) {
+                    sb.append(s);
+                }
+        };
+        // lambda
+        BiConsumer<StringBuilder, String> consumer1 = (sb, s) -> sb.append(s);
 
+        BiConsumer<StringBuilder, StringBuilder> consumer2 = new BiConsumer<StringBuilder, StringBuilder>() {
+                @Override
+                public void accept(StringBuilder sb1, StringBuilder sb2) {
+                    sb1.append(sb2);
+                }
+        };
+        //lambda
+        BiConsumer<StringBuilder, StringBuilder> consumer3 = (sb1, sb2) -> sb1.append(sb2);
 
-        }
+        //Example
+        StringBuilder word = Stream.of("ad", "jud", "i", "cate")
+                    .collect(StringBuilder::new,
+                            (sb, s) -> sb.append(s),
+                            (sb1, sb2) -> sb1.append(sb2)
+                    );
+        System.out.println(word);
+
+    }
 
     private static void reduceBiFunctionAndBinaryOperatorStream() {
         /*
