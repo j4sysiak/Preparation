@@ -36,10 +36,55 @@ public class TestStreams {
         // optional();
         // doOptionalWithNull();
         // doOptionalWithPrimitives();
-        pararellStreams();
+        parallelStreams();
     }
 
-    private static void pararellStreams() {
+    private static void parallelStreams() {
+        // Parallel streams can process elements in a stream concurrently i.e. at the same time
+        // Java split stream up into sub-streams and then the pipeline operations
+        // are performed on the sub-stream concurrently (each sub has its own thred).
+        // we use parallel(), parallelStream() methods
+        // 1. parallel() - is available in Stream<T>
+        // 2. parallelStream() is definied in the Collection<E> interface
+
+        Stream<String> animalStream1 = List.of("sheep", "pigs", "horses")
+                .parallelStream();   // from Collection<E> api
+
+        Stream<String> animalStream2 = Stream.of("sheep", "pigs", "horses")
+                .parallel();  // from Stream<T> api
+
+        // Sequential stream
+        int sum = Stream.of(10, 20, 30, 40, 50, 60)
+                  // IntStream has the sum() method so we use
+                  // the mapToInt() method to map from Stream<Integer>
+                  // to an IntStream ( a stream of int primitives)
+                  // IntStream mapToInt(ToIntFunction)
+        // ToIntFunction is functional inter face: has method int applyAsInt(T value);
+                .mapToInt(n -> n.intValue())
+                // OR  .mapToInt(Integer::intValue)
+                // OR  .mapToInt(n -> n)
+                .sum();
+        System.out.println(sum);
+
+
+        //IntStream mapToInt(ToIntFunction<? super T> mapper);
+        //public interface ToIntFunction<T> {  has method: int applyAsInt(T value);
+        ToIntFunction<Integer> function = new ToIntFunction<Integer>() {
+            @Override
+            public int applyAsInt(Integer v) {
+                return (int)v;
+            }
+        };
+        // lambda
+        ToIntFunction<Integer> function2 = v -> (int) v;  // OR v -> v   OR Integer::intValue
+
+        //parallel version
+        int sum2 = Stream.of(10, 20, 30, 40, 50, 60)
+                .parallel()
+                .mapToInt(Integer::intValue)
+                .sum();
+        System.out.println(sum2);
+
 
     }
 
