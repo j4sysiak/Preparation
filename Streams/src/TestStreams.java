@@ -36,6 +36,57 @@ public class TestStreams {
     }
 
     private static void intermidiateOperationSorted() {
+        // sorted() returns a stream withe sorted elem.
+        // Just like sorting arrays, java uses natural ordering unless we provide a comarator
+        // sorted() is a sateful intermediate operation => it needs to see all of the data before it can sort it!
+
+        // Stream<T> sorted(Comparator<T> comparator)
+        //Out:  Person {name=John, age=23} Person {name=Mary, age=25}
+
+
+        // Stream<T> sorted(Comparator<T> comparator);
+        Comparator<Person> comparator = new Comparator<Person>() {
+            @Override
+            public int compare(Person p1, Person p2) {
+                if (p1.getAge() - p2.getAge() > 0) {
+                    return 1;
+                } else if (p1.getAge() - p2.getAge() < 0) {
+                    return -1;
+                }
+                return 0;
+            }
+        };
+
+        Comparator<Person> ageComparator = (p1, p2) -> {
+            int ageDifference = p1.getAge() - p2.getAge();
+            return Integer.compare(ageDifference, 0);
+        };
+
+
+        // Example.1
+        Person john = new Person("John", 23);
+        Person mary = new Person("Mary", 25);
+        Stream<Person> stream = Stream.of(mary, john)
+                .sorted((p1, p2) -> {
+                    int ageDifference = p1.getAge() - p2.getAge();
+                    return Integer.compare(ageDifference, 0);
+                });
+        stream.forEach(System.out::println);
+
+        Function<Person, Integer> function = new Function<Person, Integer>() {
+            @Override
+            public Integer apply(Person p) {
+                return p.getAge();
+            }
+        };
+        // lambda
+        Function<Person, Integer> function2 =   p -> p.getAge();
+
+        // Example.2
+        Stream<Person> stream2 = Stream.of(mary, john)
+                .sorted(Comparator.comparing(p -> p.getAge()));
+                // OR .sorted(Comparator.comparing(Person::getAge));
+        stream2.forEach(System.out::println);
 
     }
 
