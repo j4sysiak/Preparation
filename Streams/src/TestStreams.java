@@ -3,8 +3,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
 import java.util.function.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.util.stream.*;
 
 public class TestStreams {
 
@@ -32,7 +31,128 @@ public class TestStreams {
         // intermidiateOperationLimit();
         // intermidiateOperationMap();
         // intermidiateOperationFlatMap();
-        intermidiateOperationSorted();
+        // intermidiateOperationSorted();
+        primitiveStream();
+    }
+
+    private static void primitiveStream() {
+        // As opposed to Stream<T> where T = Integer, Double, Long
+        // we could have
+        // - IntStream for int
+        // - DoubleStream for double
+        // - LongStream for long
+
+        // The primitive streams, besides standard Stream methods,
+        // also contain specialised methods for working with numeric data
+        // min() sum() average() etc.
+
+        //Example.1
+        int[] ia = {1, 2, 3};
+        double[] da = {1.1, 2.2, 3.3};
+        long[] la = {1L, 2L, 3L};
+
+        IntStream streamIa = Arrays.stream(ia);
+        DoubleStream streamDa = Arrays.stream(da);
+        LongStream streamLa = Arrays.stream(la);
+
+        System.out.println(streamIa.count() + " : " + streamDa.count() + " : " + streamLa.count());
+
+        //Example.2
+        IntStream streamIa2 = IntStream.of(1, 2, 3);
+        DoubleStream streamDa2 = DoubleStream.of(1.1, 2.2, 3.3);
+        LongStream streamLa2 = LongStream.of(1L, 2L, 3L);
+
+        //Example.3
+        // 1. using Stream<T> abd reduce(identity, accumulator)
+        Stream<Integer> numbers = Stream.of(1, 2, 3);
+        // dodawanie elementów streama
+        // Integer reduce(Integer indentity, BinaryOperator accumulator)
+        //  BinaryOperator extends BIFunction<T,T,T>   with method   T apply(T,T);
+
+//        BinaryOperator  extends BiFunction
+//        public interface BiFunction<T, U, R> {  and this got method T apply(T,T);
+
+        BiFunction<Integer, Integer, Integer> accumulator = new BiFunction<Integer, Integer, Integer>() {
+            @Override
+            public Integer apply(Integer i1, Integer i2) {
+                return i1 + i2;
+            }
+        };
+        // lambda
+        BiFunction<Integer, Integer, Integer> lambAccumulator = (n1, n2) -> n1 + n2;
+
+        Integer i = numbers.reduce(0, (n1, n2) -> n1 + n2);
+        System.out.println(i);  //6
+
+        // Using IntStream and sum()
+        // IntStream mapToInt(ToIntFunction)
+        // ToIntFunction is functional interface
+        //  int applyAsInt(T t)
+
+        ToIntFunction<Integer> function = new ToIntFunction<Integer>() {
+            @Override
+            public int applyAsInt(Integer value) {
+                return value;
+            }
+        };
+        // lambda
+        ToIntFunction<Integer> lambdaFunction = v -> v;
+
+        IntStream intStream1 = Stream.of(1, 2, 3)
+                .mapToInt(v -> v);  // unboxing
+        int myInt1 = intStream1.sum();  //6
+        System.out.println(myInt1);
+
+        IntStream intStream2 = Stream.of(1, 2, 3)
+                .mapToInt(v -> v);  // unboxing
+        int myInt2 = intStream2.reduce(0, (n1, n2) -> n1 + n2);
+        System.out.println(myInt2);
+
+        //Example.4
+        OptionalInt max = IntStream.of(10, 20, 30)
+                .max();
+        max.ifPresent(System.out::println);
+
+        OptionalDouble min = DoubleStream.of(10.1, 20.2, 30.3)
+                .min();
+       System.out.println(min.orElseThrow());   // we use Optional... NoSuchElementException is thrown if no value present
+
+        OptionalDouble average = DoubleStream.of(10.1, 20.2, 30.3)
+                .average();
+
+       // public double orElseGet(DoubleSupplier supplier) {
+         //   public interface DoubleSupplier {  has method:  double getAsDouble();
+
+        DoubleSupplier supplier1 = new DoubleSupplier() {
+            @Override
+            public double getAsDouble() {
+                return Math.random();
+            }
+        };
+        // lambda
+        DoubleSupplier supplier2 = () -> Math.random();
+
+
+        System.out.println(average.orElseGet(() -> Math.random()));
+
+
+        //Example.5
+        IntStream numbs =  IntStream.of(5, 10, 15, 20);
+        IntStream empty =  IntStream.empty();
+
+        IntSummaryStatistics intSummaryStatistics = numbs.summaryStatistics();
+        int min_ = intSummaryStatistics.getMin();  //5
+        int max_ = intSummaryStatistics.getMax();  // 20
+        double avg = intSummaryStatistics.getAverage(); // 12.5
+        long count = intSummaryStatistics.getCount(); // 4
+        long sum = intSummaryStatistics.getSum(); // 50
+
+        IntSummaryStatistics intSummaryStatisticsEmpty = empty.summaryStatistics();
+        int minE = intSummaryStatisticsEmpty.getMin();   // 2147483647
+        int maxE = intSummaryStatisticsEmpty.getMax();   // -2147483648
+        double avgE = intSummaryStatisticsEmpty.getAverage(); // 0.0
+        long countE = intSummaryStatisticsEmpty.getCount();  // 0
+        long sumE = intSummaryStatisticsEmpty.getSum(); // 0
     }
 
     private static void intermidiateOperationSorted() {
