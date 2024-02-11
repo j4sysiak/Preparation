@@ -26,7 +26,128 @@ public class TestStreams {
         // preDefinedCollectors();
         // collectingIntoMap();
         // collectorsGroupingBy();
-        collectorsPartitioningBy();
+        // collectorsPartitioningBy();
+        // intermidiateOperationFilter();
+        // intermidiateOperationDistinct();
+        // intermidiateOperationLimit();
+        // intermidiateOperationMap();
+        // intermidiateOperationFlatMap();
+        intermidiateOperationSorted();
+    }
+
+    private static void intermidiateOperationSorted() {
+
+    }
+
+    private static void intermidiateOperationFlatMap() {
+        // flatMat() takes each element in the stream e.g. Stream<List<String>>
+        // and makes any elements it contains top-level elements
+        // in a single stream e.g.  Stream<String>
+
+        List<String> list1 = Arrays.asList("sean", "desmond");
+        List<String> list2 = Arrays.asList("mary", "ann");
+        Stream<List<String>> streamOfLists = Stream.of(list1, list2);
+
+        // flatMap(Function(T, R))  IN:T  OUT:R
+        //   flatMap(List<String>, Stream<String)
+
+
+
+        Function<List<String>, Stream<String>> function = new Function<List<String>, Stream<String>>() {
+            @Override
+            public Stream<String> apply(List<String> list) {
+                return list.stream();
+            }
+        };
+        //lambda
+        Function<List<String>, Stream<String>> lambda = l -> l.stream();
+
+        //  <R> Stream<R> flatMap(Function<? super T, ? extends Stream<? extends R>> mapper);
+
+        Stream<String> stream = streamOfLists
+                 .flatMap(l -> l.stream());
+        stream.forEach(System.out::print);
+
+    }
+
+    private static void intermidiateOperationMap() {
+        // map() create a one-to-one mapping between elements in
+        //   the stream and elements in the next stage of the stream
+        // map() is for transforming dara.
+        //   <R> Stream<R> map (Function<T, R> mapper
+                  //   Function"s functional method:  R apply(T t);
+
+        Function<String, Integer> function = new Function<String, Integer>() {
+            @Override
+            public Integer apply(String s) {
+                return s.length();
+            }
+        };
+        // lambda
+        Function<String, Integer> lambda = s -> s.length();
+
+        Consumer<Integer> consumer = new Consumer<Integer>() {
+            @Override
+            public void accept(Integer i) {
+                System.out.println(i);
+            }
+        };
+        // lambda
+        Consumer<Integer> lambConsumer = i -> System.out.println(i);
+
+
+        // Example.1
+        // transformation of Stream of String's to the Stream of Integer's
+        Stream<Integer> streamI = Stream.of("book", "pen", "ruler")
+                .map(s -> s.length())
+                ;
+        streamI.forEach(i -> System.out.println(i));                   // void forEach(Consumer<? super T> action);
+        
+    }
+
+    private static void intermidiateOperationLimit() {
+        // limit()  short-circuiting stateful intermidiate operation
+        // Stream<T> limit(long maxSize)
+        // lazy evaluation, are not streamed as they are not needed
+
+        // Example.1
+        Stream.of(11, 22, 33, 44, 55, 66, 77, 88, 99)
+               // .peek(n -> System.out.println(" A - " + n))
+                .filter(n-> n > 40)
+               // .peek(n -> System.out.println(" B - " + n))
+                .limit(2)
+                .forEach(n -> System.out.println(" C - " + n));  //44, 55
+    }
+
+    private static void intermidiateOperationDistinct() {
+        // distinct() returns a stream with removed duplicate values  (equals() is used)
+
+        // Stream<T> distinct()
+        // distinct() is a stateful intermidiate operation
+
+
+        // Example.1
+        Stream.of("eagle", "eagle", "EAGLE")
+                .peek(s -> System.out.println(" 1." + s))
+                .distinct()
+                .forEach(s -> System.out.println(" 2." + s));
+        //1.eagle
+        //2.eagle
+        //1.eagle
+        //1.EAGLE
+        //2.EAGLE
+    }
+
+    private static void intermidiateOperationFilter() {
+        // intermidiate opertion produces a stream as a result
+        // Stream<T> filter(Predicate)
+        // filter return a Stream with element matching given Predicate
+
+        Stream<String> stream = Stream.of("Joe", "Tom", "Tom", "Alan", "Peter")
+                .filter(s -> s.length() > 3);
+        stream.forEach(System.out::println);
+
+        //
     }
 
     private static void collectorsPartitioningBy() {
@@ -46,7 +167,27 @@ public class TestStreams {
                         // pass in a Predicate
                         Collectors.partitioningBy(s -> s.startsWith("T"))
                 );
-        System.out.println(names);
+        System.out.println(map);
+
+        // Example.2
+        Stream<String> names2 = Stream.of("Thomas", "Teresa", "Mike", "Alan", "Peter");
+        Map<Boolean, List<String>> map2 =
+                names2.collect(
+                        // pass in Predicate
+                        Collectors.partitioningBy(s -> s.length() > 4)
+                );
+        System.out.println(map2);
+
+        // Example.3  we want Set
+        Stream<String> names3 = Stream.of("Thomas", "Teresa", "Mike", "Thomas", "Peter");
+        Map<Boolean, Set<String>> map3 =
+                names3.collect(
+                        Collectors.partitioningBy(
+                                s -> s.length() > 4, // Predicat
+                                Collectors.toSet()
+                         )
+                );
+        System.out.println(map3);
     }
 
     private static void collectorsGroupingBy() {
