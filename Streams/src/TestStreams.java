@@ -32,7 +32,59 @@ public class TestStreams {
         // intermidiateOperationMap();
         // intermidiateOperationFlatMap();
         // intermidiateOperationSorted();
-        primitiveStream();
+        // primitiveStream();
+        optional();
+    }
+
+    private static void optional() {
+        // Example.1
+        Optional<Double> doubleV1 = calcAvg(10.1, 20.9, 21.1);
+        Optional<Double> doubleVEmpty = calcAvg();
+        // if optional is empty you get: NoSuchElementException: No value present
+        //System.out.println(doubleVEmpty.get() + 10d);  //Exception in thread "main" java.util.NoSuchElementException: No value present
+        if (doubleVEmpty.isPresent()) {
+            System.out.println(doubleVEmpty.get() + 10d);
+        }
+        // pomijamy if
+        //public void ifPresent(Consumer<? super T> action) {
+        //public interface Consumer<T> {   ma metodę:   void accept(T t);
+        Consumer<Double> consumer = new Consumer<Double>() {
+            @Override
+            public void accept(Double d) {
+                System.out.println(d);
+            }
+        };
+        // lambda
+        Consumer<Double> lambConsumer = d -> System.out.println(d);
+
+        doubleV1.ifPresent(d -> System.out.println(d + 10.11));
+        // OR
+        Double d = doubleV1.orElse((Double.NaN));
+
+
+        Optional<Double> aptAvg2 = calcAvg();  // will return empty Optional
+        System.out.println(aptAvg2.orElse(Double.NaN));
+        // OR
+        System.out.println(aptAvg2.orElseGet(() -> Math.random()));
+
+        // public T orElseGet(Supplier<? extends T> supplier) {
+        //public interface Supplier<T> {   ma metodę  T get();
+        Supplier<Double> supplierD = new Supplier<Double>() {
+            @Override
+            public Double get() {
+                return Math.random();
+            }
+        };
+        // lambda
+        Supplier<Double> supplierD2 = () -> Math.random();
+    }
+
+    private static Optional<Double> calcAvg(double ... scores) {
+        if (scores.length == 0) return  Optional.empty();
+
+        double sum = 0.0;
+        for (double score : scores) sum += score;
+        return Optional.of(sum / scores.length);
     }
 
     private static void primitiveStream() {
