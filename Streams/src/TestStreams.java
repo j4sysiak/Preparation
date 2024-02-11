@@ -88,6 +88,16 @@ public class TestStreams {
                 // OR .sorted(Comparator.comparing(Person::getAge));
         stream2.forEach(System.out::println);
 
+        //Example.3
+        Stream.of("Tim", "Jim", "Peter", "Ann", "Mary")
+                .peek(n -> System.out.println(" 0."+ n ))  //"Tim", "Jim", "Peter", "Ann", "Mary"
+                .filter(n -> n.length() == 3)
+                .peek(n -> System.out.println(" 1."+ n ))  //"Tim", "Jim",   "Ann"
+                .sorted()                                  // "Ann"  "Jim"      "Tim" - juz nie wejdzie ze wzgledu na limit(2)
+                .peek(n -> System.out.println(" 2."+ n ))  // "Ann"  "Jim"      "Tim" - juz nie wejdzie ze wzgledu na limit(2)
+                .limit(2)
+                .forEach(n -> System.out.println(" 3." + n));  // "Ann"  "Jim"
+
     }
 
     private static void intermidiateOperationFlatMap() {
