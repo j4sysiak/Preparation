@@ -33,7 +33,62 @@ public class TestStreams {
         // intermidiateOperationFlatMap();
         // intermidiateOperationSorted();
         // primitiveStream();
-        optional();
+        // optional();
+        // doOptionalWithNull();
+        // doOptionalWithPrimitives();
+        pararellStreams();
+    }
+
+    private static void pararellStreams() {
+
+    }
+
+    private static void doOptionalWithPrimitives() {
+        // public void ifPresent(DoubleConsumer action) {
+        //public interface DoubleConsumer {  ma metodę :  void accept(double value);
+        DoubleConsumer consumer = new DoubleConsumer() {
+            @Override
+            public void accept(double value) {
+
+            }
+        };
+        // lambda
+        DoubleConsumer lamConsumer = v -> System.out.println(v);
+
+
+        OptionalDouble optAvg = IntStream.rangeClosed(1, 10)
+                .average();
+        optAvg.ifPresent( v-> System.out.println(v));
+        System.out.println();
+
+        //Example.2
+        // public double orElseGet(DoubleSupplier supplier) {
+        //public interface DoubleSupplier {  ma tetodę:  double getAsDouble();
+        DoubleSupplier doubleSupplier = new DoubleSupplier() {
+            @Override
+            public double getAsDouble() {
+                return Double.NaN;
+            }
+        };
+        // lambda
+        DoubleSupplier doubleSupplier2 = () -> Double.NaN;
+
+        System.out.println(optAvg.orElseGet(() -> Double.NaN));
+    }
+
+    private static void doOptionalWithNull() {
+        Optional<String> optSK = howToDealWithNull("SK");
+        optSK.ifPresent(System.out::println);
+
+        Optional<String> optSKNull = howToDealWithNull(null);
+        System.out.println(
+                optSKNull.orElseGet(() -> "Empty optional")
+        );
+    }
+
+    private static Optional<String> howToDealWithNull(String param) {
+        Optional optReturn = param == null ? Optional.empty() : Optional.of(param);
+        return  optReturn;
     }
 
     private static void optional() {
