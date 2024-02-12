@@ -1,10 +1,8 @@
 package lab;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.function.BiFunction;
-import java.util.function.Function;
+import java.util.*;
+import java.util.function.*;
+import java.util.stream.*;
 
 public class Q2_1762 {
     public static void main(String[] args) {
@@ -59,13 +57,30 @@ public class Q2_1762 {
 
           // <R> Stream<R> map(Function<? super T, ? extends R> mapper);
           // public interface Function<T, R> {  ma metodę:  R apply(T t);
-          Function<T, R>
+
+        Function<Item, String> function1 = new Function<Item, String>() {
+            @Override
+            public String apply(Item item) {
+                return item.getName();
+            }
+        };
+        // lambda
+        Function<Item, String> lambdaF = item -> item.getName();
+
+//        Stream<String> stream = new Stream<String>() {
+//
+//            @Override
+//            public <R> Stream<R> map(item -> item.getName()) {
+//                return null;
+//            }
+//        }
+
 
              Comparator<Item> comparator1 = Comparator.comparing(a -> a.getName());
              l.stream()
              // Stream<Item> sorted(Comparator<Item>)
-            .sorted(Comparator.comparing(a->a.getName())) // sorting by name
-             .map((item)->item.getName()) // mapping to a Stream<String>
+            .sorted(Comparator.comparing(a -> a.getName())) // sorting by name
+             .map(item -> item.getName()) // mapping to a Stream<String>
             //.map(Item::getName) // method reference version
             .forEach(System.out::print); // Sorted by name, as we wanted. Output: BoltNailScrew
 
