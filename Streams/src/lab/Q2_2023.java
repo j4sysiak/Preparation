@@ -8,6 +8,9 @@ import java.util.stream.IntStream;
 
 public class Q2_2023 {
     public static void main(String[] args) {
+        // Stream a list of int primitives between the range of 0 (inclusive) and 5 (exclusive).
+        // Calculate and output the average.
+
         // range() versus rangeClosed()
         IntStream is1 = IntStream.range(0,5);       //0..4
         //is1.forEach(System.out::println);           // forEach is a terminal operation
