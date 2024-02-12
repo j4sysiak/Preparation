@@ -93,7 +93,7 @@ public class Q2_1762 {
 //            .forEach(System.out::print); // Not sorted at all. Output: ScrewNailBolt  
 
             l.stream()          // Option 4
-            .map((i)->i.getName())  // mapping to a Stream<String>
+            .map(i -> i.getName())  // mapping to a Stream<String>
             .sorted()               // sort by the String's natural order
             .forEach(System.out::print); // Sorted by name, as we wanted. Output: BoltNailScrew  
     }  
