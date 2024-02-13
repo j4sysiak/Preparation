@@ -73,6 +73,9 @@ public class Q2_1787 {
 
             List<String> list = Arrays.asList("a", "b", "c");
             list.forEach(s -> System.out.println(s)); // Consumer == void accept(T t)
+            // OR
+            list.forEach(System.out::println);
+
             Stream<String> stream = list.stream();
             stream.forEach(System.out::println);
     }

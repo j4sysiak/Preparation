@@ -7,11 +7,27 @@ import java.util.Optional;
 
 public class Q2_1738 {
     public static void main(String[] args) {
+
+        /* 5
+        Here are several parts to this: (QID 2.1738)
+a. Using 1, 2 and 3 create a List of Integers.
+    i. Stream the list and calculate the sum, using the sum() method from IntStream.
+    ii. Stream the list again and calculate the maximum value, using the max() method from IntStream.
+b. Given the Person class (in the zip file), declare a List typed for Person with the following Person’s:
+    i. “Alan”, “Burke”, 22
+    ii. “Zoe”, “Peters”, 20
+    iii. “Peter”, “Castle”, 29
+Using the max(Comparator) from Stream, calculate the oldest person in the list.
+c. Using 10, 47, 33 and 23 create a List of Integers. Stream the list and using the following versions of reduce(), calculate the maximum value:
+    i. Optional<T> reduce(BinaryOperator<T> accumulator)
+    ii. T reduce(T identity, BinaryOperator<T> accumulator)
+        */
+
         // 1a. sum() is not in Stream it is in IntStream
         List<Integer> li2 = Arrays.asList(1,2,3);
         Integer sum = li2.stream()
                 // IntStream mapToInt(ToIntFunction)
-                // toIntFunction is a functional interface:
+                // ToIntFunction is a functional interface:
                 //      int applyAsInt(T value)
                 .mapToInt(i->i) // unboxing
                 .sum();
@@ -31,7 +47,7 @@ public class Q2_1738 {
                 // comparing() takes the functional interface Function:
                 //      R apply(T t)
                 //      p.getAge() returns an Integer (is a Comparable)
-                .max(Comparator.comparing(p->p.getAge())) 
+                .max(Comparator.comparing(p->p.getAge()))
                 .get();
         System.out.println(oldestPerson);
                 
