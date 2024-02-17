@@ -122,7 +122,7 @@ public class Q2_1846 {
         bookMap.forEach(biConsumer2);
 
 
-        Set<Entry<String, Double>> bookSet = bookMap.entrySet();
+        Set<Map.Entry<String, Double>> bookSet = bookMap.entrySet();
         //  bookSet.stream().forEach(Consumer<? super T> action);  // we need Consumer<? super T> action
         Consumer<Map.Entry<String, Double>> funcConsumer = (entry) -> {
             if (entry.getKey().startsWith("A")) {
@@ -132,9 +132,11 @@ public class Q2_1846 {
 
         bookSet.forEach(funcConsumer); // Set::forEach(Consumer)
         bookSet.forEach((entry) -> {
-            if (entry.getKey().startsWith("A")) {
-                System.out.println(entry.getValue());
-            }); // Set::forEach(Consumer)
+                                        if (entry.getKey().startsWith("A")) {
+                                            System.out.println(entry.getValue());
+                                        };
+                                    }
+                         ); // Set::forEach(Consumer)
 
 
             Map<String, Integer> map = new HashMap<>();
@@ -159,7 +161,16 @@ public class Q2_1846 {
             //  explanation
 
 
-            Set<Entry<String, Integer>> entries = map.entrySet();
-            entries.stream().forEach();
-        }
+            Set<Map.Entry<String, Integer>> entries = map.entrySet();
+            entries.stream().forEach( e -> System.out.println(e.getKey() + e.getValue()) );
+
+        Consumer<Entry<String, Integer>> entryConsumer = new Consumer<Entry<String, Integer>>() {
+            @Override
+            public void accept(Entry<String, Integer> e) {
+                System.out.println(e.getKey() + ":" + e.getValue());
+            }
+        };
+        // lambda
+        Consumer<Entry<String, Integer>> entryConsumerWithLambda = (e)  -> System.out.println(e.getKey() + e.getValue());
+    }
     }
