@@ -12,7 +12,7 @@ public class TestStreams {
         // lazyRetrieveDataPipeline();
         // beneficialOfUsingSreamsLazyOPerationPipeline();
         // collectionStreams();
-        // mapStreams();
+          mapStreams();
         // streamOfExample();
         // streamFromFileLines();
         // infiniteStream();
@@ -23,7 +23,7 @@ public class TestStreams {
         // reduceBiFunctionAndBinaryOperatorStream();
         // mutableCollection();  // collect() - for mutable object (tłum. zmienny) mutuable object:  StringBuilder and ArrayList  collect()
         // preDefinedCollectors();
-        // collectingIntoMap();
+         collectingIntoMap();
         // collectorsGroupingBy();
         // collectorsPartitioningBy();
         // intermidiateOperationFilter();
