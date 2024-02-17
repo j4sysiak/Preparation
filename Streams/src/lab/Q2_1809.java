@@ -2,6 +2,8 @@ package lab;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.OptionalDouble;
+import java.util.stream.Stream;
 
 public class Q2_1809 {
     public static void main(String[] args) {
@@ -15,10 +17,20 @@ public class Q2_1809 {
         Change the filter to books whose price is > 90. Ensure you do not get an exception.
         */
 
+        List<Book> books = Arrays.asList(new Book("Thinking in Java", 2.1),
+                                         new Book("Java in 24 hrs", 2.0),
+                                         new Book("Java Recipies", 10.0));
 
-        List<Book> books = Arrays.asList(new Book("Thinking in Java", 30.0),  
-                                         new Book("Java in 24 hrs", 20.0),   
-                                         new Book("Java Recipies", 10.0)); 
+
+        double valueNotPresent = OptionalDouble.of(books.stream()
+                .filter(i -> i.getPrice() > 10)
+                .map(b -> b.getPrice())
+                .mapToDouble(d -> d)
+                .average()
+                .orElse(0.0)
+        ).getAsDouble();
+
+
         double averagePrice = books.stream()
                 .filter(book->book.getPrice()>10)    
                 // DoubleStream mapToDouble(ToDoubleFunction)
@@ -29,7 +41,16 @@ public class Q2_1809 {
                 .average()
 //                .getAsDouble(); 
                 .orElse(0.0); // useful if filter filters out ALL of the Books
-        System.out.println(averagePrice);       
+        System.out.println(averagePrice);
+
+
+
+        List<String> list = Arrays.asList("apple", "banana", "cherry");
+        list.stream()
+                .filter(str -> str.startsWith("b"))
+                .findFirst()
+                .ifPresent(i -> System.out.println(i));
+
     }
     
 }
