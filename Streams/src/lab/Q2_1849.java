@@ -1,6 +1,8 @@
 package lab;
 
 import java.util.Optional;
+import java.util.function.Consumer;
+import java.util.function.Supplier;
 
 public class Q2_1849 {
     public static void main(String[] args) {
@@ -22,7 +24,62 @@ public class Q2_1849 {
                 i. initialise a Double z to the return of “price3.orElseThrow(() -> new RuntimeException(“Bad Code”). Output and observe the value of z.
         */
 
-        Optional<Double> price = Optional.ofNullable(20.0);
+        //a
+
+        Optional<Double> price = Optional.ofNullable(null);
+
+         price.ifPresent(d -> System.out.println(d));  //public interface Consumer<T> {  ma tetodę: void accept(T t);
+
+        Consumer<Double> consumer = new Consumer<Double>() {
+            @Override
+            public void accept(Double d) {
+                System.out.println(d);
+            }
+        };
+        Consumer<Double> lamconsumer = d -> System.out.println(d);
+
+
+        double dobl1 = price.orElseGet(() -> Double.NaN) ; // public interface Supplier<T> {  ma metodę:  T get();
+        double dobl2 = price.orElse(Double.NaN) ;
+
+        Supplier<Double> supplier = new Supplier<Double>() {
+            @Override
+            public Double get() {
+                return Double.NaN;
+            }
+        };
+        Supplier<Double> lamsupplier = () -> Double.NaN;
+
+
+
+        //b
+//         declare a new Optional, typed for Double, named ‘price2’ (or comment out (a) and re-use ‘price’).
+//           Use Optional.ofNullable again but this time, pass in null.
+//                i. Output ‘price2’ in a normal System.out.println().
+//                ii. check to see if price2 isEmpty() and if so output “empty”.
+//                iii. do (ii) again except this time use the more functional “ifPresent(Consumer)” method.
+//                iv. initialise a Double x to the return of “price2.orElse(44.0)”. Output and observe the value of x.
+
+        Optional<Double> price2 = Optional.ofNullable(null);
+        System.out.println("price2: " + price2);
+
+        if (price2.isEmpty()) {
+            System.out.println("price2: " + price2);
+        }
+
+        price2.ifPresent(d -> System.out.println(d));
+        price2.ifPresent(System.out::println);
+
+
+        //public interface Consumer<T> {  ma matode:  void accept(T t
+        Consumer<Double> consumer1 = new Consumer<Double>() {
+            @Override
+            public void accept(Double d) {
+                System.out.println(d);
+            }
+        };
+        Consumer<Double> lamconsumer1 = d -> System.out.println(d);
+
 
 
 
