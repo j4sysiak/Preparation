@@ -2,6 +2,7 @@ package lab;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class Q2_1840 {
     public static void main(String[] args) {
@@ -25,15 +26,31 @@ public class Q2_1840 {
         */
 
         List<Integer> ls = Arrays.asList(11, 12, 22, 33, 33, 55, 66);
+          boolean b1 = ls.stream()
+                .distinct()
+                .peek(p -> System.out.println("case-a: " + p))
+                .anyMatch(i -> i != null) ;// public interface Predicate<T> {  //  boolean test(T t);
+
+
+        boolean b2 = ls.stream()
+                .peek(p -> System.out.println("case-b: " + p))
+                .noneMatch(i -> i % 11 > 0)    // nieparzyste // public interface Predicate<T> {  //  boolean test(T t);
+                ;
+
+
+
+        Predicate<Integer> predicate = new Predicate<Integer>() {
+            @Override
+            public boolean test(Integer i) {
+                return i != null;
+            }
+        };
+        Predicate<Integer> predicate2 = i -> i != null;
 
 
 
 
-
-
-
-        
-        // 1. distinct()
+                // 1. distinct()
 //        System.out.println("distinct");
 //        ls.stream()
 //            .distinct()
