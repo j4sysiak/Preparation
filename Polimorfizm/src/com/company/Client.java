@@ -1,6 +1,7 @@
 package com.company;
 
 import com.company.model.BankAccount;
+import com.company.model.CompanyBankAccount;
 import com.company.model.PersonalBankAccount;
 
 import java.math.BigDecimal;
@@ -21,13 +22,16 @@ public class Client {
         (bo będzie wywoływana inna metoda, raz z klasy PersonalBankAccount a innym razem z CompanyBankAccount)
         */
 
-        // var bankAccount = BankAccount.create(BigDecimal.valueOf(0));
+        bankAccount = BankAccount.create(BigDecimal.valueOf(0));
 
-        bankAccount = new PersonalBankAccount(BigDecimal.valueOf(1) /*, "llll"*/);
-        bankAccount.requestPersolanLoan();
+        BankAccount personalBankAccount = new PersonalBankAccount(BigDecimal.valueOf(1) /*, "llll"*/);
+        personalBankAccount.requestPersolanLoan();
+        personalBankAccount.makeWithdrawal(BigDecimal.valueOf(100));
+        personalBankAccount.makeDeposit(BigDecimal.valueOf(33));
 
-        // var bankAccount = new CompanyBankAccount(BigDecimal.valueOf(1999) /*, "llll"*/);
-        // bankAccount.takeLoan(BigDecimal.valueOf(300000));
+        BankAccount companyBankAccount = new CompanyBankAccount(BigDecimal.valueOf(1999) /*, "llll"*/);
+        companyBankAccount.makeWithdrawal(BigDecimal.valueOf(1900)) ; // .takeLoan(BigDecimal.valueOf(300000));
+        companyBankAccount.makeDeposit(BigDecimal.valueOf(33));
 
         bankAccount.setBalance(BigDecimal.valueOf(1000));
         System.out.println(bankAccount.getBalance());

@@ -9,7 +9,7 @@ import java.util.Optional;
 
 @Builder
 @AllArgsConstructor
-public class BankAccount {
+public abstract class BankAccount {
 
     protected BigDecimal balance;
 
@@ -58,11 +58,7 @@ public class BankAccount {
         return balance = balance.add(runIfAmountNotNull(amount));
     }
 
-    public BigDecimal makeWithdrawal(BigDecimal amount) {
-        return null; // tak naprawdę nie musimy nic tutaj implementować   balance = balance.add(BigDecimal.valueOf(-1).multiply(runIfAmountNotNull(amount)));
-    }
+    public abstract BigDecimal makeWithdrawal(BigDecimal amount);
 
-    public void requestPersolanLoan() {
-       // System.out.println("Making RequestPersolanLoan in BankAccount");
-    }
+    public abstract void requestPersolanLoan();
 }

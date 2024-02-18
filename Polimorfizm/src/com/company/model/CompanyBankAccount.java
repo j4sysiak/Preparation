@@ -26,4 +26,9 @@ public class CompanyBankAccount extends BankAccount {
         return balance = balance
                 .add(BigDecimal.valueOf(-1).multiply(runIfAmountNotNull(amount)));
     }
+
+    @Override
+    public void requestPersolanLoan() {
+
+    }
 }
