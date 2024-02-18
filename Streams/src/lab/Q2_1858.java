@@ -23,7 +23,25 @@ public class Q2_1858 {
                 new AnotherBook("Gone with the wind", "Fiction"),        
                 new AnotherBook("Bourne Ultimatum", "Thriller"),         
                 new AnotherBook("The Client", "Thriller") );  
-        List<String> genreList = new ArrayList<>(); 
+        List<String> genreList = new ArrayList<>();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         books.stream()
 //            .map(book -> book.getGenre())     // lambda
             .map(AnotherBook::getGenre)       // method reference

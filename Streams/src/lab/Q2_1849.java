@@ -80,7 +80,29 @@ public class Q2_1849 {
         };
         Consumer<Double> lamconsumer1 = d -> System.out.println(d);
 
+        Optional<Double> price3 = Optional.ofNullable(20.0);
+        Double v = price3.orElse(44.0);
 
+        Optional<Double> price5 = Optional.of(21.1);
+        price5.ifPresent(System.out::println);
+        price5.ifPresent(d -> System.out.println(d));
+
+
+        Optional<Double> price6a = Optional.ofNullable(null);
+
+        // Handle the exception gracefully NullPointerException
+        try {
+            Double x =null;
+            Optional<Double> price6b = Optional.of(x);  // if we get null
+            price6b.ifPresent(System.out::println);
+        } catch (NullPointerException e) {
+            System.out.println("Caught NullPointerException: Value is null");
+            // Handle the exception gracefully
+        }
+
+      //  Optional<Double> price7 = Optional.of(null); //  java.lang.NullPointerException
+         Optional<Double> price7= Optional.ofNullable(null);
+         Double z = price7.orElseThrow(()->new RuntimeException("Bad Code"));//java.lang.RuntimeException: Bad Code
 
 
 
