@@ -23,6 +23,7 @@ public class CompanyBankAccount extends BankAccount {
     @Override
     public BigDecimal makeWithdrawal(BigDecimal amount) {
         System.out.println("specyficzne działanie metody makeWithdrawal dla wywołania z typu: CompanyBankAccount");
-        return balance = balance.add(BigDecimal.valueOf(-1).multiply(runIfAmountNotNull(amount)));
+        return balance = balance
+                .add(BigDecimal.valueOf(-1).multiply(runIfAmountNotNull(amount)));
     }
 }

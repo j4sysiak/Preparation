@@ -25,8 +25,8 @@ public class BankAccount {
 
     public void setBalance(BigDecimal amount) {
         BigDecimal c = Optional.ofNullable(amount)  // 1. sprawdzam, czy null
-                .map(this::runIfAmountNotNull)     // 2. jeżeli nie null
-                .orElseGet(this::runIfEmpty);      // 3. jeżeli null
+                .map(this::runIfAmountNotNull)      // 2. jeżeli nie null
+                .orElseGet(this::runIfEmpty);       // 3. jeżeli null
         this.balance = amount;
     }
 

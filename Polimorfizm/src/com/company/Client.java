@@ -16,7 +16,8 @@ public class Client {
         to w zależności od typu, czy wywołamy metodę z CompanyBankAccount, czy z PersonalBankAccount
         to konkretna implementacja zostanie wywołana (nadpisujemy metodę w klasach dziedziczących @Override)
 
-        np. dla wywołania metody makeWithdrawal z typu PersonalBankAccount będzie się inaczej zachowywała, niż dla wywołania z CompanyBankAccount
+        np. dla wywołania metody makeWithdrawal z typu PersonalBankAccount będzie się inaczej zachowywała,
+        niż dla wywołania z CompanyBankAccount
         (bo będzie wywoływana inna metoda, raz z klasy PersonalBankAccount a innym razem z CompanyBankAccount)
         */
 
