@@ -12,7 +12,23 @@ public interface T1 {
 
 
   class TestCase implements T1, T2  {
+
+    public static void main(String[] args) throws Exception {
+
+      TestCase testCase = new TestCase();
+      testCase.m();
+
+
+      T1 t1 = new TestCase();
+      t1.m();
+      int o = T1.VALUE;
+
+    }
+
     @Override
     public void m() {
+      System.out.println();
+      TestCase testCase = new TestCase();
+
     }
   }
