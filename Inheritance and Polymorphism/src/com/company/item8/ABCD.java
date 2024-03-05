@@ -1,6 +1,10 @@
 package com.company.item8;
 
 public class ABCD {
-    int x = 10;
-    static int y = 20;
+    static int stat = 200;
+    int x = 100;
+
+    static void staticMethod() {
+        System.out.println("Calling from staticMethod() in ABCD");
+    }
 }
