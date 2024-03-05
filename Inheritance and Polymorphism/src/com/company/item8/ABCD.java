@@ -7,4 +7,8 @@ public class ABCD {
     static void staticMethod() {
         System.out.println("Calling from staticMethod() in ABCD");
     }
+
+    void noneStaticMethod() {
+        System.out.println("Calling from noneStaticMethod() in ABCD");
+    }
 }
