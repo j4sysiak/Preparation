@@ -1,4 +1,4 @@
-package com.in28minutes.java.classmodifiers.defaultaccess.b;
+package src.classmodifiers.defaultaccess.b;
 
 public class ClassInDifferentPackage {
 	// Class DefaultAccessClass and Class ClassInDifferentPackage

@@ -1,4 +1,4 @@
-package com.in28minutes.java.basics;
+package src.basics;
 
 public class Cricketer {
 	String name;

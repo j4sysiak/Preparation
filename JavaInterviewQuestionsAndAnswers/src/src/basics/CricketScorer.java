@@ -1,4 +1,4 @@
-package com.in28minutes.java.basics;
+package src.basics;
 
 public class CricketScorer {
 	// Instance Variables - constitute the state of an object

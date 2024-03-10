@@ -1,4 +1,4 @@
-package com.in28minutes.java.classmodifiers.defaultaccess.a;
+package src.classmodifiers.defaultaccess.a;
 
 /* No public before class. So this class has default access*/
 class DefaultAccessClass {

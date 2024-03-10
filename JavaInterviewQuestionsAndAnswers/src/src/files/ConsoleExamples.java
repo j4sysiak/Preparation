@@ -1,4 +1,4 @@
-package com.in28minutes.java.files;
+package src.files;
 
 import java.io.Console;
 import java.io.IOException;

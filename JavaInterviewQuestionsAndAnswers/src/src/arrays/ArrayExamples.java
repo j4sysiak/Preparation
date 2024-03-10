@@ -1,4 +1,4 @@
-package com.in28minutes.java.arrays;
+package src.arrays;
 
 import java.util.Arrays;
 

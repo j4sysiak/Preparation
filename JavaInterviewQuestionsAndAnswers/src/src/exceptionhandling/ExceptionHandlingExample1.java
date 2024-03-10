@@ -1,4 +1,4 @@
-package com.in28minutes.java.exceptionhandling;
+package src.exceptionhandling;
 
 //Java Interview Questions Exception Handling
 //�������������������������������������������

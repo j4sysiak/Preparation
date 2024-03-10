@@ -1,4 +1,4 @@
-package com.in28minutes.java.classmodifiers.defaultaccess.a;
+package src.classmodifiers.defaultaccess.a;
 
 public class AnotherClassInSamePackage {
 	// DefaultAccessClass and AnotherClassInSamePackage
@@ -6,5 +6,5 @@ public class AnotherClassInSamePackage {
 	// So, DefaultAccessClass is visible.
 	// An instance of the class can be created.
 
-	DefaultAccessClass defaultAccess;
+     DefaultAccessClass defaultAccess;
 }
