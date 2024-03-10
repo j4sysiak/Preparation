@@ -1,4 +1,7 @@
-package com.in28minutes.java.oops.inheritance.reuse;
+package src.oops.inheritance.reuse;
+
+
+import src.basics.Actor;
 
 public class TestReuse {
 	public static void main(String[] args) {

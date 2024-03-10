@@ -1,4 +1,4 @@
-package com.in28minutes.java.oops.inheritance.polymorphism;
+package src.oops.inheritance.polymorphism;
 
 class Cat extends Animal {
 	// This is method overriding.

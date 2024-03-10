@@ -1,6 +1,7 @@
-package com.in28minutes.java.membermodifiers.access.different;
+package src.membermodifiers.access.different;
 
-import com.in28minutes.java.membermodifiers.access.ExampleClass;
+
+import src.membermodifiers.access.ExampleClass;
 
 public class TestClassInDifferentPackage {
 	public static void main(String[] args) {

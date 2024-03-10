@@ -1,4 +1,4 @@
-package com.in28minutes.java.flow;
+package src.flow;
 
 public class WhileLoopExamples {
 	public static void main(String[] args) {

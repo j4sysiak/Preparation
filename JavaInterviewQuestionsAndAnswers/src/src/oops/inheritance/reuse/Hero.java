@@ -1,4 +1,6 @@
-package com.in28minutes.java.oops.inheritance.reuse;
+package src.oops.inheritance.reuse;
+
+import src.basics.Actor;
 
 //IS-A relationship. Hero is-a Actor
 public class Hero extends Actor {

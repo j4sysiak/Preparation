@@ -1,4 +1,4 @@
-package com.in28minutes.java.collections.examples;
+package src.collections.examples;
 
 import java.util.ArrayList;
 import java.util.Arrays;

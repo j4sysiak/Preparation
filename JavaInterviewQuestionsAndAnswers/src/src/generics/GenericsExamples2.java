@@ -1,4 +1,4 @@
-package com.in28minutes.java.generics;
+package src.generics;
 
 import java.io.Serializable;
 import java.util.ArrayList;

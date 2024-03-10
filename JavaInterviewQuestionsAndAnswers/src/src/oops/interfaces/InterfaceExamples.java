@@ -1,4 +1,4 @@
-package com.in28minutes.java.oops.interfaces;
+package src.oops.interfaces;
 
 public class InterfaceExamples {
 	public static void main(String[] args) {

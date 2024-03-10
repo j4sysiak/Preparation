@@ -1,4 +1,4 @@
-package com.in28minutes.java.initializers;
+package src.initializers;
 
 public class InitializerExamples {
 	static int count;

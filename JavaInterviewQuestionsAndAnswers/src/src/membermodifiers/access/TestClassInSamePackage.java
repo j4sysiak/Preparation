@@ -1,4 +1,4 @@
-package com.in28minutes.java.membermodifiers.access;
+package src.membermodifiers.access;
 
 public class TestClassInSamePackage {
 	public static void main(String[] args) {

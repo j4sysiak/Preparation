@@ -1,4 +1,4 @@
-package com.in28minutes.java.membermodifiers.access;
+package src.membermodifiers.access;
 
 public class ExampleClass {
 	int defaultVariable;

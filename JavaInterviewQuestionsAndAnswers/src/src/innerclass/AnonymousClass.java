@@ -1,4 +1,4 @@
-package com.in28minutes.java.innerclass;
+package src.innerclass;
 
 import java.util.Arrays;
 import java.util.Comparator;

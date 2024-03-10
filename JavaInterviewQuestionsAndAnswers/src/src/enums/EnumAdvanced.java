@@ -1,4 +1,4 @@
-package com.in28minutes.java.enums;
+package src.enums;
 
 public class EnumAdvanced {
 
