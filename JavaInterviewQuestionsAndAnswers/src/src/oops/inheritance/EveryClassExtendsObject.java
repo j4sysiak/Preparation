@@ -1,4 +1,4 @@
-package com.in28minutes.java.oops.inheritance;
+package src.oops.inheritance;
 
 //Every Java class extends Object class
 public class EveryClassExtendsObject {

@@ -1,4 +1,4 @@
-package com.in28minutes.java.oops.coupling.problem;
+package src.oops.coupling.problem;
 
 //Coupling is a measure of how much a class is dependent on other classes. 
 //There should minimal dependencies between classes.

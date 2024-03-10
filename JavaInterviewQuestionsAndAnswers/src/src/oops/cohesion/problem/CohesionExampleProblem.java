@@ -1,4 +1,4 @@
-package com.in28minutes.java.oops.cohesion.problem;
+package src.oops.cohesion.problem;
 
 //Cohesion is a measure of how related the responsibilities of a class are.
 //This class is downloading from internet, parsing data and storing data to database.

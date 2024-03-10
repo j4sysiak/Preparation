@@ -1,4 +1,4 @@
-package com.in28minutes.java.oops.inheritance;
+package src.oops.inheritance;
 
 abstract class Animal {
 	String name;

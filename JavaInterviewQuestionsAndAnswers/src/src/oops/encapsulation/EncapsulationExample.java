@@ -1,4 +1,4 @@
-package com.in28minutes.java.oops.encapsulation;
+package src.oops.encapsulation;
 
 class CricketScorer {
 	private int score = 0;

@@ -1,4 +1,4 @@
-package com.in28minutes.java.oops.cohesion.solution;
+package src.oops.cohesion.solution;
 
 //This is a better way of approaching the problem. Different classes have their
 //own responsibilities.

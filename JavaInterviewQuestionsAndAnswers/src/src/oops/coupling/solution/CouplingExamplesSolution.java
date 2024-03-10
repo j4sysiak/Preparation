@@ -1,4 +1,4 @@
-package com.in28minutes.java.oops.coupling.solution;
+package src.oops.coupling.solution;
 
 class ShoppingCartEntry {
 	float pricedummy;
