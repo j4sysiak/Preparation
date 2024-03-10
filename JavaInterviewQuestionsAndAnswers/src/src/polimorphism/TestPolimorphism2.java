@@ -46,7 +46,14 @@ public class TestPolimorphism2 {
 
 
 
-//        SomeOtherClass someOtherClass = new SomeOtherClass();
+        SomeOtherClass someOtherClass = new SomeOtherClass();
+
+        System.out.println(someOtherClass instanceof Interface);  // false
+        // compiler ERROR System.out.println(someOtherClass instanceof SuperClassImplementingInteface);
+        // compiler ERROR System.out.println(someOtherClass instanceof SubClass2);
+        // compiler ERROR System.out.println(someOtherClass instanceof SubClass);  // true
+        // compiler ERROR System.out.println(someOtherClass instanceof SuperClass);  // true
+        System.out.println(someOtherClass instanceof Object);  // true
 
 
     }
