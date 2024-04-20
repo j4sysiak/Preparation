@@ -1,4 +1,4 @@
-package com.in28minutes.java.classmodifiers.nonaccess.finalclass;
+package src.classmodifiers.nonaccess.finalclass;
 
 final public class FinalClass {
 }

@@ -1,4 +1,4 @@
-package com.in28minutes.java.threads;
+package src.threads;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;

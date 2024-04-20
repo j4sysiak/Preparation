@@ -1,4 +1,4 @@
-package com.in28minutes.java.operators;
+package src.operators;
 
 public class InstanceOfExamples {
 	public static void main(String[] args) {

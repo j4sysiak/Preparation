@@ -1,4 +1,4 @@
-package com.in28minutes.java.others.date;
+package src.others.date;
 
 import java.text.DateFormat;
 import java.util.Calendar;

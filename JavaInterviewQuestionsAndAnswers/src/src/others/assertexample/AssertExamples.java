@@ -1,4 +1,4 @@
-package com.in28minutes.java.others.assertexample;
+package src.others.assertexample;
 
 public class AssertExamples {
 	// Assertions are introduced in Java 1.4. They enable you to validate

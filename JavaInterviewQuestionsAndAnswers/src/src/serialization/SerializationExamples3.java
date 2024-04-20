@@ -1,4 +1,4 @@
-package com.in28minutes.java.serialization;
+package src.serialization;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

@@ -1,4 +1,4 @@
-package com.in28minutes.java.operators;
+package src.operators;
 
 public class RelationalOperators {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.in28minutes.java.threads;
+package src.threads;
 
 public class ThreadExamples {
 	public static void main(String[] args) {
@@ -13,7 +13,7 @@ public class ThreadExamples {
 		// 3. Download and Store Fielding Statistics => 5 Minutes
 		// 4. Merge and Analyze => 25 Minutes
 
-		// Steps 1, 2 and 3 are independant and can be run in parallel to make
+		// Steps 1, 2 and 3 are independent and can be run in parallel to make
 		// them faster.
 		// If run separately, they take 35 (15 + 15 + 5) minutes.
 		// If run in parallel, (if you are lucky) they might complete in 20

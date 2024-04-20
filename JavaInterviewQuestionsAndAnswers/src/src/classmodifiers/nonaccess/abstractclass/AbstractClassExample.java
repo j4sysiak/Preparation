@@ -1,4 +1,4 @@
-package com.in28minutes.java.classmodifiers.nonaccess.abstractclass;
+package src.classmodifiers.nonaccess.abstractclass;
 
 public abstract class AbstractClassExample {
 

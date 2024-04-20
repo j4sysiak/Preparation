@@ -72,7 +72,7 @@ class DescendingSorter implements Comparator<Cricketer> {
 public class CollectionExamples {
 	public static void main(String[] args) {
 		// Collections can only hold Objects - not primitives.
-		List<Integer> integers = new ArrayList<Integer>();
+		List<Integer> integers = new ArrayList<>();
 
 		// code like below is permitted because of auto boxing
 		integers.add(5);// new Integer(5)
@@ -84,7 +84,7 @@ public class CollectionExamples {
 		// Arrays
 
 		// ArrayList
-		List<String> batsmen = new ArrayList<String>();
+		List<String> batsmen = new ArrayList<>();
 
 		// adds at the end of list
 		batsmen.add("Sachin");// [Sachin]
