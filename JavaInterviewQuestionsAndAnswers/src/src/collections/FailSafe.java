@@ -1,4 +1,4 @@
-package com.in28minutes.java.collections;
+package src.collections;
 
 import java.util.Iterator;
 import java.util.concurrent.ConcurrentHashMap;

@@ -1,4 +1,4 @@
-package com.in28minutes.java.collections.examples;
+package src.collections.examples;
 
 public class ConcurrentCollectionsExamples {
 

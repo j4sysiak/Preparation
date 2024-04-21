@@ -7,11 +7,11 @@ public class GenericsExamples {
 	static ArrayList multiplyNumbersBy2(ArrayList numbers) {
 		ArrayList result = new ArrayList();
 
-		for (int i = 0; i < numbers.size(); i++) {
-			// TYPE CAST is required
-			int value = (Integer) numbers.get(i);
-			result.add(value * 2);
-		}
+        for (Object number : numbers) {
+            // TYPE CAST is required
+            int value = (Integer) number;
+            result.add(value * 2);
+        }
 
 		return result;
 	}
@@ -23,7 +23,7 @@ public class GenericsExamples {
 	public static void main(String[] args) {
 
 		// Older code - Before Java 5
-		ArrayList<Integer> numbers = new ArrayList<Integer>();
+		ArrayList<Integer> numbers = new ArrayList<>();
 		numbers.add(5);
 		numbers.add(6);
 
