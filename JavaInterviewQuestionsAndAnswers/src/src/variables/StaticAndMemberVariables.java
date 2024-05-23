@@ -1,4 +1,4 @@
-package com.in28minutes.java.variables;
+package src.variables;
 
 public class StaticAndMemberVariables {
 	public static void main(String[] args) {

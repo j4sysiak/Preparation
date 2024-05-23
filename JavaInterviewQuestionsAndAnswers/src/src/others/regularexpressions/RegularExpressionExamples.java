@@ -1,4 +1,4 @@
-package com.in28minutes.java.others.regularexpressions;
+package src.others.regularexpressions;
 
 import java.util.ArrayList;
 import java.util.Arrays;

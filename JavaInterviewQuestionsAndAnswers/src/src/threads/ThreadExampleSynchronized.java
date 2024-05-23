@@ -1,4 +1,4 @@
-package com.in28minutes.java.threads;
+package src.threads;
 
 class SpreadSheet {
 	int cell1, cell2, cell3;

@@ -1,4 +1,4 @@
-package com.in28minutes.java.threads;
+package src.threads;
 
 public class ThreadPriority {
 	public static void main(String[] args) throws InterruptedException {

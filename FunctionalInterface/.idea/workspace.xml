@@ -5,12 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2c8cef2-eb05-4b06-9b88-f45277c9f017" name="Changes" comment="06-02-2024 2028">
-      <change afterPath="$PROJECT_DIR$/../Streams/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Streams/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Streams/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Streams/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Streams/Streams.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Streams/src/TestStreams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaInterviewQuestionsAndAnswers/src/src/exceptionhandling/mytest/Exceptions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaInterviewQuestionsAndAnswers/src/src/exceptionhandling/mytest/FewerExceptions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaInterviewQuestionsAndAnswers/src/src/exceptionhandling/mytest/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaInterviewQuestionsAndAnswers/src/src/exceptionhandling/mytest/TimeoutException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/lab/BasicLambdasRart1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/lab/BasicLambdasRart1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/lab/Printable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/lab/Printable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaInterviewQuestionsAndAnswers/src/src/arrays/ArrayExamples.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaInterviewQuestionsAndAnswers/src/src/arrays/ArrayExamples.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaInterviewQuestionsAndAnswers/src/src/exceptionhandling/mytest/ThrowingExceptions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaInterviewQuestionsAndAnswers/src/src/others/garbagecollection/GarbageCollectionExamples.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaInterviewQuestionsAndAnswers/src/src/others/garbagecollection/GarbageCollectionExamples.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaInterviewQuestionsAndAnswers/src/src/others/regularexpressions/RegularExpressionExamples.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaInterviewQuestionsAndAnswers/src/src/others/regularexpressions/RegularExpressionExamples.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaInterviewQuestionsAndAnswers/src/src/threads/ThreadExampleSynchronized.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaInterviewQuestionsAndAnswers/src/src/threads/ThreadExampleSynchronized.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaInterviewQuestionsAndAnswers/src/src/threads/ThreadPriority.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaInterviewQuestionsAndAnswers/src/src/threads/ThreadPriority.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaInterviewQuestionsAndAnswers/src/src/threads/ThreadWaitAndNotify.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaInterviewQuestionsAndAnswers/src/src/threads/ThreadWaitAndNotify.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaInterviewQuestionsAndAnswers/src/src/varargs/VariableArgumentExamples.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaInterviewQuestionsAndAnswers/src/src/varargs/VariableArgumentExamples.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaInterviewQuestionsAndAnswers/src/src/variables/PassingVariablesToMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaInterviewQuestionsAndAnswers/src/src/variables/PassingVariablesToMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaInterviewQuestionsAndAnswers/src/src/variables/StaticAndMemberVariables.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaInterviewQuestionsAndAnswers/src/src/variables/StaticAndMemberVariables.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaInterviewQuestionsAndAnswers/src/src/variables/VariableInitialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaInterviewQuestionsAndAnswers/src/src/variables/VariableInitialization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaInterviewQuestionsAndAnswers/src/src/variables/scope/VariablesExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaInterviewQuestionsAndAnswers/src/src/variables/scope/VariablesExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaInterviewQuestionsAndAnswers/src/src/wrapper/WrapperExamples.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaInterviewQuestionsAndAnswers/src/src/wrapper/WrapperExamples.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

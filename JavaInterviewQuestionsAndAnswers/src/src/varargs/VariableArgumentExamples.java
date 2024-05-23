@@ -1,4 +1,4 @@
-package com.in28minutes.java.varargs;
+package src.varargs;
 
 //Variable Arguments allow calling a method with different number of parameters.
 //Lets look at a basic example:

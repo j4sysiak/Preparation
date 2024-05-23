@@ -1,4 +1,4 @@
-package com.in28minutes.java.wrapper;
+package src.wrapper;
 
 public class WrapperExamples {
 

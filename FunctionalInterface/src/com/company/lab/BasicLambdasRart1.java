@@ -102,6 +102,15 @@ public class BasicLambdasRart1 {
     }
 
     private void consumer() {
+
+        Printable<String> printable = new Printable<String>() {
+            @Override
+            public void print(String s) {
+                System.out.println(s);
+            }
+        };
+        Printable<String> mylambda = s -> System.out.println(s);
+
         // Printable<T> is a functional interface - has one abstract method
         // void print(T t)  is similar to java.util.function.Consumer
         //a.

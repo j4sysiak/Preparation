@@ -1,4 +1,4 @@
-package com.in28minutes.java.threads;
+package src.threads;
 
 class Calculator extends Thread {
 	long sum;

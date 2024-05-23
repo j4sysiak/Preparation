@@ -82,7 +82,7 @@ public class ArrayExamples {
 		// COMPILE ERROR!!
 		// int marks4[] = {10,15.0}; //10 is int 15.0 is float
 
-		// Cross assigment of primitive arrays is ILLEGAL
+		// Cross assignment of primitive arrays is ILLEGAL !
 		int[] ints = new int[5];
 		short[] shorts = new short[5];
 		// ints = shorts;//COMPILER ERROR

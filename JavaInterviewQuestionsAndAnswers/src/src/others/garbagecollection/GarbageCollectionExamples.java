@@ -1,4 +1,4 @@
-package com.in28minutes.java.others.garbagecollection;
+package src.others.garbagecollection;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;

@@ -1,4 +1,4 @@
-package com.in28minutes.java.variables;
+package src.variables;
 
 //RULE1 :Member/Static variables are alway initialized with 
 //default values.Default values for numeric types is 0, 

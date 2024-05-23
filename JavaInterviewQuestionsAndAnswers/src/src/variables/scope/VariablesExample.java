@@ -1,4 +1,4 @@
-package com.in28minutes.java.variables.scope;
+package src.variables.scope;
 
 public class VariablesExample {
 	// RULE 1:Static Variable can be used anywhere in the class.
