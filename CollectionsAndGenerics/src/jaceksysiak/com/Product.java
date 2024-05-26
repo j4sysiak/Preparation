@@ -39,13 +39,13 @@ public class Product implements Comparable<Product>{
         }
         return false;
     }
-    
+
+
     @Override
     public int compareTo(Product product){ // specifies "natural ordering" for Product
         // delegate to Integer which implements Comparable<Integer>
-        return id.compareTo(product.id); 
+        return id.compareTo(product.id);
 //        return Integer.compare(id, product.id); // another option
 //        return id-product.id;// sorts ascending by id
     }
-    
 }
