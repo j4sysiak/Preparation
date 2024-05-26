@@ -9,9 +9,9 @@ import java.util.TreeSet;
 public class UsingSets {
     public static void main(String[] args) {
         //factoryMethods();
-        //treeSet();
+         treeSet();
         //hashSet();
-        linkedHashSet();
+        //linkedHashSet();
     }
     public static void factoryMethods(){
         // unmodifiable sets returned
