@@ -1,4 +1,4 @@
-package jaceksysiak.com;
+package jaceksysiak.model;
 
 public class Cat implements Comparable<Cat>{
     private String name;

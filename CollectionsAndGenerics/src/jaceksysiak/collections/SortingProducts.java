@@ -1,4 +1,6 @@
-package jaceksysiak.com;
+package jaceksysiak.collections;
+
+import jaceksysiak.model.Product;
 
 import java.util.ArrayList;
 import java.util.Collections;

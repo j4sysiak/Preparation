@@ -1,4 +1,6 @@
-package jaceksysiak.com;
+package jaceksysiak.collections;
+
+import jaceksysiak.model.Book;
 
 import java.util.ArrayDeque;
 import java.util.Comparator;

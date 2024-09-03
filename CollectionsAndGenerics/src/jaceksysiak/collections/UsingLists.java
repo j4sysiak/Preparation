@@ -1,4 +1,4 @@
-package jaceksysiak.com;
+package jaceksysiak.collections;
 
 import java.util.ArrayList;
 import java.util.Arrays;

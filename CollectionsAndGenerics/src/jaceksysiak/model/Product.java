@@ -1,4 +1,4 @@
-package jaceksysiak.com;
+package jaceksysiak.model;
 
 import java.util.Objects;
 

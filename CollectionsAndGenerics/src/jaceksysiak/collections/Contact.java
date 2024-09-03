@@ -1,4 +1,4 @@
-package jaceksysiak.com;
+package jaceksysiak.collections;
 
 public class Contact {
     private int age;

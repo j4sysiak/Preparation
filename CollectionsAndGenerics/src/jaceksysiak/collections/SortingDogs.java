@@ -1,4 +1,6 @@
-package jaceksysiak.com;
+package jaceksysiak.collections;
+
+import jaceksysiak.model.Dog;
 
 import java.util.Arrays;
 import java.util.Collections;
