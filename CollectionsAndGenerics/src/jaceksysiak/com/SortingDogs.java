@@ -7,11 +7,11 @@ import java.util.List;
 
 public class SortingDogs {
     public static void main(String[] args) {
-//        comparable(new Dog[]{new Dog("Spot", 2), new Dog("Rover", 7)});// just-in-time array
+        comparable(new Dog[]{new Dog("Spot", 2), new Dog("Rover", 7)});// just-in-time array
 //        comparable(Arrays.asList(new Dog("Spot", 2), new Dog("Rover", 7)));
 
         //  comparator(new Dog[]{new Dog("Rover", 7), new Dog("Spot", 2)});
-          comparator(Arrays.asList(new Dog("Rover", 7), new Dog("Spot", 2)));
+        //  comparator(Arrays.asList(new Dog("Rover", 7), new Dog("Spot", 2)));
     }
     public static void comparable(Dog[] dogArray) {
         Arrays.sort(dogArray);

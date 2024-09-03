@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class GuessGame {
 
-    // torozwiązuje problem wielowątkowości za pomocą
+    // to rozwiązuje problem wielowątkowości za pomocą
     // utworzenia instancji klasy (jedynej) przy pierwszym wejściu do klasy
     // loader zaczytuje klasę tworzy instancję i jest git
     private static GuessGame instance = new GuessGame();

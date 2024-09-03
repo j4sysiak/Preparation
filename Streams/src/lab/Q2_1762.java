@@ -80,7 +80,7 @@ public class Q2_1762 {
              l.stream()
              // Stream<Item> sorted(Comparator<Item>)
             .sorted(Comparator.comparing(a -> a.getName())) // sorting by name
-             .map(item -> item.getName()) // mapping to a Stream<String>
+             .map(Item::getName) // mapping to a Stream<String>
             //.map(Item::getName) // method reference version
             .forEach(System.out::print); // Sorted by name, as we wanted. Output: BoltNailScrew
 
