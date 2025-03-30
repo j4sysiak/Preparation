@@ -27,7 +27,7 @@ public class PreGenerics {
         // Note: generic syntax means putting the type in angle brackets
         List<String> myList2 = new ArrayList<String>();
         myList2.add("Fred");             // will hold Strings
-        myList2.add(new Dog());          // compiler error
+        // myList2.add(new Dog());          // compiler error
         // Because what is going IN is guaranteed, what is coming OUT is
         // also guaranteed => no need for the cast
         String s2 = myList2.get(0);// cast no longer required       

@@ -8,24 +8,24 @@ import java.util.stream.*;
 public class TestStreams {
 
     public static void main(String[] args) {
-        // firstPipeline();
-        // lazyRetrieveDataPipeline();
-        // beneficialOfUsingSreamsLazyOPerationPipeline();
-        // collectionStreams();
+          firstPipeline();
+          lazyRetrieveDataPipeline();
+          beneficialOfUsingSreamsLazyOPerationPipeline();
+          collectionStreams();
           mapStreams();
-        // streamOfExample();
-        // streamFromFileLines();
-        // infiniteStream();
-        // optionalStream();    //Optional<T> it replace null - If stream is empty then Optional will be empty (we do not deal with null at all)
-        // terminalStream();
-        // reduceWithoutOptionalStream();  // allways will return some value
-        // reduceWithOptionalStream();    // samethimes stream could be empty ( return null )
+          streamOfExample();
+          streamFromFileLines();
+         infiniteStream();
+         optionalStream();    //Optional<T> it replace null - If stream is empty then Optional will be empty (we do not deal with null at all)
+          terminalStream();
+          reduceWithoutOptionalStream();  // allways will return some value
+         reduceWithOptionalStream();    // samethimes stream could be empty ( return null )
         // reduceBiFunctionAndBinaryOperatorStream();
         // mutableCollection();  // collect() - for mutable object (tłum. zmienny) mutuable object:  StringBuilder and ArrayList  collect()
         // preDefinedCollectors();
          collectingIntoMap();
-        // collectorsGroupingBy();
-        // collectorsPartitioningBy();
+          collectorsGroupingBy();
+         collectorsPartitioningBy();
         // intermidiateOperationFilter();
         // intermidiateOperationDistinct();
         // intermidiateOperationLimit();
@@ -59,7 +59,7 @@ public class TestStreams {
                   // the mapToInt() method to map from Stream<Integer>
                   // to an IntStream ( a stream of int primitives)
                   // IntStream mapToInt(ToIntFunction)
-        // ToIntFunction is functional inter face: has method int applyAsInt(T value);
+        // ToIntFunction is functional interface: has method int applyAsInt(T value);
                 .mapToInt(n -> n.intValue())
                 // OR  .mapToInt(Integer::intValue)
                 // OR  .mapToInt(n -> n)
@@ -309,8 +309,8 @@ public class TestStreams {
 
     private static void intermidiateOperationSorted() {
         // sorted() returns a stream withe sorted elem.
-        // Just like sorting arrays, java uses natural ordering unless we provide a comarator
-        // sorted() is a sateful intermediate operation => it needs to see all of the data before it can sort it!
+        // Just like sorting arrays, java uses natural ordering unless we provide a comparator
+        // sorted() is a stateful intermediate operation => it needs to see all of the data before it can sort it!
 
         // Stream<T> sorted(Comparator<T> comparator)
         //Out:  Person {name=John, age=23} Person {name=Mary, age=25}
@@ -822,7 +822,7 @@ mergeFunction – a merge function, used to resolve collisions between values as
         multipleElements.reduce(op).ifPresent(System.out::println);  // 12
 
         Integer val = Stream.of(1, 1, 1)
-                .filter(i -> i > 1115)  // nie będzie żadnych elementów po tym filtrze, jednak reduce() i tak bieze te elementy
+                .filter(i -> i > 1115)  // nie będzie żadnych elementów po tym filtrze, jednak reduce() i tak bierze te elementy
                 .reduce(1, (a, b) -> a);  //
         System.out.println(val);
 
@@ -968,9 +968,10 @@ mergeFunction – a merge function, used to resolve collisions between values as
         // Stream<T> generate(Supplier<T> s)
         // Supplier :    has method  T get();
 
-        Stream<Integer> infStream = Stream.generate(
-                () -> (int) (Math.random() * 10)
-        )
+        Stream<Integer> infStream = Stream
+                .generate(
+                    () -> (int) (Math.random() * 10)
+                )
                 .limit(10);
         //  infinite call  - to stop Ctrl+Z
          infStream.forEach(System.out::println);

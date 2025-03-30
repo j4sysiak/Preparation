@@ -9,10 +9,10 @@ import java.util.List;
 public class UnboundedWildcard {
 //    public static void showList(List<Object> list){ 
     public static void showList(List<?> list){ // any type is ok
-        for(Object o:list){
+        for(Object o : list){
             System.out.println(o);
         }
-        list.add("test"); // <?> implies read-only
+       // list.add("test"); // <?> implies read-only
     }
     public static void main(String[] args) {
         // A different variation
@@ -22,10 +22,13 @@ public class UnboundedWildcard {
         List<Dog> dogs = new ArrayList<Dog>();
         dogs.add(new Dog());
         showList(dogs); // List<?> list = new ArrayList<Dog>();
-        List<Cat> cats = new ArrayList<Cat>();
+        List<Cat> cats = new ArrayList<>();
         cats.add(new Cat());
         showList(cats); // List<?> list = new ArrayList<Cat>();
-        
+
+        List<String> names2 = new ArrayList<String>();
+        names2.add("Sean");
+        showList(names2);
     }    
 }
 

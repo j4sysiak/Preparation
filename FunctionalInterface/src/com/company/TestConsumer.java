@@ -18,6 +18,11 @@ public class TestConsumer {
         };
         consumer.accept("kaka");
 
+        //using lambda
+//        Consumer<String> consumerlmbd = s -> System.out.println(s);
+//        consumerlmbd.accept("kka");
+
+
 
 
         // Consumer<T> is a functional interface i.e. one abstract method:
