@@ -8,7 +8,7 @@ public class TestUnaryOperator {
 
         // UnaryOperator<T> extends Function<T, T> is a functional interface i.e. one abstract method:
         //      T apply(T t)
-        UnaryOperator<String> unaryOp = name -> "My name is "+name;
+        UnaryOperator<String> unaryOp = name -> "My name is " + name;
         System.out.println("UnaryOperator: " + unaryOp.apply("Sean"));// My name is Sean
 
         // BinaryOperator<T> extends BiFunction<T, T, T> is a functional interface i.e. one abstract method:

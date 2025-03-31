@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="425d857f-34ac-4e50-ab42-b1b613c87a12" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../CollectionsAndGenerics/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CollectionsAndGenerics/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CollectionsAndGenerics/out/production/CollectionsAndGenerics/jaceksysiak/com/CommonCollectionMethods.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CollectionsAndGenerics/out/production/CollectionsAndGenerics/jaceksysiak/com/Contact.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CollectionsAndGenerics/out/production/CollectionsAndGenerics/jaceksysiak/com/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CollectionsAndGenerics/out/production/CollectionsAndGenerics/jaceksysiak/com/SortingDogs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CollectionsAndGenerics/out/production/CollectionsAndGenerics/jaceksysiak/com/SortingProducts.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CollectionsAndGenerics/out/production/CollectionsAndGenerics/jaceksysiak/com/UsingLists.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CollectionsAndGenerics/out/production/CollectionsAndGenerics/jaceksysiak/com/UsingMaps.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CollectionsAndGenerics/out/production/CollectionsAndGenerics/jaceksysiak/com/UsingQueues.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CollectionsAndGenerics/out/production/CollectionsAndGenerics/jaceksysiak/com/UsingSets.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CollectionsAndGenerics/src/jaceksysiak/generics/PreGenerics.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CollectionsAndGenerics/src/jaceksysiak/generics/PreGenerics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CollectionsAndGenerics/src/jaceksysiak/generics/UnboundedWildcard.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CollectionsAndGenerics/src/jaceksysiak/generics/UnboundedWildcard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CollectionsAndGenerics/src/jaceksysiak/model/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CollectionsAndGenerics/src/jaceksysiak/model/Cat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CollectionsAndGenerics/src/jaceksysiak/model/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CollectionsAndGenerics/src/jaceksysiak/model/Dog.java" afterDir="false" />
+    <list default="true" id="425d857f-34ac-4e50-ab42-b1b613c87a12" name="Changes" comment="zz1">
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/LambdaEffectivelyFinal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/LambdaEffectivelyFinal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/MethodReferenceTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/MethodReferenceTypes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/TestConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TestConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Streams/src/TestStreams.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Streams/src/TestStreams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/TestPredicate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TestPredicate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/TestUnaryOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TestUnaryOperator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +23,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;j4sysiak&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/j4sysiak/Preparation.git&quot;,
+    &quot;accountId&quot;: &quot;a750cb78-048c-44cd-9460-12ca1a3f434f&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -40,16 +45,83 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.LambdaEffectivelyFinal.executor": "Debug",
+    "Application.MethodReferenceTypes.executor": "Debug",
+    "Application.TestConsumer.executor": "Debug",
+    "Application.TestPredicate.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Jacek/Documents/JAVA/SpringBoot/Preparation/FunctionalInterface",
+    "last_opened_file_path": "C:/Users/Jacek/Documents/JAVA/SpringBoot/Preparation/FunctionalInterface/src/com/company",
     "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
+  <component name="RunManager" selected="Application.MethodReferenceTypes">
+    <configuration name="LambdaEffectivelyFinal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.LambdaEffectivelyFinal" />
+      <module name="FunctionalInterface" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MethodReferenceTypes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.MethodReferenceTypes" />
+      <module name="FunctionalInterface" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestConsumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.TestConsumer" />
+      <module name="FunctionalInterface" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestPredicate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.TestPredicate" />
+      <module name="FunctionalInterface" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MethodReferenceTypes" />
+        <item itemvalue="Application.LambdaEffectivelyFinal" />
+        <item itemvalue="Application.TestConsumer" />
+        <item itemvalue="Application.TestPredicate" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -59,6 +131,64 @@
       <option name="presentableId" value="Default" />
       <updated>1727608501427</updated>
     </task>
+    <task id="LOCAL-00001" summary="zz">
+      <option name="closed" value="true" />
+      <created>1743332818195</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1743332818195</updated>
+    </task>
+    <task id="LOCAL-00002" summary="zz1">
+      <option name="closed" value="true" />
+      <created>1743332952001</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1743332952001</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="zz" />
+    <MESSAGE value="zz1" />
+    <option name="LAST_COMMIT_MESSAGE" value="zz1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/LambdaEffectivelyFinal.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/LambdaEffectivelyFinal.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/LambdaEffectivelyFinal.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/LambdaEffectivelyFinal.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/LambdaEffectivelyFinal.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/MethodReferenceTypes.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -17,10 +17,20 @@ public class MethodReferenceTypes {
         constructorMethodReferences();  // constructor
         staticMethodReferences();       // static
     }
-    public static void boundMethodReferences(){
+    public static void boundMethodReferences() {
         String name = "Mr. Joe Bloggs";
         // Supplier<T>     
-        //      T get() 
+        //      T get()
+
+        /*
+                 Supplier<String> s = new Supplier<String>() {
+            @Override
+            public String get() {
+                return "";
+            }
+        };
+        */
+
         Supplier<String> lowerL   = () -> name.toLowerCase();   // lambda
         Supplier<String> lowerMR  = name::toLowerCase;          // method reference
 

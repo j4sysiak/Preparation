@@ -8,6 +8,7 @@ import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
 public class TestConsumer {
+
     public static void  main(String [] args) {
 
         Consumer<String> consumer = new Consumer<String>() {
