@@ -98,8 +98,11 @@ public class MethodReferenceTypes {
         //      T get() 
         Supplier<StringBuilder> sbL   = () -> new StringBuilder();  // lambda
         Supplier<StringBuilder> sbMR  = StringBuilder::new;         // method reference
-        StringBuilder sb1 = sbL.get(); sb1.append("lambda version"); System.out.println(sb1);
-        StringBuilder sb2 = sbMR.get(); sb2.append("method reference version"); System.out.println(sb2);
+        StringBuilder sb1 = sbL.get();
+        sb1.append("lambda version"); System.out.println(sb1);
+
+        StringBuilder sb2 = sbMR.get();
+        sb2.append("method reference version"); System.out.println(sb2);
         
         //  Function<T, R>
         //      R apply(T)

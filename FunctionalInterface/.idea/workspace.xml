@@ -5,20 +5,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="425d857f-34ac-4e50-ab42-b1b613c87a12" name="Changes" comment="zz1">
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cats.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FunctionalInterface/com/company/DemoFI$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FunctionalInterface/com/company/DemoFI.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FunctionalInterface/com/company/Evaluate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FunctionalInterface/com/company/LambdaEffectivelyFinal.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FunctionalInterface/com/company/MethodReferenceTypes.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FunctionalInterface/com/company/MethodRefsAndContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FunctionalInterface/com/company/Person.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FunctionalInterface/com/company/TestConsumer$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FunctionalInterface/com/company/TestConsumer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FunctionalInterface/com/company/TestFunction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FunctionalInterface/com/company/TestPredicate$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FunctionalInterface/com/company/TestPredicate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FunctionalInterface/com/company/TestSupplier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FunctionalInterface/com/company/TestUnaryOperator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FunctionalInterface/com/company/Welcome.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FunctionalInterface/com/company/WelcomeWithOneParam.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FunctionalInterface/com/company/WelcomeWithOneParamAndReturnValue.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FunctionalInterface/com/company/WelcomeWithTwoParam.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FunctionalInterface/com/company/X.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FunctionalInterface/com/company/lab/BasicLambdasRart1$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FunctionalInterface/com/company/lab/BasicLambdasRart1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FunctionalInterface/com/company/lab/BasicLambdasRart2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FunctionalInterface/com/company/lab/Evaluate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FunctionalInterface/com/company/lab/Functionable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FunctionalInterface/com/company/lab/Person.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FunctionalInterface/com/company/lab/Printable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FunctionalInterface/com/company/lab/Retrievable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/StreamTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/LambdaEffectivelyFinal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/LambdaEffectivelyFinal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/MethodReferenceTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/MethodReferenceTypes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/TestConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TestConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/TestPredicate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TestPredicate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/TestUnaryOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TestUnaryOperator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -39,14 +69,20 @@
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="2mk712LmQcy7araBxV7Dyfl0TMs" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.InfiniteStreams.executor": "Run",
     "Application.LambdaEffectivelyFinal.executor": "Debug",
     "Application.MethodReferenceTypes.executor": "Debug",
+    "Application.ProcessFile.executor": "Debug",
+    "Application.StreamTest.executor": "Debug",
     "Application.TestConsumer.executor": "Debug",
     "Application.TestPredicate.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -60,7 +96,25 @@
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.MethodReferenceTypes">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Jacek\Documents\JAVA\SpringBoot\Preparation\FunctionalInterface" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.InfiniteStreams">
+    <configuration name="InfiniteStreams" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.InfiniteStreams" />
+      <module name="FunctionalInterface" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LambdaEffectivelyFinal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.LambdaEffectivelyFinal" />
       <module name="FunctionalInterface" />
@@ -87,8 +141,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestConsumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.TestConsumer" />
+    <configuration name="ProcessFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.ProcessFile" />
       <module name="FunctionalInterface" />
       <extension name="coverage">
         <pattern>
@@ -100,8 +154,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestPredicate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.TestPredicate" />
+    <configuration name="StreamTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.StreamTest" />
       <module name="FunctionalInterface" />
       <extension name="coverage">
         <pattern>
@@ -115,10 +169,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.InfiniteStreams" />
+        <item itemvalue="Application.ProcessFile" />
+        <item itemvalue="Application.StreamTest" />
         <item itemvalue="Application.MethodReferenceTypes" />
         <item itemvalue="Application.LambdaEffectivelyFinal" />
-        <item itemvalue="Application.TestConsumer" />
-        <item itemvalue="Application.TestPredicate" />
       </list>
     </recent_temporary>
   </component>
@@ -184,9 +239,24 @@
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/company/MethodReferenceTypes.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="8" />
+          <url>file://$PROJECT_DIR$/src/com/company/StreamTest.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/ProcessFile.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/ProcessFile.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/ProcessFile.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
