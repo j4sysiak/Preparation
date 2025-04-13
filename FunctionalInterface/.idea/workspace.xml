@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="425d857f-34ac-4e50-ab42-b1b613c87a12" name="Changes" comment="zz2">
-      <change afterPath="$PROJECT_DIR$/src/com/company/ReduceExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/CollectorsExamples.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +35,23 @@
     &quot;accountId&quot;: &quot;a750cb78-048c-44cd-9460-12ca1a3f434f&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.jdks/corretto-22.0.2/lib/src.zip!/java.base/java/lang/Iterable.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.jdks/corretto-22.0.2/lib/src.zip!/java.base/java/util/Map.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.jdks/corretto-22.0.2/lib/src.zip!/java.base/java/util/function/BiFunction.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.jdks/corretto-22.0.2/lib/src.zip!/java.base/java/util/function/BinaryOperator.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.jdks/corretto-22.0.2/lib/src.zip!/java.base/java/util/function/Consumer.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.jdks/corretto-22.0.2/lib/src.zip!/java.base/java/util/function/Function.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.jdks/corretto-22.0.2/lib/src.zip!/java.base/java/util/function/Predicate.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.jdks/corretto-22.0.2/lib/src.zip!/java.base/java/util/function/ToIntFunction.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.jdks/corretto-22.0.2/lib/src.zip!/java.base/java/util/function/UnaryOperator.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.jdks/corretto-22.0.2/lib/src.zip!/java.base/java/util/stream/BaseStream.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.jdks/corretto-22.0.2/lib/src.zip!/java.base/java/util/stream/Collector.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.jdks/corretto-22.0.2/lib/src.zip!/java.base/java/util/stream/Collectors.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.jdks/corretto-22.0.2/lib/src.zip!/java.base/java/util/stream/GathererOp.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.jdks/corretto-22.0.2/lib/src.zip!/java.base/java/util/stream/IntStream.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.jdks/corretto-22.0.2/lib/src.zip!/java.base/java/util/stream/Stream.java" root0="SKIP_INSPECTION" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -48,6 +65,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.CollectorsExamples.executor": "Debug",
     "Application.InfiniteStreams.executor": "Run",
     "Application.LambdaEffectivelyFinal.executor": "Debug",
     "Application.MethodReferenceTypes.executor": "Debug",
@@ -61,10 +79,16 @@
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Jacek/Documents/JAVA/SpringBoot/Preparation/FunctionalInterface/src/com/company",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -72,9 +96,14 @@
       <recent name="C:\Users\Jacek\Documents\JAVA\SpringBoot\Preparation\FunctionalInterface" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ReduceExample">
-    <configuration name="InfiniteStreams" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.InfiniteStreams" />
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="dir" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.CollectorsExamples">
+    <configuration name="CollectorsExamples" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.CollectorsExamples" />
       <module name="FunctionalInterface" />
       <extension name="coverage">
         <pattern>
@@ -140,13 +169,21 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ReduceExample" />
-        <item itemvalue="Application.InfiniteStreams" />
-        <item itemvalue="Application.ProcessFile" />
+        <item itemvalue="Application.CollectorsExamples" />
         <item itemvalue="Application.StreamTest" />
+        <item itemvalue="Application.ReduceExample" />
+        <item itemvalue="Application.ProcessFile" />
         <item itemvalue="Application.MethodReferenceTypes" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -156,6 +193,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1727608501427</updated>
+      <workItem from="1744475989279" duration="4859000" />
     </task>
     <task id="LOCAL-00001" summary="zz">
       <option name="closed" value="true" />
@@ -183,6 +221,9 @@
     </task>
     <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="zz" />
@@ -247,6 +288,26 @@
           <url>file://$PROJECT_DIR$/src/com/company/ReduceExample.java</url>
           <line>78</line>
           <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/CollectorsExamples.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/CollectorsExamples.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/CollectorsExamples.java</url>
+          <line>93</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/CollectorsExamples.java</url>
+          <line>181</line>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
