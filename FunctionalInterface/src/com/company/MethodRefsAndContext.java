@@ -29,6 +29,10 @@ class Personen {
     public Personen(String john, int i) {
     }
 
+    public Personen() {
+
+    }
+
     public static Integer howMany(Personen... people){
         return people.length;
     } 

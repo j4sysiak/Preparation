@@ -3,17 +3,25 @@ package com.company;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.stream.Stream;
 
 public class IntermediateOperations {
     public static void main(String[] args) {
+        //doSortedOther();
         //doSorted2();
-        //doLimit();   
-        doSortedOther();
+        //doSortedFromBook();
+        doMap();
+        //doFlatMap();
+        //doLimit();
+        //doDistinct();
+        doFilter();
+
     }
 
     public static void doSortedOther() {
-
         // Stream<T> sorted()
         // Stream<T> sorted(Comparator<T> comparator)
         // Output:
@@ -41,6 +49,20 @@ public class IntermediateOperations {
                 .sorted(Comparator.comparing(p -> p.getAge()))
                 .forEach(System.out::print);
 
+        Comparator<? super Person> comparatorPerson = new Comparator<Person>() {
+            public int compare(Person p1, Person p2) {
+                return p1.getAge() - p2.getAge();
+            }
+        };
+        Comparator<? super Person> comparatorPersonLambda = (p1, p2) -> p1.getAge() - p2.getAge();
+
+        Stream.of(mary, john)
+                //.sorted(Comparator.comparing(Person::getAge))
+                .sorted(comparatorPersonLambda)
+                .forEach(System.out::print);
+        System.out.printf("");
+
+
     }
 
     public static void doSortedFromBook() {
@@ -60,35 +82,71 @@ public class IntermediateOperations {
         //                  and then stops the pipeline
         // Note: Toby is not output.
         Stream.of("Toby", "Anna", "Leroy", "Alex")
-                .peek(s -> System.out.print(" 0." + s))
+                .peek(s -> System.out.println(" 0." + s))
                 .filter(s -> s.length() == 4)
-                .peek(s -> System.out.print(" 1." + s)) // no Leroy
+                .peek(s -> System.out.println(" 1." + s)) // no Leroy
                 .sorted() // stores Toby, Anna and Alex
-                .peek(s -> System.out.print(" 2." + s))
+                .peek(s -> System.out.println(" 2." + s))
                 .limit(2)
-                .forEach(s -> System.out.print(" 3." + s));// no Toby
+                .forEach(s -> System.out.println(" 3." + s));// no Toby
 
-    }
-
-    public static void doFlatMap() {
-
-        List<String> list1 = Arrays.asList("sean", "desmond");
-        List<String> list2 = Arrays.asList("mary", "ann");
-        Stream<List<String>> streamOfLists = Stream.of(list1, list2);
-
-        // flatMap(Function(T, R)) IN:T OUT:R
-        //  flatMap(List<String>, Stream<String>)
-        streamOfLists.flatMap(list -> list.stream())
-                .forEach(System.out::print);// seandesmondmaryann
     }
 
     public static void doMap() {
 
         // <R> Stream<R> map(Function<T,R> mapper)
+        // na wejściu: String   T=String
+        // na wyjściu: Stream<R> gdzie R - będzie Integer
         //     Function's functional method: R apply(T t);
+
+        Function<String, Integer> function = new Function<String, Integer>() {
+            @Override
+            public Integer apply(String s) {
+                return 0;
+            }
+        };
+        Function<String, Integer> functionL = s -> s.length();
+
+        Stream<Integer> integerStream = Stream.of("book", "pen", "ruler")
+                        .map(functionL);
+        integerStream.forEach(System.out::print);
+
         Stream.of("book", "pen", "ruler")
                 .map(s -> s.length()) // String::length
                 .forEach(System.out::print);// 435
+    }
+
+    public static void doFlatMap() {
+        List<String> list1 = Arrays.asList("sean", "desmond");
+        List<String> list2 = Arrays.asList("mary", "ann");
+        Stream<List<String>> streamOfLists = Stream.of(list1, list2);
+
+        // Stream<R> flatMap(Function<? super T, ? extends Stream<? extends R>> mapper);
+        // flatMap(Function(T, Stream<R>)) IN:T OUT:R
+        // T = List<String>
+        // R = Strin
+        //  flatMap(Function(List<String>, Stream<String>))
+
+        Function<List<String>, Stream<String>> function = new Function<List<String>, Stream<String>>() {
+            @Override
+            public Stream<String> apply(List<String> strings) {
+                return Stream.empty();
+            }
+        };
+        Function<List<String>, Stream<String>> functionL = strings -> strings.stream();
+
+        Consumer<String> action = new Consumer<String>() {
+            @Override
+            public void accept(String s) {
+                System.out.printf(s);
+            }
+        };
+        Consumer<String> actionL = s -> System.out.printf(s);
+        Consumer<String> actionRef = System.out::print;
+
+                streamOfLists
+                .flatMap(functionL)  // po tym mam Stream<String>
+                .forEach(actionRef);// seandesmondmaryann
     }
 
     public static void doLimit() {
@@ -121,11 +179,23 @@ public class IntermediateOperations {
 
     public static void doFilter() {
 
+        // Stream<T> filter(Predicate<? super T> predicate);
+        // na wejściu mamy String   T=String
+        // Stream<String>  filter(Predicate<String> predicate);
+
+        Predicate<String> stringPredicate = new Predicate<String>() {
+            @Override
+            public boolean test(String s) {
+                return false;
+            }
+        };
+        Predicate<String> stringPredicateL = s -> s.length() > 5;
+
         // Stream<T> filter(Predicate)
         // The filter() method returns a Stream with the elements that
         // MATCH the given predicate.
         Stream.of("galway", "mayo", "roscommon")
-                .filter(countyName -> countyName.length() > 5)
+                .filter(stringPredicateL)
                 .forEach(System.out::print);// galwayroscommon
     }
 
