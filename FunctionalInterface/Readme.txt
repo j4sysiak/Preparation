@@ -1,6 +1,5 @@
 https://www.youtube.com/watch?v=6MkLC44nnkI
 
-
 Functional Programming in Java : Java Lambdas and Streams
 ---------------------------------------------------------
 

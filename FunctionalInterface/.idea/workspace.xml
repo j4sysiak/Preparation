@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="425d857f-34ac-4e50-ab42-b1b613c87a12" name="Changes" comment="zz3">
+    <list default="true" id="425d857f-34ac-4e50-ab42-b1b613c87a12" name="Changes" comment="zz4">
+      <change afterPath="$PROJECT_DIR$/src/com/company/PrimitiveStreams.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/InfiniteStreams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/InfiniteStreams.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/IntermediateOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/IntermediateOperations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/MethodRefsAndContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/MethodRefsAndContext.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +40,7 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$USER_HOME$/.jdks/corretto-22.0.2/lib/src.zip!/java.base/java/lang/Iterable.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.jdks/corretto-22.0.2/lib/src.zip!/java.base/java/util/Comparator.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.jdks/corretto-22.0.2/lib/src.zip!/java.base/java/util/Map.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.jdks/corretto-22.0.2/lib/src.zip!/java.base/java/util/function/BiFunction.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.jdks/corretto-22.0.2/lib/src.zip!/java.base/java/util/function/BinaryOperator.java" root0="SKIP_INSPECTION" />
@@ -51,6 +54,7 @@
     <setting file="jar://$USER_HOME$/.jdks/corretto-22.0.2/lib/src.zip!/java.base/java/util/stream/Collectors.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.jdks/corretto-22.0.2/lib/src.zip!/java.base/java/util/stream/GathererOp.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.jdks/corretto-22.0.2/lib/src.zip!/java.base/java/util/stream/IntStream.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.jdks/corretto-22.0.2/lib/src.zip!/java.base/java/util/stream/ReferencePipeline.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.jdks/corretto-22.0.2/lib/src.zip!/java.base/java/util/stream/Stream.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectColorInfo">{
@@ -71,6 +75,7 @@
     "Application.IntermediateOperations.executor": "Debug",
     "Application.LambdaEffectivelyFinal.executor": "Debug",
     "Application.MethodReferenceTypes.executor": "Debug",
+    "Application.PrimitiveStreams.executor": "Debug",
     "Application.ProcessFile.executor": "Debug",
     "Application.ReduceExample.executor": "Debug",
     "Application.StreamTest.executor": "Debug",
@@ -103,7 +108,7 @@
       <command value="dir" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.IntermediateOperations">
+  <component name="RunManager" selected="Application.PrimitiveStreams">
     <configuration name="CollectorsExamples" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.CollectorsExamples" />
       <module name="FunctionalInterface" />
@@ -130,8 +135,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProcessFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.ProcessFile" />
+    <configuration name="PrimitiveStreams" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.PrimitiveStreams" />
       <module name="FunctionalInterface" />
       <extension name="coverage">
         <pattern>
@@ -171,11 +176,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PrimitiveStreams" />
         <item itemvalue="Application.IntermediateOperations" />
         <item itemvalue="Application.CollectorsExamples" />
         <item itemvalue="Application.StreamTest" />
         <item itemvalue="Application.ReduceExample" />
-        <item itemvalue="Application.ProcessFile" />
       </list>
     </recent_temporary>
   </component>
@@ -196,7 +201,7 @@
       <option name="presentableId" value="Default" />
       <updated>1727608501427</updated>
       <workItem from="1744475989279" duration="4859000" />
-      <workItem from="1744528777698" duration="11958000" />
+      <workItem from="1744528777698" duration="15956000" />
     </task>
     <task id="LOCAL-00001" summary="zz">
       <option name="closed" value="true" />
@@ -230,7 +235,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744541940920</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="zz4">
+      <option name="closed" value="true" />
+      <created>1744559581850</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1744559581850</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,7 +254,8 @@
     <MESSAGE value="zz1" />
     <MESSAGE value="zz2" />
     <MESSAGE value="zz3" />
-    <option name="LAST_COMMIT_MESSAGE" value="zz3" />
+    <MESSAGE value="zz4" />
+    <option name="LAST_COMMIT_MESSAGE" value="zz4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -328,30 +342,55 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/IntermediateOperations.java</url>
-          <line>62</line>
+          <line>79</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/IntermediateOperations.java</url>
-          <line>44</line>
+          <line>55</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/IntermediateOperations.java</url>
-          <line>83</line>
+          <line>100</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/IntermediateOperations.java</url>
-          <line>119</line>
+          <line>136</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/company/IntermediateOperations.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="34" />
+          <url>file://$PROJECT_DIR$/src/com/company/PrimitiveStreams.java</url>
+          <line>182</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/PrimitiveStreams.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/PrimitiveStreams.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/PrimitiveStreams.java</url>
+          <line>172</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

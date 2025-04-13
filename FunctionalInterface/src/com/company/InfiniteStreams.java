@@ -5,14 +5,11 @@ import java.util.function.UnaryOperator;
 import java.util.stream.Stream;
 
 public class InfiniteStreams {
+
     public static void main(String[] args) {
-
-//        generate();
-//         iterate();
+        generate();
+        iterate();
         iterateWithLimit();
-
-
-
     }
     public static int rand(){
         return (int) (Math.random() * 10);
@@ -55,8 +52,9 @@ public class InfiniteStreams {
         //          T get()
 
         Stream<Integer> infStream = Stream.generate(() -> {
-            return (int) (Math.random() * 10);
+             return (int) (Math.random() * 10);
         });
+
         // keeps going until I kill it.
         infStream.forEach(System.out::println);
     }

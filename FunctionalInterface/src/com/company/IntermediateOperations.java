@@ -10,14 +10,14 @@ import java.util.stream.Stream;
 
 public class IntermediateOperations {
     public static void main(String[] args) {
-        //doSortedOther();
-        //doSorted2();
-        //doSortedFromBook();
-        doMap();
-        //doFlatMap();
-        //doLimit();
-        //doDistinct();
-        doFilter();
+        // doSortedOther();
+          doSorted2();
+        // doSortedFromBook();
+        // doMap();
+        // doFlatMap();
+        // doLimit();
+        // doDistinct();
+        // doFilter();
 
     }
 
@@ -39,11 +39,28 @@ public class IntermediateOperations {
 
     public static void doSorted2() {
 
+        // Stream<T> sorted(Comparator<? super T> comparator);
         // Stream<T> sorted(Comparator<T> comparator)
         // Output:
-        //   Person{name=John, age=23}Person{name=Mary, age=25}
+        // Person{name=John, age=23}Person{name=Mary, age=25}
+
+        // Comparator<T> comparing(Function<? super T, ? extends U> keyExtractor)
+        Function<Person, Integer> keyExtractor = new Function<Person, Integer>() {
+            @Override
+            public Integer apply(Person p) {
+                return p.getAge();
+            }
+        } ;
+        Function<Person, Integer> keyExtractorL = p -> p.getAge();
+
         Person john = new Person("John", 23);
         Person mary = new Person("Mary", 25);
+
+        Stream<Person> streamPerson = Stream.of(mary, john)
+                    //.sorted(Comparator.comparing(Person::getAge))
+                    .sorted(Comparator.comparing(keyExtractorL));
+        streamPerson.forEach(System.out::print);
+
         Stream.of(mary, john)
                 //.sorted(Comparator.comparing(Person::getAge))
                 .sorted(Comparator.comparing(p -> p.getAge()))
