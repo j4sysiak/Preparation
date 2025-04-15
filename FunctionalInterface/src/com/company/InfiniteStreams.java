@@ -1,7 +1,5 @@
 package com.company;
 
-import java.util.function.Supplier;
-import java.util.function.UnaryOperator;
 import java.util.stream.Stream;
 
 public class InfiniteStreams {

@@ -1,8 +1,6 @@
 package com.company;
 
-import java.util.IntSummaryStatistics;
-import java.util.OptionalDouble;
-import java.util.OptionalInt;
+import java.util.*;
 import java.util.function.*;
 import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
@@ -16,19 +14,54 @@ public class PrimitiveStreams {
         // mappingObjectStreams();
         // mappingPrimitiveStreams();
         // maxMinAverage();
-           stats(IntStream.of(5, 10, 15, 20));
-//       stats(IntStream.empty());
+        // stats(IntStream.of(5, 10, 15, 20));
+        // stats(IntStream.empty());
+        maxMinAverage();
     }
 
     public static void maxMinAverage(){
 
+        IntConsumer intConsumer = new IntConsumer() {
+            @Override
+            public void accept(int value) {
+
+            }
+        };
+        IntConsumer intConsumerL = i -> System.out.println(i);
+
         OptionalInt max = IntStream.of(10, 20, 30)
                 .max(); // terminal operation
+
+        max.ifPresent(i -> System.out.println(i));
+        max.orElse(0);
+
+
         max.ifPresent(System.out::println);// 30
         System.out.printf("orElse: " + max.orElse(33));
         System.out.printf("orElseGet: " + max.orElseGet(() -> 33));
         System.out.printf("orElseThrow: " + max.orElseThrow());
 
+        Comparator<Integer> comparator = new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return 0;
+            }
+        };
+        Comparator<Integer> comparatorL = (o1, o2) -> o1 - o2;
+
+                Optional<Integer> max2 = Stream.of(10, 20, 31)
+                .max(comparatorL);
+                max2.ifPresent(i -> System.out.println(i));
+                System.out.println(max2.orElse(0) );
+
+        Optional<Integer> max3 = Stream.of(10, 20, 30)
+                .max(Integer::compareTo);
+
+        Optional<Integer> max4 = Stream.of(10, 20, 30)
+                .max((a, b) -> a.compareTo(b));
+
+        Optional<Integer> max5 = Stream.of(10, 20, 30)
+                .max((a, b) -> Integer.compare(a, b)); // metoda statyczna
 
         OptionalDouble min = DoubleStream.of(10.0, 20.0, 30.0)
                 .min(); // terminal operation
@@ -38,6 +71,24 @@ public class PrimitiveStreams {
         OptionalDouble average = LongStream.of(10L, 20L, 30L)
                 .average(); // terminal operation
         System.out.println(average.orElseGet(() -> Math.random()));// 20.0
+    }
+
+    public static void stats(IntStream numbers){
+
+        IntSummaryStatistics intStats =
+                numbers.summaryStatistics(); // terminal op.
+
+        int min = intStats.getMin();
+        System.out.println(min);// 5 (2147483647 if nothing in stream)
+        int max = intStats.getMax();
+        System.out.println(max);// 20 (-2147483648 if nothing in stream)
+        double avg = intStats.getAverage();
+        System.out.println(avg);// 12.5 (0.0 if nothing in stream)
+        long count = intStats.getCount();
+        System.out.println(count);// 4 (0 if nothing in stream)
+        long sum = intStats.getSum();
+        System.out.println(sum);// 50 (0 if nothing in stream)
+
     }
 
     public static void mappingPrimitiveStreams(){
@@ -199,29 +250,10 @@ public class PrimitiveStreams {
         };
         ToIntFunction<Integer> intMapperL = n -> n; // unboxed
 
-        IntStream intS = Stream.of(1,2,3)
+        IntStream intS = Stream.of(1, 2, 3)
                 .mapToInt( intMapperL);// unboxed
         int total = intS.sum();
         System.out.println(total);//6
-
-    }
-
-
-    public static void stats(IntStream numbers){
-
-        IntSummaryStatistics intStats = 
-                numbers.summaryStatistics(); // terminal op.
-
-        int min = intStats.getMin();
-        System.out.println(min);// 5 (2147483647 if nothing in stream)
-        int max = intStats.getMax();
-        System.out.println(max);// 20 (-2147483648 if nothing in stream)
-        double avg = intStats.getAverage();
-        System.out.println(avg);// 12.5 (0.0 if nothing in stream)
-        long count = intStats.getCount();
-        System.out.println(count);// 4 (0 if nothing in stream)
-        long sum = intStats.getSum();
-        System.out.println(sum);// 50 (0 if nothing in stream)
 
     }
 }

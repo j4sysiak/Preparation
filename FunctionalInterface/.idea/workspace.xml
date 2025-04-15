@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="425d857f-34ac-4e50-ab42-b1b613c87a12" name="Changes" comment="zz4">
-      <change afterPath="$PROJECT_DIR$/src/com/company/PrimitiveStreams.java" afterDir="false" />
+    <list default="true" id="425d857f-34ac-4e50-ab42-b1b613c87a12" name="Changes" comment="zz5">
+      <change afterPath="$PROJECT_DIR$/src/com/company/Optionals.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/ParallelStreams.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/InfiniteStreams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/InfiniteStreams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/IntermediateOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/IntermediateOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/PrimitiveStreams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/PrimitiveStreams.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +53,7 @@
     <setting file="jar://$USER_HOME$/.jdks/corretto-22.0.2/lib/src.zip!/java.base/java/util/stream/Collector.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.jdks/corretto-22.0.2/lib/src.zip!/java.base/java/util/stream/Collectors.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.jdks/corretto-22.0.2/lib/src.zip!/java.base/java/util/stream/GathererOp.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.jdks/corretto-22.0.2/lib/src.zip!/java.base/java/util/stream/IntPipeline.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.jdks/corretto-22.0.2/lib/src.zip!/java.base/java/util/stream/IntStream.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.jdks/corretto-22.0.2/lib/src.zip!/java.base/java/util/stream/ReferencePipeline.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.jdks/corretto-22.0.2/lib/src.zip!/java.base/java/util/stream/Stream.java" root0="SKIP_INSPECTION" />
@@ -75,6 +76,8 @@
     "Application.IntermediateOperations.executor": "Debug",
     "Application.LambdaEffectivelyFinal.executor": "Debug",
     "Application.MethodReferenceTypes.executor": "Debug",
+    "Application.Optionals.executor": "Debug",
+    "Application.ParallelStreams.executor": "Debug",
     "Application.PrimitiveStreams.executor": "Debug",
     "Application.ProcessFile.executor": "Debug",
     "Application.ReduceExample.executor": "Debug",
@@ -84,8 +87,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Jacek/Documents/JAVA/SpringBoot/Preparation/FunctionalInterface/src/com/company",
+    "last_opened_file_path": "C:/Users/Jacek/Documents/JAVA/SpringBoot/Preparation/FunctionalInterface",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -108,7 +112,7 @@
       <command value="dir" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.PrimitiveStreams">
+  <component name="RunManager" selected="Application.ParallelStreams">
     <configuration name="CollectorsExamples" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.CollectorsExamples" />
       <module name="FunctionalInterface" />
@@ -135,6 +139,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Optionals" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Optionals" />
+      <module name="FunctionalInterface" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParallelStreams" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lets_get_certified.streams.ParallelStreams" />
+      <module name="FunctionalInterface" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lets_get_certified.streams.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PrimitiveStreams" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.PrimitiveStreams" />
       <module name="FunctionalInterface" />
@@ -148,49 +178,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReduceExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.ReduceExample" />
-      <module name="FunctionalInterface" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StreamTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.StreamTest" />
-      <module name="FunctionalInterface" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ParallelStreams" />
+        <item itemvalue="Application.Optionals" />
         <item itemvalue="Application.PrimitiveStreams" />
         <item itemvalue="Application.IntermediateOperations" />
         <item itemvalue="Application.CollectorsExamples" />
-        <item itemvalue="Application.StreamTest" />
-        <item itemvalue="Application.ReduceExample" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -201,7 +197,8 @@
       <option name="presentableId" value="Default" />
       <updated>1727608501427</updated>
       <workItem from="1744475989279" duration="4859000" />
-      <workItem from="1744528777698" duration="15956000" />
+      <workItem from="1744528777698" duration="16216000" />
+      <workItem from="1744657330358" duration="64000" />
     </task>
     <task id="LOCAL-00001" summary="zz">
       <option name="closed" value="true" />
@@ -243,7 +240,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744559581850</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="zz5">
+      <option name="closed" value="true" />
+      <created>1744576569711</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1744576569711</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,7 +260,8 @@
     <MESSAGE value="zz2" />
     <MESSAGE value="zz3" />
     <MESSAGE value="zz4" />
-    <option name="LAST_COMMIT_MESSAGE" value="zz4" />
+    <MESSAGE value="zz5" />
+    <option name="LAST_COMMIT_MESSAGE" value="zz5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -362,7 +368,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/PrimitiveStreams.java</url>
-          <line>182</line>
+          <line>236</line>
           <properties>
             <option name="lambda-ordinal" value="-1" />
           </properties>
@@ -370,21 +376,46 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/PrimitiveStreams.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/company/PrimitiveStreams.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/company/PrimitiveStreams.java</url>
-          <line>172</line>
+          <line>226</line>
           <properties>
             <option name="lambda-ordinal" value="-1" />
           </properties>
           <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/PrimitiveStreams.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/PrimitiveStreams.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/PrimitiveStreams.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/Optionals.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/Optionals.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/Optionals.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/ParallelStreams.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="52" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
